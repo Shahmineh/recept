@@ -41,6 +41,10 @@ body {
   color: #E22331;
 }
 
+.btn-category:focus{
+  box-shadow: none;
+}
+
 .sub-categories-card{
   background-color: #000;
   padding: 0;
