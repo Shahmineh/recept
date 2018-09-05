@@ -1,9 +1,9 @@
 #search{
-    width: 90%;
+  width: 90%;
 }
 
 body {
-  font-family: Gotham, serif;
+  font-family: Gotham, sans-serif;
   src: url('/gotham-book-regular.otf'), url('/gotham-book-regular.otf') format('gotham');
 }
 
@@ -11,4 +11,11 @@ body {
   width: 140px;
 }
 
-nav 
+.navbar-nav {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
