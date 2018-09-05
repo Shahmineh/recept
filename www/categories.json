@@ -1,0 +1,44 @@
+{
+    "Huvudkategori": [
+        "Sub-Kategori 1",
+        "Sub-Kategori 2",
+        "Sub-Kategori 3",
+        "Sub-Kategori 4"
+    ],
+    "Måltid": [
+        "Sub-Kategori 1",
+        "Sub-Kategori 2",
+        "Sub-Kategori 3",
+        "Sub-Kategori 4"
+    ],
+    "Typ av recept": [
+        "Sub-Kategori 1",
+        "Sub-Kategori 2",
+        "Sub-Kategori 3",
+        "Sub-Kategori 4"
+    ],
+    "Ingrediens": [
+        "Sub-Kategori 1",
+        "Sub-Kategori 2",
+        "Sub-Kategori 3",
+        "Sub-Kategori 4"
+    ],
+    "Specialkost": [
+        "Sub-Kategori 1",
+        "Sub-Kategori 2",
+        "Sub-Kategori 3",
+        "Sub-Kategori 4"
+    ],
+    "Tillfälle": [
+        "Sub-Kategori 1",
+        "Sub-Kategori 2",
+        "Sub-Kategori 3",
+        "Sub-Kategori 4"
+    ],
+    "Världens mat": [
+        "Sub-Kategori 1",
+        "Sub-Kategori 2",
+        "Sub-Kategori 3",
+        "Sub-Kategori 4"
+    ]
+}

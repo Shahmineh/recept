@@ -22,3 +22,26 @@ body {
 .nav-item {
   margin-left: 20px;
 }
+
+.side-menu-wrapper{
+  width: 300px;
+  height: 100vh;
+}
+
+.side-menu-card{
+  background-color: #000;
+  border-radius: 0;
+}
+
+.btn-category{
+  color: #B1B2AD
+}
+
+.btn-category:hover{
+  color: #E22331;
+}
+
+.sub-categories-card{
+  background-color: #000;
+  padding: 0;
+}
