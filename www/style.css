@@ -1,13 +1,24 @@
 #search{
-    width: 90%;
-    height: 50px;
+  width: 90%;
 }
 
-body {
-  font-family: Gotham, serif;
+@font-face{
+  font-family: Gotham;
   src: url('/gotham-book-regular.otf'), url('/gotham-book-regular.otf') format('gotham');
+}
+body {
+  font-family: 'Gotham', sans-serif;
 }
 
 .logga {
   width: 140px;
+}
+
+.navbar-nav {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+.nav-item {
+  margin-left: 20px;
 }
