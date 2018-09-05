@@ -4,5 +4,11 @@
 
 body {
   font-family: Gotham, serif;
-  src: url('/gotham-book-regular.otf'), url('gotham-book-regular.otf') format('gotham');
+  src: url('/gotham-book-regular.otf'), url('/gotham-book-regular.otf') format('gotham');
 }
+
+.logga {
+  width: 140px;
+}
+
+nav 
