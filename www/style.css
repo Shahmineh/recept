@@ -2,9 +2,12 @@
   width: 90%;
 }
 
-body {
-  font-family: Gotham, sans-serif;
+@font-face{
+  font-family: Gotham;
   src: url('/gotham-book-regular.otf'), url('/gotham-book-regular.otf') format('gotham');
+}
+body {
+  font-family: 'Gotham', sans-serif;
 }
 
 .logga {
