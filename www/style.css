@@ -1,5 +1,6 @@
 #search{
     width: 90%;
+    height: 50px;
 }
 
 body {
@@ -10,5 +11,3 @@ body {
 .logga {
   width: 140px;
 }
-
-nav 
