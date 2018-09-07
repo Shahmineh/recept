@@ -49,3 +49,10 @@ body {
   background-color: #000;
   padding: 0;
 }
+
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
