@@ -10,7 +10,7 @@ app.listen(3000,() => console.log('Listening on port 3000'));
 
 const mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
+/* mongoose.Promise = global.Promise;
 
 mongoose.connect("mongodb://localhost:27017/receptonaring", {
   useNewUrlParser: true
@@ -31,4 +31,4 @@ user.save().then((x)=>{
   }, (e)=>{
     console.log(e);
   }
-)
+) */

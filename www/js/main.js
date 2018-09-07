@@ -1,4 +1,4 @@
-const categories = $.getJSON("./categories.json",
+const categories = $.getJSON("../categories.json",
     function(data){
         const categoryList = Object.keys(data).map(category=>{
             //Create sub category list

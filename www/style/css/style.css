@@ -4,7 +4,7 @@
 
 @font-face{
   font-family: Gotham;
-  src: url('/gotham-book-regular.otf'), url('/gotham-book-regular.otf') format('gotham');
+  src: url('../../font/gotham-book-regular.otf'), url('../../font/gotham-book-regular.otf') format('gotham');
 }
 body {
   font-family: 'Gotham', sans-serif;
@@ -48,4 +48,8 @@ body {
 .sub-categories-card{
   background-color: #000;
   padding: 0;
+}
+
+.people-button {
+  vertical-align: middle;
 }
