@@ -50,6 +50,9 @@ body {
   padding: 0;
 }
 
-.people-button {
-  vertical-align: middle;
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 40%;
 }
