@@ -58,12 +58,42 @@ body {
 
 
 
-.input-name{
+div.input-name{
   width: 50%;
   margin: auto;
+  padding-top: 50px;
 }
 
 .upload-img{
   width: 400px;
   height: 400px;
+}
+
+i.far{
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  border: 1px solid lightgrey;
+
+}
+
+div.image-forms{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.forms{
+  margin-left: 20px;
+}
+
+.select-button{
+  width: 100px;
+}
+
+div.ingredient{
+  display: flex;
+  flex-direction: column;
 }
