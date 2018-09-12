@@ -42,10 +42,10 @@
     <main>
       <div class="container-fluid">
         <div class="row">
-          <div class="input-name input-group mb-3">
-            <input type="text" class="form-control" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Lägg till</button>
+          <div class="col-sm-12 input-names">
+            <div class="input-name input-group mb-3">
+              <input type="text" class="form-control" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn" type="button" id="button-addon2">Lägg till</button>
             </div>
           </div>
         </div>  
@@ -55,7 +55,7 @@
          <div class="forms">
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Antal person:</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="persons">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -70,7 +70,7 @@
               </div>
               <div class="form-group">
                   <label for="exampleFormControlSelect1">Tid:</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
+                  <select class="form-control" id="time">
                     <option>15 min</option>
                     <option>30 min</option>
                     <option>45 min</option>
@@ -83,38 +83,111 @@
         </div>
         <div class="row d-flex justify-content-center">
             <form class="pt-3">
-               <button>Bläddra</button>
+               <button class="btn">Bläddra</button>
             </form>
         </div>
-       <div class="row">
-         <div class="col">
-           <h4>Ingredienser:</h4>
-          <div class="ingredients col-sm-3 my-1">
-            <input type="text" class="form-control" id="ravara-input" placeholder="Råvara">
-            <select class="select-button custom-select" id="amount-select">
-              <option selected>Mängd:</option>
-              <option value="1">styck</option>
-              <option value="2">liter</option>
-              <option value="3">deciliter</option>
-              <option value="3">matsked</option>
-              <option value="3">tesked</option>
-              <option value="3">kryddmått</option>
-
-            </select>
+       <div class="row under">
+         <div class="left col-sm-4">
+           <h5>Ingredienser</h5>
+            <div class="ingredients">
+              <div class="col">
+                <input type="text" class="form-control" id="ravara-input" placeholder="Råvara">
+              </div>
+              <div class="amount col">
+                <input type="text" class="form-control" id="amount-input" placeholder="">
+                <select class="select-button custom-select" id="amount-select">
+                  <option selected>Mängd:</option>
+                  <option value="1">styck</option>
+                  <option value="2">liter</option>
+                  <option value="3">deciliter</option>
+                  <option value="3">matsked</option>
+                  <option value="3">tesked</option>
+                  <option value="3">kryddmått</option>
+                </select>
+              </div>
+            </div>
+            <div class="ingredients">
+              <div class="col">
+                <input type="text" class="form-control" id="ravara-input" placeholder="Råvara"></div>
+              <div class="amount col">
+                <input type="text" class="form-control" id="amount-input" placeholder="">
+                <select class="select-button custom-select" id="amount-select">
+                  <option selected>Mängd:</option>
+                  <option value="1">styck</option>
+                  <option value="2">liter</option>
+                  <option value="3">deciliter</option>
+                  <option value="3">matsked</option>
+                  <option value="3">tesked</option>
+                  <option value="3">kryddmått</option>
+                </select>
+              </div>
+            </div>
+              <div class="ingredients">
+                <div class="col">
+                  <input type="text" class="form-control" id="ravara-input" placeholder="Råvara"></div>
+                <div class="amount col">
+                  <input type="text" class="form-control" id="amount-input" placeholder="">
+                  <select class="select-button custom-select" id="amount-select">
+                    <option selected>Mängd:</option>
+                    <option value="1">styck</option>
+                    <option value="2">liter</option>
+                    <option value="3">deciliter</option>
+                    <option value="3">matsked</option>
+                    <option value="3">tesked</option>
+                    <option value="3">kryddmått</option>
+                  </select>
+                </div>
+              </div>
+              <div class="ingredients">
+                <div class="col">
+                  <input type="text" class="form-control" id="ravara-input" placeholder="Råvara"></div>
+                <div class="amount col">
+                  <input type="text" class="form-control" id="amount-input" placeholder="">
+                  <select class="select-button custom-select" id="amount-select">
+                    <option selected>Mängd:</option>
+                    <option value="1">styck</option>
+                    <option value="2">liter</option>
+                    <option value="3">deciliter</option>
+                    <option value="3">matsked</option>
+                    <option value="3">tesked</option>
+                    <option value="3">kryddmått</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col my-1 mt-3">
+                <button class="btn">Lägg till</button></div>
+            </div>
+          <div class="right col-sm-8">
+            <h5>Gör så här</h5>
+            <div class="input-group how-to">
+              <div class="text-input">
+                <p>1.</p>
+                <textarea class="form-control-text" aria-label="With textarea"></textarea>
+              </div>
+              <div class="text-input">
+                <p>2.</p>
+                <textarea class="form-control-text" aria-label="With textarea"></textarea>
+              </div>
+              <div class="text-input">
+                <p>3.</p>
+                <textarea class="form-control-text" aria-label="With textarea"></textarea>
+              </div>
+              <div class="text-input">
+                <p>4.</p>
+                <textarea class="form-control-text" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+            <div class="col my-1 mt-3">
+              <button class="btn">Lägg till</button></div>
         </div>
         </div>
-         <div class="col"><h4>Gör så här:</h4>
-        </div>
-        </div>
-
-        <div class="row">
-            <div class="col"><h4>Näringsinnehåll:</h4></div>
-           </div>
          
       </div>
 
     </main>
-    <footer></footer>
+    <footer>
+      
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
