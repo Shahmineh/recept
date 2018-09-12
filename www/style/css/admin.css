@@ -93,7 +93,14 @@ div.image-forms{
   width: 100px;
 }
 
-div.ingredient{
-  display: flex;
-  flex-direction: column;
+div.ingredients{
+  display: -webkit-box;
+}
+
+#ravara-input{
+  width: 150px;
+}
+
+#amount-select{
+  margin-left: 20px;
 }
