@@ -73,6 +73,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="container-fluid d-flex">
       <div class="row">
         <div class="col">
@@ -87,9 +89,6 @@
         </div>
       </aside>
       <div class="container">
-        <div class="row">
-          <button type="button" class="btn mt-2 btn-success" id="showbtn">Visa</button>
-        </div>
         <div class="row pt-2" id="showresult">
           <button type="button" class="btn btn-outline-dark">Bacon</button>
           <button type="button" class="btn ml-2 btn-outline-dark">Sphagetti</button>
@@ -103,31 +102,53 @@
           <button type="button" class="btn ml-2 btn-outline-dark">Korv</button>
         </div>
         <div class="row pt-3">
-          <div class="card" style="width: 18rem;">
+          <div class="card">
             <img class="card-img-top" src="../imgs/korvstroganoff.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Bosnisk Burek</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn btn-success">Se Recept</a>
+              <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Läs mer
+              </button>
             </div>
           </div>
-          <div class="card ml-2" style="width: 18rem;">
+          <div class="card ml-2">
             <img class="card-img-top" src="../imgs/korvstroganoff.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Svensk Ärtsoppa</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn btn-success">Se Recept</a>
+              <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Läs mer
+              </button>
             </div>
           </div>
-          <div class="card ml-2" style="width: 18rem;">
+
+          <div class="card ml-2">
             <img class="card-img-top" src="../imgs/korvstroganoff.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Tysk Ölkorv</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                 card's content.</p>
-              <a href="#" class="btn btn-success">Se Recept</a>
+              <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Läs mer
+              </button>
+            </div>
+          </div>
+          <div class="card ml-2">
+            <img class=" card-img-top" src="../imgs/korvstroganoff.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Tysk Ölkorv</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Läs mer
+              </button>
             </div>
           </div>
         </div>
@@ -141,14 +162,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="../js/main.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $("#showbtn").click(function () {
-        $("#showresult").toggle();
-      });
-    });
-  </script>
 
 </body>
 
