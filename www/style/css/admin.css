@@ -59,30 +59,31 @@ body {
 
 
 div.input-name{
-  width: 50%;
-  margin: auto;
+  width: auto;
   padding-top: 50px;
 }
 
-.upload-img{
-  width: 400px;
-  height: 400px;
+@media only screen and (min-width: 680px) {
+  div.input-name {
+    max-width: 500px;
+  }
+  div.input-names{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 i.far{
   font-size: 50px;
   display: flex;
   align-items: center;
-  padding: 60px;
+  padding: 70px;
   border: 1px solid lightgrey;
-
 }
 
 div.image-forms{
   display: flex;
   justify-content: center;
-  padding-top: 50px;
-  padding-left: 100px;
 }
 
 .forms{
@@ -94,13 +95,48 @@ div.image-forms{
 }
 
 div.ingredients{
-  display: -webkit-box;
+  display: flex;
+  margin-bottom: 15px;
 }
 
-#ravara-input{
-  width: 150px;
+div.amount{
+  display: flex;
 }
 
-#amount-select{
-  margin-left: 20px;
+div.under{
+  padding-top: 40px;
+}
+
+@media only screen and (max-width: 700px) {
+  div.right {
+    margin-top: 60px;
+  }
+}
+
+div.underleft{
+  padding-top: 50px;
+}
+
+.form-control-text{
+  width: 500px;
+}
+
+div.text-input{
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 15px;
+}
+
+.text-input p{
+  width: 20px;
+}
+
+div.how-to{
+  display: block;
+}
+
+footer{
+  height: 100px;
+  background-color: grey;
+  margin-top: 50px;
 }
