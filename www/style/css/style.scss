@@ -24,7 +24,7 @@ body {
 }
 
 .side-menu-wrapper{
-  width: 300px;
+  width: 100px;
   height: 100vh;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .btn-category:hover{
-  color: #E22331;
+  color:black;
 }
 
 .btn-category:focus{
@@ -45,7 +45,6 @@ body {
 }
 
 .sub-categories-card{
-  background-color: #000;
   padding: 0;
 }
 
@@ -55,6 +54,26 @@ body {
   left: 42%;
 }
 
+.card {
+  width: 17rem;
+}
+
+.border-control {
+  border-style: solid;
+  border-width: 2px;
+}
+
+.recipe {
+  width: 50vw;
+}
+
+.recipe-layout {
+  padding: 0 0 7px 7px;
+}
+
+.ingredient-control {
+  width: 15vw;
+}
 
 
 
@@ -63,7 +82,7 @@ div.input-name{
   padding-top: 50px;
 }
 
-@media only screen and (min-width: 680px) {
+/* @media only screen and (min-width: 680px) {
   div.input-name {
     max-width: 500px;
   }
@@ -71,7 +90,7 @@ div.input-name{
     display: flex;
     justify-content: center;
   }
-}
+} */
 
 i.far{
   font-size: 50px;
@@ -107,11 +126,11 @@ div.under{
   padding-top: 40px;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
   div.right {
     margin-top: 60px;
   }
-}
+} */
 
 div.underleft{
   padding-top: 50px;
