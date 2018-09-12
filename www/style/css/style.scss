@@ -74,3 +74,88 @@ body {
 .ingredient-control {
   width: 15vw;
 }
+
+
+
+div.input-name{
+  width: auto;
+  padding-top: 50px;
+}
+
+/* @media only screen and (min-width: 680px) {
+  div.input-name {
+    max-width: 500px;
+  }
+  div.input-names{
+    display: flex;
+    justify-content: center;
+  }
+} */
+
+i.far{
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  padding: 70px;
+  border: 1px solid lightgrey;
+}
+
+div.image-forms{
+  display: flex;
+  justify-content: center;
+}
+
+.forms{
+  margin-left: 20px;
+}
+
+.select-button{
+  width: 100px;
+}
+
+div.ingredients{
+  display: flex;
+  margin-bottom: 15px;
+}
+
+div.amount{
+  display: flex;
+}
+
+div.under{
+  padding-top: 40px;
+}
+
+/* @media only screen and (max-width: 700px) {
+  div.right {
+    margin-top: 60px;
+  }
+} */
+
+div.underleft{
+  padding-top: 50px;
+}
+
+.form-control-text{
+  width: 500px;
+}
+
+div.text-input{
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 15px;
+}
+
+.text-input p{
+  width: 20px;
+}
+
+div.how-to{
+  display: block;
+}
+
+footer{
+  height: 100px;
+  background-color: grey;
+  margin-top: 50px;
+}
