@@ -59,7 +59,7 @@ $( "#add-ingredients-btn" ).click(function() {
   $( "#howto-btn" ).click(function() {
     $( ".how-to" ).append(`
     <div class="text-input">
-                <p>1.</p>
+                <p></p>
                 <textarea class="form-control-text" aria-label="With textarea"></textarea>
               </div>
               `);
