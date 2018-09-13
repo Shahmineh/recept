@@ -221,7 +221,7 @@ footer{
 
 //Menu img
 .menu-img {
-  width: 70vw;
+  width: 100vw;
 
 }
 
@@ -229,8 +229,22 @@ footer{
   position: relative;
   overflow: hidden;
   margin: 1%;
-  
 }
+
+.breakfast.menu {
+  position: relative;
+  overflow: hidden;
+  margin: 1%;
+}
+
+.breakfast-img {
+  width: 40vw;
+}
+// .breakfast-menu {
+//   position: relative;
+//   overflow: hidden;
+//   margin: 1%;
+// }
 
 .menu .menu-img {
   transition: 0.5s;
