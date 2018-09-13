@@ -32,4 +32,10 @@ const categories = $.getJSON("../categories.json",
         //Writes all the list
         $('.side-menu').html(categoryList)
     }
+
+    function addIngredients(){
+        
+    }
+
+
 );
