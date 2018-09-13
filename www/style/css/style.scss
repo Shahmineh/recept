@@ -8,6 +8,7 @@
 }
 body {
   font-family: 'Gotham', sans-serif;
+  background-color: #f0f0f0;
 }
 
 .logga {
@@ -216,6 +217,11 @@ footer{
 }
 
 //Menu img
+.col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .menu-img {
   width: 100vw;
 
@@ -224,28 +230,14 @@ footer{
 .menu {
   position: relative;
   overflow: hidden;
-  margin: 1%;
+  margin: 0.2%;
 }
-
-.breakfast.menu {
-  position: relative;
-  overflow: hidden;
-  margin: 1%;
-}
-
-.breakfast-img {
-  width: 40vw;
-}
-// .breakfast-menu {
-//   position: relative;
-//   overflow: hidden;
-//   margin: 1%;
-// }
 
 .menu .menu-img {
   transition: 0.5s;
   max-width: 100%;
 }
+
 
 .menu:hover .menu-img {
   transform: scale(1.1)
@@ -255,21 +247,42 @@ footer{
   position: absolute;
   bottom: 50px;
   left: 50px;
-  
+  color: #000;
+  text-shadow: 2px 2px 2px #ebebeb;
+}
+
+.breakfast-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
+}
+
+.dinner-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
+}
+
+.dessert-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
 }
 
 .menu-big-text {
-  color: #000;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   font-size: 35px;
-  text-shadow: 2px 2px 2px #c0c0c0;
 }
 
 .menu-little-text {
-  color: #000;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   font-size: 25px;
-  text-shadow: 2px 2px 2px #c0c0c0;
 }
