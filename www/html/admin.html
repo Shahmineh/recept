@@ -46,6 +46,7 @@
             <div class="input-name input-group mb-3">
               <input type="text" class="form-control is-invalid" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add">
               <button class="btn" type="button" id="button-add">Lägg till</button>
+              <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
           </div>
         </div>  
@@ -100,7 +101,7 @@
               </div>
               <div class="amount col">
                 <input type="text" class="form-control" id="amount-input" placeholder="">
-                <select class="select-button custom-select" id="amount-select">
+                <select class="select-button custom-select" id="amount-select" required>
                   <option selected>Mängd:</option>
                   <option value="1">styck</option>
                   <option value="2">liter</option>
@@ -160,7 +161,7 @@
                 </div>
               </div>
               <div class="col my-1 mt-3">
-                <button class="btn">Lägg till</button></div>
+                <button class="btn" id="add-ingredients-btn">Lägg till</button></div>
             </div>
           <div class="right col-sm-8">
             <h5>Gör så här</h5>
