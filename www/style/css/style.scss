@@ -24,7 +24,6 @@ body {
 }
 
 .side-menu-wrapper{
-  width: 100px;
   height: 100vh;
 }
 
@@ -80,5 +79,212 @@ body {
 }
 
 header {
-  background-color: red !important; 
+  background-color: red !important;}
+
+.ingredient-control {
+  width: 15vw;
+}
+
+
+
+div.input-name{
+  width: auto;
+  padding-top: 50px;
+}
+
+/* @media only screen and (min-width: 680px) {
+  div.input-name {
+    max-width: 500px;
+  }
+  div.input-names{
+    display: flex;
+    justify-content: center;
+  }
+} */
+
+i.far{
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid lightgrey;
+}
+
+div.image-forms{
+  display: grid;
+  justify-content: center;
+}
+
+#persons{
+  width: 120px;
+}
+
+#time{
+  width: 120px;
+}
+
+.select-button{
+  width: 100px;
+}
+
+div.ingredients{
+  display: flex;
+  margin-bottom: 15px;
+}
+
+div.amount{
+  display: flex;
+}
+
+div.under{
+  padding-top: 40px;
+}
+
+/* @media only screen and (max-width: 700px) {
+  div.right {
+    margin-top: 60px;
+  }
+} */
+
+div.underleft{
+  padding-top: 50px;
+}
+
+.form-control-text{
+  width: 500px;
+}
+
+div.text-input{
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 15px;
+}
+
+.text-input p{
+  width: 20px;
+}
+
+div.how-to{
+  display: block;
+}
+
+footer{
+  height: 100px;
+  background-color: grey;
+  margin-top: 50px;
+}
+
+/* Flip image */
+.flip-box {
+  width: 50vw;
+  height: 30vw;
+  margin: 50px auto;
+  perspective: 1000px;
+}
+
+.flip-img, .front, .back{
+  width: 100%;
+  height: 100%;
+}
+
+.flip-img {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .5s;
+  box-shadow: 0 0 10px 2px grey;
+  border: 10px solid white;
+  border-radius: 10px;
+}
+
+.breakfast {
+  width: 100%;
+  height: 100%;
+}
+
+.front {
+  position: absolute;
+  cursor: pointer;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: #fff;
+  padding: 20px;
+  color: #000;
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  transition: opacity 0s;
+  opacity: 0;
+}
+
+.flip-box:hover .flip-img {
+  transform: rotateY(180deg);
+}
+.flip-box:hover .flip-img .back {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+//Menu img
+.menu-img {
+  width: 100vw;
+
+}
+
+.menu {
+  position: relative;
+  overflow: hidden;
+  margin: 1%;
+}
+
+.breakfast.menu {
+  position: relative;
+  overflow: hidden;
+  margin: 1%;
+}
+
+.breakfast-img {
+  width: 40vw;
+}
+// .breakfast-menu {
+//   position: relative;
+//   overflow: hidden;
+//   margin: 1%;
+// }
+
+.menu .menu-img {
+  transition: 0.5s;
+  max-width: 100%;
+}
+
+.menu:hover .menu-img {
+  transform: scale(1.1)
+}
+
+.menu-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  
+}
+
+.menu-big-text {
+  color: #000;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  text-shadow: 2px 2px 2px #c0c0c0;
+}
+
+.menu-little-text {
+  color: #000;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px #c0c0c0;
 }
