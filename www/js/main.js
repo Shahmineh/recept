@@ -33,9 +33,5 @@ const categories = $.getJSON("../categories.json",
         $('.side-menu').html(categoryList)
     }
 
-    function addIngredients(){
-        
-    }
-
 
 );
