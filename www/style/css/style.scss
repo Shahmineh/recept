@@ -18,7 +18,7 @@ body {
 .logga {
   width: 140px;
 }
-
+ 
 .navbar-nav {
   font-size: 15px;
   margin-left: 40px;
@@ -160,7 +160,7 @@ div.underleft{
 }
 
 .form-control-text{
-  width: 500px;
+  width: 100%;
 }
 
 div.text-input{
@@ -312,6 +312,11 @@ footer{
   font-weight: 500;
 }
 
+.little-box-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
 .recipe-header {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -326,4 +331,16 @@ footer{
 .recipe-summary {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.5rem;
+}
+.sum-little-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.little-box-text-pizza {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: #000;
+  text-shadow: 2px 2px 2px #eeeeee;
 }
