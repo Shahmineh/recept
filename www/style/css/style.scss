@@ -96,15 +96,9 @@ div.input-name{
   padding-top: 50px;
 }
 
-/* @media only screen and (min-width: 680px) {
-  div.input-name {
-    max-width: 500px;
-  }
-  div.input-names{
-    display: flex;
-    justify-content: center;
-  }
-} */
+div.input-names{
+  width: 500px;
+}
 
 i.far{
   font-size: 50px;
@@ -321,4 +315,8 @@ footer{
   font-weight: 500;
   color: #000;
   text-shadow: 2px 2px 2px #eeeeee;
+}
+
+div.form-group{
+  height: 60px;
 }
