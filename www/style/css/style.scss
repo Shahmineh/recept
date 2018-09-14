@@ -169,6 +169,7 @@ div.how-to{
 
 footer{
   height: 100px;
+  margin-top: 50px;
   background-color: grey;
   /* margin-top: 50px; */ 
 }
@@ -317,4 +318,13 @@ footer{
 
 div.form-group{
   height: 60px;
+}
+
+.submit-btn{
+  background-color: #e18a2b;
+  color: #fff;
+}
+
+.admin-container{
+  background-color: #fff;
 }
