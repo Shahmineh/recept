@@ -2,6 +2,10 @@
   width: 90%;
 }
 
+.fix-for-x-overflow {
+  overflow-x: hidden;
+}
+
 @font-face{
   font-family: Gotham;
   src: url('../../font/gotham-book-regular.otf'), url('../../font/gotham-book-regular.otf') format('gotham');
@@ -14,7 +18,7 @@ body {
 .logga {
   width: 140px;
 }
-
+ 
 .navbar-nav {
   font-size: 15px;
   margin-left: 40px;
@@ -59,8 +63,7 @@ body {
 }
 
 .border-control {
-  border-style: solid;
-  border-width: 2px;
+  border-left: 2px solid;
 }
 
 .recipe-layout {
@@ -72,7 +75,7 @@ body {
 }
 
 .ingredient-layout {
-  padding: 0 0 7px 0;
+  padding: 0 0 7px 0 !important;
 }
 
 .recipe-background {
@@ -80,7 +83,7 @@ body {
 }
 
 header {
-  background-color: red !important;}
+  background-color: rgb(236, 236, 236);}
 
 .ingredient-control {
   width: 15vw;
@@ -175,7 +178,7 @@ div.how-to{
 footer{
   height: 100px;
   background-color: grey;
-  margin-top: 50px;
+  /* margin-top: 50px; */ 
 }
 
 /* Flip image */
@@ -237,11 +240,6 @@ footer{
   padding-right: 0 !important;
 }
 
-.menu-img {
-  width: 100vw;
-
-}
-
 .menu {
   position: relative;
   overflow: hidden;
@@ -250,7 +248,7 @@ footer{
 
 .menu .menu-img {
   transition: 0.5s;
-  max-width: 100%;
+  width: 100%;
 }
 
 
@@ -305,4 +303,22 @@ footer{
 
 #amount-input{
   width: 80px;
+}
+
+.little-box-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.sum-little-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.little-box-text-pizza {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: #000;
+  text-shadow: 2px 2px 2px #eeeeee;
 }
