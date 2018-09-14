@@ -58,8 +58,7 @@ body {
 }
 
 .border-control {
-  border-style: solid;
-  border-width: 2px;
+  border-left: 2px solid;
 }
 
 .recipe-layout {
@@ -71,7 +70,7 @@ body {
 }
 
 .ingredient-layout {
-  padding: 0 0 7px 0;
+  padding: 0 0 7px 0 !important;
 }
 
 .recipe-background {
@@ -79,7 +78,7 @@ body {
 }
 
 header {
-  background-color: red !important;}
+  background-color: rgb(236, 236, 236);}
 
 .ingredient-control {
   width: 15vw;
@@ -174,7 +173,7 @@ div.how-to{
 footer{
   height: 100px;
   background-color: grey;
-  margin-top: 50px;
+  /* margin-top: 50px; */ 
 }
 
 /* Flip image */
