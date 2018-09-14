@@ -56,6 +56,9 @@ body {
   position: absolute;
   top: 50%;
   left: 42%;
+  @media screen and (max-width: 576px) {
+    position: unset;
+  }
 }
 
 .card {
@@ -334,9 +337,9 @@ footer{
   text-shadow: 2px 2px 2px #eeeeee;
 }
 
-div.form-group{
-  height: 60px;
-}
+// div.form-group{
+//   height: 60px;
+// }
 
 .submit-btn{
   background-color:#e26e21;
@@ -366,6 +369,10 @@ box-shadow: none;
   background-color: #fff;
   overflow-x: hidden;
   padding-top: 20px;
+  @media screen and (max-width: 576px) {
+    width: 100vw;
+    height: 100%;
+  }
  }
  
  .sidenav a {
@@ -374,9 +381,17 @@ box-shadow: none;
   font-size: 15px;
   color: #000;
   display: block;
- 
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+  }
  }
  
  .sidenav a:hover {
   color: #e26e21;
+ }
+
+ .d-flex {
+  @media screen and (max-width: 576px) {
+    display: block !important;
+  }
  }
