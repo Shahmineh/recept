@@ -94,19 +94,14 @@ header {
 
 
 div.input-name{
-  width: auto;
+  width: 100%;
   padding-top: 50px;
 }
 
-/* @media only screen and (min-width: 680px) {
-  div.input-name {
-    max-width: 500px;
-  }
-  div.input-names{
-    display: flex;
-    justify-content: center;
-  }
-} */
+div.input-names{
+  width: 500px;
+  height: 150px;
+}
 
 i.far{
   font-size: 50px;
@@ -145,9 +140,6 @@ div.amount{
   display: flex;
 }
 
-div.under{
-  padding-top: 40px;
-}
 
 /* @media only screen and (max-width: 700px) {
   div.right {
@@ -179,6 +171,7 @@ div.how-to{
 
 footer{
   height: 100px;
+  margin-top: 50px;
   background-color: grey;
   /* margin-top: 50px; */ 
 }
@@ -344,3 +337,50 @@ footer{
   color: #000;
   text-shadow: 2px 2px 2px #eeeeee;
 }
+
+div.form-group{
+  height: 60px;
+}
+
+.submit-btn{
+  background-color:#e26e21;
+  color: #fff;
+}
+.btn.focus, .btn:hover{
+  background-color:  #d8570c;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn.focus, .btn:focus{
+box-shadow: none;
+}
+
+.admin-container{
+  background-color: #fff
+}
+
+// SideNav
+.sidenav {
+  height: 100vh;
+  width: 160px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+ }
+ 
+ .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  display: block;
+ 
+ }
+ 
+ .sidenav a:hover {
+  color: #e26e21;
+ }
