@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: 50%;
   left: 42%;
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     position: unset;
   }
 }
