@@ -393,3 +393,9 @@ box-shadow: none;
  .sidenav a:hover {
   color: #e26e21;
  }
+
+ .d-flex {
+  @media screen and (max-width: 576px) {
+    display: block !important;
+  }
+ }
