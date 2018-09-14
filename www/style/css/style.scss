@@ -260,6 +260,11 @@ footer{
   left: 50px;
   color: #000;
   text-shadow: 2px 2px 2px #ebebeb;
+  @media screen and (max-width: 576px) {
+    color: #fff;
+    text-shadow: 2px 2px 2px #4d4c4c;
+  }
+  
 }
 
 .breakfast-text {
@@ -290,6 +295,9 @@ footer{
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   font-size: 35px;
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
 }
 
 .menu-little-text {
@@ -397,5 +405,14 @@ box-shadow: none;
  .d-flex {
   @media screen and (max-width: 576px) {
     display: block !important;
+  }
+ }
+
+ .display-mobile {
+  @media screen and (max-width: 576px) {
+    display: contents!important;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    display: contents!important;
   }
  }
