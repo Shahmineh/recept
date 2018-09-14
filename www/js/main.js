@@ -38,6 +38,7 @@ const categories = $.getJSON("../categories.json",
 $( "#add-ingredients-btn" ).click(function() {
     $( ".ingredients-out" ).append(`
     <div class="ingredients">
+        <i class="fas fa-times"></i> 
         <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
         <input type="text" class="form-control" id="amount-input" placeholder="">
         <select class="select-button custom-select" id="amount-select" required>
