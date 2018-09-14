@@ -86,10 +86,10 @@ $(document).on('keyup', '#ravara-input', function() {
 });
 
 $(document).on('keyup', '#ravara-input', function(){
-    $('#amount-input').addClass('is-invalid');
+    $('#gram-input').addClass('is-invalid');
 })
 
-$(document).on('keyup', '#amount-input', function() {
+$(document).on('keyup', '#gram-input', function() {
     let val = $(this).val();
    if(val.length > 0){
      $(this).removeClass('is-invalid').addClass('is-valid');

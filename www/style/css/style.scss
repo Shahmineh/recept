@@ -310,6 +310,7 @@ footer{
 
 #amount-input{
   width: 80px;
+  margin-right: 8px;
 }
 
 .sub-header {
@@ -439,4 +440,9 @@ box-shadow: none;
   @media (min-width: 768px) and (max-width: 991.98px) {
     display: contents!important;
   }
+ }
+
+ #gram-input{
+  width: 80px;
+   margin-right: 8px;
  }
