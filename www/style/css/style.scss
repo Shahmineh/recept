@@ -2,6 +2,10 @@
   width: 90%;
 }
 
+.fix-for-x-overflow {
+  overflow-x: hidden;
+}
+
 @font-face{
   font-family: Gotham;
   src: url('../../font/gotham-book-regular.otf'), url('../../font/gotham-book-regular.otf') format('gotham');
@@ -237,11 +241,6 @@ footer{
   padding-right: 0 !important;
 }
 
-.menu-img {
-  width: 100vw;
-
-}
-
 .menu {
   position: relative;
   overflow: hidden;
@@ -250,7 +249,7 @@ footer{
 
 .menu .menu-img {
   transition: 0.5s;
-  max-width: 100%;
+  width: 100%;
 }
 
 
