@@ -125,6 +125,7 @@ div.image-forms{
 
 #time{
   width: 120px;
+  margin-left: 77px;
 }
 
 .select-button{
@@ -346,6 +347,7 @@ div.form-group{
   background-color:#e26e21;
   color: #fff;
 }
+
 .btn.focus, .btn:hover{
   background-color:  #d8570c;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -355,6 +357,28 @@ div.form-group{
 box-shadow: none;
 }
 
+#add-ingredients-btn:hover{
+  background-color:  #777777;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #fff;
+}
+
+#howto-btn:hover{
+  background-color:  #777777;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #fff;
+}
+
+#button-add:hover{
+  background-color:  #777777;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #fff;
+}
+
 .admin-container{
   background-color: #fff
+}
+
+#browser-input{
+  cursor: pointer;
 }
