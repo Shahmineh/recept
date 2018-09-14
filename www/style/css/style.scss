@@ -321,10 +321,18 @@ div.form-group{
 }
 
 .submit-btn{
-  background-color: #e18a2b;
+  background-color:#e26e21;
   color: #fff;
+}
+.btn.focus, .btn:hover{
+  background-color:  #d8570c;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn.focus, .btn:focus{
+box-shadow: none;
 }
 
 .admin-container{
-  background-color: #fff;
+  background-color: #fff
 }
