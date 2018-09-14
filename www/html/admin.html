@@ -40,7 +40,7 @@
           
     </header>
     <main>
-      <div class="container-fluid">
+      <div class="container">
         <div class="row justify-content-center">
           <div class="input-names">
             <div class="input-name input-group mb-3">
@@ -53,7 +53,11 @@
         <div class="row image-forms justify-content-center d-grid">
           <div class="col mb-3">
             <i class="far fa-images justify-content-center p-5"></i>
-            <button class="btn mt-2">Bläddra</button>
+            <div class="custom-file" id="uploader">
+              <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+              <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+              <div class="invalid-feedback">Example invalid custom file feedback</div>
+            </div>
           </div>
           <div class="col forms">
             <form class="was-validated">
@@ -93,7 +97,7 @@
           </div>
         </div>
        <div class="row under">
-         <div class="left col-sm-4">
+         <div class="left col-md-12 col-lg-5">
            <h5>Ingredienser</h5>
            <div class="ingredients-out">
             <div class="ingredients">
@@ -165,23 +169,23 @@
               <div class="col my-1 mt-3">
                 <button class="btn" id="add-ingredients-btn">Lägg till</button></div>
             </div>
-          <div class="right col-sm-8">
+          <div class="right col-md-12 col-lg-7">
             <h5>Gör så här</h5>
             <div class="input-group how-to">
               <div class="text-input">
-                <p>1.</p>
+                <p></p>
                 <textarea class="form-control-text" aria-label="With textarea"></textarea>
               </div>
               <div class="text-input">
-                <p>2.</p>
+                <p></p>
                 <textarea class="form-control-text" aria-label="With textarea"></textarea>
               </div>
               <div class="text-input">
-                <p>3.</p>
+                <p></p>
                 <textarea class="form-control-text" aria-label="With textarea"></textarea>
               </div>
               <div class="text-input">
-                <p>4.</p>
+                <p></p>
                 <textarea class="form-control-text" aria-label="With textarea"></textarea>
               </div>
             </div>
