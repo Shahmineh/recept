@@ -2,12 +2,17 @@
   width: 90%;
 }
 
+.fix-for-x-overflow {
+  overflow-x: hidden;
+}
+
 @font-face{
   font-family: Gotham;
   src: url('../../font/gotham-book-regular.otf'), url('../../font/gotham-book-regular.otf') format('gotham');
 }
 body {
   font-family: 'Gotham', sans-serif;
+  background-color: #f0f0f0;
 }
 
 .logga {
@@ -105,16 +110,16 @@ i.far{
   font-size: 50px;
   display: flex;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
   border: 1px solid lightgrey;
 }
 
 div.image-forms{
   display: grid;
   justify-content: center;
+}
+
+#uploader{
+  width: 300px;
 }
 
 #persons{
@@ -230,36 +235,22 @@ footer{
 }
 
 //Menu img
-.menu-img {
-  width: 100vw;
-
+.col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .menu {
   position: relative;
   overflow: hidden;
-  margin: 1%;
+  margin: 0.2%;
 }
-
-.breakfast.menu {
-  position: relative;
-  overflow: hidden;
-  margin: 1%;
-}
-
-.breakfast-img {
-  width: 40vw;
-}
-// .breakfast-menu {
-//   position: relative;
-//   overflow: hidden;
-//   margin: 1%;
-// }
 
 .menu .menu-img {
   transition: 0.5s;
-  max-width: 100%;
+  width: 100%;
 }
+
 
 .menu:hover .menu-img {
   transform: scale(1.1)
@@ -269,21 +260,47 @@ footer{
   position: absolute;
   bottom: 50px;
   left: 50px;
-  
+  color: #000;
+  text-shadow: 2px 2px 2px #ebebeb;
+}
+
+.breakfast-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
+}
+
+.dinner-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
+}
+
+.dessert-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
 }
 
 .menu-big-text {
-  color: #000;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   font-size: 35px;
-  text-shadow: 2px 2px 2px #c0c0c0;
 }
 
 .menu-little-text {
-  color: #000;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   font-size: 25px;
   text-shadow: 2px 2px 2px #c0c0c0;
+} 
+
+#amount-input{
+  width: 80px;
 }
