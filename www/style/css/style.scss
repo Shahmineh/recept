@@ -92,19 +92,14 @@ header {
 
 
 div.input-name{
-  width: auto;
+  width: 100%;
   padding-top: 50px;
 }
 
-/* @media only screen and (min-width: 680px) {
-  div.input-name {
-    max-width: 500px;
-  }
-  div.input-names{
-    display: flex;
-    justify-content: center;
-  }
-} */
+div.input-names{
+  width: 500px;
+  height: 150px;
+}
 
 i.far{
   font-size: 50px;
@@ -143,9 +138,6 @@ div.amount{
   display: flex;
 }
 
-div.under{
-  padding-top: 40px;
-}
 
 /* @media only screen and (max-width: 700px) {
   div.right {
@@ -321,4 +313,8 @@ footer{
   font-weight: 500;
   color: #000;
   text-shadow: 2px 2px 2px #eeeeee;
+}
+
+div.form-group{
+  height: 60px;
 }
