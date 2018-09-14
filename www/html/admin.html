@@ -40,11 +40,11 @@
           
     </header>
     <main>
-      <div class="container">
+      <div class="container admin-container">
         <div class="row justify-content-center">
           <div class="input-names">
             <div class="input-name input-group mb-3">
-              <input type="text" class="form-control is-invalid" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add">
+              <input type="text" class="form-control is-invalid" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name">
               <button class="btn" type="button" id="button-add">Lägg till</button>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
@@ -73,8 +73,8 @@
                   <option>6</option>
                   <option>7</option>
                   <option>8</option>
-                  <!-- <option>9</option>
-                  <option>10</option> -->
+                  <option>9</option>
+                  <option>10</option>
                 </select>
                 <div class="invalid-feedback">Välj antal personer</div>
               </div>
@@ -96,7 +96,7 @@
           </form>
           </div>
         </div>
-       <div class="row under">
+       <div class="row under mt-4">
          <div class="left col-md-12 col-lg-5">
            <h5>Ingredienser</h5>
            <div class="ingredients-out">
@@ -156,7 +156,7 @@
               <div class="col my-1 mt-3">
                 <button class="btn" id="add-ingredients-btn">Lägg till</button></div>
             </div>
-          <div class="right col-md-12 col-lg-7">
+          <div class="right col-md-12 col-lg-6 mt-sm-4 ml-sm-0 ml-lg-4 mt-lg-0">
             <h5>Gör så här</h5>
             <div class="input-group how-to">
              
@@ -178,13 +178,13 @@
               
             </div>
             <div class="col my-1 mt-3">
-              <button class="btn" id="howto-btn">Lägg till</button>
+              <button class="btn d-flex justify-content-end" id="howto-btn">Lägg till</button>
             </div>
           </div>
         </div>
         <div class="row">
-            <div class="col d-flex justify-content-end">
-              <button class="btn btn-primary" type="submit">Submit form</button>
+            <div class="col d-flex justify-content-center m-5">
+              <button class="btn submit-btn" type="submit">Submit form</button>
             </div>  
           </div>
       </div>

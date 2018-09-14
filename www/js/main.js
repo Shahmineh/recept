@@ -55,9 +55,50 @@ $( "#add-ingredients-btn" ).click(function() {
 
   $( "#howto-btn" ).click(function() {
     $( ".how-to" ).append(`
-        <p></p>
         <div class="text-input">
         <textarea class="form-control-text" aria-label="With textarea"></textarea>
         </div>
       `);
   });   
+
+$(document).on('keyup', '#recipe-name', function() {
+   let val = $(this).val();
+   if(val.length > 0){
+     $(this).removeClass('is-invalid').addClass('is-valid');
+   }
+    else {
+      $(this).addClass('is-invalid').removeClass('is-valid');    
+   }
+}); 
+
+$(document).on('click', '#ravara-input', function() {
+    $(this).addClass('is-invalid');
+});
+
+$(document).on('keyup', '#ravara-input', function() {
+    let val = $(this).val();
+   if(val.length > 0){
+     $(this).removeClass('is-invalid').addClass('is-valid');
+   }
+    else {
+      $(this).addClass('is-invalid').removeClass('is-valid');    
+   }
+});
+
+$(document).on('keyup', '#ravara-input', function(){
+    $('#amount-input').addClass('is-invalid');
+})
+
+$(document).on('keyup', '#amount-input', function() {
+    let val = $(this).val();
+   if(val.length > 0){
+     $(this).removeClass('is-invalid').addClass('is-valid');
+   }
+    else {
+      $(this).addClass('is-invalid').removeClass('is-valid');    
+   }
+});
+
+
+
+
