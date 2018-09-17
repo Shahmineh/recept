@@ -37,7 +37,7 @@ const categories = $.getJSON("../categories.json",
 
 $( "#add-ingredient-btn" ).click(function() {
     $( ".ingredients-out" ).append(`
-    <div class="ingredients">
+    <div class="ingredients d-flex">
       <i class="fas fa-times" id="remove-btn"></i>
       <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
       <input type="text" class="form-control mr-2" id="amount-input" placeholder="Gram">
@@ -56,11 +56,15 @@ $( "#add-ingredient-btn" ).click(function() {
   });   
 
   $( "#add-howto-btn" ).click(function() {
-    $( ".how-to" ).append(`
+    $( ".how" ).append(`
+      <div class="how-to d-flex">
+        <i class="fas fa-times" id="remove-howto-btn"></i> 
+        <p class="textnumber mr-2"></p>
         <div class="text-input">
-        <textarea class="form-control-text" aria-label="With textarea"></textarea>
+          <textarea class="form-control-text" aria-label="With textarea"></textarea>
         </div>
-      `);
+      </div>
+    `);
   });   
 
 $(document).on('keyup', '#recipe-name', function() {
@@ -73,20 +77,13 @@ $(document).on('keyup', '#recipe-name', function() {
    }
 }); 
 
-$(document).on('click', '#ravara-input', function() {
-  let val = $(this).val();
-  if(val.length < 0){  
-    $(this).addClass('is-invalid');
-  }
-});
-
 $(document).on('keyup', '#ravara-input', function() {
     let val = $(this).val();
    if(val.length > 0){
      $(this).removeClass('is-invalid').addClass('is-valid');
    }
     else {
-      $(this).addClass('is-invalid').removeClass('is-valid');
+      $(this).removeClass('is-valid');
    }
 });
 
@@ -97,8 +94,8 @@ $(document).on('keyup', '#ravara-input', function(){
   }
   else{
     $('#amount-input').removeClass('is-invalid');
-
   }
+
 })
 
 $(document).on('keyup', '#amount-input', function() {
@@ -107,12 +104,19 @@ $(document).on('keyup', '#amount-input', function() {
      $(this).removeClass('is-invalid').addClass('is-valid');
    }
     else {
-      $(this).addClass('is-invalid').removeClass('is-valid');    
+      $(this).removeClass('is-valid');    
    }
 });
 
-$(document).on('click', '#remove-btn', function(){
+
+//Remove div
+$(document).on('click', '#remove-ingredient-btn', function(){
   $(this).parent('div.ingredients').remove();
 })
+
+$(document).on('click', '#remove-howto-btn', function(){
+  $(this).parent('div.how-to').remove();
+})
+
 
 
