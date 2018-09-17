@@ -312,6 +312,10 @@ footer{
   width: 80px;
 }
 
+#amount-disabled{
+  width: 80px;
+}
+
 .sub-header {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -440,3 +444,14 @@ box-shadow: none;
     display: contents!important;
   }
  }
+ @media (max-width: 768px) {
+   div.under{
+    margin-left: 20px;
+    margin-right: 20px;
+   }
+ }
+
+ textarea{
+   border-color: grey;
+ }
+

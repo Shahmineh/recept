@@ -72,7 +72,10 @@ $(document).on('keyup', '#recipe-name', function() {
 }); 
 
 $(document).on('click', '#ravara-input', function() {
+  let val = $(this).val();
+  if(val.length > 0){  
     $(this).addClass('is-invalid');
+  }
 });
 
 $(document).on('keyup', '#ravara-input', function() {
@@ -81,7 +84,7 @@ $(document).on('keyup', '#ravara-input', function() {
      $(this).removeClass('is-invalid').addClass('is-valid');
    }
     else {
-      $(this).addClass('is-invalid').removeClass('is-valid');    
+      $(this).addClass('is-invalid').removeClass('is-valid');
    }
 });
 
