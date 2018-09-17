@@ -362,12 +362,12 @@ footer{
   color: #fff;
 }
 
-.btn.focus, .btn:hover{
+.submit-btn:hover{
   background-color:  #d8570c;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.btn.focus, .btn:focus{
+.submit-btn:focus{
 box-shadow: none;
 }
 
@@ -383,7 +383,7 @@ box-shadow: none;
 
 #browser-input{
   cursor: pointer;
-} 
+}  
 
 // SideNav
 .sidenav {
@@ -431,14 +431,10 @@ box-shadow: none;
     display: contents!important;
   }
  }
- @media (max-width: 768px) {
-   div.under{
-    margin-left: 20px;
-    margin-right: 20px;
-   }
- }
 
- textarea{
-   border-color: grey;
+ i.fa-times{
+  margin-top: 9px;
+  margin-right: 13px;
+  color: red;
+  cursor: pointer;
  }
-
