@@ -38,20 +38,21 @@ const categories = $.getJSON("../categories.json",
 $( "#add-ingredient-btn" ).click(function() {
     $( ".ingredients-out" ).append(`
     <div class="ingredients">
-                <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-                <input type="text" class="form-control mr-2" id="amount-input" placeholder="Gram">
-                <input disabled type="text" class="form-control mr-2" id="amount-disabled" placeholder="Mängd">
-                <select class="select-button custom-select" id="amount-select" required>
-                  <option selected>Mängd:</option>
-                  <option value="1">styck</option>
-                  <option value="2">liter</option>
-                  <option value="3">deciliter</option>
-                  <option value="3">matsked</option>
-                  <option value="3">tesked</option>
-                  <option value="3">kryddmått</option>
-                </select>
-            </div>
-              `);
+      <i class="fas fa-times" id="remove-btn"></i>
+      <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
+      <input type="text" class="form-control mr-2" id="amount-input" placeholder="Gram">
+      <input disabled type="text" class="form-control mr-2" id="amount-disabled" placeholder="Mängd">
+      <select class="select-button custom-select" id="amount-select" required>
+        <option selected>Mängd:</option>
+        <option value="1">styck</option>
+        <option value="2">liter</option>
+        <option value="3">deciliter</option>
+        <option value="3">matsked</option>
+        <option value="3">tesked</option>
+        <option value="3">kryddmått</option>
+      </select>
+    </div>
+      `);
   });   
 
   $( "#add-howto-btn" ).click(function() {
@@ -110,6 +111,8 @@ $(document).on('keyup', '#amount-input', function() {
    }
 });
 
-
+$(document).on('click', '#remove-btn', function(){
+  $(this).parent('div.ingredients').remove();
+})
 
 
