@@ -135,7 +135,6 @@ div.image-forms{
 }
 
 div.ingredients{
-  display: flex;
   margin-bottom: 15px;
 }
 
@@ -162,14 +161,11 @@ div.text-input{
   display: flex;
   align-items: baseline;
   padding-bottom: 15px;
+  width: 100%;
 }
 
 .text-input p{
   width: 20px;
-}
-
-div.how-to{
-  display: block;
 }
 
 footer{
@@ -433,8 +429,15 @@ box-shadow: none;
  }
 
  i.fa-times{
-  margin-top: 9px;
   margin-right: 13px;
   color: red; 
   cursor: pointer;
+ }
+
+ #remove-howto-btn{
+   margin-top: 16px;
+ }
+
+ #remove-ingredient-btn{
+  margin-top: 11px;
  }
