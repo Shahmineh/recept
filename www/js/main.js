@@ -38,7 +38,7 @@ const categories = $.getJSON("../categories.json",
 $( "#add-ingredient-btn" ).click(function() {
     $( ".ingredients-out" ).append(`
     <div class="ingredients d-flex">
-      <i class="fas fa-times" id="remove-btn"></i>
+      <i class="fas fa-times" id="remove-ingredient-btn"></i>
       <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
       <input type="text" class="form-control mr-2" id="amount-input" placeholder="Gram">
       <input disabled type="text" class="form-control mr-2" id="amount-disabled" placeholder="Mängd">
