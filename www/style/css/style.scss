@@ -54,7 +54,7 @@ body {
 
 .sub-categories-card{
   padding: 0;
-}
+} 
 
 .search-bar {
   position: absolute;
@@ -65,7 +65,7 @@ body {
   }
 }
 
-.card {
+.card { 
   width: 17rem;
 }
 
@@ -368,16 +368,31 @@ footer{
 box-shadow: none;
 }
 
+#add-ingredients-btn{
+  background-color:  #d3d3d3;
+  color: #000;
+}
+
 #add-ingredients-btn:hover{
   background-color:  #777777;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   color: #fff;
 }
 
+#howto-btn{
+  background-color:  #d3d3d3;
+  color: #000;
+}
+
 #howto-btn:hover{
   background-color:  #777777;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   color: #fff;
+}
+
+#button-add{
+  background-color:  #d3d3d3;
+  color: #000;
 }
 
 #button-add:hover{
