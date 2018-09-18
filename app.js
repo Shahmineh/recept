@@ -1,5 +1,19 @@
+
+const path = require('path');
+const absolutePathHere = __dirname;
+
+require('all-that-sass')({
+  watch:  path.join(absolutePathHere,'./sass'),
+  input:  path.join(absolutePathHere,'./sass/style.scss'),
+  output: path.join(absolutePathHere,'./www/style/css/style.css'),
+  reportErrors: true,
+  reportCompiles: true,
+  outputStyle: 'expanded'
+});
+
 // Require the express module
 const express = require('express');
+
 // Create a new web server
 const app = express();
 // Tell the web server to serve files

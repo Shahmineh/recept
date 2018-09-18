@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "all-that-sass": "^1.0.7",
     "express": "^4.16.3",
     "mongoose": "^5.2.13"
   },

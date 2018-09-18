@@ -11,8 +11,8 @@ package-lock.json
 style.css
 style.css.map
 www/style/css/style.css
-www/style/css/style.css
 www/style/css/style.css.map
-www/style/css/style.css.map
-www/style/css/style.css
 *.css
+.vscode/settings.json
+sass/recipe.scss
+sass/style.scss
