@@ -23,7 +23,7 @@ class App {
     }
     
     runTest(){
-        const test = new NutritionalValues(this.livsmedelDataIdHash, this.recipes).getNutricionalValues('Omlett - Enkelt recept');
+        const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes).getNutritionValues('Omlett - Enkelt recept');
         console.log(test);
         const auto = new AutoComplete(this.livsmedelData).filterAndSort('ägg');
         console.log(auto);

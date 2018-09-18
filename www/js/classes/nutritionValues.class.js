@@ -1,10 +1,10 @@
-class NutritionalValues {
+class NutritionValues {
     constructor(livsmedelDataIdHash, recipes){
         this.livsmedelDataIdHash = livsmedelDataIdHash;
         this.recipes = recipes;
     }
 
-    getNutricionalValues(recipeName){
+    getNutritionValues(recipeName){
         const desiredNutritionNames = [
             'Kolhydrater',
             'Protein',
@@ -21,4 +21,5 @@ class NutritionalValues {
             });
     }
 
+    // calculateNutricional
 }
