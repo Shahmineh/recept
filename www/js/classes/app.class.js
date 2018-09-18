@@ -23,10 +23,12 @@ class App {
     }
     
     runTest(){
-        const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes).getNutritionValues('Omlett - Enkelt recept');
-        console.log(test);
-        const auto = new AutoComplete(this.livsmedelData).filterAndSort('ägg');
-        console.log(auto);
+
+        const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
+        console.log(test.getNutritionValues('Omlett - Enkelt recept'));
+        console.log(test.getNutritionValues('Pam'));
+        // test.getNutritionValues('Pamlet');
+        // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
     }
 
     

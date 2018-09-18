@@ -27,19 +27,19 @@
                 "number": "1977",
                 "amount": null,
                 "unit": null,
-                "weight": null
+                "weight": 0
             },
             {
                 "number": "380",
                 "amount": null,
                 "unit": null,
-                "weight": null
+                "weight": 0
             }
         ]
 
     },
     {
-        "name": "Pamlet",
+        "name": "Pam",
         "time": "10min",
         "portions": 1,
         "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
@@ -47,27 +47,32 @@
             {
                 "number": "3840",
                 "amount": 2,
-                "unit": "stycken"
+                "unit": "stycken",
+                "weight": 300
             },
             {
                 "number": "123",
                 "amount": 2,
-                "unit": "msk"
+                "unit": "msk",
+                "weight": 400
             },
             {
                 "number": "29",
                 "amount": 1,
-                "unit": "tsk"
+                "unit": "tsk",
+                "weight": 200
             },
             {
                 "number": "1977",
                 "amount": null,
-                "unit": null
+                "unit": null,
+                "weight": 10
             },
             {
                 "number": "380",
                 "amount": null,
-                "unit": null
+                "unit": null,
+                "weight": 30
             }
         ]
 

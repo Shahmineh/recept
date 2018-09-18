@@ -14,12 +14,40 @@ class NutritionValues {
             'Summa enkelomättade fettsyror',
             'Summa fleromättade fettsyror'
         ];
-        return this.recipes.find(selectedRecipe => selectedRecipe.name == recipeName).
-            ingredients.map(ingredient => {
-                return this.livsmedelDataIdHash[ingredient.number].Naringsvarden.Naringsvarde
-                .filter(x => desiredNutritionNames.includes(x.Namn));
-            });
+
+        const selectedRecipe = this.recipes.find(recipe => recipe.name === recipeName);
+
+        const nutritionValues = selectedRecipe.
+        ingredients.map(ingredient => {
+            return this.livsmedelDataIdHash[ingredient.number].Naringsvarden.Naringsvarde
+            .filter(el => desiredNutritionNames.includes(el.Namn))
+            .reduce((acc, el) => {
+                const categoryName = el.Namn;
+                const categoryQuantity = parseFloat(el.Varde.replace(',','.'))*ingredient.weight/100;
+                console.log();
+                return {
+                    ...acc, 
+                    [categoryName]: categoryQuantity
+                }
+            }, {});
+        });
+        return this.calculateNutritionValues(nutritionValues, desiredNutritionNames, selectedRecipe);
     }
 
-    // calculateNutricional
+    calculateNutritionValues(nutritionValues, nutritionNames, selectedRecipe){
+        // console.log(nutritionNames);
+        // console.log(nutritionValues);
+        // console.log(selectedRecipe);
+
+        const result = nutritionNames.reduce((acc, nutritionCategory) =>{
+            let sum = nutritionValues.reduce((acc, elSum) =>{
+                return acc + elSum[nutritionCategory]
+            },0);
+            return {
+                ...acc,
+                [nutritionCategory]: sum.toFixed(2)
+            }
+        },{})
+        return result;
+    }
 }
