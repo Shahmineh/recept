@@ -43,8 +43,20 @@ function autoComplete(str) {
 }
 
 function getNutricionalValues(recipeName){
+    const desiredNutritionNames = [
+        'Kolhydrater',
+        'Protein',
+        'Salt',
+        'Fett',
+        'Summa mättade fettsyror',
+        'Summa enkelomättade fettsyror',
+        'Summa fleromättade fettsyror'
+    ];
     return recipes.find(selectedRecipe => selectedRecipe.name == recipeName).
-        ingredients.map(ingredient => livsmedelDataIdHash[ingredient.ingredientNumber]);
+        ingredients.map(ingredient => {
+            return livsmedelDataIdHash[ingredient.ingredientNumber].Naringsvarden.Naringsvarde
+            .filter(x => desiredNutritionNames.includes(x.Namn));
+        });
 }
 
 
