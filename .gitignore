@@ -14,5 +14,3 @@ www/style/css/style.css
 www/style/css/style.css.map
 *.css
 .vscode/settings.json
-sass/recipe.scss
-sass/style.scss
