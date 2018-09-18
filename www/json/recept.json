@@ -6,29 +6,34 @@
         "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
         "ingredients": [
             {
-                "ingredientNumber": "3840",
+                "number": "3840",
                 "amount": 2,
-                "unit": "stycken"
+                "unit": "stycken",
+                "weight": 200
             },
             {
-                "ingredientNumber": "123",
+                "number": "123",
                 "amount": 2,
-                "unit": "msk"
+                "unit": "msk",
+                "weight": 400
             },
             {
-                "ingredientNumber": "29",
+                "number": "29",
                 "amount": 1,
-                "unit": "tsk"
+                "unit": "tsk",
+                "weight": 200
             },
             {
-                "ingredientNumber": "1977",
+                "number": "1977",
                 "amount": null,
-                "unit": null
+                "unit": null,
+                "weight": null
             },
             {
-                "ingredientNumber": "380",
+                "number": "380",
                 "amount": null,
-                "unit": null
+                "unit": null,
+                "weight": null
             }
         ]
 
@@ -40,27 +45,27 @@
         "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
         "ingredients": [
             {
-                "ingredientNumber": "3840",
+                "number": "3840",
                 "amount": 2,
                 "unit": "stycken"
             },
             {
-                "ingredientNumber": "123",
+                "number": "123",
                 "amount": 2,
                 "unit": "msk"
             },
             {
-                "ingredientNumber": "29",
+                "number": "29",
                 "amount": 1,
                 "unit": "tsk"
             },
             {
-                "ingredientNumber": "1977",
+                "number": "1977",
                 "amount": null,
                 "unit": null
             },
             {
-                "ingredientNumber": "380",
+                "number": "380",
                 "amount": null,
                 "unit": null
             }
