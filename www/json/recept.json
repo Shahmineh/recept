@@ -2,7 +2,7 @@
     {
         "name": "Omlett - Enkelt recept",
         "time": "10min",
-        "portation": 1,
+        "portions": 1,
         "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
         "ingredients": [
             {
@@ -41,7 +41,7 @@
     {
         "name": "Pamlet",
         "time": "10min",
-        "portation": 1,
+        "portions": 1,
         "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
         "ingredients": [
             {
