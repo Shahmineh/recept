@@ -1,0 +1,70 @@
+[
+    {
+        "name": "Omlett - Enkelt recept",
+        "time": "10min",
+        "portation": 1,
+        "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
+        "ingredients": [
+            {
+                "ingredientNumber": "3840",
+                "amount": 2,
+                "unit": "stycken"
+            },
+            {
+                "ingredientNumber": "123",
+                "amount": 2,
+                "unit": "msk"
+            },
+            {
+                "ingredientNumber": "29",
+                "amount": 1,
+                "unit": "tsk"
+            },
+            {
+                "ingredientNumber": "1977",
+                "amount": null,
+                "unit": null
+            },
+            {
+                "ingredientNumber": "380",
+                "amount": null,
+                "unit": null
+            }
+        ]
+
+    },
+    {
+        "name": "Pamlet",
+        "time": "10min",
+        "portation": 1,
+        "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
+        "ingredients": [
+            {
+                "ingredientNumber": "3840",
+                "amount": 2,
+                "unit": "stycken"
+            },
+            {
+                "ingredientNumber": "123",
+                "amount": 2,
+                "unit": "msk"
+            },
+            {
+                "ingredientNumber": "29",
+                "amount": 1,
+                "unit": "tsk"
+            },
+            {
+                "ingredientNumber": "1977",
+                "amount": null,
+                "unit": null
+            },
+            {
+                "ingredientNumber": "380",
+                "amount": null,
+                "unit": null
+            }
+        ]
+
+    }
+]
