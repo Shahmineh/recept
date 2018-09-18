@@ -35,31 +35,36 @@ const categories = $.getJSON("../categories.json",
 
 );
 
-$( "#add-ingredients-btn" ).click(function() {
+$( "#add-ingredient-btn" ).click(function() {
     $( ".ingredients-out" ).append(`
-    <div class="ingredients">
-        <i class="fas fa-times"></i> 
-        <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-        <input type="text" class="form-control" id="amount-input" placeholder="">
-        <select class="select-button custom-select" id="amount-select" required>
-            <option selected>Mängd:</option>
-            <option value="1">styck</option>
-            <option value="2">liter</option>
-            <option value="3">deciliter</option>
-            <option value="3">matsked</option>
-            <option value="3">tesked</option>
-            <option value="3">kryddmått</option>
-        </select>
+    <div class="ingredients d-flex">
+      <i class="fas fa-times" id="remove-ingredient-btn"></i>
+      <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
+      <input type="text" class="form-control mr-2" id="amount-input" placeholder="Gram">
+      <input disabled type="text" class="form-control mr-2" id="amount-disabled" placeholder="Mängd">
+      <select class="select-button custom-select" id="amount-select" required>
+        <option selected>Mängd:</option>
+        <option value="1">styck</option>
+        <option value="2">liter</option>
+        <option value="3">deciliter</option>
+        <option value="3">matsked</option>
+        <option value="3">tesked</option>
+        <option value="3">kryddmått</option>
+      </select>
     </div>
-              `);
+      `);
   });   
 
-  $( "#howto-btn" ).click(function() {
-    $( ".how-to" ).append(`
+  $( "#add-howto-btn" ).click(function() {
+    $( ".how" ).append(`
+      <div class="how-to d-flex">
+        <i class="fas fa-times" id="remove-howto-btn"></i> 
+        <p class="textnumber mr-2"></p>
         <div class="text-input">
-        <textarea class="form-control-text" aria-label="With textarea"></textarea>
+          <textarea class="form-control-text" aria-label="With textarea"></textarea>
         </div>
-      `);
+      </div>
+    `);
   });   
 
 $(document).on('keyup', '#recipe-name', function() {
@@ -72,22 +77,25 @@ $(document).on('keyup', '#recipe-name', function() {
    }
 }); 
 
-$(document).on('click', '#ravara-input', function() {
-    $(this).addClass('is-invalid');
-});
-
 $(document).on('keyup', '#ravara-input', function() {
     let val = $(this).val();
    if(val.length > 0){
      $(this).removeClass('is-invalid').addClass('is-valid');
    }
     else {
-      $(this).addClass('is-invalid').removeClass('is-valid');    
+      $(this).removeClass('is-valid');
    }
 });
 
 $(document).on('keyup', '#ravara-input', function(){
+  let val = $(this).val();
+  if(val.length > 0){
     $('#amount-input').addClass('is-invalid');
+  }
+  else{
+    $('#amount-input').removeClass('is-invalid');
+  }
+
 })
 
 $(document).on('keyup', '#amount-input', function() {
@@ -96,10 +104,19 @@ $(document).on('keyup', '#amount-input', function() {
      $(this).removeClass('is-invalid').addClass('is-valid');
    }
     else {
-      $(this).addClass('is-invalid').removeClass('is-valid');    
+      $(this).removeClass('is-valid');    
    }
 });
 
+
+//Remove div
+$(document).on('click', '#remove-ingredient-btn', function(){
+  $(this).parent('div.ingredients').remove();
+})
+
+$(document).on('click', '#remove-howto-btn', function(){
+  $(this).parent('div.how-to').remove();
+})
 
 
 

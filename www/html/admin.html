@@ -48,7 +48,6 @@
           <div class="input-names">
             <div class="input-name input-group mb-3">
               <input type="text" class="form-control is-invalid" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name">
-              <button class="btn" type="button" id="button-add">Lägg till</button>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
           </div>
@@ -64,9 +63,10 @@
           </div>
           <div class="col forms">
             <form class="was-validated">
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Antal person:</label>
-                <select class="custom-select" id="persons" required>
+              <div class="form-group d-flex justify-content-between">
+                <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label>
+                <div>
+                <select class="custom-select" id="portions-select" required>
                   <option></option>
                   <option>1</option>
                   <option>2</option>
@@ -79,12 +79,14 @@
                   <option>9</option>
                   <option>10</option>
                 </select>
-                <div class="invalid-feedback">Välj antal personer</div>
+                <div class="invalid-feedback">Välj antal portioner</div>
+              </div>
               </div>
             </form> 
             <form class="was-validated">
-            <div class="form-group">
+            <div class="form-group d-flex justify-content-between">
               <label for="exampleFormControlSelect1">Tid:</label>
+              <div>
               <select class="custom-select" id="time" required>
                 <option></option>
                 <option>15 min</option>
@@ -95,60 +97,20 @@
                 <option>90 min</option>
               </select>
               <div class="invalid-feedback">Välj tid</div>
+              </div>
             </div>
           </form>
           </div>
         </div>
-       <div class="row under mt-4">
+       <div class="row under mt-4 d-flex justify-content-center">
          <div class="left col-md-12 col-lg-5">
            <h5>Ingredienser</h5>
            <div class="ingredients-out">
-            <div class="ingredients">
-                <i class="fas fa-times"></i>               
+            <div class="ingredients d-flex">
+                <i class="fas fa-times" id="remove-ingredient-btn"></i>               
                 <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-                <input type="text" class="form-control" id="amount-input" placeholder="">
-                <select class="select-button custom-select" id="amount-select" required>
-                  <option selected>Mängd:</option>
-                  <option value="1">styck</option>
-                  <option value="2">liter</option>
-                  <option value="3">deciliter</option>
-                  <option value="3">matsked</option>
-                  <option value="3">tesked</option>
-                  <option value="3">kryddmått</option>
-                </select>
-            </div>
-            <div class="ingredients">
-                <i class="fas fa-times"></i> 
-                <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-                <input type="text" class="form-control" id="amount-input" placeholder="">
-                <select class="select-button custom-select" id="amount-select" required>
-                  <option selected>Mängd:</option>
-                  <option value="1">styck</option>
-                  <option value="2">liter</option>
-                  <option value="3">deciliter</option>
-                  <option value="3">matsked</option>
-                  <option value="3">tesked</option>
-                  <option value="3">kryddmått</option>
-                </select>
-            </div>
-            <div class="ingredients">
-                <i class="fas fa-times"></i> 
-                <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-                <input type="text" class="form-control" id="amount-input" placeholder="">
-                <select class="select-button custom-select" id="amount-select" required>
-                  <option selected>Mängd:</option>
-                  <option value="1">styck</option>
-                  <option value="2">liter</option>
-                  <option value="3">deciliter</option>
-                  <option value="3">matsked</option>
-                  <option value="3">tesked</option>
-                  <option value="3">kryddmått</option>
-                </select>
-            </div>
-            <div class="ingredients">
-                <i class="fas fa-times"></i> 
-                <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-                <input type="text" class="form-control" id="amount-input" placeholder="">
+                <input type="text" class="form-control mr-2" id="amount-input" placeholder="Gram">
+                <input disabled type="text" class="form-control mr-2" id="amount-disabled" placeholder="Mängd">
                 <select class="select-button custom-select" id="amount-select" required>
                   <option selected>Mängd:</option>
                   <option value="1">styck</option>
@@ -161,37 +123,27 @@
             </div>
               </div>
               <div class="col my-1 mt-3">
-                <button class="btn" id="add-ingredients-btn">Lägg till</button></div>
+                <button class="btn admin-button" id="add-ingredient-btn">Lägg till</button></div>
             </div>
           <div class="right col-md-12 col-lg-6 mt-sm-4 mt-lg-0">
             <h5>Gör så här</h5>
-            <div class="input-group how-to">
-                
+            <div class="input-group d-block how">
+                <div class="how-to d-flex">
+                  <i class="fas fa-times" id="remove-howto-btn"></i> 
+                  <p class="textnumber mr-2"></p>
                   <div class="text-input">
                     <textarea class="form-control-text" aria-label="With textarea"></textarea>
                   </div>
-             
-                  <div class="text-input">
-                    <textarea class="form-control-text" aria-label="With textarea"></textarea>
-                  </div>
-            
-                  <div class="text-input">
-                    <textarea class="form-control-text" aria-label="With textarea"></textarea>
-                  </div>
-              
-                  <div class="text-input">
-                    <textarea class="form-control-text" aria-label="With textarea"></textarea>
-                  </div>
-              
+                </div>
             </div>
             <div class="col my-1 mt-3">
-              <button class="btn d-flex justify-content-end" id="howto-btn">Lägg till</button>
+              <button class="btn admin-button d-flex justify-content-end" id="add-howto-btn">Lägg till</button>
             </div>
           </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center m-5">
-              <button class="btn submit-btn" type="submit">Submit form</button>
+              <button class="btn submit-btn" type="submit">Lägg till recept</button>
             </div>  
           </div>
       </div>
