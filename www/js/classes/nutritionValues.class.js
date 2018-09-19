@@ -24,7 +24,6 @@ class NutritionValues {
             .reduce((acc, el) => {
                 const categoryName = el.Namn;
                 const categoryQuantity = parseFloat(el.Varde.replace(',','.'))*ingredient.weight/100;
-                console.log();
                 return {
                     ...acc, 
                     [categoryName]: categoryQuantity
