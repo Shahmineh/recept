@@ -37,7 +37,6 @@ class NutritionValues {
         // console.log(nutritionNames);
         // console.log(nutritionValues);
         // console.log(selectedRecipe.portions);
-
         const result = nutritionNames.reduce((acc, nutritionCategory) =>{
             let sum = nutritionValues.reduce((acc, elSum) =>{
                 return acc + elSum[nutritionCategory]

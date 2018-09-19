@@ -10,19 +10,29 @@ class App extends Base{
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
                 //filter the entire data to a smaller version
-
+               
+                // const nutritionNames = [
+                //     'Kolhydrater',
+                //     'Protein',
+                //     'Salt',
+                //     'Fett',
+                //     'Summa mättade fettsyror',
+                //     'Summa enkelomättade fettsyror',
+                //     'Summa fleromättade fettsyror'
+                // ];
                 // const hashMap = data.reduce((acc, curr) => {
-
-                //     return {
-                //         ...acc,
-                //         [curr.Nummer]: {
-                //             id: curr.Nummer,
-                //             facts: curr.Naringsvarden.Naringsvarde
-                //                 .filter()
-                //                 .map()
-                //         },
-                //     }
-                // }, {})
+                //     console.log(curr.Naringsvarden.Naringsvarde.filter(el => nutritionNames.includes(el.Namn)));
+                //     // return {
+                //     //     ...acc,
+                //     //     [curr.Nummer]: {
+                //     //         id: curr.Nummer,
+                //     //         facts: curr.Naringsvarden.Naringsvarde
+                //     //             .filter()
+                //     //             .map()
+                //     //     },
+                //     // }
+                // }, {});
+                // console.log(hashMap);
 
                 this.createIdHashForLivsmedelData();
                 $.getJSON('/json/recept.json', (data) => {
@@ -119,7 +129,7 @@ class App extends Base{
 
         const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
         console.log(test.getNutritionValues('Omlett - Enkelt recept'));
-        console.log(test.getNutritionValues('Pam'));
+        // console.log(test.getNutritionValues('Pam'));
         // test.getNutritionValues('Pamlet');
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
     }
