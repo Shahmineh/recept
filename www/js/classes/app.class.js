@@ -38,6 +38,13 @@ class App {
         let navbar = new Navbar();
         $('header').empty();
         navbar.render('header');
+
+
+
+        // Create pages
+        let startsidan = new Startsidan(this);
+        $('main').empty();
+        startsidan.render('main');
     }
 
     
