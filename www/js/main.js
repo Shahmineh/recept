@@ -1,15 +1,6 @@
 const app = new App();
 
 
-
-
-let instructionCounter = 1;
-
-appendHowTo();
-
-
-
-
 const categories = $.getJSON("/json/categories.json",
     function (data) {
         const categoryList = Object.keys(data).map(category => {
@@ -47,92 +38,7 @@ const categories = $.getJSON("/json/categories.json",
 
 );
 
-$( "#add-ingredient-btn" ).click(function() {
-    $( ".ingredients-outer" ).append(`
-    <div class="ingredients d-flex">
-      <i class="fas fa-times" id="remove-ingredient-btn"></i>
-      <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-      <input type="text" class="form-control mr-2" id="amount-input" placeholder="Mängd">
-      <select class="select-button custom-select" id="amount-select" required>
-        <option selected>Mängd:</option>
-        <option value="1">styck</option>
-        <option value="2">liter</option>
-        <option value="3">deciliter</option>
-        <option value="3">matsked</option>
-        <option value="3">tesked</option>
-        <option value="3">kryddmått</option>
-      </select>
-      <input type="text" class="form-control ml-2" id="gram-input" placeholder="Gram">
-    </div>
-      `);
-  });   
 
-  function appendHowTo(){
-    $( ".how" ).append(`
-    <div class="how-to">
-      <i class="fas fa-times" id="remove-howto-btn"></i> 
-      <p class="textnumber mr-2">${instructionCounter++}</p>
-      <div class="text-input">
-        <textarea class="form-control-text" aria-label="With textarea"></textarea>
-      </div>
-    </div>
-  `);
-  }
-
-  $( "#add-howto-btn" ).click(function() {
-    appendHowTo();
-  });   
-
-$(document).on('keyup', '#recipe-name', function() {
-   let val = $(this).val();
-   if(val.length > 0){
-     $(this).removeClass('is-invalid').addClass('is-valid');
-   }
-    else {
-      $(this).addClass('is-invalid').removeClass('is-valid');    
-   }
-}); 
-
-$(document).on('keyup', '#ravara-input', function() {
-    let val = $(this).val();
-   if(val.length > 0){
-     $(this).removeClass('is-invalid').addClass('is-valid');
-   }
-    else {
-      $(this).removeClass('is-valid');
-   }
-});
-
-$(document).on('keyup', '#ravara-input', function(){
-  let val = $(this).val();
-  if(val.length > 0){
-    $('#amount-input').addClass('is-invalid');
-  }
-  else{
-    $('#amount-input').removeClass('is-invalid');
-  }
-
-})
-
-$(document).on('keyup', '#amount-input', function() {
-    let val = $(this).val();
-   if(val.length > 0){
-     $(this).removeClass('is-invalid').addClass('is-valid');
-   }
-    else {
-      $(this).removeClass('is-valid');    
-   }
-});
-
-
-//Remove div
-$(document).on('click', '#remove-ingredient-btn', function(){
-  $(this).parent('div.ingredients').remove();
-})
-
-$(document).on('click', '#remove-howto-btn', function(){
-  $(this).parent('div.how-to').remove();
-})
 
 
 
