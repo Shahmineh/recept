@@ -36,8 +36,11 @@ class App {
 
     start(){
         let navbar = new Navbar();
+        let recipe = new Recipe();
         $('header').empty();
+        $('main').empty();
         navbar.render('header');
+        recipe.render('header');
     }
 
     
