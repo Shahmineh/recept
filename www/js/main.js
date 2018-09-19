@@ -69,7 +69,7 @@ $( "#add-ingredient-btn" ).click(function() {
 
   function appendHowTo(){
     $( ".how" ).append(`
-    <div class="how-to d-flex">
+    <div class="how-to">
       <i class="fas fa-times" id="remove-howto-btn"></i> 
       <p class="textnumber mr-2">${instructionCounter++}</p>
       <div class="text-input">
