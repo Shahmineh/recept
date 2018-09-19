@@ -6,13 +6,13 @@ class App extends Base{
         this.livsmedelDataIdHash = {};
         this.recipes;
         this.clickEvents();
+        this.start();
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
                 this.createIdHashForLivsmedelData();
                 $.getJSON('/json/recept.json', (data) => {
                     this.recipes = data;
                     this.runTest();
-                    this.start();
                 })
             }
         );
@@ -20,6 +20,9 @@ class App extends Base{
     }
 
     navigation(){
+        let navbar = new Navbar();
+        $('header').empty();
+        navbar.render('header');
         // get the current url
         let url = location.pathname;
         
@@ -107,15 +110,7 @@ class App extends Base{
     }
 
     start(){
-        let navbar = new Navbar();
-        
-        $('header').empty();
-        
-        navbar.render('header');
-
-
-
-        
+         
     }
 
     
