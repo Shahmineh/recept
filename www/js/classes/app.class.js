@@ -31,5 +31,6 @@ class App {
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
     }
 
-    
+
+
 }
