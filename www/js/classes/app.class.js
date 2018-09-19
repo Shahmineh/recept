@@ -4,6 +4,7 @@ class App {
         this.livsmedelData;
         this.livsmedelDataIdHash = {};
         this.recipes;
+        this.start();
         
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
@@ -36,7 +37,7 @@ class App {
                 $.getJSON('/json/recept.json', (data) => {
                     this.recipes = data;
                     this.runTest();
-                    this.start();
+                    
                 })
             }
         );
@@ -61,11 +62,13 @@ class App {
 
     start(){
         let navbar = new Navbar();
-        let recipe = new Recipe();
+        // let recipe = new Recipe();
+        let addRecipe = new AddRecipe();
         $('header').empty();
         $('main').empty();
         navbar.render('header');
-        recipe.render('header');
+        // recipe.render('header');
+        addRecipe.render('main');
     }
 
     
