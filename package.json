@@ -6,6 +6,7 @@
   "dependencies": {
     "all-that-sass": "^1.0.7",
     "express": "^4.16.3",
+    "jsonflex": "^1.0.10",
     "mongoose": "^5.2.13"
   },
   "devDependencies": {},
