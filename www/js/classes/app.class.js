@@ -40,7 +40,13 @@ class App {
         $('header').empty();
         $('main').empty();
         navbar.render('header');
-        recipe.render('header');
+
+
+
+        // Create pages
+        let startsidan = new Startsidan(this);
+        $('main').empty();
+        startsidan.render('main');
     }
 
     
