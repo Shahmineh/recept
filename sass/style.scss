@@ -108,73 +108,8 @@ div.input-name{
   width: 100%;
   padding-top: 50px;
 }
- 
-div.input-names{
-  width: 500px;
-  height: 150px;
-}
-
-i.far{
-  font-size: 50px;
-  display: flex;
-  align-items: center;
-  border: 1px solid lightgrey;
-}
-
-div.image-forms{
-  display: grid;
-  justify-content: center;
-}
-
-#uploader{
-  width: 300px;
-}
-
-#portions{
-  width: 120px;
-}
-
-#time{
-  width: 120px;
-}
-
-.select-button{
-  width: 100px;
-}
-
-div.ingredients{
-  margin-bottom: 15px;
-}
-
-div.amount{
-  display: flex;
-}
 
 
-/* @media only screen and (max-width: 700px) {
-  div.right {
-    margin-top: 60px;
-  }
-} */
-
-div.underleft{
-  padding-top: 50px;
-}
-
-.form-control-text{
-  width: 100%;
-}
-
-div.text-input{
-  display: flex;
-  align-items: baseline;
-  padding-bottom: 15px;
-  width: 100%;
-}
-
-.text-input p{
-  width: 20px;
-}
 
 footer{
   height: 100px;
@@ -310,14 +245,6 @@ footer{
   text-shadow: 2px 2px 2px #c0c0c0;
 } 
 
-#amount-input{
-  width: 80px;
-}
-
-#gram-input{
-  width: 80px;
-}
-
 .sub-header {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -359,61 +286,6 @@ footer{
 // div.form-group{
 //   height: 60px;
 // }
-
-.submit-btn{
-  background-color:#e26e21;
-  color: #fff;
-}
-
-.submit-btn:hover{
-  background-color:  #d8570c;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.submit-btn:focus{
-box-shadow: none;
-}
-
-#add-ingredients-btn{
-  background-color:  #d3d3d3;
-  color: #000;
-}
-
-#add-ingredients-btn:hover{
-  background-color:  #777777;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #fff;
-}
-
-#howto-btn{
-  background-color:  #d3d3d3;
-  color: #000;
-}
-
-#howto-btn:hover{
-  background-color:  #777777;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #fff;
-}
-
-#button-add{
-  background-color:  #d3d3d3;
-  color: #000;
-}
-
-#button-add:hover{
-  background-color:  #777777;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #fff;
-}
-
-.admin-container{
-  background-color: #fff
-}
-
-#browser-input{
-  cursor: pointer;
-}  
 
 // SideNav
 .sidenav {
@@ -462,16 +334,4 @@ box-shadow: none;
   }
  }
 
- i.fa-times{
-  margin-right: 13px;
-  color: red; 
-  cursor: pointer;
- }
 
- #remove-howto-btn{
-   margin-top: 16px;
- }
-
- #remove-ingredient-btn{
-  margin-top: 11px;
- }
