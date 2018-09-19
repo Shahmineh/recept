@@ -34,10 +34,10 @@ class App {
                 // console.log(hashMap);
 
                 this.createIdHashForLivsmedelData();
-                $.getJSON('/json/recept.json', (data) => {
+                $.getJSON('/json/recipe.json', (data) => {
                     this.recipes = data;
                     this.runTest();
-                    
+                    let addRecipe = new AddRecipe(this.recipes);    
                 })
             }
         );
@@ -54,7 +54,7 @@ class App {
     runTest(){
 
         const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
-        console.log(test.getNutritionValues('Omlett - Enkelt recept'));
+        // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
         // console.log(test.getNutritionValues('Pam'));
         // test.getNutritionValues('Pamlet');
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
@@ -63,12 +63,10 @@ class App {
     start(){
         let navbar = new Navbar();
         // let recipe = new Recipe();
-        let addRecipe = new AddRecipe();
         $('header').empty();
-        $('main').empty();
         navbar.render('header');
         // recipe.render('header');
-        addRecipe.render('main');
+        //addRecipe.render('main');
     }
 
     
