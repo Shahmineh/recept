@@ -1,5 +1,19 @@
+
+const path = require('path');
+const absolutePathHere = __dirname;
+
+require('all-that-sass')({
+  watch:  path.join(absolutePathHere,'./sass'),
+  input:  path.join(absolutePathHere,'./sass/style.scss'),
+  output: path.join(absolutePathHere,'./www/style/css/style.css'),
+  reportErrors: true,
+  reportCompiles: true,
+  outputStyle: 'expanded'
+});
+
 // Require the express module
 const express = require('express');
+
 // Create a new web server
 const app = express();
 // Tell the web server to serve files
@@ -7,28 +21,3 @@ const app = express();
 app.use(express.static('www'));
 // Start the web server on port 3000
 app.listen(3000,() => console.log('Listening on port 3000'));
-
-const mongoose = require('mongoose');
-
-/* mongoose.Promise = global.Promise;
-
-mongoose.connect("mongodb://localhost:27017/receptonaring", {
-  useNewUrlParser: true
-});
-
-let User = mongoose.model('User', {
-  email: String,
-  password: String
-});
-
-let user = new User({
-  email: "dennisek85@gmail.com",
-  password: 'test'
-});
-
-user.save().then((x)=>{
-    console.log('saved')
-  }, (e)=>{
-    console.log(e);
-  }
-) */
