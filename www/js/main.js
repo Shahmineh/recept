@@ -51,7 +51,7 @@ $( "#add-ingredient-btn" ).click(function() {
     <div class="ingredients d-flex">
       <i class="fas fa-times" id="remove-ingredient-btn"></i>
       <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-      <input type="text" class="form-control mr-2" id="amount-disabled" placeholder="Mängd">
+      <input type="text" class="form-control mr-2" id="amount-input" placeholder="Mängd">
       <select class="select-button custom-select" id="amount-select" required>
         <option selected>Mängd:</option>
         <option value="1">styck</option>
@@ -61,7 +61,7 @@ $( "#add-ingredient-btn" ).click(function() {
         <option value="3">tesked</option>
         <option value="3">kryddmått</option>
       </select>
-      <input type="text" class="form-control ml-2" id="amount-input" placeholder="Gram">
+      <input type="text" class="form-control ml-2" id="gram-input" placeholder="Gram">
     </div>
       `);
   });   
