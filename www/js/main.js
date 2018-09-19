@@ -1,4 +1,16 @@
-const categories = $.getJSON("../categories.json",
+const app = new App();
+
+
+
+
+let instructionCounter = 1;
+
+appendHowTo();
+
+
+
+
+const categories = $.getJSON("/json/categories.json",
     function (data) {
         const categoryList = Object.keys(data).map(category => {
             //Create sub category list
@@ -55,16 +67,20 @@ $( "#add-ingredient-btn" ).click(function() {
       `);
   });   
 
-  $( "#add-howto-btn" ).click(function() {
+  function appendHowTo(){
     $( ".how" ).append(`
-      <div class="how-to d-flex">
-        <i class="fas fa-times" id="remove-howto-btn"></i> 
-        <p class="textnumber mr-2"></p>
-        <div class="text-input">
-          <textarea class="form-control-text" aria-label="With textarea"></textarea>
-        </div>
+    <div class="how-to d-flex">
+      <i class="fas fa-times" id="remove-howto-btn"></i> 
+      <p class="textnumber mr-2">${instructionCounter++}</p>
+      <div class="text-input">
+        <textarea class="form-control-text" aria-label="With textarea"></textarea>
       </div>
-    `);
+    </div>
+  `);
+  }
+
+  $( "#add-howto-btn" ).click(function() {
+    appendHowTo();
   });   
 
 $(document).on('keyup', '#recipe-name', function() {
