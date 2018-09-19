@@ -35,8 +35,8 @@
                 "unit": null,
                 "weight": 0
             }
-        ]
-
+        ],
+        "steps": []
     },
     {
         "name": "Pam",
@@ -74,7 +74,7 @@
                 "unit": null,
                 "weight": 30
             }
-        ]
-
+        ],
+        "steps": []
     }
 ]

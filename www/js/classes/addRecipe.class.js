@@ -42,7 +42,7 @@ class AddRecipe extends Base {
     $( ".how" ).append(`
       <div class="how-to">
         <i class="fas fa-times" id="remove-howto-btn"></i> 
-        <p class="textnumber mr-2">${that.instructionCounter}</p>
+        <p class="textnumber mr-2">${that.instructionCounter +1}</p>
         <div class="text-input">
           <textarea class="form-control-text" aria-label="With textarea" id="instructions-text-${that.instructionCounter}" required></textarea>
         </div>
@@ -176,12 +176,22 @@ class AddRecipe extends Base {
           ]
         },[]);
 
+      let steps = Array(that.instructionCounter)
+      .fill({})
+      .reduce((acc, curr, index)=>{
+        return {
+          ...acc,
+          [index]: $(`#instructions-text-${index}`).val(),
+        }
+      },{});
+
       let recipe = {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
         portions: $('#portions-select').val(),
         description: 'Quisque ut dolor gravida, placerat libero vel, euismod.',
-        ingredients: ingredients
+        ingredients: ingredients,
+        steps: steps
       };
       that.formValidation(recipe);
     });
