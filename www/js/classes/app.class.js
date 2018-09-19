@@ -9,6 +9,21 @@ class App extends Base{
         this.start();
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
+                //filter the entire data to a smaller version
+
+                // const hashMap = data.reduce((acc, curr) => {
+
+                //     return {
+                //         ...acc,
+                //         [curr.Nummer]: {
+                //             id: curr.Nummer,
+                //             facts: curr.Naringsvarden.Naringsvarde
+                //                 .filter()
+                //                 .map()
+                //         },
+                //     }
+                // }, {})
+
                 this.createIdHashForLivsmedelData();
                 $.getJSON('/json/recept.json', (data) => {
                     this.recipes = data;
