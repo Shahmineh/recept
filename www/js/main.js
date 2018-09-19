@@ -1,14 +1,3 @@
-const app = new App();
-
-
-
-
-
-
-
-
-
-
 const categories = $.getJSON("/json/categories.json",
     function (data) {
         const categoryList = Object.keys(data).map(category => {
