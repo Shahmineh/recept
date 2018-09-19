@@ -3,8 +3,9 @@ const app = new App();
 
 
 
+let instructionCounter = 1;
 
-
+appendHowTo();
 
 
 
@@ -66,16 +67,20 @@ $( "#add-ingredient-btn" ).click(function() {
       `);
   });   
 
-  $( "#add-howto-btn" ).click(function() {
+  function appendHowTo(){
     $( ".how" ).append(`
-      <div class="how-to d-flex">
-        <i class="fas fa-times" id="remove-howto-btn"></i> 
-        <p class="textnumber mr-2"></p>
-        <div class="text-input">
-          <textarea class="form-control-text" aria-label="With textarea"></textarea>
-        </div>
+    <div class="how-to d-flex">
+      <i class="fas fa-times" id="remove-howto-btn"></i> 
+      <p class="textnumber mr-2">${instructionCounter++}</p>
+      <div class="text-input">
+        <textarea class="form-control-text" aria-label="With textarea"></textarea>
       </div>
-    `);
+    </div>
+  `);
+  }
+
+  $( "#add-howto-btn" ).click(function() {
+    appendHowTo();
   });   
 
 $(document).on('keyup', '#recipe-name', function() {
