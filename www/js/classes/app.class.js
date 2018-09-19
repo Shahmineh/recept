@@ -4,15 +4,18 @@ class App {
         this.livsmedelData;
         this.livsmedelDataIdHash = {};
         this.recipes;
+        
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
                 this.createIdHashForLivsmedelData();
                 $.getJSON('/json/recept.json', (data) => {
                     this.recipes = data;
                     this.runTest();
+                    this.start();
                 })
             }
         );
+        
     }
 
     // re-writes livesmedeldata for easier filtering
@@ -29,6 +32,12 @@ class App {
         console.log(test.getNutritionValues('Pam'));
         // test.getNutritionValues('Pamlet');
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
+    }
+
+    start(){
+        let navbar = new Navbar();
+        $('header').empty();
+        navbar.render('header');
     }
 
     
