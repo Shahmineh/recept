@@ -1,80 +1,105 @@
 [
-    {
-        "name": "Omlett - Enkelt recept",
-        "time": "10min",
-        "portions": 1,
-        "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
-        "ingredients": [
-            {
-                "number": "3840",
-                "amount": 2,
-                "unit": "stycken",
-                "weight": 200
-            },
-            {
-                "number": "123",
-                "amount": 2,
-                "unit": "msk",
-                "weight": 400
-            },
-            {
-                "number": "29",
-                "amount": 1,
-                "unit": "tsk",
-                "weight": 200
-            },
-            {
-                "number": "1977",
-                "amount": null,
-                "unit": null,
-                "weight": 0
-            },
-            {
-                "number": "380",
-                "amount": null,
-                "unit": null,
-                "weight": 0
-            }
-        ],
-        "steps": []
-    },
-    {
-        "name": "Pam",
-        "time": "10min",
-        "portions": 2,
-        "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
-        "ingredients": [
-            {
-                "number": "3840",
-                "amount": 2,
-                "unit": "stycken",
-                "weight": 300
-            },
-            {
-                "number": "123",
-                "amount": 2,
-                "unit": "msk",
-                "weight": 400
-            },
-            {
-                "number": "29",
-                "amount": 1,
-                "unit": "tsk",
-                "weight": 200
-            },
-            {
-                "number": "1977",
-                "amount": null,
-                "unit": null,
-                "weight": 10
-            },
-            {
-                "number": "380",
-                "amount": null,
-                "unit": null,
-                "weight": 30
-            }
-        ],
-        "steps": []
+  {
+    "name": "Omlett - Enkelt recept",
+    "time": "10min",
+    "portions": 1,
+    "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
+    "ingredients": [
+      {
+        "number": "3840",
+        "amount": 2,
+        "unit": "stycken",
+        "weight": 200
+      },
+      {
+        "number": "123",
+        "amount": 2,
+        "unit": "msk",
+        "weight": 400
+      },
+      {
+        "number": "29",
+        "amount": 1,
+        "unit": "tsk",
+        "weight": 200
+      },
+      {
+        "number": "1977",
+        "amount": null,
+        "unit": null,
+        "weight": 0
+      },
+      {
+        "number": "380",
+        "amount": null,
+        "unit": null,
+        "weight": 0
+      }
+    ],
+    "steps": []
+  },
+  {
+    "name": "Pam",
+    "time": "10min",
+    "portions": 2,
+    "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
+    "ingredients": [
+      {
+        "number": "3840",
+        "amount": 2,
+        "unit": "stycken",
+        "weight": 300
+      },
+      {
+        "number": "123",
+        "amount": 2,
+        "unit": "msk",
+        "weight": 400
+      },
+      {
+        "number": "29",
+        "amount": 1,
+        "unit": "tsk",
+        "weight": 200
+      },
+      {
+        "number": "1977",
+        "amount": null,
+        "unit": null,
+        "weight": 10
+      },
+      {
+        "number": "380",
+        "amount": null,
+        "unit": null,
+        "weight": 30
+      }
+    ],
+    "steps": []
+  },
+  {
+    "name": "Kalles tallrik",
+    "time": "5 min",
+    "portions": "2",
+    "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
+    "ingredients": [
+      {
+        "number": "Ägg",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "30"
+      },
+      {
+        "number": "Kaviar",
+        "amount": "2",
+        "unit": "matsked",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Dela äggen i halvor",
+      "1": "Fördela kaviar",
+      "2": "Servera"
     }
+  }
 ]
