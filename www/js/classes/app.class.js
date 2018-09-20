@@ -97,6 +97,11 @@ class App extends Base{
                 <h2>HTML/Render method here</h2>`
             );            
         }
+        if (url == '/addrecipe') {
+            let addRecipe = new addRecipe();
+            $('main').empty();
+            addRecipe.render('main');
+        }
     }
 
     clickEvents(){
