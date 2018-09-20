@@ -98,6 +98,18 @@ class AddRecipe extends Base {
           $(this).addClass('is-invalid').removeClass('is-valid');    
       }
     }); 
+    //Validation name-description
+    $(document).on('keyup', '#recipe-description', function() {
+      let val = $(this).val();
+      if(val.length > 0){
+        $(this).removeClass('is-invalid').addClass('is-valid');
+      }
+        else {
+          $(this).addClass('is-invalid').removeClass('is-valid');    
+      }
+    });
+
+
     //Validation portions
     $(document).on('change', '.portions-select', function() {
       let val = $(this).val();
@@ -189,7 +201,7 @@ class AddRecipe extends Base {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
         portions: $('#portions-select').val(),
-        description: 'Quisque ut dolor gravida, placerat libero vel, euismod.',
+        description: $('#recipe-description'),
         ingredients: ingredients,
         steps: steps
       };
