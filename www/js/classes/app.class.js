@@ -5,40 +5,15 @@ class App extends Base{
         this.livsmedelData;
         this.livsmedelDataIdHash = {};
         this.recipes;
+        this.clickEvents();
         this.start();
         
         $.getJSON("/json/livsmedel.json", (data) => {
-                this.livsmedelData = data;
-                //filter the entire data to a smaller version
-               
-                // const nutritionNames = [
-                //     'Kolhydrater',
-                //     'Protein',
-                //     'Salt',
-                //     'Fett',
-                //     'Summa mättade fettsyror',
-                //     'Summa enkelomättade fettsyror',
-                //     'Summa fleromättade fettsyror'
-                // ];
-                // const hashMap = data.reduce((acc, curr) => {
-                //     console.log(curr.Naringsvarden.Naringsvarde.filter(el => nutritionNames.includes(el.Namn)));
-                //     // return {
-                //     //     ...acc,
-                //     //     [curr.Nummer]: {
-                //     //         id: curr.Nummer,
-                //     //         facts: curr.Naringsvarden.Naringsvarde
-                //     //             .filter()
-                //     //             .map()
-                //     //     },
-                //     // }
-                // }, {});
-                // console.log(hashMap);
-
+                this.livsmedelData = data;  
                 this.createIdHashForLivsmedelData();
                 $.getJSON('/json/recipe.json', (data) => {
                     this.recipes = data;
-                    this.runTest();
-                    let addRecipe = new AddRecipe(this.recipes);    
+                    this.runTest();   
                 })
             }
         );
