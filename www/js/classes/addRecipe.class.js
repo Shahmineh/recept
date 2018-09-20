@@ -6,13 +6,12 @@ class AddRecipe extends Base {
     this.recipes = recipes;
     this.renderForm();
     this.eventHandler();
+    this.start();
   }
 
   renderForm(){
-    $('main').empty();
-    this.render('main');
-    this.addIngredient();
-    this.addInstruction();
+    console.log('HEJ');
+    
   }
 
   addIngredient(){
@@ -38,6 +37,7 @@ class AddRecipe extends Base {
   }
 
   addInstruction(){
+    console.log("I'm working")
     let that = this;
     $( ".how" ).append(`
       <div class="how-to">
@@ -195,6 +195,11 @@ class AddRecipe extends Base {
       };
       that.formValidation(recipe);
     });
+  }
+
+  start(){
+    this.addIngredient();
+    this.addInstruction();
   }
 }
 

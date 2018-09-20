@@ -62,7 +62,21 @@ Object.assign(AddRecipe.prototype, { template(){return `
          <div class="left col-md-12 col-lg-5">
            <div class="small-five"><small>Lägg till dina ingredienser nedan. Ange råvara, mängd och mängd i gram. Lägg till fler råvaror med lägg till-knappen. Ta bort med krysset till vänster.</small></div>
            <div class="ingredients-outer">
-            
+            <div class="ingredients d-flex">
+              <i class="fas fa-times" id="remove-ingredient-btn"></i>
+              <input type="text" class="form-control mr-2 ravara-input" id="ravara-input-0" placeholder="Råvara" required>
+              <input type="text" class="form-control mr-2 amount-input" id="amount-input-0" placeholder="Mängd" required>
+              <select class="select-button custom-select amount-select" id="amount-select-0" required>
+                <option selected value="null">Mängd:</option>
+                <option value="styck">styck</option>
+                <option value="liter">liter</option>
+                <option value="deciliter">deciliter</option>
+                <option value="matsked">matsked</option>
+                <option value="tesked">tesked</option>
+                <option value="kryddmått">kryddmått</option>
+              </select>
+              <input type="text" class="form-control ml-2 gram-input" id="gram-input-0}" placeholder="Gram" required>
+            </div> 
            </div>
               <div class="col my-1 mt-3">
                 <button class="btn admin-button" id="add-ingredient-btn" type="button">Lägg till</button></div>
@@ -70,7 +84,13 @@ Object.assign(AddRecipe.prototype, { template(){return `
           <div class="right col-md-12 col-lg-6 mt-sm-4 mt-lg-0">
             <div class="small-six"><small>Här nedan beskriver du tillvägagångssättet steg för steg. Var kortfattad. Max 100 ord i varje ruta. Lägg till textruta med lägg till-knappen och ta bort med krysset till vänster.</small></div>
             <div class="input-1group d-block how">
-              
+              <div class="how-to">
+                <i class="fas fa-times" id="remove-howto-btn"></i> 
+                <p class="textnumber mr-2">1</p>
+                <div class="text-input">
+                  <textarea class="form-control-text" aria-label="With textarea" id="instructions-text-0" required></textarea>
+                </div>
+              </div>  
             </div>
             <div class="col my-1 mt-3">
               <button class="btn admin-button d-flex justify-content-end" id="add-howto-btn" type="button">Lägg till</button>
