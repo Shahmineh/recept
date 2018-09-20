@@ -3,12 +3,21 @@ Object.assign(AddRecipe.prototype, { template(){return `
       <form class="needs-validation" novalidate>
         <div class="row justify-content-center">
           <div class="input-names">
-            <div class="input-name input-group mb-3">
+            <div class="input-name input-group">
               <input type="text" class="form-control" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
+            <small>Namne ge ditt recept med ett lockande namn. Max 30 ord.</small>
           </div>
         </div>  
+        <div class="row recipe-description justify-content-center">
+          <div class="input-names">
+            <div class="input-name input-group">
+              <input type="text" class="form-control" id="recipe-description" placeholder="Beskriv recpetet här">
+            </div>
+            <small>Beskriv ditt recept kortfattat här. Max 3 meningar.</small>
+          </div>
+        </div>
         <div class="row image-forms justify-content-center d-grid">
           <div class="col mb-3">
             <i class="far fa-images justify-content-center p-5"></i>
