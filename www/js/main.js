@@ -13,9 +13,9 @@ const categories = $.getJSON("/json/categories.json",
                     <li class="nav-item">
                         <a class="nav-link active btn-category" href="#">${subCategory}</a>
                     </li>`;
-            }).join('');
-
-
+            }).join('');    
+        });
+    })
 
 // const categories = $.getJSON("/json/categories.json",
 //     function (data) {
