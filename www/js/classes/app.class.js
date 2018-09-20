@@ -73,9 +73,9 @@ class App extends Base{
             );            
         }
         if (url == '/addrecipe') {
-            let addRecipe = new addRecipe();
+            let addrecipe = new AddRecipe();
             $('main').empty();
-            addRecipe.render('main');
+            addrecipe.render('main');
         }
     }
 
