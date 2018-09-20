@@ -7,7 +7,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
               <input type="text" class="form-control" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
-            <small>Namne ge ditt recept med ett lockande namn. Max 30 ord.</small>
+            <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small></div>
           </div>
         </div>  
         <div class="row recipe-description justify-content-center">
@@ -15,7 +15,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="input-name input-group">
               <input type="text" class="form-control" id="recipe-description" placeholder="Beskriv recpetet här">
             </div>
-            <small>Beskriv ditt recept kortfattat här. Max 3 meningar.</small>
+            <div class="small-two"><small>Beskriv ditt recept kortfattat här. Max 3 meningar.</small></div>
           </div>
         </div>
         <div class="row image-forms justify-content-center d-grid">
@@ -28,6 +28,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
           </div>
           <div class="col forms">
+            <div class="small-three"><small>Välj nedan hur många portioner ditt recept ska </small></div>
               <div class="form-group d-flex justify-content-between">
                 <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label>
                 <div>
@@ -47,6 +48,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
                 <div class="invalid-feedback">Välj antal portioner</div>
               </div>
               </div>
+            <div class="small-four"><small>Ange hur lång tid det kommer ta att laga receptet</small></div>
             <div class="form-group d-flex justify-content-between">
               <label for="exampleFormControlSelect1">Tid:</label>
               <div>
@@ -58,7 +60,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
         </div>
        <div class="row under mt-4 d-flex justify-content-center">
          <div class="left col-md-12 col-lg-5">
-           <h5>Ingredienser</h5>
+           <div class="small-five"><small>Lägg till dina ingredienser nedan. Ange råvara, mängd och mängd i gram. Lägg till fler råvaror med lägg till-knappen. Ta bort med krysset till vänster.</small></div>
            <div class="ingredients-outer">
             
            </div>
@@ -66,7 +68,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
                 <button class="btn admin-button" id="add-ingredient-btn" type="button">Lägg till</button></div>
             </div>
           <div class="right col-md-12 col-lg-6 mt-sm-4 mt-lg-0">
-            <h5>Gör så här</h5>
+            <div class="small-six"><small>Här nedan beskriver du tillvägagångssättet steg för steg. Var kortfattad. Max 100 ord i varje ruta. Lägg till textruta med lägg till-knappen och ta bort med krysset till vänster.</small></div>
             <div class="input-1group d-block how">
               
             </div>
