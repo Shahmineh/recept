@@ -1,6 +1,7 @@
 @import "recipe.scss";
 @import "nav.scss";
 @import "addRecipe.scss";
+@import "startsidan.scss";
 
 
 header {
@@ -24,22 +25,22 @@ body {
   background-color: #f0f0f0;
 }
 
-.logga {
-  width: 140px; 
-}
+// .logga {
+//   width: 140px; 
+// }
  
-.navbar-nav {
-  font-size: 15px;
-  margin-left: 40px;
-}
+// .navbar-nav {
+//   font-size: 15px;
+//   margin-left: 40px;
+// }
 
-.nav-item {
-  margin-left: 20px;
-}
+// .nav-item {
+//   margin-left: 20px;
+// }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: #e26e21;
-}
+// .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+//   color: #e26e21;
+// }
 
 .side-menu-wrapper{
   height: 100vh;
@@ -65,45 +66,21 @@ body {
   padding: 0;
 } 
 
-.search-bar {
-  position: absolute;
-  top: 50%;
-  left: 42%;
-  @media screen and (max-width: 768px) {
-    position: unset;
-  }
-}
+// .search-bar {
+//   position: absolute;
+//   top: 50%;
+//   left: 42%;
+//   @media screen and (max-width: 768px) {
+//     position: unset;
+//   }
+// }
 
 .card { 
   width: 17rem;
 }
 
-.border-control {
-  border-left: 2px solid;
-}
-
-.recipe-layout {
-  padding: 0 0 7px 7px;
-  font-size: 1.2rem;
-}
- 
-.ingredient-control {
-  list-style: none;
-}
-
-.ingredient-layout {
-  padding: 0 0 7px 0 !important;
-  font-size: 1.2rem;
-}
-
-.recipe-background {
-  background-color: #fff;
-}
-
 header {
   background-color: rgb(236, 236, 236);}
-
-
 
 div.input-name{
   width: 100%;
@@ -245,6 +222,14 @@ footer{
   text-shadow: 2px 2px 2px #c0c0c0;
 } 
 
+#amount-input{
+  width: 80px;
+}
+
+#amount-disabled{
+  width: 80px;
+}
+
 .sub-header {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -255,21 +240,11 @@ footer{
   font-weight: 500;
 }
 
-.recipe-header {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-  font-size: 2.75rem !important;
-}
-
 .cook-time {
   font-weight: 500;
   font-size: 1.25rem !important;
 }
 
-.recipe-summary {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.5rem;
-}
 .sum-little-text {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -286,6 +261,61 @@ footer{
 // div.form-group{
 //   height: 60px;
 // }
+
+.submit-btn{
+  background-color:#e26e21;
+  color: #fff;
+}
+
+.submit-btn:hover{
+  background-color:  #d8570c;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.submit-btn:focus{
+box-shadow: none;
+}
+
+#add-ingredients-btn{
+  background-color:  #d3d3d3;
+  color: #000;
+}
+
+#add-ingredients-btn:hover{
+  background-color:  #777777;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #fff;
+}
+
+#howto-btn{
+  background-color:  #d3d3d3;
+  color: #000;
+}
+
+#howto-btn:hover{
+  background-color:  #777777;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #fff;
+}
+
+#button-add{
+  background-color:  #d3d3d3;
+  color: #000;
+}
+
+#button-add:hover{
+  background-color:  #777777;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #fff;
+}
+
+.admin-container{
+  background-color: #fff
+}
+
+#browser-input{
+  cursor: pointer;
+}  
 
 // SideNav
 .sidenav {
@@ -335,3 +365,7 @@ footer{
  }
 
 
+
+ #remove-ingredient-btn{
+  margin-top: 11px;
+ }
