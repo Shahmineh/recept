@@ -1,7 +1,12 @@
 @import "recipe.scss";
 @import "nav.scss";
+@import "addRecipe.scss";
 @import "startsidan.scss";
 
+
+header {
+  color: yellow;
+}
 
 #search{
   width: 90%;
@@ -81,73 +86,8 @@ div.input-name{
   width: 100%;
   padding-top: 50px;
 }
- 
-div.input-names{
-  width: 500px;
-  height: 150px;
-}
-
-i.far{
-  font-size: 50px;
-  display: flex;
-  align-items: center;
-  border: 1px solid lightgrey;
-}
-
-div.image-forms{
-  display: grid;
-  justify-content: center;
-}
-
-#uploader{
-  width: 300px;
-}
-
-#portions{
-  width: 120px;
-}
-
-#time{
-  width: 120px;
-}
-
-.select-button{
-  width: 100px;
-}
-
-div.ingredients{
-  margin-bottom: 15px;
-}
-
-div.amount{
-  display: flex;
-}
 
 
-/* @media only screen and (max-width: 700px) {
-  div.right {
-    margin-top: 60px;
-  }
-} */
-
-div.underleft{
-  padding-top: 50px;
-}
-
-.form-control-text{
-  width: 100%;
-}
-
-div.text-input{
-  display: flex;
-  align-items: baseline;
-  padding-bottom: 15px;
-  width: 100%;
-}
-
-.text-input p{
-  width: 20px;
-}
 
 footer{
   height: 100px;
@@ -290,6 +230,11 @@ footer{
   width: 80px;
 }
 
+.sub-header {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
 .little-box-text {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -372,6 +317,38 @@ box-shadow: none;
   cursor: pointer;
 }  
 
+// SideNav
+.sidenav {
+  height: 100vh;
+  width: 160px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  @media screen and (max-width: 576px) {
+    width: 100vw;
+    height: 100%;
+  }
+ }
+ 
+ .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  display: block;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+  }
+ }
+ 
+ .sidenav a:hover {
+  color: #e26e21;
+ }
+
  .d-flex {
   @media screen and (max-width: 576px) {
     display: block !important;
@@ -387,18 +364,8 @@ box-shadow: none;
   }
  }
 
- i.fa-times{
-  margin-right: 13px;
-  color: red; 
-  cursor: pointer;
- }
 
- #remove-howto-btn{
-   margin-top: 16px;
- }
 
  #remove-ingredient-btn{
   margin-top: 11px;
  }
-
- 

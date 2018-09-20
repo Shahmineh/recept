@@ -87,7 +87,9 @@
             <div class="form-group d-flex justify-content-between">
               <label for="exampleFormControlSelect1">Tid:</label>
               <div>
-              <select class="custom-select" id="time" required>
+              <input type="text" class="form-control mr-2" id="time-input" placeholder="Tid">
+              
+              <!-- <select class="custom-select" id="time" required>
                 <option></option>
                 <option>15 min</option>
                 <option>30 min</option>
@@ -95,7 +97,7 @@
                 <option>60 min</option>
                 <option>75 min</option>
                 <option>90 min</option>
-              </select>
+              </select> -->
               <div class="invalid-feedback">Välj tid</div>
               </div>
             </div>
@@ -105,21 +107,24 @@
        <div class="row under mt-4 d-flex justify-content-center">
          <div class="left col-md-12 col-lg-5">
            <h5>Ingredienser</h5>
-           <div class="ingredients-out">
+           <div class="ingredients-outer">
             <div class="ingredients d-flex">
                 <i class="fas fa-times" id="remove-ingredient-btn"></i>               
                 <input type="text" class="form-control mr-2" id="ravara-input" placeholder="Råvara">
-                <input type="text" class="form-control mr-2" id="amount-input" placeholder="Gram">
-                <input disabled type="text" class="form-control mr-2" id="amount-disabled" placeholder="Mängd">
+                <input type="text" class="form-control mr-2" id="amount-input" placeholder="Mängd">
                 <select class="select-button custom-select" id="amount-select" required>
                   <option selected>Mängd:</option>
-                  <option value="1">styck</option>
-                  <option value="2">liter</option>
-                  <option value="3">deciliter</option>
-                  <option value="3">matsked</option>
-                  <option value="3">tesked</option>
-                  <option value="3">kryddmått</option>
+                  <option value="1">st</option>
+                  <option value="2">l</option>
+                  <option value="3">dl</option>
+                  <option value="4">msk</option>
+                  <option value="5">tsk</option>
+                  <option value="6">kryddmått</option>
+                  <option value="7">gram</option>
+
+
                 </select>
+                <input type="text" class="form-control ml-2" id="gram-input" placeholder="Gram">
             </div>
               </div>
               <div class="col my-1 mt-3">
@@ -127,14 +132,8 @@
             </div>
           <div class="right col-md-12 col-lg-6 mt-sm-4 mt-lg-0">
             <h5>Gör så här</h5>
-            <div class="input-group d-block how">
-                <div class="how-to d-flex">
-                  <i class="fas fa-times" id="remove-howto-btn"></i> 
-                  <p class="textnumber mr-2"></p>
-                  <div class="text-input">
-                    <textarea class="form-control-text" aria-label="With textarea"></textarea>
-                  </div>
-                </div>
+            <div class="input-1group d-block how">
+               
             </div>
             <div class="col my-1 mt-3">
               <button class="btn admin-button d-flex justify-content-end" id="add-howto-btn">Lägg till</button>
@@ -155,6 +154,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
+    <!-- Application specific JavaScript -->
+    <script src="/js/classes/app.class.js"></script>
+    <script src="/js/classes/nutritionValues.class.js"></script>
+    <script src="/js/classes/autoComplete.class.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

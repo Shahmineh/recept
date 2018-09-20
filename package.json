@@ -5,7 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "all-that-sass": "^1.0.7",
+    "compression": "^1.7.3",
     "express": "^4.16.3",
+    "jsonflex": "^1.0.10",
     "mongoose": "^5.2.13"
   },
   "devDependencies": {},
