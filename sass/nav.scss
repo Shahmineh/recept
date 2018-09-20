@@ -37,6 +37,7 @@ header {
  .max-100 {
     max-height: 100vh;
     overflow: auto;
+    overflow-x: hidden;
     @media screen and (max-width: 576px) {
       max-height: fit-content;
     }
