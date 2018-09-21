@@ -1,10 +1,12 @@
 class AddRecipe extends Base {
-  constructor(recipes){
+  constructor(recipes, ingredients){
     super();
     this.ingredientCounter;
     this.instructionCounter;
     this.recipes = recipes;
+    this.ingredients = ingredients;
     this.imagePath;
+    this.filter = new Filter(this.ingredients, this.recipes);
     this.eventHandler();
   }
 
@@ -193,7 +195,8 @@ class AddRecipe extends Base {
     }); 
     //Validation ingredient
     $(document).on('keyup', '.ravara-input', function() {
-      let val = $(this).val();
+      let val = that.filter.filterIngredients($(this).val());
+      console.log(val);
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');
 
