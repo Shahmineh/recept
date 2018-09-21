@@ -14,7 +14,7 @@ class App extends Base{
                     this.recipes = data;
                     this.runTest();
                     this.addRecipe = new AddRecipe(this.recipes);
-                    this.search = new Search(this.recipes);
+                    // this.search = new Search(this.recipes);
                     this.navigation();
                 })
             }
