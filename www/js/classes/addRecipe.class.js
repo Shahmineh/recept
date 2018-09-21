@@ -18,10 +18,10 @@ class AddRecipe extends Base {
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
         <i class="fas fa-times" id="remove-ingredient-btn"></i>
-        <input type="text" class="form-control mr-2 ravara-input" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
+        <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
         <input type="text" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
-        <select class="select-button custom-select amount-select" id="amount-select-${that.ingredientCounter}" required>
-          <option selected value="null">Mängd:</option>
+        <select class="custom-select amount-select" id="amount-select-${that.ingredientCounter}" required>
+          <option selected value="">Mängd:</option>
           <option value="styck">styck</option>
           <option value="liter">liter</option>
           <option value="deciliter">deciliter</option>
@@ -92,7 +92,7 @@ class AddRecipe extends Base {
 
     //  ALL VALIDATIONS NEED A BIT OF IMPROVEMENT, SPECIALLY VALIDATING BY DATA TYPE
     //Validation name
-    $(document).on('keyup', '#recipe-name', function() {
+    $(document).on('keyup', '.recipe-name', function() {
       let val = $(this).val();
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');
@@ -102,7 +102,7 @@ class AddRecipe extends Base {
       }
     }); 
     //Validation name-description
-    $(document).on('keyup', '#recipe-description', function() {
+    $(document).on('keyup', '.recipe-description', function() {
       let val = $(this).val();
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');

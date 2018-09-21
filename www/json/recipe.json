@@ -101,5 +101,41 @@
       "1": "Fördela kaviar",
       "2": "Servera"
     }
+  },
+  {
+    "name": "hej",
+    "time": "10 min",
+    "portions": "1",
+    "description": "he",
+    "ingredients": [
+      {
+        "number": "hej",
+        "amount": "hejh",
+        "unit": "styck",
+        "weight": "hej"
+      }
+    ],
+    "steps": {
+      "0": "hejehejehje",
+      "1": "hejd"
+    }
+  },
+  {
+    "name": "Paulina lasagne",
+    "time": "30 min",
+    "portions": "2",
+    "description": "God vegetarisk lasagne som går fort att laga.",
+    "ingredients": [
+      {
+        "number": "Lasagne",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "300"
+      }
+    ],
+    "steps": {
+      "0": "Köp Coops frysta vegetariska lasagne",
+      "1": "Tillaga i ugnen i 30 min"
+    }
   }
 ]
