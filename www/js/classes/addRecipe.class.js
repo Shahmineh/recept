@@ -6,7 +6,6 @@ class AddRecipe extends Base {
     this.recipes = recipes;
     this.ingredients = ingredients;
     this.imagePath;
-    this.tags = Object.values(this.ingredients).map(item=>item.Namn);
     this.filter = new Filter(this.ingredients, this.recipes);
     this.eventHandler();
   }
@@ -21,26 +20,32 @@ class AddRecipe extends Base {
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
         <i class="fas fa-times" id="remove-ingredient-btn"></i>
-        <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
-        <input type="text" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
-        <select class="custom-select amount-select" id="amount-select-${that.ingredientCounter}" required>
-          <option selected value="">Mängd:</option>
-          <option value="styck">styck</option>
-          <option value="liter">liter</option>
-          <option value="deciliter">deciliter</option>
-          <option value="matsked">matsked</option>
-          <option value="tesked">tesked</option>
-          <option value="kryddmått">kryddmått</option>
-        </select>
-        <input type="text" class="form-control ml-2 gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
+        <div class="flex-column">
+          <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
+          <div class="invalid-feedback">Fyll i här</div>
+        </div>
+        <div class="flex-column">
+          <input type="text" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+          <div class="invalid-feedback">Fyll i här</div>
+        </div>
+        <div class="flex-column">
+          <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
+            <option selected value="">Mängd:</option>
+            <option value="styck">styck</option>
+            <option value="liter">liter</option>
+            <option value="deciliter">deciliter</option>
+            <option value="matsked">matsked</option>
+            <option value="tesked">tesked</option>
+            <option value="kryddmått">kryddmått</option>
+          </select>
+          <div class="invalid-feedback">Fyll i här</div>
+        </div>
+        <div class="flex-column">
+          <input type="text" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
+          <div class="invalid-feedback">Fyll i här</div>
+          </div>
       </div>
-      <div id="data-ravara-input-${that.ingredientCounter}"></div>
     `);
-    
-    // Object.values(that.ingredients).map(item=>{
-    //   return $(`#data-ravara-input-${that.ingredientCounter}`).append(`<option value="${item.Namn}"></option>`);
-    // });
-
     that.ingredientCounter++;
   }
 
@@ -50,9 +55,11 @@ class AddRecipe extends Base {
       <div class="how-to">
         <i class="fas fa-times" id="remove-howto-btn"></i> 
         <p class="textnumber mr-2">${that.instructionCounter +1}</p>
-        <div class="text-input">
-          <textarea class="form-control-text" aria-label="With textarea" id="instructions-text-${that.instructionCounter}" required></textarea>
+        <div class="text-input flex-column">
+          <textarea class="form-control form-control-text" aria-label="With textarea" id="instructions-text-${that.instructionCounter}" required></textarea>
+          <div class="invalid-feedback">Skriv instruktioner här.</div> 
         </div>
+        
       </div>
     `);
     that.instructionCounter++;
@@ -187,18 +194,9 @@ class AddRecipe extends Base {
       }
     }); 
     //Validation ingredient
-    $(document).on('keyup', '.ravara-input', function(event) {
-      let val = $(this).val();
-      let inputHits = that.filter.filterIngredientsByName(val);
-      $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
-      val.length > 2 ? inputHits.map(item=>{
-        let hit = Object.values(that.ingredients).filter(el=>el.Namn==item)[0];
-        return $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
-          <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${hit.Nummer}" type="button" data-id="${hit.Nummer}">
-            ${hit.Namn}
-          </button>
-        `);
-      }) : null;
+    $(document).on('keyup', '.ravara-input', function() {
+      let val = that.filter.filterIngredients($(this).val());
+      console.log(val);
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');
 
@@ -207,15 +205,6 @@ class AddRecipe extends Base {
         $(this).removeClass('is-valid').addClass('is-invalid');
       }
     });
-    $(document).on('click', '.button-data-ravara-input', function(event){
-      let id = $(this).attr('data-id');
-      let name = $(this).text().trim();
-      // $(`#ravara-input-${that.ingredientCounter-1}`).empty();
-      $(`#ravara-input-${that.ingredientCounter-1}`).val(name);
-      console.log(name);
-      console.log(id);
-    });
-
     //Validation amount
     $(document).on('keyup', '.amount-input', function(){
       let val = $(this).val();
@@ -246,7 +235,16 @@ class AddRecipe extends Base {
         $(this).removeClass('is-valid').addClass('is-invalid');
       }
     });
-
+    //Validation instrcutions
+    $(document).on('keyup', '.form-control-text', function(){
+      let val = $(this).val();
+      if(val.length > 0){
+        $(this).removeClass('is-invalid').addClass('is-valid');
+      }
+      else{
+        $(this).removeClass('is-valid').addClass('is-invalid');
+      }
+    });
     //Submit
     $(document).on('click', '#submit-btn', function(){
       let ingredients = Array(that.ingredientCounter)
