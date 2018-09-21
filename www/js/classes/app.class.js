@@ -6,43 +6,17 @@ class App extends Base{
         this.livsmedelDataIdHash = {};
         this.recipes;
         this.start();
-        
+        this.clickEvents();
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
-                //filter the entire data to a smaller version
-               
-                // const nutritionNames = [
-                //     'Kolhydrater',
-                //     'Protein',
-                //     'Salt',
-                //     'Fett',
-                //     'Summa mättade fettsyror',
-                //     'Summa enkelomättade fettsyror',
-                //     'Summa fleromättade fettsyror'
-                // ];
-                // const hashMap = data.reduce((acc, curr) => {
-                //     console.log(curr.Naringsvarden.Naringsvarde.filter(el => nutritionNames.includes(el.Namn)));
-                //     // return {
-                //     //     ...acc,
-                //     //     [curr.Nummer]: {
-                //     //         id: curr.Nummer,
-                //     //         facts: curr.Naringsvarden.Naringsvarde
-                //     //             .filter()
-                //     //             .map()
-                //     //     },
-                //     // }
-                // }, {});
-                // console.log(hashMap);
-
                 this.createIdHashForLivsmedelData();
                 $.getJSON('/json/recipe.json', (data) => {
                     this.recipes = data;
                     this.runTest();
-                    let addRecipe = new AddRecipe(this.recipes);    
                 })
             }
         );
-        
+        this.addRecipe = new AddRecipe(this.recipes);
     }
 
     navigation(){
@@ -97,14 +71,17 @@ class App extends Base{
                 <h2>HTML/Render method here</h2>`
             );            
         }
+        if (url == '/lagg-recept') {
+            $('main').empty();
+            this.addRecipe.reset();
+            this.addRecipe.render('main');
+            this.addRecipe.addIngredient(); 
+            this.addRecipe.addInstruction(); 
+        }
     }
 
     clickEvents(){
         let that = this;
-        //Add item
-        $(document).on("click", '#btn-add-allTasks', function() {
-            item.addItem(currentTab);
-        });
         //Navigation
         $(document).on('click','a.nav-btn',function(e){
             //Create a push state preventDefault
@@ -137,11 +114,8 @@ class App extends Base{
 
     start(){
         let navbar = new Navbar();
-        // let recipe = new Recipe();
         $('header').empty();
         navbar.render('header');
-        // recipe.render('header');
-        //addRecipe.render('main');
     }
 
     

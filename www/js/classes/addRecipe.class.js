@@ -1,22 +1,20 @@
 class AddRecipe extends Base {
   constructor(recipes){
     super();
-    this.ingredientCounter = 0;
-    this.instructionCounter = 0;
+    this.ingredientCounter;
+    this.instructionCounter;
     this.recipes = recipes;
-    this.renderForm();
     this.eventHandler();
   }
 
-  renderForm(){
-    $('main').empty();
-    this.render('main');
-    this.addIngredient();
-    this.addInstruction();
+  reset(){
+    this.ingredientCounter = 0;
+    this.instructionCounter = 0;
   }
 
   addIngredient(){
     let that = this;
+    console.log('woop');
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
         <i class="fas fa-times" id="remove-ingredient-btn"></i>
@@ -61,6 +59,9 @@ class AddRecipe extends Base {
           event.stopPropagation();
         }
         if(form.checkValidity() === true){
+          console.log('woop');
+          event.preventDefault();
+          event.stopPropagation();
           JSON._save('recipe.json', [...that.recipes, recipe]);
         }
         form.classList.add('was-validated');
@@ -72,7 +73,7 @@ class AddRecipe extends Base {
     let that = this;
     //Add ingredient
     $(document).on('click', "#add-ingredient-btn", function() {
-      that.addIngredient()
+      that.addIngredient();
     });   
     //Remove ingredient
     $(document).on('click', '#remove-ingredient-btn', function(){
@@ -80,7 +81,9 @@ class AddRecipe extends Base {
       that.ingredientCounter--;
     });
     //add instruction
-    $(document).on('click',  "#add-howto-btn" , function() {that.addInstruction()});   
+    $(document).on('click',  "#add-howto-btn" , function() {
+      that.addInstruction();
+    });   
     //Remove instruction
     $(document).on('click', '#remove-howto-btn', function(){
       $(this).parent('div.how-to').remove();
@@ -201,7 +204,7 @@ class AddRecipe extends Base {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
         portions: $('#portions-select').val(),
-        description: $('#recipe-description'),
+        description: $('#recipe-description').val(),
         ingredients: ingredients,
         steps: steps
       };
