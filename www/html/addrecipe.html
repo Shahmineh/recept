@@ -4,7 +4,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
         <div class="row justify-content-center">
           <div class="input-names">
             <div class="input-name input-group">
-              <input type="text" class="form-control" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
+              <input type="text" class="form-control recipe-name" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
             <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small></div>
@@ -13,18 +13,19 @@ Object.assign(AddRecipe.prototype, { template(){return `
         <div class="row recipe-description justify-content-center">
           <div class="input-names">
             <div class="input-name input-group">
-              <input type="text" class="form-control" id="recipe-description" placeholder="Beskriv recpetet här">
+              <input type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" required>
+              <div class="invalid-feedback">Beskriv ditt recept här</div>
             </div>
-            <div class="small-two"><small>Beskriv ditt recept kortfattat här. Max 3 meningar.</small></div>
+            <div class="small-two"><small>Beskriv ditt recept kortfattat. Max 3 meningar.</small></div>
           </div>
         </div>
         <div class="row image-forms justify-content-center d-grid">
           <div class="col mb-3">
             <i class="far fa-images justify-content-center p-5"></i>
             <div class="custom-file" id="uploader">
-              <input type="file" class="custom-file-input" id="browser-input">
+              <input type="file" class="custom-file-input" id="browser-input" required>
               <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-              <div class="invalid-feedback">Example invalid custom file feedback</div>
+              <div class="invalid-feedback">Lägg till bild med hög upplösning</div>
             </div>
           </div>
           <div class="col forms">
@@ -33,7 +34,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
                 <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label>
                 <div>
                   <select class="custom-select portions-select" id="portions-select" required>
-                    <option></option>
+                    <option value="">Välj antal</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -52,7 +53,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="form-group d-flex justify-content-between">
               <label for="exampleFormControlSelect1">Tid:</label>
               <div>
-              <input type="text" class="form-control mr-2 time-input" id="time-input" placeholder="Tid" requiredrequired>
+              <input type="text" class="form-control time-input" id="time-input" placeholder="Tid" required>
               <div class="invalid-feedback">Välj tid</div>
               </div>
             </div>
@@ -72,6 +73,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="input-1group d-block how">
               
             </div>
+            
             <div class="col my-1 mt-3">
               <button class="btn admin-button d-flex justify-content-end" id="add-howto-btn" type="button">Lägg till</button>
             </div>
