@@ -13,10 +13,12 @@ class App extends Base{
                 $.getJSON('/json/recipe.json', (data) => {
                     this.recipes = data;
                     this.runTest();
+                    this.addRecipe = new AddRecipe(this.recipes);
+                    this.search = new Search(this.recipes);
+                    this.navigation();
                 })
             }
         );
-        this.addRecipe = new AddRecipe(this.recipes);
     }
 
     navigation(){

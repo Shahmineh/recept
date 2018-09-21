@@ -4,6 +4,7 @@ class AddRecipe extends Base {
     this.ingredientCounter;
     this.instructionCounter;
     this.recipes = recipes;
+    this.imagePath;
     this.eventHandler();
   }
 
@@ -14,7 +15,6 @@ class AddRecipe extends Base {
 
   addIngredient(){
     let that = this;
-    console.log('woop');
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
         <i class="fas fa-times" id="remove-ingredient-btn"></i>
@@ -73,10 +73,18 @@ class AddRecipe extends Base {
           event.stopPropagation();
         }
         if(form.checkValidity() === true){
-          console.log('woop');
           event.preventDefault();
           event.stopPropagation();
           JSON._save('recipe.json', [...that.recipes, recipe]);
+          $.getJSON('/json/recipe.json', (data) => {
+              that.recipes = data;
+          });
+          $('.max-100').animate({ scrollTop: 0 }, "fast");
+          that.reset();
+          $('main').empty();
+          that.render('main');
+          that.addIngredient();
+          that.addInstruction();
         }
         form.classList.add('was-validated');
       }, false);
@@ -125,6 +133,44 @@ class AddRecipe extends Base {
           $(this).addClass('is-invalid').removeClass('is-valid');    
       }
     });
+
+
+
+    $(document).ready( function() {
+      $(document).on('change', '.btn-file :file', function() {
+        var input = $(this),
+          label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        input.trigger('fileselect', [label]);
+      });
+
+      $('.btn-file :file').on('fileselect', function(event, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                  $('#img-upload').attr('src', e.target.result);
+              }
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+      $("#imgInp").change(function(){
+        readURL(this);
+      }); 	
+    });
+
     //Validation portions
     $(document).on('change', '.portions-select', function() {
       let val = $(this).val();
@@ -221,16 +267,19 @@ class AddRecipe extends Base {
         }
       },{});
 
+      let imagePath = $('#imgInp').val().split("\\")[2];
+
       let recipe = {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
         portions: $('#portions-select').val(),
         description: $('#recipe-description').val(),
         ingredients: ingredients,
-        steps: steps
+        steps: steps,
+        imagePath: imagePath
       };
       that.formValidation(recipe);
-    });
+    }); 
   }
 }
 
