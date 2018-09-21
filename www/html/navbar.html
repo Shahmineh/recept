@@ -11,8 +11,8 @@ Object.assign(Navbar.prototype, { template(){ return `
   </form> -->
 <div id="cssmenu">
   <ul>
-    <li><a href="#"><span>Home</span></a></li>
-    <li class="has-sub"><a href="#"><span>Huvudkategori</span></a>
+    <li><a href="/"><span>Home</span></a></li>
+    <li class="has-sub"><a href="/huvudkategori"><span>Huvudkategori</span></a>
        <ul>
           <li class=""><a href="#"><span>Kött</span></a>
              <!-- <ul>
@@ -31,7 +31,7 @@ Object.assign(Navbar.prototype, { template(){ return `
           </li>
        </ul>
     </li>
-    <li class="has-sub"><a href="#"><span>Måltid <i class="fas fa-utensils big-icon"></i></span></a>
+    <li class="has-sub"><a href="/maltid"><span>Måltid <i class="fas fa-utensils big-icon"></i></span></a>
       <ul>
         <li class=""><a href="#"><span>Frukost</span></a></li>
         <li class=""><a href="#"><span>Förrätt</span></a></li>
@@ -39,14 +39,14 @@ Object.assign(Navbar.prototype, { template(){ return `
         <li class=""><a href="#"><span>Efterätt</span></a></li>
       </ul>
     </li>
-    <li class="has-sub"><a href="#"><span>Specialkost</span></a>
+    <li class="has-sub"><a href="/specialkost"><span>Specialkost</span></a>
       <ul>
         <li class=""><a href="#"><span>Veg</span></a></li>
         <li class=""><a href="#"><span>Laktosfri</span></a></li>
         <li class=""><a href="#"><span>Glutenfri</span></a></li>
       </ul>
     </li>
-    <li class="last"><a href="#"><span>Världens mat <i class="fas fa-globe-americas big-icon"></i></span></a></li>
+    <li class="last"><a href="/varldens-mat"><span>Världens mat <i class="fas fa-globe-americas big-icon"></i></span></a></li>
  </ul>
 </div>
 `}});
