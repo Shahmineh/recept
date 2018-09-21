@@ -36,7 +36,7 @@ div.image-forms{
 }
 
 #uploader{
-  width: 300px;
+  width: 318px;
 }
 
 #portions-select{
@@ -48,10 +48,6 @@ div.image-forms{
 #time-input{
   width: 120px;
   background-color: #e9ecef;
-}
-
-.select-button{
- 
 }
 
 div.ingredients{
@@ -76,12 +72,9 @@ div.underleft{
 .form-control-text{
   background-color: #e9ecef;
   width: 100%;
-  border-style: none;
 }
 
 div.text-input{
-  display: flex;
-  align-items: baseline;
   padding-bottom: 15px;
   width: 100%;
 }
@@ -203,4 +196,9 @@ i.fa-times{
  .small-six{
    margin-left: 55px;
    margin-bottom: 15px;
+ }
+
+ .flex-column{
+   display: flex;
+   flex-direction: column;
  }
