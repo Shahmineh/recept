@@ -11,8 +11,16 @@ div.input-names{
   width: 500px;
 }
 
+#recipe-name{
+  background-color: #e9ecef;
+}
+
 div.recipe-description{
   height: 150px;
+}
+
+#recipe-description{
+  background-color: #e9ecef;
 }
 
 i.far{
@@ -31,16 +39,19 @@ div.image-forms{
   width: 300px;
 }
 
-#portions{
+#portions-select{
   width: 120px;
+  background-color: #e9ecef;
+  
 }
 
 #time-input{
   width: 120px;
+  background-color: #e9ecef;
 }
 
 .select-button{
-  width: 100px;
+ 
 }
 
 div.ingredients{
@@ -63,7 +74,9 @@ div.underleft{
 }
 
 .form-control-text{
+  background-color: #e9ecef;
   width: 100%;
+  border-style: none;
 }
 
 div.text-input{
@@ -77,11 +90,23 @@ div.text-input{
   width: 20px;
 }
 
-#amount-input{
+.ravara-input{
+  background-color: #e9ecef;
+  width: 137px;
+}
+
+.amount-input{
+  background-color: #e9ecef;
   width: 80px;
 }
 
-#gram-input{
+.amount-select{
+  width: 100px;
+  background-color: #e9ecef;
+}
+
+.gram-input{
+  background-color: #e9ecef;
   width: 80px;
 }
 
@@ -99,23 +124,23 @@ div.text-input{
 box-shadow: none;
 }
 
-#add-ingredients-btn{
+#add-ingredient-btn{
   background-color:  #d3d3d3;
   color: #000;
 }
 
-#add-ingredients-btn:hover{
+#add-ingredient-btn:hover{
   background-color:  #777777;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   color: #fff;
 }
 
-#howto-btn{
+#add-howto-btn{
   background-color:  #d3d3d3;
   color: #000;
 }
 
-#howto-btn:hover{
+#add-howto-btn:hover{
   background-color:  #777777;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   color: #fff;
