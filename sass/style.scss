@@ -3,10 +3,6 @@
 @import "startsidan.scss";
 
 
-// header {
-//   color: yellow;
-// }
-
 #search{
   width: 90%;
 }
@@ -78,32 +74,8 @@ body {
   width: 17rem;
 }
 
-.border-control {
-  border-left: 2px solid;
-}
-
-.recipe-layout {
-  padding: 0 0 7px 7px;
-  font-size: 1.2rem;
-}
- 
-.ingredient-control {
-  list-style: none;
-}
-
-.ingredient-layout {
-  padding: 0 0 7px 0 !important;
-  font-size: 1.2rem;
-}
-
-.recipe-background {
-  background-color: #fff;
-}
-
 header {
   background-color: rgb(236, 236, 236);}
-
-
 
 div.input-name{
   width: 100%;
@@ -318,20 +290,9 @@ footer{
   width: 80px;
 }
 
-.sub-header {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-}
-
 .little-box-text {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
-}
-
-.recipe-header {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-  font-size: 2.75rem !important;
 }
 
 .cook-time {
@@ -339,10 +300,6 @@ footer{
   font-size: 1.25rem !important;
 }
 
-.recipe-summary {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.5rem;
-}
 .sum-little-text {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -444,7 +401,4 @@ box-shadow: none;
   margin-top: 11px;
  }
 
- .max-100 {
-   max-height: 100vh;
-   overflow: auto;
- }
+ 
