@@ -1,7 +1,7 @@
 Object.assign(AddRecipe.prototype, { template(){return `
-  <div class="container admin-container">
-      <form class="needs-validation" novalidate>
-        <div class="row justify-content-center">
+  <div class="container admin-container" id="admin-container">
+      <form class="needs-validation addIngredient-form" novalidate >
+        <div class="row justify-content-center" >
           <div class="input-names">
             <div class="input-name input-group">
               <input type="text" class="form-control recipe-name" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
@@ -21,11 +21,18 @@ Object.assign(AddRecipe.prototype, { template(){return `
         </div>
         <div class="row image-forms justify-content-center d-grid">
           <div class="col mb-3">
-            <i class="far fa-images justify-content-center p-5"></i>
+            <!-- <i class="far fa-images justify-content-center p-5"></i> -->
             <div class="custom-file" id="uploader">
-              <input type="file" class="custom-file-input" id="browser-input" required>
-              <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-              <div class="invalid-feedback">Lägg till bild med hög upplösning</div>
+              <label>Upload Image</label>
+              <div class="input-group">
+                  <span class="input-group-btn">
+                      <span class="btn btn-default btn-file">
+                          Browse… <input type="file" id="imgInp">
+                      </span>
+                  </span>
+                  <input type="text" class="form-control" readonly>
+              </div>
+              <img id='img-upload'/>
             </div>
           </div>
           <div class="col forms">
@@ -86,4 +93,5 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
       </form>
     </div>
+    
 `}});
