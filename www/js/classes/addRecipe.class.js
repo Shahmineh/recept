@@ -1,9 +1,12 @@
 class AddRecipe extends Base {
-  constructor(recipes){
+  constructor(recipes, ingredients){
     super();
     this.ingredientCounter;
     this.instructionCounter;
     this.recipes = recipes;
+    this.ingredients = ingredients;
+    this.imagePath;
+    this.filter = new Filter(this.ingredients, this.recipes);
     this.eventHandler();
   }
 
@@ -14,34 +17,21 @@ class AddRecipe extends Base {
 
   addIngredient(){
     let that = this;
-    console.log('woop');
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
         <i class="fas fa-times" id="remove-ingredient-btn"></i>
-        <div class="flex-column">
-          <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
-          <div class="invalid-feedback">Fyll i här</div>
-        </div>
-        <div class="flex-column">
-          <input type="text" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
-          <div class="invalid-feedback">Fyll i här</div>
-        </div>
-        <div class="flex-column">
-          <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
-            <option selected value="">Mängd:</option>
-            <option value="styck">styck</option>
-            <option value="liter">liter</option>
-            <option value="deciliter">deciliter</option>
-            <option value="matsked">matsked</option>
-            <option value="tesked">tesked</option>
-            <option value="kryddmått">kryddmått</option>
-          </select>
-          <div class="invalid-feedback">Fyll i här</div>
-        </div>
-        <div class="flex-column">
-          <input type="text" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
-          <div class="invalid-feedback">Fyll i här</div>
-          </div>
+        <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
+        <input type="text" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+        <select class="custom-select amount-select" id="amount-select-${that.ingredientCounter}" required>
+          <option selected value="">Mängd:</option>
+          <option value="styck">styck</option>
+          <option value="liter">liter</option>
+          <option value="deciliter">deciliter</option>
+          <option value="matsked">matsked</option>
+          <option value="tesked">tesked</option>
+          <option value="kryddmått">kryddmått</option>
+        </select>
+        <input type="text" class="form-control ml-2 gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
       </div>
     `);
     that.ingredientCounter++;
@@ -53,11 +43,9 @@ class AddRecipe extends Base {
       <div class="how-to">
         <i class="fas fa-times" id="remove-howto-btn"></i> 
         <p class="textnumber mr-2">${that.instructionCounter +1}</p>
-        <div class="text-input flex-column">
-          <textarea class="form-control form-control-text" aria-label="With textarea" id="instructions-text-${that.instructionCounter}" required></textarea>
-          <div class="invalid-feedback">Skriv instruktioner här.</div> 
+        <div class="text-input">
+          <textarea class="form-control-text" aria-label="With textarea" id="instructions-text-${that.instructionCounter}" required></textarea>
         </div>
-        
       </div>
     `);
     that.instructionCounter++;
@@ -73,10 +61,18 @@ class AddRecipe extends Base {
           event.stopPropagation();
         }
         if(form.checkValidity() === true){
-          console.log('woop');
           event.preventDefault();
           event.stopPropagation();
           JSON._save('recipe.json', [...that.recipes, recipe]);
+          $.getJSON('/json/recipe.json', (data) => {
+              that.recipes = data;
+          });
+          $('.max-100').animate({ scrollTop: 0 }, "fast");
+          that.reset();
+          $('main').empty();
+          that.render('main');
+          that.addIngredient();
+          that.addInstruction();
         }
         form.classList.add('was-validated');
       }, false);
@@ -125,6 +121,44 @@ class AddRecipe extends Base {
           $(this).addClass('is-invalid').removeClass('is-valid');    
       }
     });
+
+
+
+    $(document).ready( function() {
+      $(document).on('change', '.btn-file :file', function() {
+        var input = $(this),
+          label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        input.trigger('fileselect', [label]);
+      });
+
+      $('.btn-file :file').on('fileselect', function(event, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                  $('#img-upload').attr('src', e.target.result);
+              }
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+      $("#imgInp").change(function(){
+        readURL(this);
+      }); 	
+    });
+
     //Validation portions
     $(document).on('change', '.portions-select', function() {
       let val = $(this).val();
@@ -147,7 +181,8 @@ class AddRecipe extends Base {
     }); 
     //Validation ingredient
     $(document).on('keyup', '.ravara-input', function() {
-      let val = $(this).val();
+      let val = that.filter.filterIngredients($(this).val());
+      console.log(val);
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');
 
@@ -186,16 +221,7 @@ class AddRecipe extends Base {
         $(this).removeClass('is-valid').addClass('is-invalid');
       }
     });
-    //Validation instrcutions
-    $(document).on('keyup', '.form-control-text', function(){
-      let val = $(this).val();
-      if(val.length > 0){
-        $(this).removeClass('is-invalid').addClass('is-valid');
-      }
-      else{
-        $(this).removeClass('is-valid').addClass('is-invalid');
-      }
-    });
+
     //Submit
     $(document).on('click', '#submit-btn', function(){
       let ingredients = Array(that.ingredientCounter)
@@ -221,16 +247,19 @@ class AddRecipe extends Base {
         }
       },{});
 
+      let imagePath = $('#imgInp').val().split("\\")[2];
+
       let recipe = {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
         portions: $('#portions-select').val(),
         description: $('#recipe-description').val(),
         ingredients: ingredients,
-        steps: steps
+        steps: steps,
+        imagePath: imagePath
       };
       that.formValidation(recipe);
-    });
+    }); 
   }
 }
 
