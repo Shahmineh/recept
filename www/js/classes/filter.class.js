@@ -1,6 +1,6 @@
 class Filter{
-    constructor(livsmedelData, recipes){
-        this.livsmedelData = livsmedelData;
+    constructor(ingredients, recipes){
+        this.ingredients = ingredients;
         this.recipes = recipes;
         this.eventHandler();
     }
@@ -12,22 +12,26 @@ class Filter{
         });
     }
 
-    filterIngredients(inputToFilter) {
+    filterIngredientsByName(inputToFilter) {
         if(inputToFilter.length  < 3){
             return new Error("Write more than 3 char");
         }
         inputToFilter = inputToFilter.toLowerCase();
+        let result = Object.values(this.ingredients)
+        .filter(item => item.Namn.toLowerCase().includes(inputToFilter))
+        .map(x => x.Namn)
+        return this.filterSort(result, inputToFilter);
+    }
 
-        let result = this.livsmedelData
+    filterIngredientsById(inputToFilter) {
+        if(inputToFilter.length  < 3){
+            return new Error("Write more than 3 char");
+        }
+        inputToFilter = inputToFilter.toLowerCase();
+        let result = Object.values(this.ingredients)
         .filter(item => item.Namn.toLowerCase().includes(inputToFilter))
         .map(x => x.Nummer)
-        .sort((a,b)=>{
-            let posA = a.toLowerCase().indexOf(inputToFilter);
-            let posB = b.toLowerCase().indexOf(inputToFilter);
-            return posA < posB ? -1 : 1;
-        });
-        // console.log('ingredient filter');
-        return result;
+        return this.filterSort(result, inputToFilter);
     }
 
     filterRecipes(inputToFilter) {
@@ -46,7 +50,14 @@ class Filter{
             let posB = b.name.toLowerCase().indexOf(inputToFilter);
             return posA < posB ? -1 : 1;
         });
-        // console.log('recipe filter');
         return result;
+    }
+
+    filterSort(dataToSort, inputToFilter){
+        return dataToSort.sort((a,b)=>{
+            let posA = a.toLowerCase().indexOf(inputToFilter);
+            let posB = b.toLowerCase().indexOf(inputToFilter);
+            return posA < posB ? -1 : 1;
+        });
     }
 }
