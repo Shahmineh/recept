@@ -13,7 +13,7 @@ class App extends Base{
                 $.getJSON('/json/recipe.json', (data) => {
                     this.recipes = data;
                     this.runTest();
-                    this.addRecipe = new AddRecipe(this.recipes, this.livsmedelData);
+                    this.addRecipe = new AddRecipe(this.recipes, this.livsmedelDataIdHash);
                     this.search = new Search(this.recipes, this.livsmedelData);
                     this.navigation();
                 })
