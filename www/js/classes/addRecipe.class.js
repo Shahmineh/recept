@@ -222,12 +222,9 @@ class AddRecipe extends Base {
       }
     });
     $(document).on('click', '.button-data-ravara-input', function(event){
-      let id = $(this).attr('data-id');
       let name = $(this).text().trim();
-      // $(`#ravara-input-${that.ingredientCounter-1}`).empty();
       $(`#ravara-input-${that.ingredientCounter-1}`).val(name);
-      console.log(name);
-      console.log(id);
+      $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
     });
 
     //Validation amount
