@@ -16,10 +16,7 @@ class Search{
             let val = $('#search-input').val();
             if(event.keyCode === 13){
                 event.preventDefault();
-
-                // console.log(that.filter.filterIngredients(val));
-
-                let searchResult = that.filter.filterRecipes(val).length ? that.filter.filterRecipes(val) : that.filter.filterIngredients(val).map(item=>{
+                let searchResult = that.filter.filterRecipes(val).length ? that.filter.filterRecipes(val) : that.filter.filterIngredientsById(val).map(item=>{
                     return that.filter.filterRecipes(item)
                 }).filter(item=>item.length).flat();
 
@@ -29,6 +26,4 @@ class Search{
             }
         });
     }
-
-    
 }
