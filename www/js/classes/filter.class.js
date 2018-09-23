@@ -13,9 +13,9 @@ class Filter{
     }
 
     filterIngredientsByName(inputToFilter) {
-        if(inputToFilter.length  < 3){
-            return new Error("Write more than 3 char");
-        }
+        // if(inputToFilter.length  < 3){
+        //     return new Error("Write more than 3 char");
+        // }
         inputToFilter = inputToFilter.toLowerCase();
         let result = Object.values(this.ingredients)
         .filter(item => item.Namn.toLowerCase().includes(inputToFilter))
@@ -24,9 +24,9 @@ class Filter{
     }
 
     filterIngredientsById(inputToFilter) {
-        if(inputToFilter.length  < 3){
-            return new Error("Write more than 3 char");
-        }
+        // if(inputToFilter.length  < 3){
+        //     return new Error("Write more than 3 char");
+        // }
         inputToFilter = inputToFilter.toLowerCase();
         let result = Object.values(this.ingredients)
         .filter(item => item.Namn.toLowerCase().includes(inputToFilter))

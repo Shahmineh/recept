@@ -3,27 +3,56 @@ class Search{
         this.recipes = recipes;
         this.ingredients = ingredients;
         this.filter = new Filter(this.ingredients, this.recipes);
+        this.searchResult;
         this.eventHandler();
+        this.autoCompleteSearch();
     }
+
+    searchEngine(val){
+        let searchSplit = this.filter.filterRecipes(val).length  ? this.filter.filterRecipes(val) : this.filter.filterIngredientsById(val).map(item=>{
+            return this.filter.filterRecipes(item)
+        }).filter(item=>item.length).flat();
+        let searchRefine = searchSplit.reduce((acc, curr)=>{
+            return {
+                ...acc,
+                [curr.name]: curr
+            }
+        }, {});
+        this.searchResult = Object.keys(searchRefine).map(item=>searchRefine[item]);
+        return this.searchResult;
+    }
+
     eventHandler(){
-        let that = this;
+        const that = this;
+        $(document).on('keydown', '#search-input', function(event){
+            let val = $('#search-input').val();
+            val.length ? that.searchEngine(val) : null;
+            //console.log(that.searchResult);
+            if(event.keyCode === 13){
+                event.preventDefault();
+                $('#search-input').val('');
+                console.log('search result', that.searchResult);
+            }
+        });
+
         $(document).on('click', '#search-button', function(){
             let val = $('#search-input').val();
            // console.log(that.filterRecipes(val));
             //that.filterRecipes(val);
         });
-        $(document).on('keydown', '#search-input', function(event){
-            let val = $('#search-input').val();
-            if(event.keyCode === 13){
-                event.preventDefault();
-                let searchResult = that.filter.filterRecipes(val).length ? that.filter.filterRecipes(val) : that.filter.filterIngredientsById(val).map(item=>{
-                    return that.filter.filterRecipes(item)
-                }).filter(item=>item.length).flat();
+        
+    }
 
-                console.log('search result',searchResult);
-
-                $('#search-input').val('');
-            }
+    autoCompleteSearch(){
+        const that = this;
+        $(document).on('keydown', '#search-input', function(){
+            $('.search-autocomplete').empty();
+            that.searchResult ? that.searchResult.map(item=>{
+                console.log('woop');
+                return $('.search-autocomplete').append(`<button>${item.name}</button>`)
+            }) : null;
+            
+            console.log(that.searchResult);
         });
     }
 }
