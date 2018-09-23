@@ -294,6 +294,8 @@ class AddRecipe extends Base {
 
       let imagePath = $('#imgInp').val().split("\\")[2];
 
+
+      // GIVE ID'S TO SAVED RECIPES !!!!!!!!
       let recipe = {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
