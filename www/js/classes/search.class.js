@@ -24,35 +24,33 @@ class Search{
 
     eventHandler(){
         const that = this;
-        $(document).on('keydown', '#search-input', function(event){
+        $(document).on('keyup', '#search-input', function(event){
             let val = $('#search-input').val();
+            console.log(val);
             val.length ? that.searchEngine(val) : null;
             //console.log(that.searchResult);
+            
+        });
+        $(document).on('keydown', '#search-input', function(event){
             if(event.keyCode === 13){
                 event.preventDefault();
                 $('#search-input').val('');
                 console.log('search result', that.searchResult);
             }
-        });
-
+        })
         $(document).on('click', '#search-button', function(){
             let val = $('#search-input').val();
-           // console.log(that.filterRecipes(val));
-            //that.filterRecipes(val);
         });
         
     }
 
     autoCompleteSearch(){
         const that = this;
-        $(document).on('keydown', '#search-input', function(){
+        $(document).on('keyup', '#search-input', function(){
             $('.search-autocomplete').empty();
-            that.searchResult ? that.searchResult.map(item=>{
-                console.log('woop');
+            that.searchResult &&  $('#search-input').val().length ? that.searchResult.map(item=>{
                 return $('.search-autocomplete').append(`<button>${item.name}</button>`)
-            }) : null;
-            
-            console.log(that.searchResult);
+            }) : $('.search-autocomplete').empty();
         });
     }
 }
