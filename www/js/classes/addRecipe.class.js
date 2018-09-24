@@ -102,6 +102,7 @@ class AddRecipe extends Base {
 
   eventHandler(){
     let that = this;
+    let arr = [];
     //Add ingredient
     $(document).on('click', "#add-ingredient-btn", function() {
       that.addIngredient();
@@ -143,7 +144,7 @@ class AddRecipe extends Base {
       }
     });
 
-
+    
 
     $(document).ready( function() {
       $(document).on('change', '.btn-file :file', function() {
@@ -267,6 +268,19 @@ class AddRecipe extends Base {
         $(this).removeClass('is-valid').addClass('is-invalid');
       }
     });
+    //Validation tags
+    $(document).on("click",".form-check-input", function(){ 
+      
+      let val = $("input:checked").each(function(){
+        arr.push($(this).val());
+    });
+    });
+    
+
+     
+    
+
+
     //Submit
     $(document).on('click', '#submit-btn', function(){
       let ingredients = Array(that.ingredientCounter)
@@ -301,10 +315,12 @@ class AddRecipe extends Base {
         description: $('#recipe-description').val(),
         ingredients: ingredients,
         steps: steps,
-        imagePath: imagePath
+        imagePath: imagePath,
+        tags: arr
       };
-      that.formValidation(recipe);
+      that.formValidation(recipe); 
     }); 
+    console.log(arr)
   }
 }
 
