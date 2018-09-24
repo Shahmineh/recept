@@ -115,5 +115,33 @@
       }
     ],
     "steps": []
+  },
+  {
+    "name": "Bananpannkaka",
+    "time": "10min",
+    "portions": "1",
+    "description": "Jättegoda bananpannkakor som går fort att göra.",
+    "ingredients": [
+      {
+        "number": "Ägg ekologiskt rått",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "60"
+      },
+      {
+        "number": "Banan",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "60"
+      }
+    ],
+    "steps": {
+      "0": "Mosa bananen med en gaffel i en skål",
+      "1": "Kläck äggen i skålen och blanda",
+      "2": "Ta en skopa av smeten till en medium-het panna\n",
+      "3": "Stek några minuter på var sida",
+      "4": "Ät och njut!"
+    },
+    "imagePath": "bananpannkaka.jpg"
   }
 ]
