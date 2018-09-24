@@ -1,10 +1,13 @@
 class AddRecipe extends Base {
-  constructor(recipes){
+  constructor(recipes, ingredients){
     super();
     this.ingredientCounter;
     this.instructionCounter;
     this.recipes = recipes;
+    this.ingredients = ingredients;
     this.imagePath;
+    this.tags = Object.values(this.ingredients).map(item=>item.Namn);
+    this.filter = new Filter(this.ingredients, this.recipes);
     this.eventHandler();
   }
 
@@ -43,7 +46,13 @@ class AddRecipe extends Base {
           <div class="invalid-feedback">Fyll i här</div>
           </div>
       </div>
+      <div id="data-ravara-input-${that.ingredientCounter}"></div>
     `);
+    
+    // Object.values(that.ingredients).map(item=>{
+    //   return $(`#data-ravara-input-${that.ingredientCounter}`).append(`<option value="${item.Namn}"></option>`);
+    // });
+
     that.ingredientCounter++;
   }
 
@@ -192,8 +201,18 @@ class AddRecipe extends Base {
       }
     }); 
     //Validation ingredient
-    $(document).on('keyup', '.ravara-input', function() {
+    $(document).on('keyup', '.ravara-input', function(event) {
       let val = $(this).val();
+      let inputHits = that.filter.filterIngredientsByName(val);
+      $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
+      val.length > 2 ? inputHits.map(item=>{
+        let hit = Object.values(that.ingredients).filter(el=>el.Namn==item)[0];
+        return $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
+          <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${hit.Nummer}" type="button" data-id="${hit.Nummer}">
+            ${hit.Namn}
+          </button>
+        `);
+      }) : null;
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');
 
@@ -202,6 +221,12 @@ class AddRecipe extends Base {
         $(this).removeClass('is-valid').addClass('is-invalid');
       }
     });
+    $(document).on('click', '.button-data-ravara-input', function(event){
+      let name = $(this).text().trim();
+      $(`#ravara-input-${that.ingredientCounter-1}`).val(name);
+      $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
+    });
+
     //Validation amount
     $(document).on('keyup', '.amount-input', function(){
       let val = $(this).val();

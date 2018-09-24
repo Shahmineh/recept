@@ -24,7 +24,7 @@
         "weight": 200
       },
       {
-        "number": "1977",
+        "number": "1978",
         "amount": null,
         "unit": null,
         "weight": 0
@@ -40,7 +40,7 @@
   },
   {
     "name": "Pam",
-    "time": "10min",
+    "time": "15min",
     "portions": 2,
     "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
     "ingredients": [
@@ -51,7 +51,7 @@
         "weight": 300
       },
       {
-        "number": "123",
+        "number": "1234",
         "amount": 2,
         "unit": "msk",
         "weight": 400
@@ -78,82 +78,70 @@
     "steps": []
   },
   {
-    "name": "Kalles tallrik",
-    "time": "5 min",
-    "portions": "2",
+    "name": "Tam",
+    "time": "15min",
+    "portions": 2,
     "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
     "ingredients": [
       {
-        "number": "Ägg",
-        "amount": "1",
-        "unit": "styck",
-        "weight": "30"
+        "number": "3840",
+        "amount": 2,
+        "unit": "stycken",
+        "weight": 300
       },
       {
-        "number": "Kaviar",
-        "amount": "2",
-        "unit": "matsked",
-        "weight": "10"
+        "number": "785",
+        "amount": 2,
+        "unit": "msk",
+        "weight": 400
+      },
+      {
+        "number": "29",
+        "amount": 1,
+        "unit": "tsk",
+        "weight": 200
+      },
+      {
+        "number": "1977",
+        "amount": null,
+        "unit": null,
+        "weight": 10
+      },
+      {
+        "number": "380",
+        "amount": null,
+        "unit": null,
+        "weight": 30
       }
     ],
-    "steps": {
-      "0": "Dela äggen i halvor",
-      "1": "Fördela kaviar",
-      "2": "Servera"
-    }
+    "steps": []
   },
   {
-    "name": "hej",
-    "time": "10 min",
+    "name": "Bananpannkaka",
+    "time": "10min",
     "portions": "1",
-    "description": "he",
+    "description": "Jättegoda bananpannkakor som går fort att göra.",
     "ingredients": [
       {
-        "number": "hej",
-        "amount": "hejh",
+        "number": "Ägg ekologiskt rått",
+        "amount": "2",
         "unit": "styck",
-        "weight": "hej"
-      }
-    ],
-    "steps": {
-      "0": "hejehejehje",
-      "1": "hejd"
-    }
-  },
-  {
-    "name": "Paulina lasagne",
-    "time": "30 min",
-    "portions": "2",
-    "description": "God vegetarisk lasagne som går fort att laga.",
-    "ingredients": [
+        "weight": "60"
+      },
       {
-        "number": "Lasagne",
+        "number": "Banan",
         "amount": "1",
         "unit": "styck",
-        "weight": "300"
+        "weight": "60"
       }
     ],
     "steps": {
-      "0": "Köp Coops frysta vegetariska lasagne",
-      "1": "Tillaga i ugnen i 30 min"
-    }
-  },
-  {
-    "name": "hej",
-    "time": "10 min",
-    "portions": "1",
-    "description": "heehje",
-    "ingredients": [
-      {
-        "number": "hej",
-        "amount": "hejh",
-        "unit": "liter",
-        "weight": "hej"
-      }
-    ],
-    "steps": {
-      "0": "hejehejhejhejk"
+      "0": "Mosa bananen med en gaffel i en skål",
+      "1": "Kläck äggen i skålen och blanda",
+      "2": "Ta en skopa av smeten till en medium-het panna\n",
+      "3": "Stek några minuter på var sida",
+      "4": "Ät och njut!"
     },
-    "imagePath": "daddy.jpg"
+    "imagePath": "bananpannkaka.jpg"
   }
 ]
