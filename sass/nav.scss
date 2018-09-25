@@ -12,7 +12,6 @@ header {
   height: 100vh;
   min-width: 220px;
   background-color: #fff;
-  padding-top: 20px;
   @media screen and (max-width: 576px) {
     width: 100vw;
     height: 100%;
@@ -104,7 +103,7 @@ header {
 }
 
 #cssmenu ul ul {
-  top: 9px;
+  top: -1px;
   left: 100%;
 }
 
@@ -170,6 +169,9 @@ header {
 #cssmenu > ul > li a:hover,
 #cssmenu > ul > li:hover a {
   background: rgba(255, 255, 255, 0.959);
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 #cssmenu li {
