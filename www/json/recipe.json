@@ -338,5 +338,77 @@
       "Vegetarisk/vegansk",
       "Efterrätt"
     ]
+  },
+  {
+    "name": "Korv Stroganoff",
+    "time": "45",
+    "portions": "4",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "ingredients": [
+      {
+        "number": "Ris långkornigt kokt m salt",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "Korv kött 58% typ falukorv",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "Lök gul",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "Matlagningsgrädde fett 15%",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "Kranvatten",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "Tomatpuré konc konserv",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "Sojasås",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "Rapsolja",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
+    },
+    "imagePath": "korvstroganoff.png",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
   }
 ]
