@@ -342,53 +342,53 @@
   {
     "name": "Korv Stroganoff",
     "time": "45",
-    "portions": "4",
+    "portions": "2",
     "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
     "ingredients": [
       {
-        "number": "Ris långkornigt kokt m salt",
+        "number": "2515",
         "amount": "2",
         "unit": "deciliter",
         "weight": "180"
       },
       {
-        "number": "Korv kött 58% typ falukorv",
+        "number": "1488",
         "amount": "1",
         "unit": "styck",
         "weight": "400"
       },
       {
-        "number": "Lök gul",
+        "number": "344",
         "amount": "2",
         "unit": "styck",
         "weight": "200"
       },
       {
-        "number": "Matlagningsgrädde fett 15%",
+        "number": "1717",
         "amount": "2",
         "unit": "deciliter",
         "weight": "200"
       },
       {
-        "number": "Kranvatten",
+        "number": "1953",
         "amount": "1",
         "unit": "deciliter",
         "weight": "100"
       },
       {
-        "number": "Tomatpuré konc konserv",
+        "number": "401",
         "amount": "1",
         "unit": "matsked",
         "weight": "10"
       },
       {
-        "number": "Sojasås",
+        "number": "909",
         "amount": "1",
         "unit": "matsked",
         "weight": "10"
       },
       {
-        "number": "Rapsolja",
+        "number": "2189",
         "amount": "1",
         "unit": "matsked",
         "weight": "10"

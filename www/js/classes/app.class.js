@@ -16,6 +16,7 @@ class App extends Base{
                     this.addRecipe = new AddRecipe(this.recipes, this.livsmedelDataIdHash);
                     this.search = new Search(this.recipes, this.livsmedelData);
                     this.filter = new Filter(this.livsmedelData, this.recipes);
+                    this.getNutritionValues = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
                     this.navigation();
                 })
             }
@@ -35,7 +36,7 @@ class App extends Base{
             startsidan.render('main');
         }
         if (url == '/recept') {
-            let recipe = new Recipe(this.filter, 'Korv Stroganoff');
+            let recipe = new Recipe(this.filter, 'Korv Stroganoff', this.getNutritionValues);
             $('main').empty();
             recipe.render('main');
             recipe.ingredientList();
@@ -110,7 +111,7 @@ class App extends Base{
     
     runTest(){
 
-        const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
+        // const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
         // console.log(test.getNutritionValues('Pam'));
         // test.getNutritionValues('Pamlet');
