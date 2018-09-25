@@ -12,7 +12,7 @@ header {
   height: 100vh;
   min-width: 180px;
   background-color: #fff;
-  // padding-top: 20px;
+  padding-top: 20px;
   @media screen and (max-width: 576px) {
     width: 100vw;
     height: 100%;
@@ -182,21 +182,15 @@ header {
 }
 
 #cssmenu ul ul li.first {
-  -webkit-border-radius: 0 3px 0 0;
-  -moz-border-radius: 0 3px 0 0;
   border-radius: 0 3px 0 0;
 }
 
 #cssmenu ul ul li.last {
-  -webkit-border-radius: 0 0 3px 0;
-  -moz-border-radius: 0 0 3px 0;
   border-radius: 0 0 3px 0;
   border-bottom: 0;
 }
 
 #cssmenu ul ul {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
 
@@ -257,20 +251,14 @@ header {
 }
 
 #cssmenu.align-right ul ul li.first {
-  -webkit-border-radius: 3px 0 0 0;
-  -moz-border-radius: 3px 0 0 0;
   border-radius: 3px 0 0 0;
 }
 
 #cssmenu.align-right ul ul li.last {
-  -webkit-border-radius: 0 0 0 3px;
-  -moz-border-radius: 0 0 0 3px;
   border-radius: 0 0 0 3px;
 }
 
 #cssmenu.align-right ul ul {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
 
