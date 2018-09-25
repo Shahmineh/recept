@@ -300,7 +300,7 @@ class AddRecipe extends Base {
           return [
             ...acc,
             {
-              number: $(`#ravara-input-${index}`).val(),
+              number: that.filter.filterIngredientsById($(`#ravara-input-${index}`).val()).join(),
               amount: $(`#amount-input-${index}`).val(),
               unit: $(`#amount-select-${index}`).val(),
               weight: $(`#gram-input-${index}`).val(),
@@ -319,8 +319,6 @@ class AddRecipe extends Base {
 
       let imagePath = $('#imgInp').val().split("\\")[2];
 
-
-      // GIVE ID'S TO SAVED RECIPES !!!!!!!!
       let recipe = {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
