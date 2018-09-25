@@ -1,0 +1,112 @@
+//Menu img
+.col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.menu {
+  position: relative;
+  overflow: hidden;
+  margin: 0.2%;
+}
+
+.menu .menu-img {
+  transition: 0.5s;
+  width: 100%;
+}
+
+
+.menu:hover .menu-img {
+  transform: scale(1.1)
+}
+
+.menu-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: #000;
+  text-shadow: 2px 2px 2px #ebebeb;
+  @media screen and (max-width: 576px) {
+    color: #fff;
+    text-shadow: 2px 2px 2px #4d4c4c;
+  }
+  
+}
+
+.breakfast-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
+}
+
+.dinner-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
+}
+
+.dessert-text {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #2b2b2b;
+}
+
+.menu-big-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
+}
+
+.menu-little-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px #c0c0c0;
+} 
+
+.sub-header {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.little-box-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.sum-little-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}  
+
+.little-box-text-pizza {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: #000;
+  text-shadow: 2px 2px 2px #eeeeee;
+}
+
+.d-flex {
+  @media screen and (max-width: 576px) {
+    display: block !important;
+  }
+ }
+
+ .display-mobile {
+  @media screen and (max-width: 576px) {
+    display: contents!important;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    display: contents!important;
+  }
+ }

@@ -9,6 +9,7 @@ class AddRecipe extends Base {
     this.tags = Object.values(this.ingredients).map(item=>item.Namn);
     this.filter = new Filter(this.ingredients, this.recipes);
     this.eventHandler();
+    this.tagArrayMain, this.tagArraySpecial, this.tagArrayMeal = [];
   }
 
   reset(){
@@ -105,6 +106,7 @@ class AddRecipe extends Base {
 
   eventHandler(){
     let that = this;
+    // let arr = [];
     //Add ingredient
     $(document).on('click', "#add-ingredient-btn", function() {
       that.addIngredient();
@@ -146,7 +148,7 @@ class AddRecipe extends Base {
       }
     });
 
-
+    
 
     $(document).ready( function() {
       $(document).on('change', '.btn-file :file', function() {
@@ -282,6 +284,29 @@ class AddRecipe extends Base {
         $(this).removeClass('is-valid').addClass('is-invalid');
       }
     });
+    //Validation tags
+    $(document).on("click",".form-check-input-main", function(){ 
+      let arr = [];
+      $(".form-check-input-main:checked").each(function(){
+        arr.push($(this).val());
+      });
+      that.tagArrayMain = arr;
+    });
+    $(document).on("click",".form-check-input-special", function(){ 
+      let arr = [];
+      $(".form-check-input-special:checked").each(function(){
+        arr.push($(this).val());
+      });
+      that.tagArraySpecial = arr;
+    });
+    $(document).on("click",".form-check-input-meal", function(){ 
+      let arr = [];
+      $(".form-check-input-meal:checked").each(function(){
+        arr.push($(this).val());
+      });
+      that.tagArrayMeal = arr;
+    });
+
     //Submit
     $(document).on('click', '#submit-btn', function(){
       let ingredients = Array(that.ingredientCounter)
@@ -309,6 +334,8 @@ class AddRecipe extends Base {
 
       let imagePath = $('#imgInp').val().split("\\")[2];
 
+
+      // GIVE ID'S TO SAVED RECIPES !!!!!!!!
       let recipe = {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
@@ -316,9 +343,15 @@ class AddRecipe extends Base {
         description: $('#recipe-description').val(),
         ingredients: ingredients,
         steps: steps,
-        imagePath: imagePath
+        imagePath: imagePath,
+        tags: {
+          main: that.tagArrayMain,
+          special: that.tagArraySpecial,
+          meal: that.tagArrayMeal
+        }
       };
-      that.formValidation(recipe);
+      that.tagArrayMain, that.tagArraySpecial, that.tagArrayMeal = [];
+      that.formValidation(recipe);  
     }); 
   }
 }
