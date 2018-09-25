@@ -1,5 +1,5 @@
 Object.assign(AddRecipe.prototype, { template(){return `
-  <div class="container admin-container" id="admin-container">
+  <div class="container-fluid admin-container" id="admin-container">
       <form class="needs-validation addIngredient-form" novalidate >
         <div class="row justify-content-center" >
           <div class="input-names">
@@ -10,24 +10,24 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small></div>
           </div>
         </div>  
-        <div class="row recipe-description justify-content-center">
-          <div class="input-names">
+        <div class="row mb- recipe-description justify-content-center">
+          <div class="col-sm-10 col-lg-6 input-names">
             <div class="input-name input-group">
-              <input type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" required>
+              <textarea type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" required></textarea>
               <div class="invalid-feedback">Beskriv ditt recept här</div>
             </div>
             <div class="small-two"><small>Beskriv ditt recept kortfattat. Max 3 meningar.</small></div>
           </div>
         </div>
-        <div class="row image-forms justify-content-center d-grid">
-          <div class="col mb-3">
+        <div class="row mb-3 image-forms justify-content-center d-grid">
+          <div class="col">
             <!-- <i class="far fa-images justify-content-center p-5"></i> -->
             <div class="custom-file" id="uploader">
-              <label>Upload Image</label>
+              <!-- <label>Lägg upp bild</label> -->
               <div class="input-group">
                   <span class="input-group-btn">
                       <span class="btn btn-default btn-file">
-                          Browse… <input type="file" id="imgInp">
+                              <input type="file" id="imgInp">
                       </span>
                   </span>
                   <input type="text" class="form-control" readonly>
@@ -81,8 +81,92 @@ Object.assign(AddRecipe.prototype, { template(){return `
               
             </div>
             
-            <div class="col my-1 mt-3">
+            <!-- <div class="col my-1 mt-3">
               <button class="btn admin-button d-flex justify-content-end" id="add-howto-btn" type="button">Lägg till</button>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-5">
+          <small>Fyll i taggar som passar bäst till ditt recept. Minst en i varje spalt måste fyllas i.</small>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-5">
+          <!-- <div class="tags"> --> 
+        
+          <div class="col-sm-12 col-lg-3">
+             <p>Huvudkategori</p>
+            <div class="form-check form-check-main">
+              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kott-tag" value="Kött">
+              <label class="form-check-label" for="exampleRadios2">
+                Kött
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="fisk-tag" value="Fisk">
+              <label class="form-check-label" for="exampleRadios2">
+                Fisk
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kyckling-tag" value="Kyckling">
+              <label class="form-check-label" for="exampleRadios2">
+                Kyckling
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-12 sm-mt-3 col-lg-3">
+            <p>Specialkost</p>
+            <div class="form-check">
+              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
+              <label class="form-check-label" for="exampleRadios2">
+                Vegetarisk/vegansk
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="laktos-tag" value="Laktosfri">
+              <label class="form-check-label" for="exampleRadios2">
+                Laktosfri
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="gluten-tag" value="Glutenfri">
+              <label class="form-check-label" for="glutenfri">
+                Glutenfri
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-12 sm-mt-3 col-lg-3">
+            <p>Måltid</p>
+            <div class="form-check">
+              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="frukost-tag" value="Frukost">
+              <label class="form-check-label" for="frukost">
+                Frukost
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="mellan-tag" value="Mellanmål">
+              <label class="form-check-label" for="exampleRadios2">
+                Mellanmål
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="for-tag" value="Förrätt">
+              <label class="form-check-label" for="exampleRadios2">
+                  Förrätt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="huvud-tag" value="Huvudrätt">
+              <label class="form-check-label" for="huvudrätt">
+                Huvudrätt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="efter-tag" value="Efterrätt">
+              <label class="form-check-label" for="efterrätt">
+                Efterrätt
+              </label>
             </div>
           </div>
         </div>
@@ -91,6 +175,13 @@ Object.assign(AddRecipe.prototype, { template(){return `
               <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
             </div>  
           </div>
+        </div>
+
+        <div class="row">
+          <div class="col display-flex justify-content-center m-5">
+            <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
+        </div>  
+        </div>
       </form>
     </div>
     
