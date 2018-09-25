@@ -34,6 +34,17 @@ class Filter{
         return this.filterSort(result, inputToFilter);
     }
 
+    getIngredientName(inputToFilter){
+        inputToFilter = inputToFilter.toLowerCase();
+        console.log(inputToFilter)
+        /* let result = Object.values(this.ingredients)
+        .filter(item => item.Namn.toLowerCase().find(input => {
+            input.Namn === inputToFilter;
+        }))
+
+        return result;     */
+    }
+
     filterRecipes(inputToFilter) {
         // if(inputToFilter.length  < 3){
         //     return new Error("Write more than 3 char");

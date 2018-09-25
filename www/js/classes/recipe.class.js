@@ -1,13 +1,17 @@
 class Recipe extends Base {
-  constructor(filter, filterString){
+  constructor(filter, filterString, nutritionList){
     super();
     this.recipe = filter.filterRecipes(filterString)[0];
+    this.nutritionValue = nutritionList.getNutritionValues(this.recipe.name);
+    this.filter = filter;
+    console.log(this.nutritionValue);
+    
   }
 
   ingredientList(){
     let that = this;
     this.recipe.ingredients.map( ingredient => {
-      console.log(ingredient);
+    
       return $(".ingredient-control").append(`<li class="ingredient-layout">${ingredient.amount} ${ingredient.unit} ${ingredient.number}</li>`);
     });
     
