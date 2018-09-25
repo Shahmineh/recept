@@ -10,7 +10,7 @@
 // SideNav
 header {
   height: 100vh;
-  min-width: 220px;
+  min-width: 240px;
   background-color: #fff;
   @media screen and (max-width: 576px) {
     width: 100vw;
@@ -64,6 +64,10 @@ header {
 //   float: left;
 // }
 
+input[type="checkbox"]{
+  display: none;
+}
+
 #cssmenu ul li {
   float: left;
   min-height: 1px;
@@ -71,13 +75,43 @@ header {
   vertical-align: middle;
   position: relative;
 }
+// Hover color on li
+#cssmenu > ul > li > label:hover,
+#cssmenu > ul > li > label:focus {
+  color: #e26e21;
+}
 
-#cssmenu ul li.hover,
-#cssmenu ul li:hover {
-  position: relative;
-  z-index: 599;
-  cursor: default;
-  background-color: #707070c0;
+label {
+  cursor: pointer;
+}
+
+#cssmenux ul li:hover, #cssmenu input:checked ~ ul {
+
+  visibility: visible;
+  
+  li {
+    position: relative;
+    z-index: 599;
+    cursor: default;
+
+    a {
+      background: rgba(255, 255, 255, 0.959);
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+}
+
+
+#cssmenu ul ul li:hover > a {
+  background: #838383e3 !important;
+  color: #ffffff;
+}
+
+#cssmenu > ul > li.active a {
+  background: rgba(255, 255, 255, 0.959);
 }
 
 #cssmenu ul ul {
@@ -98,9 +132,7 @@ header {
   right: 0;
 }
 
-#cssmenu ul li:hover > ul {
-  visibility: visible;
-}
+
 
 #cssmenu ul ul {
   top: -1px;
@@ -138,7 +170,7 @@ header {
   clear: both;
 }
 
-#cssmenu a {
+#cssmenu a, #cssmenu label {
   display: block;
   padding: 15px 20px;
   color: #ffffff;
@@ -153,25 +185,8 @@ header {
   width: 200px;
 }
 
-#cssmenu > ul > li > a {
+#cssmenu > ul > li > a, #cssmenu > ul > li > label {
   color: #333;
-}
-
-#cssmenu > ul > li > a:hover,
-#cssmenu > ul > li > a:focus {
-  color: #e26e21;
-}
-
-#cssmenu > ul > li.active a {
-  background: rgba(255, 255, 255, 0.959);
-}
-
-#cssmenu > ul > li a:hover,
-#cssmenu > ul > li:hover a {
-  background: rgba(255, 255, 255, 0.959);
-  height: 60px;
-  display: flex;
-  align-items: center;
 }
 
 #cssmenu li {
@@ -179,7 +194,7 @@ header {
 }
 
 #cssmenu ul li.has-sub > a:after {
-  content: '>';
+  content: '+';
   position: absolute;
   top: 50%;
   right: 15px;
@@ -208,18 +223,12 @@ header {
   color: #333;
 }
 
-#cssmenu ul ul a:hover {
-  color: #ffffff;
-}
 
 #cssmenu ul ul li {
   border-bottom: 1px solid #707070;
 }
 
-#cssmenu ul ul li:hover > a {
-  background: #83838393;
-  color: #ffffff;
-}
+
 
 // #cssmenu.align-right > ul > li > a {
 //   border-left: 4px solid #1b9bff;
@@ -269,4 +278,16 @@ header {
 
 .menu-icon {
   width: 30px;
+  margin-right: 10px;
+  display: inline-block;
 }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header {
+    height: 100vh;
+    min-width: 70px;
+  }
+  #cssmenu > ul > li span span {
+    display: none;
+  }
+ }
