@@ -2,7 +2,8 @@ Object.assign(Navbar.prototype, { template(){ return `
 <div id="cssmenu">
   <ul>
     <li><a href="/" class="nav-btn"><span>Home</span></a></li>
-    <li class="has-sub"><a href="/huvudkategori" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="menu icon"> Huvudkategori</span></a>
+    <li class="has-sub"><label for="main-item-1" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="menu icon"><span>Huvudkategori</span></span></label>
+       <input id="main-item-1" type="checkbox">
        <ul>
           <li class=""><a href="#" class="nav-btn"><span>Kött</span></a>
              <!-- <ul>
@@ -19,7 +20,8 @@ Object.assign(Navbar.prototype, { template(){ return `
           </li>
        </ul>
     </li>
-    <li class="has-sub"><a href="/maltid" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"> Måltid</span></a>
+    <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"><span> Måltid</span></span></label>
+      <input id="main-item-2" type="checkbox">
       <ul>
         <li class=""><a href="#" class="nav-btn"><span>Frukost</span></a></li>
         <li class=""><a href="#" class="nav-btn"><span>Mellanmål</span></a></li>
@@ -28,15 +30,16 @@ Object.assign(Navbar.prototype, { template(){ return `
         <li class=""><a href="#" class="nav-btn"><span>Efterätt</span></a></li>
       </ul>
     </li>
-    <li class="has-sub"><a href="/specialkost" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"> Specialkost</span></a>
+    <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"><span> Specialkost</span></span></label>
+      <input id="main-item-3" type="checkbox">
       <ul>
         <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
         <li class=""><a href="#" class="nav-btn"><span>Laktosfri</span></a></li>
         <li class=""><a href="#" class="nav-btn"><span>Glutenfri</span></a></li>
       </ul>
     </li>
-    <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"> Världens mat</span></a></li>
-    <li ><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"> Lägg till recept</span></a></li>
+    <!-- <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"><span> Världens mat</span></span></a></li> -->
+    <li ><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"><span> Lägg till recept</span></span></a></li>
  </ul>
 </div>
 `}});
