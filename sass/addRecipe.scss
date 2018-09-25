@@ -7,9 +7,9 @@
   display: flex;
 }
 
-// div.input-names{
-//   width: 500px;
-// }
+div.row-top{
+  margin-top: 50px;
+}
 
 #recipe-name{
   background-color: #e9ecef;
@@ -90,17 +90,17 @@ div.text-input{
 
 .amount-input{
   background-color: #e9ecef;
-  width: 80px;
+ /*  width: 80px; */
 }
 
 .amount-select{
-  width: 100px;
   background-color: #e9ecef;
+    /* width: 100px; */
 }
 
 .gram-input{
   background-color: #e9ecef;
-  width: 80px;
+  /* width: auto; */
 }
 
 input[type=number]::-webkit-inner-spin-button{

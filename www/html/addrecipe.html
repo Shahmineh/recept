@@ -1,8 +1,11 @@
 Object.assign(AddRecipe.prototype, { template(){return `
   <div class="container-fluid admin-container" id="admin-container">
       <form class="needs-validation addIngredient-form" novalidate >
+        <div class="row d-flex justify-content-center">
+          <h3>Lägg till recept</h3>
+        </div>
         <div class="row justify-content-center" >
-          <div class="input-names">
+          <div class="input-names row-top">
             <div class="input-name input-group">
               <input type="text" class="form-control recipe-name" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
@@ -68,7 +71,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
         </div>
        <div class="row under mt-4 d-flex justify-content-center">
          <div class="left col-md-12 col-lg-5">
-           <div class="small-five"><small>Lägg till dina ingredienser nedan. Ange råvara, mängd och mängd i gram. Lägg till fler råvaror med lägg till-knappen. Ta bort med krysset till vänster.</small></div>
+           <div class="small-five"><small>Ange råvara samt mängd.</small></div>
            <div class="ingredients-outer">
             
            </div>
@@ -76,7 +79,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
                 <button class="btn admin-button" id="add-ingredient-btn" type="button">Lägg till</button></div>
             </div>
           <div class="right col-md-12 col-lg-6 mt-sm-4 mt-lg-0">
-            <div class="small-six"><small>Här nedan beskriver du tillvägagångssättet steg för steg. Var kortfattad. Max 100 ord i varje ruta. Lägg till textruta med lägg till-knappen och ta bort med krysset till vänster.</small></div>
+            <div class="small-six"><small>Beskriv tillvägagångssätt. Max 100 ord i varje ruta.</small></div>
             <div class="input-1group d-block how">
               
             </div>
@@ -94,7 +97,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
         <div class="row d-flex justify-content-center mt-5">
           <!-- <div class="tags"> --> 
         
-          <div class="col-sm-12 col-lg-3">
+          <div class="col-sm-12 col-lg-4">
              <p>Huvudkategori</p>
             <div class="form-check form-check-main">
               <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kott-tag" value="Kött">
@@ -115,7 +118,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
               </label>
             </div>
           </div>
-          <div class="col-sm-12 sm-mt-3 col-lg-3">
+          <div class="col-sm-12 mt-sm-3 col-lg-4">
             <p>Specialkost</p>
             <div class="form-check">
               <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
@@ -136,7 +139,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
               </label>
             </div>
           </div>
-          <div class="col-sm-12 sm-mt-3 col-lg-3">
+          <div class="col-sm-12 mt-sm-3 col-lg-4">
             <p>Måltid</p>
             <div class="form-check">
               <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="frukost-tag" value="Frukost">
