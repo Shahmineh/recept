@@ -1,7 +1,12 @@
 @import "recipe.scss";
 @import "nav.scss";
+@import "addRecipe.scss";
 @import "startsidan.scss";
 
+
+header {
+  color: yellow;
+}
 
 #search{
   width: 90%;
@@ -74,109 +79,13 @@ body {
   width: 17rem;
 }
 
-.border-control {
-  border-left: 2px solid;
-}
-
-.recipe-layout {
-  padding: 0 0 7px 7px;
-  font-size: 1.2rem;
-}
- 
-.ingredient-control {
-  list-style: none;
-}
-
-.ingredient-layout {
-  padding: 0 0 7px 0 !important;
-  font-size: 1.2rem;
-}
-
-.recipe-background {
-  background-color: #fff;
-}
-
-header {
-  background-color: rgb(236, 236, 236);}
-
-
-
 div.input-name{
   width: 100%;
   padding-top: 50px;
 }
- 
-div.input-names{
-  width: 500px;
-  height: 150px;
-}
-
-i.far{
-  font-size: 50px;
-  display: flex;
-  align-items: center;
-  border: 1px solid lightgrey;
-}
-
-div.image-forms{
-  display: grid;
-  justify-content: center;
-}
-
-#uploader{
-  width: 300px;
-}
-
-#portions{
-  width: 120px;
-}
-
-#time{
-  width: 120px;
-}
-
-.select-button{
-  width: 100px;
-}
-
-div.ingredients{
-  margin-bottom: 15px;
-}
-
-div.amount{
-  display: flex;
-}
 
 
-/* @media only screen and (max-width: 700px) {
-  div.right {
-    margin-top: 60px;
-  }
-} */
 
-div.underleft{
-  padding-top: 50px;
-}
-
-.form-control-text{
-  width: 100%;
-}
-
-div.text-input{
-  display: flex;
-  align-items: baseline;
-  padding-bottom: 15px;
-  width: 100%;
-}
-
-.text-input p{
-  width: 20px;
-}
-
-footer{
-  height: 100px;
-  background-color: grey;
-}
 
 /* Flip image */
 .flip-box {
@@ -293,7 +202,7 @@ footer{
 .menu-big-text {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 45px;
   @media screen and (max-width: 576px) {
     font-size: 25px;
   }
@@ -306,14 +215,6 @@ footer{
   text-shadow: 2px 2px 2px #c0c0c0;
 } 
 
-#amount-input{
-  width: 80px;
-}
-
-#amount-disabled{
-  width: 80px;
-}
-
 .sub-header {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -324,21 +225,11 @@ footer{
   font-weight: 500;
 }
 
-.recipe-header {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-  font-size: 2.75rem !important;
-}
-
 .cook-time {
   font-weight: 500;
   font-size: 1.25rem !important;
 }
 
-.recipe-summary {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.5rem;
-}
 .sum-little-text {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -351,65 +242,37 @@ footer{
   color: #000;
   text-shadow: 2px 2px 2px #eeeeee;
 }
-
-// div.form-group{
-//   height: 60px;
-// }
-
-.submit-btn{
-  background-color:#e26e21;
-  color: #fff;
-}
-
-.submit-btn:hover{
-  background-color:  #d8570c;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.submit-btn:focus{
-box-shadow: none;
-}
-
-#add-ingredients-btn{
-  background-color:  #d3d3d3;
+// SideNav
+.sidenav {
+  height: 100vh;
+  width: 160px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  @media screen and (max-width: 576px) {
+    width: 100vw;
+    height: 100%;
+  }
+ }
+ 
+ .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
   color: #000;
-}
-
-#add-ingredients-btn:hover{
-  background-color:  #777777;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #fff;
-}
-
-#howto-btn{
-  background-color:  #d3d3d3;
-  color: #000;
-}
-
-#howto-btn:hover{
-  background-color:  #777777;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #fff;
-}
-
-#button-add{
-  background-color:  #d3d3d3;
-  color: #000;
-}
-
-#button-add:hover{
-  background-color:  #777777;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #fff;
-}
-
-.admin-container{
-  background-color: #fff
-}
-
-#browser-input{
-  cursor: pointer;
-}  
+  display: block;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+  }
+ }
+ 
+ .sidenav a:hover {
+  color: #e26e21;
+ }
 
  .d-flex {
   @media screen and (max-width: 576px) {
@@ -424,23 +287,4 @@ box-shadow: none;
   @media (min-width: 768px) and (max-width: 991.98px) {
     display: contents!important;
   }
- }
-
- i.fa-times{
-  margin-right: 13px;
-  color: red; 
-  cursor: pointer;
- }
-
- #remove-howto-btn{
-   margin-top: 16px;
- }
-
- #remove-ingredient-btn{
-  margin-top: 11px;
- }
-
- .max-100 {
-   max-height: 100vh;
-   overflow: auto;
  }

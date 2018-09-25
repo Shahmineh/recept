@@ -1,0 +1,42 @@
+.border-control {
+  @media screen and (min-width: 990px) {
+    border-left: 0px;
+  }
+  @media screen and (min-width: 1000px) {
+    border-left: 2px solid;
+  }
+}
+
+.recipe-layout {
+  padding: 0 0 7px 7px;
+  font-size: 1.2rem;
+}
+ 
+.ingredient-control {
+  list-style: none;
+}
+
+.ingredient-layout {
+  padding: 0 0 7px 0 !important;
+  font-size: 1.2rem;
+}
+
+.recipe-background {
+  background-color: #fff;
+}
+
+.sub-header {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.recipe-header {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 2.75rem !important;
+}
+
+.recipe-summary {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+}
