@@ -10,7 +10,7 @@
 // SideNav
 header {
   height: 100vh;
-  min-width: 180px;
+  min-width: 220px;
   background-color: #fff;
   padding-top: 20px;
   @media screen and (max-width: 576px) {
@@ -177,7 +177,7 @@ header {
 }
 
 #cssmenu ul li.has-sub > a:after {
-  content: '+';
+  content: '>';
   position: absolute;
   top: 50%;
   right: 15px;
@@ -265,3 +265,6 @@ header {
   border-radius: 3px 0 0 3px;
 }
 
+.menu-icon {
+  width: 30px;
+}
