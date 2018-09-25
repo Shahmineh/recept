@@ -1,17 +1,17 @@
 Object.assign(Navbar.prototype, { template(){ return `
 <div id="cssmenu">
   <ul>
-    <li><a href="/"><span>Home</span></a></li>
-    <li class="has-sub"><a href="/huvudkategori"><span>Huvudkategori</span></a>
+    <li><a href="/" class="nav-btn"><span>Home</span></a></li>
+    <li class="has-sub"><a href="/huvudkategori" class="nav-btn"><span>Huvudkategori</span></a>
        <ul>
-          <li class=""><a href="#"><span>Kött</span></a>
+          <li class=""><a href="#" class="nav-btn"><span>Kött</span></a>
              <!-- <ul>
                 <li><a href="#"><span>Nött</span></a></li>
                 <li class="last"><a href="#"><span>Fläsk</span></a></li>
              </ul> -->
           </li>
-          <li class=""><a href="#"><span>Fisk</span></a></li>
-          <li class=""><a href="#"><span>Kyckling</span></a>
+          <li class=""><a href="#" class="nav-btn"><span>Fisk</span></a></li>
+          <li class=""><a href="#" class="nav-btn"><span>Kyckling</span></a>
              <!-- <ul>
                 <li><a href="#"><span>Sub Product</span></a></li>
                 <li class="last"><a href="#"><span>Sub Product</span></a></li>
@@ -19,23 +19,23 @@ Object.assign(Navbar.prototype, { template(){ return `
           </li>
        </ul>
     </li>
-    <li class="has-sub"><a href="/maltid"><span>Måltid <i class="fas fa-utensils big-icon"></i></span></a>
+    <li class="has-sub"><a href="/maltid" class="nav-btn"><span>Måltid <i class="fas fa-utensils big-icon"></i></span></a>
       <ul>
-        <li class=""><a href="#"><span>Frukost</span></a></li>
-        <li class=""><a href="#"><span>Mellanmål</span></a></li>
-        <li class=""><a href="#"><span>Förrätt</span></a></li>
-        <li class=""><a href="#"><span>Huvudrätt</span></a></li>
-        <li class=""><a href="#"><span>Efterätt</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Frukost</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Mellanmål</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Förrätt</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Huvudrätt</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Efterätt</span></a></li>
       </ul>
     </li>
-    <li class="has-sub"><a href="/specialkost"><span>Specialkost</span></a>
+    <li class="has-sub"><a href="/specialkost" class="nav-btn"><span>Specialkost</span></a>
       <ul>
-        <li class=""><a href="#"><span>Veg</span></a></li>
-        <li class=""><a href="#"><span>Laktosfri</span></a></li>
-        <li class=""><a href="#"><span>Glutenfri</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Laktosfri</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Glutenfri</span></a></li>
       </ul>
     </li>
-    <li class="last"><a href="/varldens-mat"><span>Världens mat <i class="fas fa-globe-americas big-icon"></i></span></a></li>
+    <li class="last"><a href="/varldens-mat" class="nav-btn"><span>Världens mat <i class="fas fa-globe-americas big-icon"></i></span></a></li>
  </ul>
 </div>
 `}});
