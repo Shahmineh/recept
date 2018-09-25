@@ -26,7 +26,6 @@ class Search{
         const that = this;
         $(document).on('keyup', '#search-input', function(event){
             let val = $('#search-input').val();
-            console.log(val);
             val.length ? that.searchEngine(val) : null;
             //console.log(that.searchResult);
             
