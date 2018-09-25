@@ -15,6 +15,7 @@ class App extends Base{
                     this.runTest();
                     this.addRecipe = new AddRecipe(this.recipes, this.livsmedelDataIdHash);
                     this.search = new Search(this.recipes, this.livsmedelData);
+                    this.filter = new Filter(this.livsmedelData, this.recipes);
                     this.navigation();
                 })
             }
@@ -34,9 +35,11 @@ class App extends Base{
             startsidan.render('main');
         }
         if (url == '/recept') {
-            let recipe = new Recipe();
+            let recipe = new Recipe(this.filter, 'Korv Stroganoff');
             $('main').empty();
             recipe.render('main');
+            recipe.ingredientList();
+            recipe.instructionList();
         }
         if (url == '/huvudkategori') {
             $('main').empty();
