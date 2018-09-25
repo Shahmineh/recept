@@ -5,18 +5,20 @@ class App extends Base{
         this.livsmedelData;
         this.livsmedelDataIdHash = {};
         this.recipes;
-        this.clickEvents();
         this.start();
+        this.clickEvents();
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
                 this.createIdHashForLivsmedelData();
-                $.getJSON('/json/recept.json', (data) => {
+                $.getJSON('/json/recipe.json', (data) => {
                     this.recipes = data;
                     this.runTest();
+                    this.addRecipe = new AddRecipe(this.recipes, this.livsmedelDataIdHash);
+                    this.search = new Search(this.recipes, this.livsmedelData);
+                    this.navigation();
                 })
             }
         );
-        
     }
 
     navigation(){
@@ -71,14 +73,17 @@ class App extends Base{
                 <h2>HTML/Render method here</h2>`
             );            
         }
+        if (url == '/lagg-recept') {
+            $('main').empty();
+            this.addRecipe.reset();
+            this.addRecipe.render('main');
+            this.addRecipe.addIngredient(); 
+            this.addRecipe.addInstruction(); 
+        }
     }
 
     clickEvents(){
         let that = this;
-        //Add item
-        $(document).on("click", '#btn-add-allTasks', function() {
-            item.addItem(currentTab);
-        });
         //Navigation
         $(document).on('click','a.nav-btn',function(e){
             //Create a push state preventDefault
@@ -103,14 +108,16 @@ class App extends Base{
     runTest(){
 
         const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
-        console.log(test.getNutritionValues('Omlett - Enkelt recept'));
-        console.log(test.getNutritionValues('Pam'));
+        // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
+        // console.log(test.getNutritionValues('Pam'));
         // test.getNutritionValues('Pamlet');
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
     }
 
     start(){
-         
+        let navbar = new Navbar();
+        $('header').empty();
+        navbar.render('header');
     }
 
     

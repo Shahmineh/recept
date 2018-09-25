@@ -36,15 +36,14 @@ class NutritionValues {
     calculateNutritionValues(nutritionValues, nutritionNames, selectedRecipe){
         // console.log(nutritionNames);
         // console.log(nutritionValues);
-        // console.log(selectedRecipe);
-
+        // console.log(selectedRecipe.portions);
         const result = nutritionNames.reduce((acc, nutritionCategory) =>{
             let sum = nutritionValues.reduce((acc, elSum) =>{
                 return acc + elSum[nutritionCategory]
             },0);
             return {
                 ...acc,
-                [nutritionCategory]: sum.toFixed(2)
+                [nutritionCategory]: sum.toFixed(2)*selectedRecipe.portions + 'g'
             }
         },{})
         return result;
