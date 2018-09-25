@@ -9,6 +9,7 @@ class AddRecipe extends Base {
     this.tags = Object.values(this.ingredients).map(item=>item.Namn);
     this.filter = new Filter(this.ingredients, this.recipes);
     this.eventHandler();
+    this.tagArrayMain, this.tagArraySpecial, this.tagArrayMeal = [];
   }
 
   reset(){
@@ -102,7 +103,7 @@ class AddRecipe extends Base {
 
   eventHandler(){
     let that = this;
-    let arr = [];
+    // let arr = [];
     //Add ingredient
     $(document).on('click', "#add-ingredient-btn", function() {
       that.addIngredient();
@@ -269,17 +270,27 @@ class AddRecipe extends Base {
       }
     });
     //Validation tags
-    $(document).on("click",".form-check-input", function(){ 
-      
-      let val = $("input:checked").each(function(){
+    $(document).on("click",".form-check-input-main", function(){ 
+      let arr = [];
+      $(".form-check-input-main:checked").each(function(){
         arr.push($(this).val());
+      });
+      that.tagArrayMain = arr;
     });
+    $(document).on("click",".form-check-input-special", function(){ 
+      let arr = [];
+      $(".form-check-input-special:checked").each(function(){
+        arr.push($(this).val());
+      });
+      that.tagArraySpecial = arr;
     });
-    
-
-     
-    
-
+    $(document).on("click",".form-check-input-meal", function(){ 
+      let arr = [];
+      $(".form-check-input-meal:checked").each(function(){
+        arr.push($(this).val());
+      });
+      that.tagArrayMeal = arr;
+    });
 
     //Submit
     $(document).on('click', '#submit-btn', function(){
@@ -316,11 +327,15 @@ class AddRecipe extends Base {
         ingredients: ingredients,
         steps: steps,
         imagePath: imagePath,
-        tags: arr
+        tags: {
+          main: that.tagArrayMain,
+          special: that.tagArraySpecial,
+          meal: that.tagArrayMeal
+        }
       };
-      that.formValidation(recipe); 
+      that.tagArrayMain, that.tagArraySpecial, that.tagArrayMeal = [];
+      that.formValidation(recipe);  
     }); 
-    console.log(arr)
   }
 }
 
