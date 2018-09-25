@@ -38,5 +38,10 @@ Object.assign(Navbar.prototype, { template(){ return `
     <li class="last"><a href="/varldens-mat" class="nav-btn"><span>Världens mat <img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"></span></a></li>
     <li ><a href="/lagg-recept" class="nav-btn"><span>Lägg till recept <img src="/imgs/plus.png" class="menu-icon" alt="menu icon"></span></a></li>
  </ul>
+ <form class="form-inline my-2 my-lg-0">
+   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+  </form>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search-button">Search</button>
+  <div class="search-autocomplete"></div>
 </div>
 `}});

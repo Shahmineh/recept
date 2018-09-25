@@ -36,7 +36,7 @@ class Filter{
 
     getIngredientName(inputToFilter){
         inputToFilter = inputToFilter.toLowerCase();
-        console.log(inputToFilter)
+        return Object.values(this.ingredients).find(item => item.Nummer === inputToFilter).Namn;
         /* let result = Object.values(this.ingredients)
         .filter(item => item.Namn.toLowerCase().find(input => {
             input.Namn === inputToFilter;

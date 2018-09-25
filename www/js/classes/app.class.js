@@ -41,6 +41,7 @@ class App extends Base{
             recipe.render('main');
             recipe.ingredientList();
             recipe.instructionList();
+            recipe.nutritionValues();
         }
         if (url == '/huvudkategori') {
             $('main').empty();
@@ -111,7 +112,7 @@ class App extends Base{
     
     runTest(){
 
-        // const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
+        const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
         // console.log(test.getNutritionValues('Pam'));
         // test.getNutritionValues('Pamlet');
