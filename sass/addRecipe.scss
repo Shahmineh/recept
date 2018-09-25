@@ -154,8 +154,36 @@ box-shadow: none;
   color: #fff;
 }
 
-.admin-container{
-  background-color: #fff
+/*.admin-container:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+
+  // background-color: rgb(255, 255, 255)
+  background-image: url("/imgs/food-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  
+  filter: blur(2px); 
+}
+
+.admin-container {
+  overflow: auto;
+  position: relative;
+}*/
+
+body {
+  background-image: url("/imgs/food-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
 }
 
 #browser-input{
