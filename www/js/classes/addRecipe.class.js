@@ -21,8 +21,10 @@ class AddRecipe extends Base {
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
           <i class="fas fa-times" id="remove-ingredient-btn"></i>
+          <div class="flex-column">
           <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
           <div class="invalid-feedback">Fyll i här</div>
+          </div>
           <div class="d-flex">
           <div class="flex-column">
             <input type="number" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
@@ -42,7 +44,7 @@ class AddRecipe extends Base {
             <div class="invalid-feedback">Fyll i här</div>
           </div>
           </div>
-          <div class="gram">
+          <div class="flex-column gram">
             <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
             <div class="invalid-feedback">Fyll i här</div>
           </div>
@@ -258,7 +260,7 @@ class AddRecipe extends Base {
       else{
         $(`#gram-input-${id}`).show();
       }
-        });
+        }); 
 
     //Validation weight
     $(document).on('keyup', '.gram-input', function(){
