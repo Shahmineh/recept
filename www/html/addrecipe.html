@@ -98,86 +98,88 @@ Object.assign(AddRecipe.prototype, { template(){return `
         </div> 
 
         <div class="row d-flex justify-content-center mt-5">
-          <small>Fyll i taggar som passar bäst till ditt recept. Minst en i varje spalt måste fyllas i.</small>
+          <div class="small-seven">
+            <small>Fyll i taggar som passar bäst till ditt recept. Minst en i varje spalt måste fyllas i.</small>
+          </div>
         </div>
 
-        <div class="row tags mt-2">
-            <div class="col-sm-12 col-lg-4">
-              <p>Huvudkategori</p>
-              <div class="form-check form-check-main">
-                <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kott-tag" value="Kött">
-                <label class="form-check-label" for="exampleRadios2">
-                  Kött
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="fisk-tag" value="Fisk">
-                <label class="form-check-label" for="exampleRadios2">
-                  Fisk
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kyckling-tag" value="Kyckling">
-                <label class="form-check-label" for="exampleRadios2">
-                  Kyckling
-                </label>
-              </div>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-              <p>Specialkost</p>
-              <div class="form-check">
-                <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
-                <label class="form-check-label" for="exampleRadios2">
-                  Veg/vegansk
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="laktos-tag" value="Laktosfri">
-                <label class="form-check-label" for="exampleRadios2">
-                  Laktosfri
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="gluten-tag" value="Glutenfri">
-                <label class="form-check-label" for="glutenfri">
-                  Glutenfri
-                </label>
-              </div>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-            <p>Måltid</p>
-            <div class="form-check">
-              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="frukost-tag" value="Frukost">
-              <label class="form-check-label" for="frukost">
-                Frukost
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="mellan-tag" value="Mellanmål">
+        <div class="row mt-2">
+          <div class="col-sm-12 col-lg-4">
+            <p>Huvudkategori</p>
+            <div class="form-check form-check-main">
+              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kott-tag" value="Kött">
               <label class="form-check-label" for="exampleRadios2">
-                Mellanmål
+                Kött
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="for-tag" value="Förrätt">
+              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="fisk-tag" value="Fisk">
               <label class="form-check-label" for="exampleRadios2">
-                  Förrätt
+                Fisk
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="huvud-tag" value="Huvudrätt">
-              <label class="form-check-label" for="huvudrätt">
-                Huvudrätt
+              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kyckling-tag" value="Kyckling">
+              <label class="form-check-label" for="exampleRadios2">
+                Kyckling
               </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="efter-tag" value="Efterrätt">
-              <label class="form-check-label" for="efterrätt">
-                Efterrätt
-              </label>
-            </div>
             </div>
           </div>
+          <div class="col-sm-12 col-lg-4 mt-sm-4">
+            <p>Specialkost</p>
+            <div class="form-check">
+              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
+              <label class="form-check-label" for="exampleRadios2">
+                Veg/vegansk
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="laktos-tag" value="Laktosfri">
+              <label class="form-check-label" for="exampleRadios2">
+                Laktosfri
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="gluten-tag" value="Glutenfri">
+              <label class="form-check-label" for="glutenfri">
+                Glutenfri
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 mt-sm-4">
+          <p>Måltid</p>
+          <div class="form-check">
+            <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="frukost-tag" value="Frukost">
+            <label class="form-check-label" for="frukost">
+              Frukost
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="mellan-tag" value="Mellanmål">
+            <label class="form-check-label" for="exampleRadios2">
+              Mellanmål
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="for-tag" value="Förrätt">
+            <label class="form-check-label" for="exampleRadios2">
+                Förrätt
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="huvud-tag" value="Huvudrätt">
+            <label class="form-check-label" for="huvudrätt">
+              Huvudrätt
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="efter-tag" value="Efterrätt">
+            <label class="form-check-label" for="efterrätt">
+              Efterrätt
+            </label>
+          </div>
+          </div>
+        </div>
         <div class="row">
             <div class="col d-flex justify-content-center m-5">
               <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
