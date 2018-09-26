@@ -85,7 +85,7 @@ class AddRecipe extends Base {
         if(form.checkValidity() === true){
           event.preventDefault();
           event.stopPropagation();
-          JSON._save('recipe.json', [...that.recipes, recipe]);
+          JSON._save('recipe.json', [...Object.values(that.recipes), recipe]);
           $.getJSON('/json/recipe.json', (data) => {
               that.recipes = data;
           });
@@ -299,7 +299,7 @@ class AddRecipe extends Base {
           return [
             ...acc,
             {
-              number: that.filter.filterIngredientsById($(`#ravara-input-${index}`).val()).join(),
+              number: that.filter.filterIngredients($(`#ravara-input-${index}`).val())[0].Nummer,
               amount: $(`#amount-input-${index}`).val(),
               unit: $(`#amount-select-${index}`).val(),
               weight: $(`#gram-input-${index}`).val(),
