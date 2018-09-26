@@ -1,5 +1,5 @@
-class App extends Base{
-    constructor(){
+class App extends Base {
+    constructor() {
         super();
         // Read data to our globals from json files
         this.livsmedelData;
@@ -8,26 +8,26 @@ class App extends Base{
         this.start();
         this.clickEvents();
         $.getJSON("/json/livsmedel.json", (data) => {
-                this.livsmedelData = data;
-                this.createIdHashForLivsmedelData();
-                $.getJSON('/json/recipe.json', (data) => {
-                    this.recipes = data;
-                    this.runTest();
-                    this.addRecipe = new AddRecipe(this.recipes, this.livsmedelDataIdHash);
-                    this.search = new Search(this.recipes, this.livsmedelData);
-                    this.navigation();
-                })
-            }
+            this.livsmedelData = data;
+            this.createIdHashForLivsmedelData();
+            $.getJSON('/json/recipe.json', (data) => {
+                this.recipes = data;
+                this.runTest();
+                this.addRecipe = new AddRecipe(this.recipes, this.livsmedelDataIdHash);
+                this.search = new Search(this.recipes, this.livsmedelData);
+                this.navigation();
+            })
+        }
         );
     }
 
-    navigation(){
+    navigation() {
         let navbar = new Navbar();
         $('header').empty();
         navbar.render('header');
         // get the current url
         let url = location.pathname;
-        
+
         if (url == '/') {
             let startsidan = new Startsidan(this);
             $('main').empty();
@@ -45,47 +45,45 @@ class App extends Base{
                 <h2>HTML/Render method here</h2>`
             );
         }
-        if (url == '/maltid') {
+        if (url == '/maltid/frukost') {
+            $('main').empty();
+            searchresult.render('main')
+        }
+
+        if (url == '/ingrediens') {
             $('main').empty();
             $('main').html(
                 `<h1>${url}</h1>
                 <h2>HTML/Render method here</h2>`
             );
         }
-        if (url == '/ingrediens') {
-            $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
-        }
         if (url == '/specialkost') {
             $('main').empty();
             $('main').html(
                 `<h1>${url}</h1>
                 <h2>HTML/Render method here</h2>`
-            );            
+            );
         }
         if (url == '/varldens-mat') {
             $('main').empty();
             $('main').html(
                 `<h1>${url}</h1>
                 <h2>HTML/Render method here</h2>`
-            );            
+            );
         }
         if (url == '/lagg-recept') {
             $('main').empty();
             this.addRecipe.reset();
             this.addRecipe.render('main');
-            this.addRecipe.addIngredient(); 
-            this.addRecipe.addInstruction(); 
+            this.addRecipe.addIngredient();
+            this.addRecipe.addInstruction();
         }
     }
 
-    clickEvents(){
+    clickEvents() {
         let that = this;
         //Navigation
-        $(document).on('click','a.nav-btn',function(e){
+        $(document).on('click', 'a.nav-btn', function (e) {
             //Create a push state preventDefault
             let href = $(this).attr('href');
             history.pushState(null, null, href);
@@ -99,13 +97,13 @@ class App extends Base{
 
 
     // re-writes livesmedeldata for easier filtering
-    createIdHashForLivsmedelData(){
-        for(let livsmedel of this.livsmedelData){
+    createIdHashForLivsmedelData() {
+        for (let livsmedel of this.livsmedelData) {
             this.livsmedelDataIdHash[livsmedel.Nummer] = livsmedel;
         }
     }
-    
-    runTest(){
+
+    runTest() {
 
         const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
@@ -114,11 +112,11 @@ class App extends Base{
         // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
     }
 
-    start(){
+    start() {
         let navbar = new Navbar();
         $('header').empty();
         navbar.render('header');
     }
 
-    
+
 }

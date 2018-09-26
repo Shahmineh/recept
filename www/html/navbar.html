@@ -3,34 +3,36 @@ Object.assign(Navbar.prototype, { template(){ return `
   <ul>
     <li><a href="/" class="nav-btn"><span>Home</span></a></li>
     <li class="has-sub"><label for="main-item-1" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="menu icon"><span>Huvudkategori</span></span></label>
-       <input id="main-item-1" type="checkbox">
-       <ul>
-          <li class=""><a href="#" class="nav-btn"><span>Kött</span></a>
-             <!-- <ul>
+      <input id="main-item-1" type="checkbox">
+      <ul>
+        <li class=""><a href="#" class="nav-btn"><span>Kött</span></a>
+          <!-- <ul>
                 <li><a href="#"><span>Nött</span></a></li>
                 <li class="last"><a href="#"><span>Fläsk</span></a></li>
              </ul> -->
-          </li>
-          <li class=""><a href="#" class="nav-btn"><span>Fisk</span></a></li>
-          <li class=""><a href="#" class="nav-btn"><span>Kyckling</span></a>
-             <!-- <ul>
+        </li>
+        <li class=""><a href="#" class="nav-btn"><span>Fisk</span></a></li>
+        <li class=""><a href="#" class="nav-btn"><span>Kyckling</span></a>
+          <!-- <ul>
                 <li><a href="#"><span>Sub Product</span></a></li>
                 <li class="last"><a href="#"><span>Sub Product</span></a></li>
              </ul> -->
-          </li>
-       </ul>
-    </li>
-    <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"><span> Måltid</span></span></label>
-      <input id="main-item-2" type="checkbox">
-      <ul>
-        <li class=""><a href="#" class="nav-btn"><span>Frukost</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Mellanmål</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Förrätt</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Huvudrätt</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Efterätt</span></a></li>
+        </li>
       </ul>
     </li>
-    <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"><span> Specialkost</span></span></label>
+    <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"><span>
+            Måltid</span></span></label>
+      <input id="main-item-2" type="checkbox">
+      <ul>
+        <li><a href="/maltid/frukost" class="nav-btn"><span>Frukost</span></a></li>
+        <li><a href="/maltid/mellanmal" class="nav-btn"><span>Mellanmål</span></a></li>
+        <li><a href="/maltid/forratt" class="nav-btn"><span>Förrätt</span></a></li>
+        <li><a href="/maltid/huvudratt" class="nav-btn"><span>Huvudrätt</span></a></li>
+        <li><a href="/maltid/efterratt" class="nav-btn"><span>Efterätt</span></a></li>
+      </ul>
+    </li>
+    <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"><span>
+            Specialkost</span></span></label>
       <input id="main-item-3" type="checkbox">
       <ul>
         <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
@@ -39,7 +41,8 @@ Object.assign(Navbar.prototype, { template(){ return `
       </ul>
     </li>
     <!-- <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"><span> Världens mat</span></span></a></li> -->
-    <li ><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"><span> Lägg till recept</span></span></a></li>
- </ul>
+    <li><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"><span>
+            Lägg till recept</span></span></a></li>
+  </ul>
 </div>
 `}});
