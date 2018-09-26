@@ -14,10 +14,7 @@ class App extends Base{
                     this.recipes = data;
                     this.search = new Search(this.recipes, this.livsmedelData);
                     this.filter = new Filter(this.ingredientsIdHash, this.recipes);
-                    // this.getNutritionValues = new NutritionValues(this.ingredientsIdHash, this.recipes);
-                    this.navigation();
-                    // console.log(this.filter.filterIngredients('korv'));
-                    // console.log(this.filter.filterRecipesByName('Korv'));
+                    // this.navigation();
                 })
             }
         );
@@ -57,88 +54,70 @@ class App extends Base{
             recipe.nutritionValuesList();
         }
         if (url == '/huvudkategori/kott') {
+            let categoryPage = new CategoryPage('kött', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/huvudkategori/fisk') {
+            let categoryPage = new CategoryPage('fisk', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/huvudkategori/kyckling') {
+            let categoryPage = new CategoryPage('kyckling', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/maltid/frukost') {
+            let categoryPage = new CategoryPage('frukost', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/maltid/mellamal') {
+            let categoryPage = new CategoryPage('mellanmål', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/maltid/forrrat') {
+            let categoryPage = new CategoryPage('förrätt', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/maltid/huvudratt') {
+            let categoryPage = new CategoryPage('huvudrätt', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/maltid/efterratt') {
+            let categoryPage = new CategoryPage('efterrätt', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
         if (url == '/specialkost/veg') {
+            let categoryPage = new CategoryPage('veg', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
+            categoryPage.render('main');
+            categoryPage.renderRecipes();        
         }
         if (url == '/specialkost/laktosfri') {
+            let categoryPage = new CategoryPage('laktosfri', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
+            categoryPage.render('main');
+            categoryPage.renderRecipes();            
         }
         if (url == '/specialkost/glutenfri') {
+            let categoryPage = new CategoryPage('glutenfri', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
-        }
-        if (url == '/varldens-mat') {
-            $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
+            categoryPage.render('main');
+            categoryPage.renderRecipes();           
         }
         if (url == '/lagg-recept') {
             let addRecipe = new AddRecipe(this.recipes, this.ingredientsIdHash);
