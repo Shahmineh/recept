@@ -9,7 +9,8 @@
   src: url('../../font/gotham-book-regular.otf'), url('../../font/gotham-book-regular.otf') format('gotham');
 }
 
-body {
+body, html {
+  overflow-x: hidden;
   font-family: 'Gotham', sans-serif;
   background-color: #f0f0f0;
 }
