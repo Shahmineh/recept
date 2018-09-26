@@ -1,7 +1,3 @@
-// .search-border {
-//   border-color: #e26e21;
-// }
-
 .big-icon {
   font-size: 20px;
   color: #f56410;
@@ -22,17 +18,9 @@ header {
       font-size: 15px;
       color: #000;
       display: block;
-     }
+    }
   }
- 
- 
- 
-//  header a:hover {
-//   color: #e26e21;
-//  }
-
- 
- }
+}
 
  .max-100 {
   max-height: 100vh;
@@ -41,15 +29,8 @@ header {
   @media screen and (max-width: 576px) {
     max-height: fit-content;
   }
+ }
 
-  
-  }
-// #cssmenu {
-//   padding: 0;
-//   margin: 0;
-//   border: 0;
-//   line-height: 1;
-// }
 #cssmenu ul,
 #cssmenu ul li,
 #cssmenu ul ul {
@@ -57,12 +38,6 @@ header {
   margin: 0;
   padding: 0;
 }
-
-// #cssmenu ul {
-//   position: relative;
-//   z-index: 597;
-//   float: left;
-// }
 
 input[type="checkbox"]{
   display: none;
@@ -75,6 +50,7 @@ input[type="checkbox"]{
   vertical-align: middle;
   position: relative;
 }
+
 // Hover color on li
 #cssmenu > ul > li > label:hover,
 #cssmenu > ul > li > label:focus {
@@ -101,9 +77,7 @@ label {
       align-items: center;
     }
   }
-  
 }
-
 
 #cssmenu ul ul li:hover > a {
   background: #838383e3 !important;
@@ -121,18 +95,16 @@ label {
   left: 0px;
   z-index: 598;
   width: 100%;
-}
 
-#cssmenu ul ul li {
-  float: none;
+  li {
+    float: none;
+  }
 }
 
 #cssmenu ul ul ul {
   top: -2px;
   right: 0;
 }
-
-
 
 #cssmenu ul ul {
   top: -1px;
@@ -151,14 +123,6 @@ label {
   font-weight: normal;
 }
 
-/* Custom CSS Styles */
-// #cssmenu {
-//   width: 200px;
-//   background: #fff;
-//   // font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
-//   zoom: 1;
-//   font-size: 12px;
-// }
 #cssmenu:before {
   content: '';
   display: block;
@@ -175,11 +139,7 @@ label {
   padding: 15px 20px;
   color: #ffffff;
   text-decoration: none;
-  // text-transform: uppercase;
 }
-// #cssmenu > ul {
-//   width: 200px;
-// }
 
 #cssmenu ul ul {
   width: 200px;
@@ -201,39 +161,17 @@ label {
   margin-top: -6px;
 }
 
-#cssmenu ul ul li.first {
-  border-radius: 0 3px 0 0;
-}
-
-#cssmenu ul ul li.last {
-  border-radius: 0 0 3px 0;
-  border-bottom: 0;
-}
-
 #cssmenu ul ul {
   border-radius: 0 3px 3px 0;
+  a {
+    font-size: 12px;
+    color: #333;
+  }
+
+  li {
+    border-bottom: 1px solid #707070;
+  }
 }
-
-// #cssmenu ul ul {
-//   border: 1px solid #0082e7;
-// }
-
-#cssmenu ul ul a {
-  font-size: 12px;
-  color: #333;
-}
-
-
-#cssmenu ul ul li {
-  border-bottom: 1px solid #707070;
-}
-
-
-
-// #cssmenu.align-right > ul > li > a {
-//   border-left: 4px solid #1b9bff;
-//   border-right: none;
-// }
 
 #cssmenu.align-right {
   float: right;
@@ -287,6 +225,7 @@ label {
     height: 100vh;
     min-width: 70px;
   }
+
   #cssmenu > ul > li span span {
     display: none;
   }
