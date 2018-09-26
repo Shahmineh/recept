@@ -14,10 +14,10 @@ class App extends Base{
                     this.recipes = data;
                     this.search = new Search(this.recipes, this.livsmedelData);
                     this.filter = new Filter(this.ingredientsIdHash, this.recipes);
-                    // this.navigation();
                 })
             }
         );
+        console.log('mehhh');
     }
 
     // re-writes livesmedeldata for easier filtering
@@ -27,19 +27,12 @@ class App extends Base{
         }
     }
 
-    start(){
-        let navbar = new Navbar();
-        $('header').empty();
-        navbar.render('header');
-    }
-
     navigation(){
         let navbar = new Navbar();
         $('header').empty();
         navbar.render('header');
         // get the current url
         let url = location.pathname;
-        
         if (url == '/') {
             let startsidan = new Startsidan(this);
             $('main').empty();
@@ -129,6 +122,8 @@ class App extends Base{
         }
     }
 
+    
+
     eventHandlers(){
         let that = this;
         //Navigation
@@ -141,5 +136,11 @@ class App extends Base{
             //Stop the browers from starting a page reload
             e.preventDefault();
         });
-    }    
+    } 
+    
+    start(){
+        let navbar = new Navbar();
+        $('header').empty();
+        navbar.render('header');
+    }
 }

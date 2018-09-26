@@ -60,7 +60,7 @@
           "3": "Smaka av med salt och peppar.",
           "4": "Servera ris och vitkålssallad vid sidan om."
         },
-        "imagePath": "korvstroganoff.png",
+        "imagePath": "pasta.jpg",
         "tags": {
           "main": [
             "Kött"
@@ -131,7 +131,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "brunch.jpg",
     "tags": {
       "main": [
         "Kött"
@@ -202,7 +202,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "spanskpizza.jpeg",
     "tags": {
       "main": [
         "Kött"
@@ -273,7 +273,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "dinner.jpg",
     "tags": {
       "main": [
         "Kött"
