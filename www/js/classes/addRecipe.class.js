@@ -205,13 +205,12 @@ class AddRecipe extends Base {
     //Validation ingredient
     $(document).on('keyup', '.ravara-input', function(event) {
       let val = $(this).val();
-      let inputHits = that.filter.filterIngredientsByName(val);
+      let inputHits = that.filter.filterIngredients(val);
       $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
       val.length > 2 ? inputHits.map(item=>{
-        let hit = Object.values(that.ingredients).filter(el=>el.Namn==item)[0];
         return $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
-          <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${hit.Nummer}" type="button" data-id="${hit.Nummer}">
-            ${hit.Namn}
+          <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${item.Nummer}" type="button" data-id="${item.Nummer}">
+            ${item.Namn}
           </button>
         `);
       }) : null;

@@ -3,24 +3,37 @@ class App extends Base{
         super();
         // Read data to our globals from json files
         this.livsmedelData;
-        this.livsmedelDataIdHash = {};
+        this.ingredientsIdHash = {};
         this.recipes;
         this.start();
-        this.clickEvents();
+        this.eventHandlers();
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
                 this.createIdHashForLivsmedelData();
                 $.getJSON('/json/recipe.json', (data) => {
                     this.recipes = data;
-                    this.runTest();
-                    this.addRecipe = new AddRecipe(this.recipes, this.livsmedelDataIdHash);
                     this.search = new Search(this.recipes, this.livsmedelData);
-                    this.filter = new Filter(this.livsmedelData, this.recipes);
-                    this.getNutritionValues = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
+                    this.filter = new Filter(this.ingredientsIdHash, this.recipes);
+                    // this.getNutritionValues = new NutritionValues(this.ingredientsIdHash, this.recipes);
                     this.navigation();
+                    // console.log(this.filter.filterIngredients('korv'));
+                    // console.log(this.filter.filterRecipesByName('Korv'));
                 })
             }
         );
+    }
+
+    // re-writes livesmedeldata for easier filtering
+     createIdHashForLivsmedelData(){
+        for(let livsmedel of this.livsmedelData){
+            this.ingredientsIdHash[livsmedel.Nummer] = livsmedel;
+        }
+    }
+
+    start(){
+        let navbar = new Navbar();
+        $('header').empty();
+        navbar.render('header');
     }
 
     navigation(){
@@ -36,12 +49,12 @@ class App extends Base{
             startsidan.render('main');
         }
         if (url == '/recept') {
-            let recipe = new Recipe(this.filter, 'Korv Stroganoff', this.getNutritionValues);
+            let recipe = new Recipe('Korv Stroganoff', this.ingredientsIdHash, this.recipes);
             $('main').empty();
             recipe.render('main');
             recipe.ingredientList();
             recipe.instructionList();
-            recipe.nutritionValues();
+            recipe.nutritionValuesList();
         }
         if (url == '/huvudkategori') {
             $('main').empty();
@@ -79,15 +92,16 @@ class App extends Base{
             );            
         }
         if (url == '/lagg-recept') {
+            let addRecipe = new AddRecipe(this.recipes, this.ingredientsIdHash);
             $('main').empty();
-            this.addRecipe.reset();
-            this.addRecipe.render('main');
-            this.addRecipe.addIngredient(); 
-            this.addRecipe.addInstruction(); 
+            addRecipe.reset();
+            addRecipe.render('main');
+            addRecipe.addIngredient(); 
+            addRecipe.addInstruction(); 
         }
     }
 
-    clickEvents(){
+    eventHandlers(){
         let that = this;
         //Navigation
         $(document).on('click','a.nav-btn',function(e){
@@ -99,31 +113,5 @@ class App extends Base{
             //Stop the browers from starting a page reload
             e.preventDefault();
         });
-    }
-
-
-
-    // re-writes livesmedeldata for easier filtering
-    createIdHashForLivsmedelData(){
-        for(let livsmedel of this.livsmedelData){
-            this.livsmedelDataIdHash[livsmedel.Nummer] = livsmedel;
-        }
-    }
-    
-    runTest(){
-
-        const test = new NutritionValues(this.livsmedelDataIdHash, this.recipes);
-        // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
-        // console.log(test.getNutritionValues('Pam'));
-        // test.getNutritionValues('Pamlet');
-        // console.log(test.getNutritionValues('Omlett - Enkelt recept'));
-    }
-
-    start(){
-        let navbar = new Navbar();
-        $('header').empty();
-        navbar.render('header');
-    }
-
-    
+    }    
 }
