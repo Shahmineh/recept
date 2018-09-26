@@ -210,12 +210,12 @@ class AddRecipe extends Base {
       let val = $(this).val();
       let inputHits = that.filter.filterIngredients(val);
       $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
-      val.length > 2 ? inputHits.map(item=>{
-        return $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
+      val.length > 2 ? inputHits.map((item, index)=>{
+        return index < 10 ? $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
           <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${item.Nummer}" type="button" data-id="${item.Nummer}">
             ${item.Namn}
           </button>
-        `);
+        `): null;
       }) : null;
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');
