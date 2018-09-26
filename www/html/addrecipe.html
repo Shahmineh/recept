@@ -1,146 +1,150 @@
 Object.assign(AddRecipe.prototype, { template(){return `
   <div class="container-fluid admin-container" id="admin-container">
       <form class="needs-validation addIngredient-form" novalidate >
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center pt-5">
           <h3>Lägg till recept</h3>
         </div>
         <div class="row justify-content-center" >
-          <div class="input-names row-top">
+          <div class="col-sm-10 col-lg-6 input-names row-top">
+            <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small>
+            </div>
             <div class="input-name input-group">
               <input type="text" class="form-control recipe-name" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
-            <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small></div>
           </div>
         </div>  
-        <div class="row mb- recipe-description justify-content-center">
+        <div class="row recipe-description justify-content-center">
           <div class="col-sm-10 col-lg-6 input-names">
+            <div class="small-two"><small>Beskriv ditt recept kortfattat. Max 3 meningar.</small>
+            </div>
             <div class="input-name input-group">
               <textarea type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" required></textarea>
-              <div class="invalid-feedback">Beskriv ditt recept här</div>
+            <div class="invalid-feedback">Beskriv ditt recept här</div>
             </div>
-            <div class="small-two"><small>Beskriv ditt recept kortfattat. Max 3 meningar.</small></div>
           </div>
         </div>
-        <div class="row mb-3 image-forms justify-content-center d-grid">
+        <div class="row image-forms justify-content-center d-grid pt-5">
           <div class="col">
             <!-- <i class="far fa-images justify-content-center p-5"></i> -->
             <div class="custom-file" id="uploader">
-              <!-- <label>Lägg upp bild</label> -->
+              <div><small>Lägg upp bild på din maträtt</small>
+              </div>
               <div class="input-group">
-                  <span class="input-group-btn">
-                      <span class="btn btn-default btn-file">
-                              <input type="file" id="imgInp">
-                      </span>
+                <input type="text" class="form-control" readonly>
+                <span class="input-group-btn">
+                  <span class="btn btn-default btn-file">
+                  <input type="file" id="imgInp">
                   </span>
-                  <input type="text" class="form-control" readonly>
+                </span>
               </div>
               <img id='img-upload'/>
             </div>
           </div>
-          <div class="col forms">
-            <div class="small-three"><small>Välj nedan hur många portioner ditt recept ska </small></div>
-              <div class="form-group d-flex justify-content-between">
-                <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label>
-                <div>
-                  <select class="custom-select portions-select" id="portions-select" required>
-                    <option value="">Välj antal</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                  </select>
-                <div class="invalid-feedback">Välj antal portioner</div>
-              </div>
-              </div>
-            <div class="small-four"><small>Ange hur lång tid det kommer ta att laga receptet</small></div>
+          <div class="col forms pt-5">
+            <div class="small-three">
+              <small>Välj antal portioner samt tid i min </small>
+            </div>
+            <div class="form-group d-flex justify-content-between">
+              <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label>
+              <div>
+                <select class="custom-select portions-select" id="portions-select" required>
+                  <option value="">Välj antal</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              <div class="invalid-feedback">Välj antal portioner</div>
+            </div>
+            </div>
+           <!--  <div class="small-four"><small>Ange hur lång tid det kommer ta att laga receptet</small></div> -->
             <div class="form-group d-flex justify-content-between">
               <label for="exampleFormControlSelect1">Tid:</label>
               <div>
-              <input type="text" class="form-control time-input" id="time-input" placeholder="Tid" required>
-              <div class="invalid-feedback">Välj tid</div>
+                <input type="text" class="form-control time-input" id="time-input" placeholder="Tid" required>
+                <div class="invalid-feedback">Välj tid</div>
               </div>
             </div>
           </div>
         </div>
-       <div class="row under mt-4 d-flex justify-content-center">
-         <div class="left col-md-12 col-lg-5">
-           <div class="small-five"><small>Ange råvara samt mängd.</small><i class="fas fa-info-circle"></i></div>
-           
-           <div class="ingredients-outer">
-            
-           </div>
-              <div class="col my-1 mt-3">
-                <button class="btn admin-button" id="add-ingredient-btn" type="button">Lägg till</button></div>
+       <div class="row col-12 under d-flex justify-content-center mt-5">
+         <div class="left mr-lg-5">
+            <div class="small-five">
+              <small>Ange råvara samt mängd.</small><i class="fas fa-info-circle"></i>
             </div>
-          <div class="right col-md-12 col-lg-6 mt-sm-4 mt-lg-0">
-            <div class="small-six"><small>Beskriv tillvägagångssätt. Max 100 ord i varje ruta.</small></div>
-            <div class="input-1group d-block how">
-              
+            <div class="ingredients-outer">
             </div>
-            
-            <div class="col my-1 mt-3">
+            <div class="buttons">
+              <button class="btn admin-button" id="add-ingredient-btn" type="button">Lägg till</button>
+            </div>
+          </div>
+          <div class="right mt-sm-5 mt-lg-0 mt-lg-0">
+            <div class="small-six">
+              <small>Beskriv tillvägagångssätt. Max 100 ord i varje ruta.</small>
+            </div>
+            <div class="input-group d-block how">
+            </div>
+            <div class="buttons">
               <button class="btn admin-button d-flex justify-content-end" id="add-howto-btn" type="button">Lägg till</button>
             </div>
           </div>
-        </div>
+        </div> 
 
         <div class="row d-flex justify-content-center mt-5">
           <small>Fyll i taggar som passar bäst till ditt recept. Minst en i varje spalt måste fyllas i.</small>
         </div>
 
-        <div class="row d-flex justify-content-center mt-5">
-          <!-- <div class="tags"> --> 
-        
-          <div class="col-sm-12 col-lg-4">
-             <p>Huvudkategori</p>
-            <div class="form-check form-check-main">
-              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kott-tag" value="Kött">
-              <label class="form-check-label" for="exampleRadios2">
-                Kött
-              </label>
+        <div class="row tags mt-2">
+            <div class="col-sm-12 col-lg-4">
+              <p>Huvudkategori</p>
+              <div class="form-check form-check-main">
+                <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kott-tag" value="Kött">
+                <label class="form-check-label" for="exampleRadios2">
+                  Kött
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="fisk-tag" value="Fisk">
+                <label class="form-check-label" for="exampleRadios2">
+                  Fisk
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kyckling-tag" value="Kyckling">
+                <label class="form-check-label" for="exampleRadios2">
+                  Kyckling
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="fisk-tag" value="Fisk">
-              <label class="form-check-label" for="exampleRadios2">
-                Fisk
-              </label>
+            <div class="col-sm-12 col-lg-4">
+              <p>Specialkost</p>
+              <div class="form-check">
+                <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
+                <label class="form-check-label" for="exampleRadios2">
+                  Veg/vegansk
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="laktos-tag" value="Laktosfri">
+                <label class="form-check-label" for="exampleRadios2">
+                  Laktosfri
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="gluten-tag" value="Glutenfri">
+                <label class="form-check-label" for="glutenfri">
+                  Glutenfri
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kyckling-tag" value="Kyckling">
-              <label class="form-check-label" for="exampleRadios2">
-                Kyckling
-              </label>
-            </div>
-          </div>
-          <div class="col-sm-12 mt-sm-3 col-lg-4">
-            <p>Specialkost</p>
-            <div class="form-check">
-              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
-              <label class="form-check-label" for="exampleRadios2">
-                Vegetarisk/vegansk
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="laktos-tag" value="Laktosfri">
-              <label class="form-check-label" for="exampleRadios2">
-                Laktosfri
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="gluten-tag" value="Glutenfri">
-              <label class="form-check-label" for="glutenfri">
-                Glutenfri
-              </label>
-            </div>
-          </div>
-          <div class="col-sm-12 mt-sm-3 col-lg-4">
+            <div class="col-sm-12 col-lg-4">
             <p>Måltid</p>
             <div class="form-check">
               <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="frukost-tag" value="Frukost">
@@ -172,8 +176,8 @@ Object.assign(AddRecipe.prototype, { template(){return `
                 Efterrätt
               </label>
             </div>
+            </div>
           </div>
-        </div>
         <div class="row">
             <div class="col d-flex justify-content-center m-5">
               <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>

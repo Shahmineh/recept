@@ -20,36 +20,37 @@ class AddRecipe extends Base {
   addIngredient(){
     let that = this;
     $( ".ingredients-outer" ).append(`
-      <div class="ingredients d-flex">
+      <div class="ingredients display-flex">
           <i class="fas fa-times" id="remove-ingredient-btn"></i>
-          <div class="flex-column">
-          <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
-          <div class="invalid-feedback">Fyll i här</div>
-          </div>
-          <div class="d-flex">
-          <div class="flex-column">
-            <input type="number" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+            <div class="flex-column">
+            <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
             <div class="invalid-feedback">Fyll i här</div>
+            </div>
+            
+            <div class="d-flex">
+            <div class="flex-column">
+              <input type="number" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+              <div class="invalid-feedback">Fyll i här</div>
+            </div>
+            <div class="flex-column">
+              <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
+                <option selected value="">Mängd:</option>
+                <option value="styck">styck</option>
+                <option value="liter">liter</option>
+                <option value="deciliter">deciliter</option>
+                <option value="matsked">matsked</option>
+                <option value="tesked">tesked</option>
+                <option value="kryddmått">kryddmått</option>
+                <option value="gram" id="select-gram">gram</option>
+              </select>
+              <div class="invalid-feedback">Fyll i här</div>
+            </div>
+            </div>
+            <div class="flex-column gram">
+              <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
+              <div class="invalid-feedback">Fyll i här</div>
+            </div>
           </div>
-          <div class="flex-column">
-            <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
-              <option selected value="">Mängd:</option>
-              <option value="styck">styck</option>
-              <option value="liter">liter</option>
-              <option value="deciliter">deciliter</option>
-              <option value="matsked">matsked</option>
-              <option value="tesked">tesked</option>
-              <option value="kryddmått">kryddmått</option>
-              <option value="gram" id="select-gram">gram</option>
-            </select>
-            <div class="invalid-feedback">Fyll i här</div>
-          </div>
-          </div>
-          <div class="flex-column gram">
-            <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
-            <div class="invalid-feedback">Fyll i här</div>
-          </div>
-        </div>
       <div id="data-ravara-input-${that.ingredientCounter}"></div>
     `);
     

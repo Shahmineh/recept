@@ -59,9 +59,9 @@ div.amount{
 }
 
 
-/* @media only screen and (max-width: 700px) {
-  div.right {
-    margin-top: 60px;
+/* @media only screen and (max-width: 992px) {
+  .form-control-text {
+   width: 524px;
   }
 } */
 
@@ -71,7 +71,7 @@ div.underleft{
 
 .form-control-text{
   background-color: #e9ecef;
-  width: 100%;
+  width: auto;
 }
 
 div.text-input{
@@ -90,17 +90,17 @@ div.text-input{
 
 .amount-input{
   background-color: #e9ecef;
- /*  width: 80px; */
+  width: 80px;
 }
 
 .amount-select{
   background-color: #e9ecef;
-    /* width: 100px; */
+  width: 100px;
 }
 
 .gram-input{
   background-color: #e9ecef;
-  /* width: auto; */
+  width: 80px;
 }
 
 input[type=number]::-webkit-inner-spin-button{
@@ -124,6 +124,8 @@ box-shadow: none;
 #add-ingredient-btn{
   background-color:  #d3d3d3;
   color: #000;
+  margin-left: 24px;
+  margin-top:25px;
 }
 
 #add-ingredient-btn:hover{
@@ -135,6 +137,8 @@ box-shadow: none;
 #add-howto-btn{
   background-color:  #d3d3d3;
   color: #000;
+  margin-left: 50px;
+  margin-top: 25px;
 }
 
 #add-howto-btn:hover{
@@ -197,7 +201,7 @@ i.fa-times{
 
  .small-five{
    margin-bottom: 15px;
-   margin-left: 35px;
+   margin-left: 24px;
  }
 
  .small-six{
@@ -221,4 +225,8 @@ i.fa-times{
 
 i .fa-info-circle{
   font-size: 5px;
+}
+
+.tags p{
+  padding-left: 1.25rem;
 }
