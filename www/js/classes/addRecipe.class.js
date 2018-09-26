@@ -27,7 +27,7 @@ class AddRecipe extends Base {
           <div class="invalid-feedback">Fyll i här</div>
         </div>
         <div class="flex-column">
-          <input type="number" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+          <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
           <div class="invalid-feedback">Fyll i här</div>
         </div>
         <div class="flex-column">
