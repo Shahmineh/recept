@@ -3,7 +3,7 @@ Object.assign(Navbar.prototype, { template(){ return `
   <ul>
     <li><a href="/" class="nav-btn"><span>Home</span></a></li>
     <li class="has-sub"><label for="main-item-1" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="menu icon"><span>Huvudkategori</span></span></label>
-       <input id="main-item-1" type="checkbox">
+       <input id="main-item-1" type="radio" name="menu">
        <ul>
           <li class=""><a href="#" class="nav-btn"><span>Kött</span></a>
              <!-- <ul>
@@ -21,17 +21,17 @@ Object.assign(Navbar.prototype, { template(){ return `
        </ul>
     </li>
     <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"><span> Måltid</span></span></label>
-      <input id="main-item-2" type="checkbox">
+      <input id="main-item-2" type="radio" name="menu">
       <ul>
-        <li class=""><a href="#" class="nav-btn"><span>Frukost</span></a></li>
+        <li class="first"><a href="#" class="nav-btn"><span>Frukost</span></a></li>
         <li class=""><a href="#" class="nav-btn"><span>Mellanmål</span></a></li>
         <li class=""><a href="#" class="nav-btn"><span>Förrätt</span></a></li>
         <li class=""><a href="#" class="nav-btn"><span>Huvudrätt</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Efterätt</span></a></li>
+        <li class="last"><a href="#" class="nav-btn"><span>Efterätt</span></a></li>
       </ul>
     </li>
     <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"><span> Specialkost</span></span></label>
-      <input id="main-item-3" type="checkbox">
+      <input id="main-item-3" type="radio" name="menu">
       <ul>
         <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
         <li class=""><a href="#" class="nav-btn"><span>Laktosfri</span></a></li>
@@ -41,16 +41,23 @@ Object.assign(Navbar.prototype, { template(){ return `
     <!-- <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"><span> Världens mat</span></span></a></li> -->
     <li ><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"><span> Lägg till recept</span></span></a></li>
     <li class="has-sub"><label for="main-item-4" class="nav-btn"><span><img src="/imgs/loupe.png" class="menu-icon" alt="menu icon"><span> Sök recept</span></span></label>
-      <input id="main-item-4" type="checkbox">
+      <input id="main-item-4" type="radio" name="menu">
       <ul>
-        <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
+        <li class="search-slide">
+          <div>
+            <p>Vad söker du?</p>
+            <!-- <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+            </form> -->
+          </div>
+        </li>
+          
       </ul>
     </li>
  </ul>
  <form class="form-inline my-2 my-lg-0">
-   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-  </form>
-  <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search-button">Search</button>
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+ </form>
   <div class="search-autocomplete"></div>
 </div>
 `}});
