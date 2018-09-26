@@ -7,49 +7,49 @@
           {
             "number": "2515",
             "amount": "2",
-            "unit": "deciliter",
+            "unit": "dl",
             "weight": "180"
           },
           {
             "number": "1488",
             "amount": "1",
-            "unit": "styck",
+            "unit": "st",
             "weight": "400"
           },
           {
             "number": "344",
             "amount": "2",
-            "unit": "styck",
+            "unit": "st",
             "weight": "200"
           },
           {
             "number": "1717",
             "amount": "2",
-            "unit": "deciliter",
+            "unit": "dl",
             "weight": "200"
           },
           {
             "number": "1953",
             "amount": "1",
-            "unit": "deciliter",
+            "unit": "dl",
             "weight": "100"
           },
           {
-            "number": "401",
+            "number": "410",
             "amount": "1",
-            "unit": "matsked",
+            "unit": "msk",
             "weight": "10"
           },
           {
             "number": "909",
             "amount": "1",
-            "unit": "matsked",
+            "unit": "msk",
             "weight": "10"
           },
           {
             "number": "2189",
             "amount": "1",
-            "unit": "matsked",
+            "unit": "msk",
             "weight": "10"
           }
         ],
