@@ -27,18 +27,21 @@ class AddRecipe extends Base {
           <div class="invalid-feedback">Fyll i här</div>
         </div>
         <div class="flex-column">
-          <input type="number" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+          <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
           <div class="invalid-feedback">Fyll i här</div>
         </div>
         <div class="flex-column">
           <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
             <option selected value="">Mängd:</option>
-            <option value="styck">styck</option>
-            <option value="liter">liter</option>
-            <option value="deciliter">deciliter</option>
-            <option value="matsked">matsked</option>
-            <option value="tesked">tesked</option>
-            <option value="kryddmått">kryddmått</option>
+            <option value="st">styck</option>
+            <option value="l">liter</option>
+            <option value="dl">deciliter</option>
+            <option value="msk">matsked</option>
+            <option value="tsk">tesked</option>
+            <option value="krm">kryddmått</option>
+            <option value="kg">kilogram</option>
+            <option value="hg">hektogram</option>
+            <option value="g">gram</option>
           </select>
           <div class="invalid-feedback">Fyll i här</div>
         </div>
