@@ -209,10 +209,10 @@ i.fa-times{
    margin-bottom: 15px;
  }
 
- .flex-column{
+ /* .flex-column{
    display: flex;
    flex-direction: column;
- }
+ } */
 
 // @media screen and (max-width: 576px)
 // .display-flex {
@@ -233,6 +233,17 @@ i .fa-info-circle{
 
 .small-seven{
   margin-left:15px;
+}
+
+.input-group-btn{
+  background-color:  #d3d3d3;
+  color: #000;
+}
+
+.input-group-btn:hover{
+  background-color:  #777777;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #fff;
 }
 
 .btn-file {

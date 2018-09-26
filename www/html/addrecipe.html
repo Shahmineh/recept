@@ -1,10 +1,10 @@
 Object.assign(AddRecipe.prototype, { template(){return `
   <div class="container-fluid admin-container" id="admin-container">
       <form class="needs-validation addIngredient-form" novalidate >
-        <div class="row pt-5">
+        <div class="row justify-content-center pt-5">
           <h3>Lägg till recept</h3>
         </div>
-        <div class="row" >
+        <div class="row justify-content-center" >
           <div class="col-sm-10 col-lg-6 input-names row-top">
             <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small>
             </div>
@@ -14,7 +14,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
           </div>
         </div>  
-        <div class="row recipe-description">
+        <div class="row recipe-description justify-content-center">
           <div class="col-sm-10 col-lg-6 input-names">
             <div class="small-two"><small>Beskriv ditt recept kortfattat. Max 3 meningar.</small>
             </div>
@@ -24,7 +24,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
           </div>
         </div>
-        <div class="row image-forms pt-5">
+        <div class="row image-forms justify-content-center d-grid pt-5">
             <!-- <i class="far fa-images justify-content-center p-5"></i> -->
           <div class="custom-file" id="uploader">
             <div>
@@ -50,7 +50,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <img id='img-upload'/> -->
           </div>
         </div>  
-        <div class="row pt-5">
+        <div class="row justify-content-center pt-5">
           <div class="forms">
             <div class="small-three">
               <small>Välj antal portioner samt tid i min </small>
@@ -84,7 +84,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
           </div>
         </div>
-       <div class="row col-12 under mt-5">
+       <div class="row col-12 justify-content-center under mt-5">
          <div class="left mr-lg-5">
             <div class="small-five">
               <small>Ange råvara samt mängd.</small><i class="fas fa-info-circle"></i>
@@ -107,13 +107,13 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
         </div> 
 
-        <div class="row mt-5">
+        <div class="row justify-content-center mt-5">
           <div class="small-seven">
             <small>Fyll i taggar som passar bäst till ditt recept. Minst en i varje spalt måste fyllas i.</small>
           </div>
         </div>
 
-        <div class="row mt-2">
+        <div class="row justify-content-center mt-2">
           <div class="col-sm-12 col-lg-3 mt-sm-4">
             <p>Huvudkategori</p>
             <div class="form-check form-check-main">
@@ -190,10 +190,10 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
           </div>
         </div>
-        <div class="row">
-            <div class="col m-5">
+        <div class="row justify-content-center mt-5">
+            
               <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
-          </div>  
+          
         </div>
       </form>
   </div>
