@@ -5,7 +5,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
           <h3>Lägg till recept</h3>
         </div>
         <div class="row justify-content-center" >
-          <div class="input-names row-top">
+          <div class="col-sm-10 col-lg-6 input-names row-top">
             <div class="input-name input-group">
               <input type="text" class="form-control recipe-name" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
@@ -13,7 +13,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small></div>
           </div>
         </div>  
-        <div class="row mb- recipe-description justify-content-center">
+        <div class="row recipe-description justify-content-center">
           <div class="col-sm-10 col-lg-6 input-names">
             <div class="input-name input-group">
               <textarea type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" required></textarea>
