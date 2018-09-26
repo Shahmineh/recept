@@ -255,7 +255,7 @@ class AddRecipe extends Base {
     $(document).on('change', '.amount-select', function() {
       let val = $(this).val();
       let id = $(this).attr('id').split('amount-select-')[1]; console.log(id)
-      if(val == 'gram'){
+      if(val == 'g'){
           $(`#gram-input-${id}`).hide();
       }
       else{
