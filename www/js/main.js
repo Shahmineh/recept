@@ -1,9 +1,17 @@
-const app = new App();
+const app = new App()
 // app.navigation();
 //Call changePage when click back and forward
-window.addEventListener('popstate',app.navigation);
+window.addEventListener('popstate', app.navigation)
 
-
+$(document).on('click', '*', function(e) {
+  if (e.target.getAttribute('type') != 'radio') {
+    let s = $('[type="radio"]:checked')
+    if (s.length) {
+      s.prop('checked', false);
+      e.stopImmediatePropagation();
+    }
+  }
+})
 // const categories = $.getJSON("/json/categories.json",
 //     function (data) {
 //         const categoryList = Object.keys(data).map(category => {
@@ -13,7 +21,7 @@ window.addEventListener('popstate',app.navigation);
 //                     <li class="nav-item">
 //                         <a class="nav-link active btn-category" href="#">${subCategory}</a>
 //                     </li>`;
-//             }).join('');    
+//             }).join('');
 //         });
 //     })
 
@@ -27,8 +35,3 @@ window.addEventListener('popstate',app.navigation);
 //                         <a class="nav-link active btn-category" href="#">${subCategory}</a>
 //                     </li>`;
 //             }).join('');
-
-
-
-
-
