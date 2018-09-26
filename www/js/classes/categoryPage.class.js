@@ -1,11 +1,8 @@
 class CategoryPage extends Base {
   constructor(selectedTag, ingredients, recipes){
     super();
-    console.log('selectedTag', selectedTag);
     this.filter = new Filter(ingredients, recipes);
-    console.log('ingredients',ingredients);
     this.filterResult = this.filter.filterRecipesByTags(selectedTag);
-    console.log('recipes', recipes);
     // this.eventHandlers();
   } 
 

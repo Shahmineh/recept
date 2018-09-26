@@ -5,7 +5,8 @@ class App extends Base{
         this.livsmedelData;
         this.ingredientsIdHash = {};
         this.recipes;
-        this.start();
+        this.renderNav();
+        this.firstLoadStartPage()
         this.eventHandlers();
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
@@ -14,10 +15,10 @@ class App extends Base{
                     this.recipes = data;
                     this.search = new Search(this.recipes, this.livsmedelData);
                     this.filter = new Filter(this.ingredientsIdHash, this.recipes);
+                    this.navigation();
                 })
             }
         );
-        console.log('mehhh');
     }
 
     // re-writes livesmedeldata for easier filtering
@@ -25,6 +26,12 @@ class App extends Base{
         for(let livsmedel of this.livsmedelData){
             this.ingredientsIdHash[livsmedel.Nummer] = livsmedel;
         }
+    }
+
+    firstLoadStartPage(){
+        let startsidan = new Startsidan(this);
+        $('main').empty();
+        startsidan.render('main');
     }
 
     navigation(){
@@ -138,9 +145,11 @@ class App extends Base{
         });
     } 
     
-    start(){
+    renderNav(){
         let navbar = new Navbar();
         $('header').empty();
         navbar.render('header');
+        window.addEventListener('popstate', this.navigation.bind(this));
     }
+
 }
