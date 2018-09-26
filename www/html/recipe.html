@@ -1,14 +1,15 @@
 Object.assign(Recipe.prototype, { template(){ return `
       <div class="row">
         <div class="d-block w-100">
-          <img class="img-fluid" alt="Färdiglagad Korv Stroganoff med garnityr" src="/imgs/${this.recipe.imagePath}">
+          <img class="img-fluid" alt="Färdiglagad Korv Stroganoff med garnityr" src="/imgs/${this.selectedRecipe.imagePath}">
         </div>
       </div>
 
       <div class="container-fluid">
         <div class="row recipe-background">
           <div class="col-6">
-            <h1 class="mt-3 recipe-header">${this.recipe.name}</h1><i class="fas fa-clock cook-time"></i>&nbsp;<a class="cook-time">${this.recipe.time}</a>
+            <h1 class="mt-3 recipe-header">${this.selectedRecipe.name}</h1><i class="fas fa-clock cook-time"></i>&nbsp;<p class="d-inline cook-time">${this.selectedRecipe.time}</p>
+            <p class="cook-time d-inline ml-2">${this.selectedRecipe.portions} portioner</p>
           </div>
           
             <div class="col-6">
@@ -31,7 +32,7 @@ Object.assign(Recipe.prototype, { template(){ return `
         <div class="container-fluid">
           <div class="row recipe-background">
             <div class="col-12 mt-3 mb-3">
-              <span class="recipe-summary">${this.recipe.description}</span>
+              <span class="recipe-summary">${this.selectedRecipe.description}</span>
             </div>
           </div>
         </div>

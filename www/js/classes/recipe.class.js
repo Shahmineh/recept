@@ -1,31 +1,28 @@
 class Recipe extends Base {
-  constructor(filter, filterString, nutritionList){
+  constructor(selectedRecipe, ingredients, recipes){
     super();
-    this.recipe = filter.filterRecipes(filterString)[0];
-    this.nutritionValue = nutritionList.getNutritionValues(this.recipe.name);
-    this.filter = filter;
+    this.filter = new Filter(ingredients, recipes);
+    this.selectedRecipe = this.filter.findRecipe(selectedRecipe);
+    this.nutrition = new NutritionValues(ingredients, recipes);
   }
 
   ingredientList(){
-    let that = this;
-    this.recipe.ingredients.map( ingredient => {
+    this.selectedRecipe.ingredients.map( ingredient => {
       return $(".ingredient-control").append(`<li class="ingredient-layout">${ingredient.amount} ${ingredient.unit} ${this.filter.getIngredientName(ingredient.number)}</li>`);
     });
   }
 
   instructionList(){
-    let that = this;
-    Object.values(this.recipe.steps).map( instruction => {
+    Object.values(this.selectedRecipe.steps).map( instruction => {
       return $(".recipe").append(`<li class="recipe-layout">${instruction}</li>`);
     });
   }
 
-  nutritionValues(){
-    let that = this;
-    Object.keys(this.nutritionValue).map( key => {
-      return $(".nutrition-control").append(`<li class="ingredient-layout"><span>${key}: </span><span>${that.nutritionValue[key]}</span></li>`);
+  nutritionValuesList(){
+    let nutritionValues = this.nutrition.getNutritionValues(this.selectedRecipe.name);
+    Object.keys(nutritionValues).map( key => {
+      return $(".nutrition-control").append(`<li class="ingredient-layout"><span>${key}: </span><span>${nutritionValues[key]}</span></li>`);
     });
   }
-
-
+  
 }
