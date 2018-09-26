@@ -40,6 +40,12 @@ Object.assign(Navbar.prototype, { template(){ return `
     </li>
     <!-- <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"><span> Världens mat</span></span></a></li> -->
     <li ><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"><span> Lägg till recept</span></span></a></li>
+    <li class="has-sub"><label for="main-item-4" class="nav-btn"><span><img src="/imgs/loupe.png" class="menu-icon" alt="menu icon"><span> Sök recept</span></span></label>
+      <input id="main-item-4" type="checkbox">
+      <ul>
+        <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
+      </ul>
+    </li>
  </ul>
  <form class="form-inline my-2 my-lg-0">
    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
