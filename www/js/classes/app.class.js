@@ -56,28 +56,77 @@ class App extends Base{
             recipe.instructionList();
             recipe.nutritionValuesList();
         }
-        if (url == '/huvudkategori') {
+        if (url == '/huvudkategori/kott') {
             $('main').empty();
             $('main').html(
                 `<h1>${url}</h1>
                 <h2>HTML/Render method here</h2>`
             );
         }
-        if (url == '/maltid') {
+        if (url == '/huvudkategori/fisk') {
             $('main').empty();
             $('main').html(
                 `<h1>${url}</h1>
                 <h2>HTML/Render method here</h2>`
             );
         }
-        if (url == '/ingrediens') {
+        if (url == '/huvudkategori/kyckling') {
+            $('main').empty();
+            $('main').html(
+                `<h1>${url}</h1>
+                <h2>HTML/Render method here</h2>`
+            );
+        }
+        if (url == '/maltid/frukost') {
+            $('main').empty();
+            $('main').html(
+                `<h1>${url}</h1>
+                <h2>HTML/Render method here</h2>`
+            );
+        }
+        if (url == '/maltid/mellamal') {
+            $('main').empty();
+            $('main').html(
+                `<h1>${url}</h1>
+                <h2>HTML/Render method here</h2>`
+            );
+        }
+        if (url == '/maltid/forrrat') {
+            $('main').empty();
+            $('main').html(
+                `<h1>${url}</h1>
+                <h2>HTML/Render method here</h2>`
+            );
+        }
+        if (url == '/maltid/huvudratt') {
+            $('main').empty();
+            $('main').html(
+                `<h1>${url}</h1>
+                <h2>HTML/Render method here</h2>`
+            );
+        }
+        if (url == '/maltid/efterratt') {
+            $('main').empty();
+            $('main').html(
+                `<h1>${url}</h1>
+                <h2>HTML/Render method here</h2>`
+            );
+        }
+        if (url == '/specialkost/veg') {
             $('main').empty();
             $('main').html(
                 `<h1>${url}</h1>
                 <h2>HTML/Render method here</h2>`
             );            
         }
-        if (url == '/specialkost') {
+        if (url == '/specialkost/laktosfri') {
+            $('main').empty();
+            $('main').html(
+                `<h1>${url}</h1>
+                <h2>HTML/Render method here</h2>`
+            );            
+        }
+        if (url == '/specialkost/glutenfri') {
             $('main').empty();
             $('main').html(
                 `<h1>${url}</h1>

@@ -5,14 +5,14 @@ Object.assign(Navbar.prototype, { template(){ return `
     <li class="has-sub"><label for="main-item-1" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="menu icon"><span>Huvudkategori</span></span></label>
        <input id="main-item-1" type="checkbox">
        <ul>
-          <li class=""><a href="#" class="nav-btn"><span>Kött</span></a>
+          <li class=""><a href="/huvudkategori/kott" class="nav-btn"><span>Kött</span></a>
              <!-- <ul>
                 <li><a href="#"><span>Nött</span></a></li>
                 <li class="last"><a href="#"><span>Fläsk</span></a></li>
              </ul> -->
           </li>
-          <li class=""><a href="#" class="nav-btn"><span>Fisk</span></a></li>
-          <li class=""><a href="#" class="nav-btn"><span>Kyckling</span></a>
+          <li class=""><a href="/huvudkategori/fisk" class="nav-btn"><span>Fisk</span></a></li>
+          <li class=""><a href="/huvudkategori/kyckling" class="nav-btn"><span>Kyckling</span></a>
              <!-- <ul>
                 <li><a href="#"><span>Sub Product</span></a></li>
                 <li class="last"><a href="#"><span>Sub Product</span></a></li>
@@ -23,19 +23,19 @@ Object.assign(Navbar.prototype, { template(){ return `
     <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"><span> Måltid</span></span></label>
       <input id="main-item-2" type="checkbox">
       <ul>
-        <li class=""><a href="#" class="nav-btn"><span>Frukost</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Mellanmål</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Förrätt</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Huvudrätt</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Efterätt</span></a></li>
+        <li class=""><a href="/maltid/frukost" class="nav-btn"><span>Frukost</span></a></li>
+        <li class=""><a href="/maltid/mellamal" class="nav-btn"><span>Mellanmål</span></a></li>
+        <li class=""><a href="/maltid/forrrat" class="nav-btn"><span>Förrätt</span></a></li>
+        <li class=""><a href="/maltid/huvudratt" class="nav-btn"><span>Huvudrätt</span></a></li>
+        <li class=""><a href="/maltid/efterratt" class="nav-btn"><span>Efterrätt</span></a></li>
       </ul>
     </li>
     <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"><span> Specialkost</span></span></label>
       <input id="main-item-3" type="checkbox">
       <ul>
-        <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Laktosfri</span></a></li>
-        <li class=""><a href="#" class="nav-btn"><span>Glutenfri</span></a></li>
+        <li class=""><a href="/specialkost/veg" class="nav-btn"><span>Veg</span></a></li>
+        <li class=""><a href="/specialkost/laktosfri" class="nav-btn"><span>Laktosfri</span></a></li>
+        <li class=""><a href="/specialkost/glutenfri" class="nav-btn"><span>Glutenfri</span></a></li>
       </ul>
     </li>
     <!-- <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"><span> Världens mat</span></span></a></li> -->
