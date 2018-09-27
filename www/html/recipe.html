@@ -1,7 +1,7 @@
 Object.assign(Recipe.prototype, { template(){ return `
       <div class="row">
-        <div class="d-block w-100">
-          <img class="img-fluid" alt="Färdiglagad Korv Stroganoff med garnityr" src="/imgs/${this.selectedRecipe.imagePath}">
+        <div class="d-block mx-auto">
+          <img class="recipe-image" alt="${this.selectedRecipe.tags.meal}" src="/imgs/${this.selectedRecipe.imagePath}">
         </div>
       </div>
 
