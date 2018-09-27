@@ -3,7 +3,7 @@ Object.assign(Navbar.prototype, { template(){ return `
   <ul>
     <li><a href="/" class="nav-btn"><span>Home</span></a></li>
     <li class="has-sub"><label for="main-item-1" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="menu icon"><span>Huvudkategori</span></span></label>
-       <input id="main-item-1" type="checkbox">
+       <input id="main-item-1" type="radio" name="menu">
        <ul>
           <li class=""><a href="/huvudkategori/kott" class="nav-btn"><span>Kött</span></a>
              <!-- <ul>
@@ -21,7 +21,7 @@ Object.assign(Navbar.prototype, { template(){ return `
        </ul>
     </li>
     <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"><span> Måltid</span></span></label>
-      <input id="main-item-2" type="checkbox">
+      <input id="main-item-2" type="radio" name="menu">
       <ul>
         <li class=""><a href="/maltid/frukost" class="nav-btn"><span>Frukost</span></a></li>
         <li class=""><a href="/maltid/mellamal" class="nav-btn"><span>Mellanmål</span></a></li>
@@ -31,7 +31,7 @@ Object.assign(Navbar.prototype, { template(){ return `
       </ul>
     </li>
     <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"><span> Specialkost</span></span></label>
-      <input id="main-item-3" type="checkbox">
+      <input id="main-item-3" type="radio" name="menu">
       <ul>
         <li class=""><a href="/specialkost/veg" class="nav-btn"><span>Veg</span></a></li>
         <li class=""><a href="/specialkost/laktosfri" class="nav-btn"><span>Laktosfri</span></a></li>
