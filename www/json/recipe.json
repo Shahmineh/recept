@@ -443,34 +443,6 @@
   },
   {
     "name": "Bönstroganoff med potatismos",
-    "time": "45",
-    "portions": "4",
-    "description": "Vad sägs om en vegovariant på vardagshjälten Stroganoff till middag? Denna gör du med zucchini, morötter och bönor i crème fraiche med smak av tomat och basilika. Till det har vi en riktigt krämig potatismos. Hoppas det smakar!",
-    "ingredients": [
-      {
-        "number": "4457",
-        "amount": "400",
-        "unit": "g",
-        "weight": "400"
-      }
-    ],
-    "steps": {
-      "0": "hahdfh"
-    },
-    "tags": {
-      "main": [
-        "Fisk"
-      ],
-      "special": [
-        "Laktosfri"
-      ],
-      "meal": [
-        "Mellanmål"
-      ]
-    }
-  },
-  {
-    "name": "Bönstroganoff med potatismos",
     "time": "45min",
     "portions": "4",
     "description": "Vad sägs om en vegovariant på vardagshjälten Stroganoff till middag? Denna gör du med zucchini, morötter och bönor i crème fraiche med smak av tomat och basilika. Till det har vi en riktigt krämig potatismos. Hoppas det smakar!",
