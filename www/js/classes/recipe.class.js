@@ -6,7 +6,10 @@ class Recipe extends Base {
     this.nutrition = new NutritionValues(ingredients, recipes);
     this.localPortion = this.selectedRecipe.portions;
     this.ratio = 1;
+    this.imagePath = 'Hej';
+    
     this.eventHandlers();
+    this.renderMainPicture();
   } 
 
   eventHandlers(){
@@ -29,6 +32,18 @@ class Recipe extends Base {
     that.ingredientList();
     that.instructionList();
     that.nutritionValuesList();
+  }
+
+  renderMainPicture(){
+
+    let imagePath;
+
+    if(this.selectedRecipe.tags.main[0] === "Kött"){
+      this.imagePath = 'kott-main.jpg'
+    }
+    
+    console.log(this.imagePath);
+    console.log(this.selectedRecipe.tags.main);
   }
 
 

@@ -8,9 +8,27 @@
 }
 
 .recipe-image {
-  width: 900px;
-  height: 500px;
-  object-fit: cover;
+  display: inline-block;
+  width: 300px;
+/*   height: 500px;
+  object-fit: cover; */
+}
+
+.category-image {
+  display: inline-block;
+  width: 300px;
+}
+
+.category-image-control {
+  max-width: 300px;
+}
+
+.recipe-image-control {
+  max-width: 700px;
+}
+
+.image-background {
+  background-color: #fff;
 }
 
 .recipe-layout {
