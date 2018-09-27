@@ -58,7 +58,7 @@ Object.assign(Navbar.prototype, { template(){ return `
 
   <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
+      <div class="modal-content modal-size">
         <div class="modal-header search-modal-header">
           <h4 class="modal-title" id="exampleModalLabel">Vad söker du efter?</h4>
           <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -66,14 +66,14 @@ Object.assign(Navbar.prototype, { template(){ return `
           </button> -->
         </div>
         <div class="modal-body">
-          <form class="form-inline my-2 my-lg-0">
-           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+          <form class="form-inline my-2 my-lg-0 search-holder">
+           <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search" id="search-input">
           </form>
           <div class="search-autocomplete"></div>
 
         </div>
         <div class="modal-footer">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search-button">Search</button>
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search-button">Search</button> -->
         </div>
       </div>
     </div>
