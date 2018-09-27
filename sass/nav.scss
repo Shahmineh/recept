@@ -32,6 +32,10 @@ header {
   }
  }
 
+ input[type="radio"]{
+  display: none;
+}
+
 #cssmenu ul,
 #cssmenu ul li,
 #cssmenu ul ul {
@@ -246,6 +250,41 @@ label {
   }
  }
 
+ // Modal
+ .search-modal-header {
+   align-self: center;
+   border-bottom: none;
+ }
+
+ .modal-title {
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  padding-top: 20px;
+ }
+
+ .search-holder {
+  justify-content: center;
+ }
+
+ .search-bar {
+   width: 80% !important;
+   margin-top: 50px;
+ }
+
+ .modal-size {
+  height: 90vh;
+  width: 72vw;
+ }
+
+ .modal-footer {
+   border-top: none;
+ }
+
+ .modal-content {
+   background-image: url("/imgs/modal-back.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
  .logo {
   width: 40px;
   margin-right: 10px;

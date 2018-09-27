@@ -1,342 +1,894 @@
 [
   {
-    "name": "Omlett - Enkelt recept",
-    "time": "10min",
-    "portions": 1,
-    "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
+    "name": "Korv Stroganoff",
+    "time": "45 min",
+    "portions": "2",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
     "ingredients": [
       {
-        "number": "3840",
-        "amount": 2,
-        "unit": "stycken",
-        "weight": 200
+        "number": "2515",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "st",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "st",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "410",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
+    },
+    "imagePath": "korvstroganoff.png",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "name": "Risotto Svamp",
+    "time": "45 min",
+    "portions": "2",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "ingredients": [
+      {
+        "number": "1",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
+    },
+    "imagePath": "brunch.jpg",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Laktosfri"
+      ]
+    }
+  },
+  {
+    "name": "Risotto Korv",
+    "time": "45 min",
+    "portions": "2",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "3",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
+    },
+    "imagePath": "spanskpizza.jpeg",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "name": "Korv bulle",
+    "time": "45 min",
+    "portions": "2",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
+    },
+    "imagePath": "dinner.jpg",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "name": "Krämig pasta med kycklinglårfilé och basilika",
+    "time": "45min",
+    "portions": "4",
+    "description": "Crème de la crème skulle man kunna säga om denna krämiga pasta gjord med möra kycklinglårfiléer, soltorkade tomater och härligt gröna basilikablad. Ät tagliatellepastan tillsammans med en tomatsallad, och måltiden är serverad!",
+    "ingredients": [
+      {
+        "number": "2226",
+        "amount": "300",
+        "unit": "g",
+        "weight": "300"
+      },
+      {
+        "number": "1173",
+        "amount": "600",
+        "unit": "g",
+        "weight": "600"
+      },
+      {
+        "number": "4661",
+        "amount": "0.5",
+        "unit": "tsk",
+        "weight": "3"
+      },
+      {
+        "number": "371",
+        "amount": "1",
+        "unit": "st",
+        "weight": "3"
+      },
+      {
+        "number": "1715",
+        "amount": "2.5",
+        "unit": "dl",
+        "weight": "250"
       },
       {
         "number": "123",
-        "amount": 2,
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "1945",
+        "amount": "1",
         "unit": "msk",
-        "weight": 400
+        "weight": "9"
       },
       {
-        "number": "29",
-        "amount": 1,
-        "unit": "tsk",
-        "weight": 200
-      },
-      {
-        "number": "1978",
-        "amount": null,
-        "unit": null,
-        "weight": 0
-      },
-      {
-        "number": "380",
-        "amount": null,
-        "unit": null,
-        "weight": 0
-      }
-    ],
-    "steps": []
-  },
-  {
-    "name": "Pam",
-    "time": "15min",
-    "portions": 2,
-    "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
-    "ingredients": [
-      {
-        "number": "3840",
-        "amount": 2,
-        "unit": "stycken",
-        "weight": 300
-      },
-      {
-        "number": "1234",
-        "amount": 2,
-        "unit": "msk",
-        "weight": 400
-      },
-      {
-        "number": "29",
-        "amount": 1,
-        "unit": "tsk",
-        "weight": 200
-      },
-      {
-        "number": "1977",
-        "amount": null,
-        "unit": null,
-        "weight": 10
-      },
-      {
-        "number": "380",
-        "amount": null,
-        "unit": null,
-        "weight": 30
-      }
-    ],
-    "steps": []
-  },
-  {
-    "name": "Tam",
-    "time": "15min",
-    "portions": 2,
-    "description": "Quisque ut dolor gravida, placerat libero vel, euismod. lala",
-    "ingredients": [
-      {
-        "number": "3840",
-        "amount": 2,
-        "unit": "stycken",
-        "weight": 300
-      },
-      {
-        "number": "785",
-        "amount": 2,
-        "unit": "msk",
-        "weight": 400
-      },
-      {
-        "number": "29",
-        "amount": 1,
-        "unit": "tsk",
-        "weight": 200
-      },
-      {
-        "number": "1977",
-        "amount": null,
-        "unit": null,
-        "weight": 10
-      },
-      {
-        "number": "380",
-        "amount": null,
-        "unit": null,
-        "weight": 30
-      }
-    ],
-    "steps": []
-  },
-  {
-    "name": "Bananpannkaka",
-    "time": "10min",
-    "portions": "1",
-    "description": "Jättegoda bananpannkakor som går fort att göra.",
-    "ingredients": [
-      {
-        "number": "Ägg ekologiskt rått",
+        "number": "379",
         "amount": "2",
-        "unit": "styck",
-        "weight": "60"
+        "unit": "dl",
+        "weight": "20"
       },
       {
-        "number": "Banan",
+        "number": "365",
+        "amount": "200",
+        "unit": "g",
+        "weight": "200"
+      },
+      {
+        "number": "4947",
         "amount": "1",
-        "unit": "styck",
-        "weight": "60"
-      }
-    ],
-    "steps": {
-      "0": "Mosa bananen med en gaffel i en skål",
-      "1": "Kläck äggen i skålen och blanda",
-      "2": "Ta en skopa av smeten till en medium-het panna\n",
-      "3": "Stek några minuter på var sida",
-      "4": "Ät och njut!"
-    },
-    "imagePath": "bananpannkaka.jpg"
-  },
-  {
-    "name": "r",
-    "time": "r",
-    "portions": "1",
-    "description": "r",
-    "ingredients": [
+        "unit": "st",
+        "weight": "100"
+      },
       {
-        "number": "r",
-        "amount": "r",
-        "unit": "styck",
-        "weight": "r"
+        "number": "422",
+        "amount": "200",
+        "unit": "g",
+        "weight": "200"
       }
     ],
     "steps": {
-      "0": "r"
+      "0": "Koka pastan enligt anvisningen på förpackningen.",
+      "1": "Strimla kycklingen och bryn den i oljan i en stekpanna.",
+      "2": "Sänk värmen och krydda med salt och peppar och pressa i vitlöken.",
+      "3": "Blanda grädde, mjölk och majsstärkelse och rör ner i pannan. Låt sjuda ca 5 minuter.",
+      "4": "Grovhacka basilikan och blanda ner hälften i pannan tillsammans med soltorkade tomater.",
+      "5": "Tomatsallad: Skala och skiva löken och dela tomaterna. Blanda lök med tomater och resten av basilikan.",
+      "6": "Servera kycklingsåsen med pasta och tomatsallad."
     },
-    "tags": "Kött"
+    "tags": {
+      "meal": []
+    }
   },
   {
-    "name": "d",
-    "time": "d",
-    "portions": "2",
-    "description": "d",
-    "ingredients": [
-      {
-        "number": "d",
-        "amount": "d",
-        "unit": "liter",
-        "weight": "d"
-      }
-    ],
-    "steps": {
-      "0": "d"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "d",
-    "time": "d",
-    "portions": "3",
-    "description": "d",
-    "ingredients": [
-      {
-        "number": "d",
-        "amount": "d",
-        "unit": "deciliter",
-        "weight": "d"
-      }
-    ],
-    "steps": {
-      "0": "ddddd"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "f",
-    "time": "f",
+    "name": "Ugnsfalu med bostongurka och paprika",
+    "time": "45min",
     "portions": "4",
-    "description": "f",
+    "description": "Låt klassikern falukorv i ugn stå på middagsbordet ikväll och upplev ljuva barndomsminnen. Varva korv och tomater och toppa gratängen med chilisås, senap, bostongurka och tillslut ströbröd för en liten uppdaterad variant av rätten, men ack så smakrik. Serveras såklart med potatismos, och krispig spetspaprika.",
     "ingredients": [
       {
-        "number": "f",
-        "amount": "f",
-        "unit": "styck",
-        "weight": "f"
-      }
-    ],
-    "steps": {
-      "0": "ffff"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "rrr",
-    "time": "r",
-    "portions": "4",
-    "description": "rrr",
-    "ingredients": [
+        "number": "4457",
+        "amount": "900",
+        "unit": "g",
+        "weight": "900"
+      },
       {
-        "number": "r",
-        "amount": "r",
-        "unit": "tesked",
-        "weight": "r"
-      }
-    ],
-    "steps": {
-      "0": "rrrrr"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "ddd",
-    "time": "fff",
-    "portions": "4",
-    "description": "fff",
-    "ingredients": [
+        "number": "123",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
       {
-        "number": "ggg",
-        "amount": "www",
-        "unit": "liter",
-        "weight": "www"
-      }
-    ],
-    "steps": {
-      "0": "www",
-      "1": "www"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "fff",
-    "time": "ff",
-    "portions": "4",
-    "description": "fff",
-    "ingredients": [
+        "number": "1488",
+        "amount": "550",
+        "unit": "g",
+        "weight": "550"
+      },
       {
-        "number": "ff",
-        "amount": "ff",
-        "unit": "liter",
-        "weight": "fff"
-      }
-    ],
-    "steps": {
-      "0": "ffff"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "hejehej",
-    "time": "d",
-    "portions": "4",
-    "description": "hejehjehjehej",
-    "ingredients": [
+        "number": "422",
+        "amount": "2",
+        "unit": "st",
+        "weight": "80"
+      },
       {
-        "number": "d",
-        "amount": "d",
-        "unit": "liter",
-        "weight": "d"
-      }
-    ],
-    "steps": {
-      "0": "d"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "jjj",
-    "time": "kk",
-    "portions": "2",
-    "description": "jjj",
-    "ingredients": [
+        "number": "1968",
+        "amount": "2",
+        "unit": "msk",
+        "weight": "40"
+      },
       {
-        "number": "kk",
+        "number": "1972",
         "amount": "1",
-        "unit": "kryddmått",
+        "unit": "msk",
+        "weight": "15"
+      },
+      {
+        "number": "488",
+        "amount": "0.5",
+        "unit": "dl",
+        "weight": "5"
+      },
+      {
+        "number": "188",
+        "amount": "2",
+        "unit": "msk",
+        "weight": "20"
+      }
+    ],
+    "steps": {
+      "0": "Sätt ugnen på 225°C.",
+      "1": "Potatismos: Skala, dela och koka potatisen.",
+      "2": "Ugnsfalu: Skiva korven och lägg den omlott i en ugnssäker form.",
+      "3": "Skiva tomaterna och lägg dem mellan korvskivorna. Bred chilisås, senap och bostongurka över korven och toppa med ströbrödet. Sätt in formen mitt i ugnen ca 20 minuter.",
+      "4": "Till servering: Skiva paprikan.",
+      "5": "Potatismos: Värm mjölken. Krossa potatisen med en visp och rör ner mjölken. Smaka av med salt och peppar."
+    },
+    "imagePath": "ugnfalu.jpg",
+    "tags": {
+      "meal": []
+    }
+  },
+  {
+    "name": "Bönstroganoff med potatismos",
+    "time": "45min",
+    "portions": "4",
+    "description": "Vad sägs om en vegovariant på vardagshjälten Stroganoff till middag? Denna gör du med zucchini, morötter och bönor i crème fraiche med smak av tomat och basilika. Till det har vi en riktigt krämig potatismos. Hoppas det smakar!",
+    "ingredients": [
+      {
+        "number": "4457",
+        "amount": "1",
+        "unit": "kg",
+        "weight": "1000"
+      },
+      {
+        "number": "127",
+        "amount": "3",
+        "unit": "dl",
+        "weight": "300"
+      },
+      {
+        "number": "1975",
+        "amount": "1",
+        "unit": "tsk",
+        "weight": "6"
+      },
+      {
+        "number": "385",
+        "amount": "1",
+        "unit": "st",
+        "weight": "100"
+      },
+      {
+        "number": "308",
+        "amount": "2",
+        "unit": "st",
+        "weight": "180"
+      },
+      {
+        "number": "362",
+        "amount": "1",
+        "unit": "st",
+        "weight": "300"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "3761",
+        "amount": "400",
+        "unit": "g",
+        "weight": "400"
+      },
+      {
+        "number": "2044",
+        "amount": "4",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "352",
+        "amount": "2",
+        "unit": "msk",
+        "weight": "30"
+      }
+    ],
+    "steps": {
+      "0": "Potatismos: Skala och skär potatisen i mindre bitar. Täck potatisen med vatten i en kastrull och koka ca 15 min. Häll av vattnet.",
+      "1": "Pressa eller mosa potatisen direkt i kastrullen. Värm gräddmjölken och häll över potatisen. Vispa potatismoset luftigt. Smaka av med salt och peppar.",
+      "2": "Bönstroganoff: Skala och finhacka löken, skala och skär morötterna i stavar, skiva zucchinin. ",
+      "3": "Fräs grönsakerna i smör-& rapsolja ca 3 min. Häll på vatten och låt puttra ca 2 min.",
+      "4": "Skölj bönorna i kallt vatten. Låt dem rinna av. Tillsätt crème fraiche och bönor. Låt grytan koka ca 2 min. ",
+      "5": "Strö över persilja och servera med potatismos."
+    },
+    "imagePath": "bongryta.jpg",
+    "tags": {
+      "special": [
+        "Vegetarisk/vegansk"
+      ],
+      "meal": []
+    }
+  },
+  {
+    "name": "Ugnsstekt lax med rostade rotfrukter",
+    "time": "45min",
+    "portions": "4",
+    "description": "Hur gott med ugnsstekt lax och härligt söta rostade rotfrukter? En riktigt god smakkombination som dessutom är riktigt enkel att göra då allting tillagas i ugnen. Servera med en klick crème fraiche med smak av fetaost och soltorkade tomater, ät och njut!",
+    "ingredients": [
+      {
+        "number": "4457",
+        "amount": "400",
+        "unit": "g",
+        "weight": "400"
+      },
+      {
+        "number": "2162",
+        "amount": "300",
+        "unit": "g",
+        "weight": "300"
+      },
+      {
+        "number": "319",
+        "amount": "300",
+        "unit": "g",
+        "weight": "300"
+      },
+      {
+        "number": "1975",
+        "amount": "1",
+        "unit": "tsk",
+        "weight": "6"
+      },
+      {
+        "number": "4661",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "13"
+      },
+      {
+        "number": "1255",
+        "amount": "500",
+        "unit": "g",
+        "weight": "500"
+      }
+    ],
+    "steps": {
+      "0": "Sätt ugnen på 200°C.",
+      "1": "Skala och skär rotfrukterna i klyftor och lägg dem i en ugnssäker form. Strö över salt, peppar och ringla över lite rapsolja. Sätt in mitt i ugnen ca 10 min. ",
+      "2": "Pensla laxen med rapsolja, salta och peppra. Lägg sedan laxen på rotfrukterna och fortsätt laga i ugnen ca 15 minuter.",
+      "3": "Till servering: Servera med crème fraiche, tomater och dill."
+    },
+    "imagePath": "laxgryta.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "name": "Pannkakstårta med choklad och nutella",
+    "time": "1-4t",
+    "portions": "4",
+    "description": "Vem älskar inte choklad? Och pannkakor? Här slår vi två flugor i en smäll och lagar en maffig chokladpannkakstårta med hasselnötskräm! Lager på lager av ljuvlig choklad som blir den perfekta efterrätten till barnkalaset eller dessertbuffén. Toppa med valfria bär och pudra över florsocker.",
+    "ingredients": [
+      {
+        "number": "1941",
+        "amount": "4",
+        "unit": "dl",
+        "weight": "240"
+      },
+      {
+        "number": "1975",
+        "amount": "1",
+        "unit": "krm",
+        "weight": "1"
+      },
+      {
+        "number": "1886",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "40"
+      },
+      {
+        "number": "3840",
+        "amount": "3",
+        "unit": "st",
+        "weight": "180"
+      },
+      {
+        "number": "123",
+        "amount": "4",
+        "unit": "dl",
+        "weight": "400"
+      },
+      {
+        "number": "3841",
+        "amount": "5",
+        "unit": "st",
+        "weight": "70"
+      },
+      {
+        "number": "1681",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "1941",
+        "amount": "3",
+        "unit": "msk",
+        "weight": "27"
+      },
+      {
+        "number": "1945",
+        "amount": "3",
+        "unit": "msk",
+        "weight": "27"
+      },
+      {
+        "number": "6071",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "123",
+        "amount": "3.5",
+        "unit": "dl",
+        "weight": "350"
+      },
+      {
+        "number": "1715",
+        "amount": "1.5",
+        "unit": "dl",
+        "weight": "150"
+      },
+      {
+        "number": "1860",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      }
+    ],
+    "steps": {
+      "0": "Blanda alla torra ingredienser i en bunke. Tillsätt äggen under vispning. Tillsätt mjölken, lite i taget under vispning och vispa till en slät smet. Låt smeten vila i 30 minuter.",
+      "1": "Hetta upp en pannkakspanna, ca 24 cm i diameter och pensla med olja. Stek sedan ca 16 tunna pannkakor (för ca 10 port). Lägg på ett fat och låt svalna.",
+      "2": "Nutellakräm: Rör ihop äggulor och socker i en skål. Rör ner vetemjöl och majsstärkelse. Dela och skrapa ur fröna från vaniljstången. Lägg frön och stång i en kastrull tillsammans med mjölk och grädde och koka upp.",
+      "3": "Häll gräddmjölken över äggblandningen under omrörning och häll tillbaka i kastrullen. Sjud under omrörning tills den tjocknar. Låt svalna. Blanda krämen med hasselnötskrämen.",
+      "4": "Lägg två pannkakor på varandra på ett fat. Bred ut 2–3 msk nutellakräm. Fortsätt att varva tills pannkakorna är slut. Bred extra nutellakräm på toppen om det finns kvar. Ställ tårtan kallt till servering.",
+      "5": "Garnering: Strö över bären och sikta över florsocker."
+    },
+    "imagePath": "pannkakstarta.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Efterrätt"
+      ]
+    }
+  },
+  {
+    "name": "Frukostsallad med ägg",
+    "time": "45min",
+    "portions": "4",
+    "description": "En krispig och krämig sallad som passar på såväl hårt som mjukt bröd.",
+    "ingredients": [
+      {
+        "number": "3840",
+        "amount": "6",
+        "unit": "st",
+        "weight": "360"
+      },
+      {
+        "number": "320",
+        "amount": "2",
+        "unit": "st",
+        "weight": "300"
+      },
+      {
+        "number": "5872",
+        "amount": "1",
+        "unit": "st",
+        "weight": "100"
+      },
+      {
+        "number": "161",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "1975",
+        "amount": "2",
+        "unit": "krm",
         "weight": "2"
       }
     ],
     "steps": {
-      "0": "ddd"
+      "0": "Skala och hacka äggen grovt. Halvera, gröp ur och skär avokadon i små bitar. Kärna ur och skär äpplet i små tärningar. Lägg allt i en skål och vänd försiktigt ihop med matyoghurt. Smaka av med salt och peppar."
     },
-    "tags": [
-      "Kött",
-      "Kött",
-      "Laktosfri",
-      "Kött",
-      "Laktosfri",
-      "Frukost"
-    ]
+    "imagePath": "frukostsallad.jpg",
+    "tags": {
+      "special": [
+        "Vegetarisk/vegansk"
+      ],
+      "meal": [
+        "Frukost"
+      ]
+    }
   },
   {
-    "name": "testa igen",
-    "time": "10 min",
-    "portions": "3",
-    "description": "hejsam",
+    "name": "Smoothiebowl med björnbär",
+    "time": "45min",
+    "portions": "4",
+    "description": "Att servera smoothie i skål är en ren fröjd på frukostbordet. Variera toppingen som du vill med frukter, bär, frön och nötter efter humör och säsong.",
     "ingredients": [
       {
-        "number": "ägg",
+        "number": "600",
         "amount": "1",
-        "unit": "liter",
-        "weight": "1"
+        "unit": "st",
+        "weight": "150"
+      },
+      {
+        "number": "1802",
+        "amount": "250",
+        "unit": "g",
+        "weight": "250"
+      },
+      {
+        "number": "702",
+        "amount": "3",
+        "unit": "msk",
+        "weight": "18"
+      },
+      {
+        "number": "579",
+        "amount": "1",
+        "unit": "st",
+        "weight": "100"
+      },
+      {
+        "number": "1573",
+        "amount": "4",
+        "unit": "tsk",
+        "weight": "12"
+      },
+      {
+        "number": "1564",
+        "amount": "2",
+        "unit": "msk",
+        "weight": "20"
+      },
+      {
+        "number": "1896",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "20"
       }
     ],
     "steps": {
-      "0": "testetst"
+      "0": "Lägg undan några björnbär till garnering. Mixa resterande björnbär, halva bananen. havregryn och yoghurt till en slät kräm.",
+      "1": "Häll upp i två skålar och toppa med de sparade björnbären, resten av bananen, passionfruktskärnor, skivad kiwi, chiafrön, kokos, mynta och honung."
     },
-    "tags": [
-      "Fisk",
-      "Fisk",
-      "Vegetarisk/vegansk",
-      "Fisk",
-      "Vegetarisk/vegansk",
-      "Efterrätt"
-    ]
+    "imagePath": "smoothiebowl.jpg",
+    "tags": {
+      "special": [
+        "Vegetarisk/vegansk"
+      ],
+      "meal": [
+        "Frukost",
+        "Mellanmål"
+      ]
+    }
+  },
+  {
+    "name": "Grillad Auberginegryta",
+    "time": "105",
+    "portions": "4",
+    "description": "Vill du laga mer mat med grönsaker? Här har du en smakrik lakto-ovo vegetarisk gryta med grillad aubergine, ägg, vitlök och krossade tomater. ",
+    "ingredients": [
+      {
+        "number": "470",
+        "amount": "3",
+        "unit": "st",
+        "weight": "1200"
+      },
+      {
+        "number": "4947",
+        "amount": "1",
+        "unit": "st",
+        "weight": "60"
+      },
+      {
+        "number": "371",
+        "amount": "5",
+        "unit": "st",
+        "weight": "30"
+      },
+      {
+        "number": "30",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "422",
+        "amount": "400",
+        "unit": "g",
+        "weight": "400"
+      },
+      {
+        "number": "1977",
+        "amount": "1",
+        "unit": "tsk",
+        "weight": "10"
+      },
+      {
+        "number": "51",
+        "amount": "1.5",
+        "unit": "tsk",
+        "weight": "23"
+      },
+      {
+        "number": "380",
+        "amount": "1.5",
+        "unit": "tsk",
+        "weight": "5"
+      },
+      {
+        "number": "3840",
+        "amount": "4",
+        "unit": "st",
+        "weight": "240"
+      },
+      {
+        "number": "352",
+        "amount": "1.5",
+        "unit": "dl",
+        "weight": "30"
+      },
+      {
+        "number": "2044",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "40"
+      }
+    ],
+    "steps": {
+      "0": "Sätt ugnen på 250°C",
+      "1": "Nagga auberginen med en gaffel och grilla i mitten av ugnen 20–30 min tills den är helt mjuk. Skrapa ur köttet och hacka det fint. ",
+      "2": "Skala och hacka löken. Bryn lök och vitlök i smör i en stekpanna. ",
+      "3": "Tillsätt aubergine, krossade tomater, salt och kryddor. Låt koka ihop under omrörning ett par minuter. ",
+      "4": "Knäck ner äggen i pannan och rör försiktigt så att äggen går sönder men inte blandar sig helt med övriga ingredienser. ",
+      "5": "Garnera med persilja och servera med crème fraiche."
+    },
+    "imagePath": "aubergingryta.jpg",
+    "tags": {
+      "special": [
+        "Vegetarisk/vegansk"
+      ],
+      "meal": [
+        "Förrätt"
+      ]
+    }
   }
 ]
