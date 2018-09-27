@@ -10,7 +10,7 @@ class CategoryPage extends Base {
         let that = this;
         this.filterResult.length ? this.filterResult.map(recipe => {
             return $(".category-container").append(`
-            <div class="col-lg-3">
+            <div class="card-group">
                 <div class="card">
                     <img class="card-img-top" src="/imgs/${recipe.imagePath}" alt="Card image cap">
                         <div class="card-body">
