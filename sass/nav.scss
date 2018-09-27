@@ -261,3 +261,9 @@ label {
  .modal-footer {
    border-top: none;
  }
+
+ .modal-content {
+   background-image: url("/imgs/modal-back.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
