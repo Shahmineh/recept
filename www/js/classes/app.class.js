@@ -28,7 +28,7 @@ class App extends Base {
             this.ingredientsIdHash[livsmedel.Nummer] = livsmedel;
         }
     }
-
+    
     firstLoadStartPage() {
         let startsidan = new Startsidan(this);
         $('main').empty();
