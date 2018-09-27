@@ -2,6 +2,7 @@ class App extends Base {
     constructor() {
         super();
         // Read data to our globals from json files
+        this.loaderRender();
         this.livsmedelData;
         this.ingredientsIdHash = {};
         this.recipes;
@@ -34,7 +35,12 @@ class App extends Base {
         startsidan.render('main');
     }
 
-    handleReload(){
+    loaderRender(){
+        !this.recipes ? $('main').html(`
+            <div class="loader">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+        `) : null;
 
     }
 

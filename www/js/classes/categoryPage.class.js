@@ -21,7 +21,12 @@ class CategoryPage extends Base {
                 </div>
             </div>
 `);
-        }) : $(".category-container").append(`<h1>Sorry no recipe found</h1>`);
+        }) : $(".category-container").append(`
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center h-100">
+                <img src="/imgs/loupe.png" class="menu-icon" alt="menu icon">
+                <h1>Inga resultat. Testa en annan kategori.</h1>
+            </div>
+        `);
     }
 
 }
