@@ -1,5 +1,5 @@
-class App extends Base{
-    constructor(){
+class App extends Base {
+    constructor() {
         super();
         // Read data to our globals from json files
         this.livsmedelData;
@@ -9,32 +9,32 @@ class App extends Base{
         this.firstLoadStartPage()
         this.eventHandlers();
         $.getJSON("/json/livsmedel.json", (data) => {
-                this.livsmedelData = data;
-                this.createIdHashForLivsmedelData();
-                $.getJSON('/json/recipe.json', (data) => {
-                    this.recipes = data;
-                    this.search = new Search(this.recipes, this.livsmedelData);
-                    this.filter = new Filter(this.ingredientsIdHash, this.recipes);
-                    this.navigation();
-                })
-            }
+            this.livsmedelData = data;
+            this.createIdHashForLivsmedelData();
+            $.getJSON('/json/recipe.json', (data) => {
+                this.recipes = data;
+                this.search = new Search(this.recipes, this.livsmedelData);
+                this.filter = new Filter(this.ingredientsIdHash, this.recipes);
+                this.navigation();
+            })
+        }
         );
     }
 
     // re-writes livesmedeldata for easier filtering
-     createIdHashForLivsmedelData(){
-        for(let livsmedel of this.livsmedelData){
+    createIdHashForLivsmedelData() {
+        for (let livsmedel of this.livsmedelData) {
             this.ingredientsIdHash[livsmedel.Nummer] = livsmedel;
         }
     }
 
-    firstLoadStartPage(){
+    firstLoadStartPage() {
         let startsidan = new Startsidan(this);
         $('main').empty();
         startsidan.render('main');
     }
 
-    navigation(){
+    navigation() {
         let navbar = new Navbar();
         $('header').empty();
         navbar.render('header');
@@ -105,36 +105,36 @@ class App extends Base{
             let categoryPage = new CategoryPage('veg', this.ingredientsIdHash, this.recipes);
             $('main').empty();
             categoryPage.render('main');
-            categoryPage.renderRecipes();        
+            categoryPage.renderRecipes();
         }
         if (url == '/specialkost/laktosfri') {
             let categoryPage = new CategoryPage('laktosfri', this.ingredientsIdHash, this.recipes);
             $('main').empty();
             categoryPage.render('main');
-            categoryPage.renderRecipes();            
+            categoryPage.renderRecipes();
         }
         if (url == '/specialkost/glutenfri') {
             let categoryPage = new CategoryPage('glutenfri', this.ingredientsIdHash, this.recipes);
             $('main').empty();
             categoryPage.render('main');
-            categoryPage.renderRecipes();           
+            categoryPage.renderRecipes();
         }
         if (url == '/lagg-recept') {
             let addRecipe = new AddRecipe(this.recipes, this.ingredientsIdHash);
             $('main').empty();
             addRecipe.reset();
             addRecipe.render('main');
-            addRecipe.addIngredient(); 
-            addRecipe.addInstruction(); 
+            addRecipe.addIngredient();
+            addRecipe.addInstruction();
         }
     }
 
-    
 
-    eventHandlers(){
+
+    eventHandlers() {
         let that = this;
         //Navigation
-        $(document).on('click','a.nav-btn',function(e){
+        $(document).on('click', 'a.nav-btn', function (e) {
             //Create a push state preventDefault
             let href = $(this).attr('href');
             history.pushState(null, null, href);
@@ -143,9 +143,9 @@ class App extends Base{
             //Stop the browers from starting a page reload
             e.preventDefault();
         });
-    } 
-    
-    renderNav(){
+    }
+
+    renderNav() {
         let navbar = new Navbar();
         $('header').empty();
         navbar.render('header');

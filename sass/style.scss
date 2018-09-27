@@ -2,6 +2,7 @@
 @import "nav.scss";
 @import "addRecipe.scss";
 @import "startsidan.scss";
+@import "searchresult.scss";
 
 
 @font-face {
@@ -13,6 +14,7 @@ body, html {
   overflow-x: hidden;
   font-family: 'Gotham', sans-serif;
   background-color: #f0f0f0;
+  
 }
 
 // .search-bar {

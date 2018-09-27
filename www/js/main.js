@@ -4,7 +4,7 @@ const app = new App();
 //Call changePage when click back and forward
 // window.addEventListener('popstate', app.navigation)
 
-$(document).on('click', '*', function(e) {
+$(document).on('click', '*', function (e) {
   if (e.target.getAttribute('type') != 'radio') {
     let s = $('[type="radio"]:checked')
     if (s.length) {
@@ -12,5 +12,4 @@ $(document).on('click', '*', function(e) {
       e.stopImmediatePropagation();
     }
   }
-})
-
+});
