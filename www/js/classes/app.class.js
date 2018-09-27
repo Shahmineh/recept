@@ -19,6 +19,7 @@ class App extends Base{
                 })
             }
         );
+        console.log('woop');
     }
 
     // re-writes livesmedeldata for easier filtering
