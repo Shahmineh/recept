@@ -246,8 +246,14 @@ label {
   }
  }
 
- // Search-slide
+ // Modal
+ .search-modal-header {
+   align-self: center;
+   border-bottom: none;
+ }
 
- #cssmenu ul ul li.search-slide {
-  background-color: rgba(255, 255, 255, 0.979);
+ .modal-title {
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  padding-top: 20px;
  }

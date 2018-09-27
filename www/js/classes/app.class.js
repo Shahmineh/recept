@@ -5,7 +5,8 @@ class App extends Base{
         this.livsmedelData;
         this.ingredientsIdHash = {};
         this.recipes;
-        this.start();
+        this.renderNav();
+        this.firstLoadStartPage()
         this.eventHandlers();
         $.getJSON("/json/livsmedel.json", (data) => {
                 this.livsmedelData = data;
@@ -14,10 +15,7 @@ class App extends Base{
                     this.recipes = data;
                     this.search = new Search(this.recipes, this.livsmedelData);
                     this.filter = new Filter(this.ingredientsIdHash, this.recipes);
-                    // this.getNutritionValues = new NutritionValues(this.ingredientsIdHash, this.recipes);
                     this.navigation();
-                    // console.log(this.filter.filterIngredients('korv'));
-                    // console.log(this.filter.filterRecipesByName('Korv'));
                 })
             }
         );
@@ -30,10 +28,10 @@ class App extends Base{
         }
     }
 
-    start(){
-        let navbar = new Navbar();
-        $('header').empty();
-        navbar.render('header');
+    firstLoadStartPage(){
+        let startsidan = new Startsidan(this);
+        $('main').empty();
+        startsidan.render('main');
     }
 
     navigation(){
@@ -42,7 +40,6 @@ class App extends Base{
         navbar.render('header');
         // get the current url
         let url = location.pathname;
-        
         if (url == '/') {
             let startsidan = new Startsidan(this);
             $('main').empty();
@@ -56,40 +53,71 @@ class App extends Base{
             recipe.instructionList();
             recipe.nutritionValuesList();
         }
-        if (url == '/huvudkategori') {
+        if (url == '/huvudkategori/kott') {
+            let categoryPage = new CategoryPage('kött', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
-        if (url == '/maltid') {
+        if (url == '/huvudkategori/fisk') {
+            let categoryPage = new CategoryPage('fisk', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
-        if (url == '/ingrediens') {
+        if (url == '/huvudkategori/kyckling') {
+            let categoryPage = new CategoryPage('kyckling', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
-        if (url == '/specialkost') {
+        if (url == '/maltid/frukost') {
+            let categoryPage = new CategoryPage('frukost', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
         }
-        if (url == '/varldens-mat') {
+        if (url == '/maltid/mellamal') {
+            let categoryPage = new CategoryPage('mellanmål', this.ingredientsIdHash, this.recipes);
             $('main').empty();
-            $('main').html(
-                `<h1>${url}</h1>
-                <h2>HTML/Render method here</h2>`
-            );            
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
+        }
+        if (url == '/maltid/forrrat') {
+            let categoryPage = new CategoryPage('förrätt', this.ingredientsIdHash, this.recipes);
+            $('main').empty();
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
+        }
+        if (url == '/maltid/huvudratt') {
+            let categoryPage = new CategoryPage('huvudrätt', this.ingredientsIdHash, this.recipes);
+            $('main').empty();
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
+        }
+        if (url == '/maltid/efterratt') {
+            let categoryPage = new CategoryPage('efterrätt', this.ingredientsIdHash, this.recipes);
+            $('main').empty();
+            categoryPage.render('main');
+            categoryPage.renderRecipes();
+        }
+        if (url == '/specialkost/veg') {
+            let categoryPage = new CategoryPage('veg', this.ingredientsIdHash, this.recipes);
+            $('main').empty();
+            categoryPage.render('main');
+            categoryPage.renderRecipes();        
+        }
+        if (url == '/specialkost/laktosfri') {
+            let categoryPage = new CategoryPage('laktosfri', this.ingredientsIdHash, this.recipes);
+            $('main').empty();
+            categoryPage.render('main');
+            categoryPage.renderRecipes();            
+        }
+        if (url == '/specialkost/glutenfri') {
+            let categoryPage = new CategoryPage('glutenfri', this.ingredientsIdHash, this.recipes);
+            $('main').empty();
+            categoryPage.render('main');
+            categoryPage.renderRecipes();           
         }
         if (url == '/lagg-recept') {
             let addRecipe = new AddRecipe(this.recipes, this.ingredientsIdHash);
@@ -100,6 +128,8 @@ class App extends Base{
             addRecipe.addInstruction(); 
         }
     }
+
+    
 
     eventHandlers(){
         let that = this;
@@ -113,5 +143,13 @@ class App extends Base{
             //Stop the browers from starting a page reload
             e.preventDefault();
         });
-    }    
+    } 
+    
+    renderNav(){
+        let navbar = new Navbar();
+        $('header').empty();
+        navbar.render('header');
+        window.addEventListener('popstate', this.navigation.bind(this));
+    }
+
 }

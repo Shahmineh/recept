@@ -73,6 +73,79 @@
   },
   {
     "name": "Risotto Svamp",
+{  
+  "1": {"name": "Korv Stroganoff",
+        "time": "45 min",
+        "portions": "2",
+        "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+        "ingredients": [
+          {
+            "number": "2515",
+            "amount": "2",
+            "unit": "dl",
+            "weight": "180"
+          },
+          {
+            "number": "1488",
+            "amount": "1",
+            "unit": "st",
+            "weight": "400"
+          },
+          {
+            "number": "344",
+            "amount": "2",
+            "unit": "st",
+            "weight": "200"
+          },
+          {
+            "number": "1717",
+            "amount": "2",
+            "unit": "dl",
+            "weight": "200"
+          },
+          {
+            "number": "1953",
+            "amount": "1",
+            "unit": "dl",
+            "weight": "100"
+          },
+          {
+            "number": "410",
+            "amount": "1",
+            "unit": "msk",
+            "weight": "10"
+          },
+          {
+            "number": "909",
+            "amount": "1",
+            "unit": "msk",
+            "weight": "10"
+          },
+          {
+            "number": "2189",
+            "amount": "1",
+            "unit": "msk",
+            "weight": "10"
+          }
+        ],
+        "steps": {
+          "0": "Koka riset enligt anvisning på förpackningen.",
+          "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+          "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+          "3": "Smaka av med salt och peppar.",
+          "4": "Servera ris och vitkålssallad vid sidan om."
+        },
+        "imagePath": "pasta.jpg",
+        "tags": {
+          "main": [
+            "Kött"
+          ],
+          "meal": [
+            "Huvudrätt"
+          ]
+        }
+      },
+  "2": {"name": "Risotto Svamp",
     "time": "45 min",
     "portions": "2",
     "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
@@ -133,7 +206,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "brunch.jpg",
     "tags": {
       "main": [
         "Kött"
@@ -205,7 +278,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "spanskpizza.jpeg",
     "tags": {
       "main": [
         "Kött"
@@ -277,7 +350,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "dinner.jpg",
     "tags": {
       "main": [
         "Kött"
