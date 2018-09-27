@@ -66,6 +66,14 @@ label {
   cursor: pointer;
 }
 
+li > a {
+  cursor: pointer;
+  :hover,
+  :focus {
+    color: #e26e21;
+  }
+}
+
 #cssmenux ul li:hover, #cssmenu input:checked ~ ul {
 
   visibility: visible;
