@@ -821,5 +821,95 @@
         "Mellanmål"
       ]
     }
+  },
+  {
+    "name": "Grillad Auberginegryta",
+    "time": "105",
+    "portions": "4",
+    "description": "Vill du laga mer mat med grönsaker? Här har du en smakrik lakto-ovo vegetarisk gryta med grillad aubergine, ägg, vitlök och krossade tomater. ",
+    "ingredients": [
+      {
+        "number": "470",
+        "amount": "3",
+        "unit": "st",
+        "weight": "1200"
+      },
+      {
+        "number": "4947",
+        "amount": "1",
+        "unit": "st",
+        "weight": "60"
+      },
+      {
+        "number": "371",
+        "amount": "5",
+        "unit": "st",
+        "weight": "30"
+      },
+      {
+        "number": "30",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "422",
+        "amount": "400",
+        "unit": "g",
+        "weight": "400"
+      },
+      {
+        "number": "1977",
+        "amount": "1",
+        "unit": "tsk",
+        "weight": "10"
+      },
+      {
+        "number": "51",
+        "amount": "1.5",
+        "unit": "tsk",
+        "weight": "23"
+      },
+      {
+        "number": "380",
+        "amount": "1.5",
+        "unit": "tsk",
+        "weight": "5"
+      },
+      {
+        "number": "3840",
+        "amount": "4",
+        "unit": "st",
+        "weight": "240"
+      },
+      {
+        "number": "352",
+        "amount": "1.5",
+        "unit": "dl",
+        "weight": "30"
+      },
+      {
+        "number": "2044",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "40"
+      }
+    ],
+    "steps": {
+      "0": "Sätt ugnen på 250°C",
+      "1": "Nagga auberginen med en gaffel och grilla i mitten av ugnen 20–30 min tills den är helt mjuk. Skrapa ur köttet och hacka det fint. ",
+      "2": "Skala och hacka löken. Bryn lök och vitlök i smör i en stekpanna. ",
+      "3": "Tillsätt aubergine, krossade tomater, salt och kryddor. Låt koka ihop under omrörning ett par minuter. ",
+      "4": "Knäck ner äggen i pannan och rör försiktigt så att äggen går sönder men inte blandar sig helt med övriga ingredienser. ",
+      "5": "Garnera med persilja och servera med crème fraiche."
+    },
+    "tags": {
+      "special": [
+        "Vegetarisk/vegansk"
+      ],
+      "meal": [
+        "Förrätt"
+      ]
+    }
   }
 ]
