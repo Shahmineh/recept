@@ -17,7 +17,7 @@ class CategoryPage extends Base {
                             <p class="lead">${recipe.name}</p>
                             <p>${recipe.description}</p>
                         </div>
-                        <a href="/recept" class="btn category-btn" role="button" aria-pressed="true">Se Recept</a>
+                        <a href="/recept/${recipe.recipeId}" class="btn nav-btn category-btn" role="button" aria-pressed="true">Se Recept</a>
                 </div>
             </div>
 `);

@@ -49,7 +49,9 @@ class App extends Base {
             $('main').empty();
             startsidan.render('main');
         }
-        if (url == '/recept') {
+        if (url.startsWith('/recept')) {
+            let [, , theRecipeId] = url.split('/');
+            console.log(theRecipeId);
             let recipe = new Recipe('Korv Stroganoff', this.ingredientsIdHash, this.recipes);
             $('main').empty();
             recipe.render('main');
