@@ -69,6 +69,8 @@ class App extends Base {
             $('main').empty();
             categoryPage.render('main');
             categoryPage.renderRecipes();
+            categoryPage.renderRecipes();
+            categoryPage.renderRecipes();
         }
         if (url == '/huvudkategori/fisk') {
             let categoryPage = new CategoryPage('fisk', this.ingredientsIdHash, this.recipes);
