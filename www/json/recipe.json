@@ -436,6 +436,7 @@
       "4": "Till servering: Skiva paprikan.",
       "5": "Potatismos: Värm mjölken. Krossa potatisen med en visp och rör ner mjölken. Smaka av med salt och peppar."
     },
+    "imagePath": "ugnfalu.jpg",
     "tags": {
       "meal": []
     }
@@ -543,6 +544,7 @@
       "4": "Skölj bönorna i kallt vatten. Låt dem rinna av. Tillsätt crème fraiche och bönor. Låt grytan koka ca 2 min. ",
       "5": "Strö över persilja och servera med potatismos."
     },
+    "imagePath": "bongryta.jpg",
     "tags": {
       "special": [
         "Vegetarisk/vegansk"
@@ -599,6 +601,7 @@
       "2": "Pensla laxen med rapsolja, salta och peppra. Lägg sedan laxen på rotfrukterna och fortsätt laga i ugnen ca 15 minuter.",
       "3": "Till servering: Servera med crème fraiche, tomater och dill."
     },
+    "imagePath": "laxgryta.jpg",
     "tags": {
       "main": [
         "Fisk"
@@ -701,6 +704,7 @@
       "4": "Lägg två pannkakor på varandra på ett fat. Bred ut 2–3 msk nutellakräm. Fortsätt att varva tills pannkakorna är slut. Bred extra nutellakräm på toppen om det finns kvar. Ställ tårtan kallt till servering.",
       "5": "Garnering: Strö över bären och sikta över florsocker."
     },
+    "imagePath": "pannkakstarta.jpg",
     "tags": {
       "main": [
         "Fisk"
@@ -750,6 +754,7 @@
     "steps": {
       "0": "Skala och hacka äggen grovt. Halvera, gröp ur och skär avokadon i små bitar. Kärna ur och skär äpplet i små tärningar. Lägg allt i en skål och vänd försiktigt ihop med matyoghurt. Smaka av med salt och peppar."
     },
+    "imagePath": "frukostsallad.jpg",
     "tags": {
       "special": [
         "Vegetarisk/vegansk"
@@ -812,6 +817,7 @@
       "0": "Lägg undan några björnbär till garnering. Mixa resterande björnbär, halva bananen. havregryn och yoghurt till en slät kräm.",
       "1": "Häll upp i två skålar och toppa med de sparade björnbären, resten av bananen, passionfruktskärnor, skivad kiwi, chiafrön, kokos, mynta och honung."
     },
+    "imagePath": "smoothiebowl.jpg",
     "tags": {
       "special": [
         "Vegetarisk/vegansk"
@@ -903,8 +909,8 @@
       "4": "Knäck ner äggen i pannan och rör försiktigt så att äggen går sönder men inte blandar sig helt med övriga ingredienser. ",
       "5": "Garnera med persilja och servera med crème fraiche."
     },
+    "imagePath": "aubergingryta.jpg",
     "tags": {
-      "imagePath": "aubergingryta.jpg",
       "special": [
         "Vegetarisk/vegansk"
       ],
