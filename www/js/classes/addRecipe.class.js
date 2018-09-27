@@ -323,6 +323,7 @@ class AddRecipe extends Base {
       let imagePath = $('#imgInp').val().split("\\")[2];
 
       let recipe = {
+        recipeId: (that.recipes.length + 1).toString(),
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
         portions: $('#portions-select').val(),
