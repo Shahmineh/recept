@@ -1,342 +1,286 @@
-[
-  {
-    "name": "Omlett - Enkelt recept",
-    "time": "10min",
-    "portions": 1,
-    "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
+{  
+  "1": {"name": "Korv Stroganoff",
+        "time": "45 min",
+        "portions": "2",
+        "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+        "ingredients": [
+          {
+            "number": "2515",
+            "amount": "2",
+            "unit": "dl",
+            "weight": "180"
+          },
+          {
+            "number": "1488",
+            "amount": "1",
+            "unit": "st",
+            "weight": "400"
+          },
+          {
+            "number": "344",
+            "amount": "2",
+            "unit": "st",
+            "weight": "200"
+          },
+          {
+            "number": "1717",
+            "amount": "2",
+            "unit": "dl",
+            "weight": "200"
+          },
+          {
+            "number": "1953",
+            "amount": "1",
+            "unit": "dl",
+            "weight": "100"
+          },
+          {
+            "number": "410",
+            "amount": "1",
+            "unit": "msk",
+            "weight": "10"
+          },
+          {
+            "number": "909",
+            "amount": "1",
+            "unit": "msk",
+            "weight": "10"
+          },
+          {
+            "number": "2189",
+            "amount": "1",
+            "unit": "msk",
+            "weight": "10"
+          }
+        ],
+        "steps": {
+          "0": "Koka riset enligt anvisning på förpackningen.",
+          "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+          "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+          "3": "Smaka av med salt och peppar.",
+          "4": "Servera ris och vitkålssallad vid sidan om."
+        },
+        "imagePath": "pasta.jpg",
+        "tags": {
+          "main": [
+            "Kött"
+          ],
+          "meal": [
+            "Huvudrätt"
+          ]
+        }
+      },
+  "2": {"name": "Risotto Svamp",
+    "time": "45 min",
+    "portions": "2",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
     "ingredients": [
       {
-        "number": "3840",
-        "amount": 2,
-        "unit": "stycken",
-        "weight": 200
+        "number": "1",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
       },
       {
-        "number": "123",
-        "amount": 2,
-        "unit": "msk",
-        "weight": 400
+        "number": "1488",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "400"
       },
       {
-        "number": "29",
-        "amount": 1,
-        "unit": "tsk",
-        "weight": 200
-      },
-      {
-        "number": "1978",
-        "amount": null,
-        "unit": null,
-        "weight": 0
-      },
-      {
-        "number": "380",
-        "amount": null,
-        "unit": null,
-        "weight": 0
-      }
-    ],
-    "steps": []
-  },
-  {
-    "name": "Pam",
-    "time": "15min",
-    "portions": 2,
-    "description": "Quisque ut dolor gravida, placerat libero vel, euismod.",
-    "ingredients": [
-      {
-        "number": "3840",
-        "amount": 2,
-        "unit": "stycken",
-        "weight": 300
-      },
-      {
-        "number": "1234",
-        "amount": 2,
-        "unit": "msk",
-        "weight": 400
-      },
-      {
-        "number": "29",
-        "amount": 1,
-        "unit": "tsk",
-        "weight": 200
-      },
-      {
-        "number": "1977",
-        "amount": null,
-        "unit": null,
-        "weight": 10
-      },
-      {
-        "number": "380",
-        "amount": null,
-        "unit": null,
-        "weight": 30
-      }
-    ],
-    "steps": []
-  },
-  {
-    "name": "Tam",
-    "time": "15min",
-    "portions": 2,
-    "description": "Quisque ut dolor gravida, placerat libero vel, euismod. lala",
-    "ingredients": [
-      {
-        "number": "3840",
-        "amount": 2,
-        "unit": "stycken",
-        "weight": 300
-      },
-      {
-        "number": "785",
-        "amount": 2,
-        "unit": "msk",
-        "weight": 400
-      },
-      {
-        "number": "29",
-        "amount": 1,
-        "unit": "tsk",
-        "weight": 200
-      },
-      {
-        "number": "1977",
-        "amount": null,
-        "unit": null,
-        "weight": 10
-      },
-      {
-        "number": "380",
-        "amount": null,
-        "unit": null,
-        "weight": 30
-      }
-    ],
-    "steps": []
-  },
-  {
-    "name": "Bananpannkaka",
-    "time": "10min",
-    "portions": "1",
-    "description": "Jättegoda bananpannkakor som går fort att göra.",
-    "ingredients": [
-      {
-        "number": "Ägg ekologiskt rått",
+        "number": "344",
         "amount": "2",
         "unit": "styck",
-        "weight": "60"
+        "weight": "200"
       },
       {
-        "number": "Banan",
-        "amount": "1",
-        "unit": "styck",
-        "weight": "60"
-      }
-    ],
-    "steps": {
-      "0": "Mosa bananen med en gaffel i en skål",
-      "1": "Kläck äggen i skålen och blanda",
-      "2": "Ta en skopa av smeten till en medium-het panna\n",
-      "3": "Stek några minuter på var sida",
-      "4": "Ät och njut!"
-    },
-    "imagePath": "bananpannkaka.jpg"
-  },
-  {
-    "name": "r",
-    "time": "r",
-    "portions": "1",
-    "description": "r",
-    "ingredients": [
-      {
-        "number": "r",
-        "amount": "r",
-        "unit": "styck",
-        "weight": "r"
-      }
-    ],
-    "steps": {
-      "0": "r"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "d",
-    "time": "d",
-    "portions": "2",
-    "description": "d",
-    "ingredients": [
-      {
-        "number": "d",
-        "amount": "d",
-        "unit": "liter",
-        "weight": "d"
-      }
-    ],
-    "steps": {
-      "0": "d"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "d",
-    "time": "d",
-    "portions": "3",
-    "description": "d",
-    "ingredients": [
-      {
-        "number": "d",
-        "amount": "d",
+        "number": "1717",
+        "amount": "2",
         "unit": "deciliter",
-        "weight": "d"
-      }
-    ],
-    "steps": {
-      "0": "ddddd"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "f",
-    "time": "f",
-    "portions": "4",
-    "description": "f",
-    "ingredients": [
+        "weight": "200"
+      },
       {
-        "number": "f",
-        "amount": "f",
-        "unit": "styck",
-        "weight": "f"
-      }
-    ],
-    "steps": {
-      "0": "ffff"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "rrr",
-    "time": "r",
-    "portions": "4",
-    "description": "rrr",
-    "ingredients": [
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
       {
-        "number": "r",
-        "amount": "r",
-        "unit": "tesked",
-        "weight": "r"
-      }
-    ],
-    "steps": {
-      "0": "rrrrr"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "ddd",
-    "time": "fff",
-    "portions": "4",
-    "description": "fff",
-    "ingredients": [
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
       {
-        "number": "ggg",
-        "amount": "www",
-        "unit": "liter",
-        "weight": "www"
-      }
-    ],
-    "steps": {
-      "0": "www",
-      "1": "www"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "fff",
-    "time": "ff",
-    "portions": "4",
-    "description": "fff",
-    "ingredients": [
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
       {
-        "number": "ff",
-        "amount": "ff",
-        "unit": "liter",
-        "weight": "fff"
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
       }
     ],
     "steps": {
-      "0": "ffff"
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "tags": "Kött"
+    "imagePath": "brunch.jpg",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Laktosfri"
+      ]
+    }
   },
-  {
-    "name": "hejehej",
-    "time": "d",
-    "portions": "4",
-    "description": "hejehjehjehej",
-    "ingredients": [
-      {
-        "number": "d",
-        "amount": "d",
-        "unit": "liter",
-        "weight": "d"
-      }
-    ],
-    "steps": {
-      "0": "d"
-    },
-    "tags": "Kött"
-  },
-  {
-    "name": "jjj",
-    "time": "kk",
+  "3": {"name": "Risotto Korv",
+    "time": "45 min",
     "portions": "2",
-    "description": "jjj",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
     "ingredients": [
       {
-        "number": "kk",
+        "number": "2515",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "3",
         "amount": "1",
-        "unit": "kryddmått",
-        "weight": "2"
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
       }
     ],
     "steps": {
-      "0": "ddd"
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "tags": [
-      "Kött",
-      "Kött",
-      "Laktosfri",
-      "Kött",
-      "Laktosfri",
-      "Frukost"
-    ]
+    "imagePath": "spanskpizza.jpeg",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
   },
-  {
-    "name": "testa igen",
-    "time": "10 min",
-    "portions": "3",
-    "description": "hejsam",
+  "4": {"name": "Korv bulle",
+    "time": "45 min",
+    "portions": "2",
+    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
     "ingredients": [
       {
-        "number": "ägg",
+        "number": "2515",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
         "amount": "1",
-        "unit": "liter",
-        "weight": "1"
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
       }
     ],
     "steps": {
-      "0": "testetst"
+      "0": "Koka riset enligt anvisning på förpackningen.",
+      "1": "Fräs korven i oljan i en kastrull ca 5 minuter. Tillsätt lök och fräs ytterligare någon minut.",
+      "2": "Tillsätt grädde, vatten, tomatpuré och kinesisk soja. Koka ca 10 minuter. Red eventuellt av med vetemjöl eller maizenaredning.",
+      "3": "Smaka av med salt och peppar.",
+      "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "tags": [
-      "Fisk",
-      "Fisk",
-      "Vegetarisk/vegansk",
-      "Fisk",
-      "Vegetarisk/vegansk",
-      "Efterrätt"
-    ]
+    "imagePath": "dinner.jpg",
+    "tags": {
+      "main": [
+        "Kött"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
   }
-]
+}

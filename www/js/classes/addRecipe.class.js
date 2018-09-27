@@ -27,18 +27,21 @@ class AddRecipe extends Base {
           <div class="invalid-feedback">Fyll i här</div>
         </div>
         <div class="flex-column">
-          <input type="number" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+          <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
           <div class="invalid-feedback">Fyll i här</div>
         </div>
         <div class="flex-column">
           <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
             <option selected value="">Mängd:</option>
-            <option value="styck">styck</option>
-            <option value="liter">liter</option>
-            <option value="deciliter">deciliter</option>
-            <option value="matsked">matsked</option>
-            <option value="tesked">tesked</option>
-            <option value="kryddmått">kryddmått</option>
+            <option value="st">styck</option>
+            <option value="l">liter</option>
+            <option value="dl">deciliter</option>
+            <option value="msk">matsked</option>
+            <option value="tsk">tesked</option>
+            <option value="krm">kryddmått</option>
+            <option value="kg">kilogram</option>
+            <option value="hg">hektogram</option>
+            <option value="g">gram</option>
           </select>
           <div class="invalid-feedback">Fyll i här</div>
         </div>
@@ -85,7 +88,7 @@ class AddRecipe extends Base {
         if(form.checkValidity() === true){
           event.preventDefault();
           event.stopPropagation();
-          JSON._save('recipe.json', [...that.recipes, recipe]);
+          JSON._save('recipe.json', [...Object.values(that.recipes), recipe]);
           $.getJSON('/json/recipe.json', (data) => {
               that.recipes = data;
           });
@@ -205,13 +208,12 @@ class AddRecipe extends Base {
     //Validation ingredient
     $(document).on('keyup', '.ravara-input', function(event) {
       let val = $(this).val();
-      let inputHits = that.filter.filterIngredientsByName(val);
+      let inputHits = that.filter.filterIngredients(val);
       $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
       val.length > 2 ? inputHits.map(item=>{
-        let hit = Object.values(that.ingredients).filter(el=>el.Namn==item)[0];
         return $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
-          <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${hit.Nummer}" type="button" data-id="${hit.Nummer}">
-            ${hit.Namn}
+          <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${item.Nummer}" type="button" data-id="${item.Nummer}">
+            ${item.Namn}
           </button>
         `);
       }) : null;
@@ -300,7 +302,7 @@ class AddRecipe extends Base {
           return [
             ...acc,
             {
-              number: $(`#ravara-input-${index}`).val(),
+              number: that.filter.filterIngredients($(`#ravara-input-${index}`).val())[0].Nummer,
               amount: $(`#amount-input-${index}`).val(),
               unit: $(`#amount-select-${index}`).val(),
               weight: $(`#gram-input-${index}`).val(),
@@ -319,8 +321,6 @@ class AddRecipe extends Base {
 
       let imagePath = $('#imgInp').val().split("\\")[2];
 
-
-      // GIVE ID'S TO SAVED RECIPES !!!!!!!!
       let recipe = {
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
