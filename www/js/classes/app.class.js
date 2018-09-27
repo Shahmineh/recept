@@ -6,7 +6,7 @@ class App extends Base {
         this.ingredientsIdHash = {};
         this.recipes;
         this.renderNav();
-        this.firstLoadStartPage()
+        // this.firstLoadStartPage()
         this.eventHandlers();
         $.getJSON("/json/livsmedel.json", (data) => {
             this.livsmedelData = data;
@@ -32,6 +32,10 @@ class App extends Base {
         let startsidan = new Startsidan(this);
         $('main').empty();
         startsidan.render('main');
+    }
+
+    handleReload(){
+
     }
 
     navigation() {
@@ -142,6 +146,16 @@ class App extends Base {
             that.navigation();
             //Stop the browers from starting a page reload
             e.preventDefault();
+        });
+
+        $(document).on('click', 'main', function (e) {
+          if (e.target.getAttribute('type') != 'radio') {
+            let s = $('[type="radio"]:checked')
+            if (s.length) {
+              s.prop('checked', false);
+              e.stopImmediatePropagation();
+            }
+          }
         });
     }
 
