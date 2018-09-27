@@ -1,29 +1,27 @@
 Object.assign(Recipe.prototype, { template(){ return `
       <div class="row image-background">
-        <div class="d-block">
-          <div class="col-2 category-image-control">
+          <div class="col-12 category-image-control w-100">
             <img class="category-image" alt="${this.selectedRecipe.tags.main}" src=/imgs/${this.imagePath}>
           </div>
-          <div class="col-6 recipe-image-control">
-            <img class="recipe-image" alt="${this.selectedRecipe.tags.meal}" src="/imgs/${this.selectedRecipe.imagePath}">
-          </div>
-        </div>
       </div>
 
-      <div class="container-fluid">
-        <div class="row recipe-background">
-          <div class="col-6">
-            <h1 class="mt-3 recipe-header">${this.selectedRecipe.name}</h1><i class="fas fa-clock cook-time"></i>&nbsp;<p class="d-inline cook-time">${this.selectedRecipe.time}</p>
-            <div class="d-inline ml-4">
-              <button type="button" class="btn" id="recipe-remove"><i class="fas fa-minus"></i></button>
-              <p class="cook-time d-inline">${this.localPortion} portioner</p>
-              <button type="button" class="btn" id="recipe-add"><i class="fas fa-plus"></i></button>
+      <div class="container-fluid p-5">
+        <div class="recipe-background">
+            <h1 class="mt-3 recipe-header">${this.selectedRecipe.name}</h1>
+            <div class="d-inline-flex align-items-center flex-md-row flex-column">
+              <div class="d-inline-flex align-items-center">
+                <i class="fas fa-clock cook-time"></i>&nbsp;<p class="cook-time">${this.selectedRecipe.time}</p>
+              </div>
+              <div class="d-inline ml-4">
+                <button type="button" class="btn ml-2" id="recipe-remove"><i class="fas fa-minus"></i></button>
+                <p class="cook-time d-inline ml-2">${this.localPortion} portioner</p>
+                <button type="button" class="btn ml-2" id="recipe-add"><i class="fas fa-plus"></i></button>
+            </div>
             </div>
           </div>
-          </div>
         </div>
-        
-        <div class="container-fluid">
+
+        <div class="container-fluid px-5">
           <div class="row recipe-background">
             <div class="col-12 mt-3 mb-3">
               <span class="recipe-summary">${this.selectedRecipe.description}</span>
@@ -32,36 +30,37 @@ Object.assign(Recipe.prototype, { template(){ return `
         </div>
       </div>
 
-      <div class="container-fluid">
-        <div class="row recipe-background">
-          <div class="col-12 col-lg-3 mt-2">  
-              <h4 class="sub-header pb-2">
+      <div class="container-fluid p-5">
+        <div class="recipe-content">
+          <div class="ingredients-wrapper py-4">  
+              <h4 class="sub-header pb-4">
                 Ingredienser:
               </h4>
             <ul class="ingredient-control pl-1 mt-1">
 
             </ul>
           </div>
-          <div class="cl-12 col-lg-8">
-            <h4 class="mt-2 sub-header pb-2">
+          <div class="instructions-wrapper py-4">
+            <h4 class="sub-header">
               Gör såhär:
             </h4>
             <ol class="recipe border-control">
               
             </ol>
           </div>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 col-lg-3 mt-2">  
-                <h4 class="sub-header pb-2">
-                  Näringsinnehåll:
-                </h4>
-                <ul class="nutrition-control pl-1 mt-1">
-                
-                </ul>
-              </div>
-            </div>
+        </div>
+
+
+        <div class="container-fluid p-0">
+          <div class="recipe-image-control py-4 w-100">
+            <img class="recipe-image" alt="${this.selectedRecipe.tags.meal}" src="/imgs/${this.selectedRecipe.imagePath}">
           </div>
+          <h4 class="sub-header py-4">
+            Näringsinnehåll:
+          </h4>
+          <ul class="nutrition-control pl-1 mt-1">
+
+          </ul>
         </div>
       </div>
 `}});
