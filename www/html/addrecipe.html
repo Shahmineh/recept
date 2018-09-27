@@ -4,12 +4,12 @@ Object.assign(AddRecipe.prototype, { template(){return `
         <div class="row justify-content-center pt-5">
           <h3>Lägg till recept</h3>
         </div>
-        <div class="row" >
+        <div class="row row-names" >
           <div class="input-names">
             <div class="small-one"><small>Namne ge ditt recept</small>
             </div>
             <div class="input-name input-group">
-              <input type="text" class="form-control recipe-name" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
+              <input type="text" class="form-control recipe-name" placeholder="Receptets namn" autocomplete="off" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
           </div>
@@ -52,7 +52,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <img id='img-upload'/> -->
           </div>
         </div>  
-        <div class="row justify-content-center pt-5">
+        <div class="row row-time justify-content-center pt-5">
           <div class="forms-div">
             <div class="small-three">
               <small>Välj antal portioner och tid</small>
@@ -80,7 +80,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
               <div class="form-group">
                 <!-- <label for="exampleFormControlSelect1">Tid:</label> -->
               <div>
-              <input type="text" class="form-control time-input" id="time-input" placeholder="Tid" required>
+              <input type="text" class="form-control time-input" id="time-input" autocomplete="off" placeholder="Tid" required>
               <div class="invalid-feedback">Välj tid</div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
         </div>
 
-        <div class="row tags justify-content-center mt-2">
+        <div class="row tags justify-content-center">
           <div class="col-sm-12 col-lg-3 mt-sm-4 mb-4">
             <p>Huvudkategori</p>
             <div class="form-check form-check-main">
@@ -193,7 +193,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
           </div>
         </div>
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center pt-5 pb-5">
             
               <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
           

@@ -12,6 +12,18 @@ $(document).on('click', '*', function(e) {
     }
   }
 })
+
+/* $(document).on('click', '*', function(e) { 
+  // if (e.target.getAttribute('type') != 'radio') {
+    let s = $('.ravara-list');
+    if (s.length) {
+      
+      e.stopImmediatePropagation();
+    // }
+  }
+}) */
+
+
 // const categories = $.getJSON("/json/categories.json",
 //     function (data) {
 //         const categoryList = Object.keys(data).map(category => {

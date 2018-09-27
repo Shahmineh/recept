@@ -25,7 +25,7 @@ class AddRecipe extends Base {
           <i class="fas fa-times" id="remove-ingredient-btn"></i>
               
         <div class="flex-column">
-          <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
+          <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" required>
           <div class="invalid-feedback">Fyll i här</div>
         </div>
         <div class="flex-column">
@@ -50,10 +50,10 @@ class AddRecipe extends Base {
         </div>
         <div class="flex-column">
           <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
-          <div class="invalid-feedback">Fyll i här</div>
+          <div class="invalid-feedback gram-input">Fyll i här</div>
         </div>
       </div>
-      <div id="data-ravara-input-${that.ingredientCounter}"></div>
+      <div class="ravara-list" id="data-ravara-input-${that.ingredientCounter}"></div>
     `);
     
     // Object.values(that.ingredients).map(item=>{
@@ -213,12 +213,14 @@ class AddRecipe extends Base {
       let val = $(this).val();
       let inputHits = that.filter.filterIngredients(val);
       $(`#data-ravara-input-${that.ingredientCounter-1}`).empty();
-      val.length > 2 ? inputHits.map(item=>{
-        return $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
-          <button class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${item.Nummer}" type="button" data-id="${item.Nummer}">
+      val.length > 2 ? inputHits.map((item,index)=>{
+        return index < 10 ? $(`#data-ravara-input-${that.ingredientCounter-1}`).append(`
+          <ul class="list-ul">
+          <li class="button-data-ravara-input" id="button-data-ravara-input-${that.ingredientCounter-1}-${item.Nummer}" type="button" data-id="${item.Nummer}">
             ${item.Namn}
-          </button>
-        `);
+          </li>
+          </ul>
+        `) : null;
       }) : null;
       if(val.length > 0){
         $(this).removeClass('is-invalid').addClass('is-valid');
@@ -228,6 +230,8 @@ class AddRecipe extends Base {
         $(this).removeClass('is-valid').addClass('is-invalid');
       }
     });
+
+
     $(document).on('click', '.button-data-ravara-input', function(event){
       let name = $(this).text().trim();
       $(`#ravara-input-${that.ingredientCounter-1}`).val(name);

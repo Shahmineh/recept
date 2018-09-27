@@ -1,3 +1,9 @@
+.row-names{
+  height: 85px;
+}
+
+
+
 .input-names{
   width: 100%;
   padding-left: 15%;
@@ -22,9 +28,13 @@ div.row-top{
   background-color: #e9ecef;
 }
 
-// div.recipe-description{
-//   height: auto;
-// }
+div.recipe-description{
+  height:129px;
+}
+
+.row-time{
+
+}
 
 #recipe-description{
   background-color: #e9ecef;
@@ -37,10 +47,9 @@ i.far{
   border: 1px solid lightgrey;
 }
 
-/* div.image-forms{
-  display: grid;
-  justify-content: center;
-} */
+.forms{
+  height: 80px;
+}
 
 
 #portions-select{
@@ -55,6 +64,7 @@ i.far{
 }
 
 div.ingredients{
+  height: 50px;
   margin-bottom: 15px;
 }
 
@@ -62,12 +72,6 @@ div.amount{
   display: flex;
 }
 
-
-/* @media only screen and (max-width: 992px) {
-  .form-control-text {
-   width: 524px;
-  }
-} */
 div.under{
   padding-left: 5%;
   padding-right: 5%;
@@ -137,7 +141,6 @@ box-shadow: none;
   background-color:  #d3d3d3;
   color: #000;
   margin-left: 24px;
-  // margin-top:25px;
 }
 
 #add-ingredient-btn:hover{
@@ -150,7 +153,6 @@ box-shadow: none;
   background-color:  #d3d3d3;
   color: #000;
   margin-left: 50px;
-  // margin-top: 25px;
 }
 
 #add-howto-btn:hover{
@@ -175,6 +177,7 @@ body .admin-container{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+  position: relative;
 }
 
 #browser-input{
@@ -212,24 +215,12 @@ i.fa-times{
  }
 
  .small-five{
-  //  margin-bottom: 15px;
    margin-left: 24px;
  }
 
  .small-six{
    margin-left: 55px;
-  //  margin-bottom: 15px;
  }
-
- /* .flex-column{
-   display: flex;
-   flex-direction: column;
- } */
-
-// @media screen and (max-width: 576px)
-// .display-flex {
-//   display: flex;
-// }
 
 .display-flex{
   display: flex;
@@ -239,14 +230,22 @@ i .fa-info-circle{
   font-size: 5px;
 }
 
-.tags p{
-  padding-left: 1.25rem;
-  font-size: 20px;
+/* .tags{
+  padding-left: 60px; 
+} */
+
+@media screen and (min-width: 375px){
+  div.tags{
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 }
 
-.small-seven{
-  margin-left:15px;
+.tags p{
+  padding-left: 1.25rem;
+  font-size: 18px;
 }
+
 
 .input-group-btn{
   background-color:  #d3d3d3;
@@ -286,15 +285,8 @@ i .fa-info-circle{
 
 #img-upload{
   width: 100%;
-  
 }
 
-/* .img-div{
-  height: 400px;
-  width: 400px;
-  position: relative;
-  overflow: hidden;
-} */
 @media screen and (min-width: 576px){
   .forms{
     display: flex;
@@ -315,6 +307,26 @@ i .fa-info-circle{
 }
 
 .form-check-label{
-  font-size: 18px;
+  font-size: 15px;
+  padding-bottom: 4px;
 }
 
+div .ravara-list{
+  position: absolute;
+}
+
+.button-data-ravara-input{
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.959);
+  padding: 7px;
+}
+.button-data-ravara-input:hover{
+  background: #838383e3 !important;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.list-ul{
+  margin-bottom: 0px;
+}
+   
