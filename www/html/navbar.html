@@ -43,25 +43,46 @@ Object.assign(Navbar.prototype, { template(){ return `
     <!-- <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"><span> Världens mat</span></span></a></li> -->
     <li><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"><span>
             Lägg till recept</span></span></a></li>
-    <li class="has-sub"><label for="main-item-4" class="nav-btn"><span><img src="/imgs/loupe.png" class="menu-icon" alt="menu icon"><span>
-            Sök recept</span></span></label>
-      <input id="main-item-4" type="radio" name="menu">
-      <ul>
-        <li class="search-slide">
-          <div>
-            <p>Vad söker du?</p>
-            <!-- <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-            </form> -->
-          </div>
-        </li>
+    <li class="has-sub">
+      <button type="button" class="btn nav-btn" data-toggle="modal" data-target="#searchModal">
+        <img src="/imgs/loupe.png" class="menu-icon" alt="menu icon">
+        Sök recept
+      </button>
 
-      </ul>
+      <!-- <input id="main-item-4" type="checkbox">
+      <ul>
+        <li class=""><a href="#" class="nav-btn"><span>Veg</span></a></li>
+      </ul> -->
+
     </li>
   </ul>
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-  </form>
-  <div class="search-autocomplete"></div>
+
+
+
+  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-size">
+        <div class="modal-header search-modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Vad söker du efter?</h4>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <form class="form-inline my-2 my-lg-0 search-holder">
+            <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search" id="search-input">
+          </form>
+          <div class="search-autocomplete"></div>
+
+        </div>
+        <div class="modal-footer">
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search-button">Search</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
 `}});
