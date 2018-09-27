@@ -2,7 +2,7 @@ class Recipe extends Base {
   constructor(selectedRecipe, ingredients, recipes){
     super();
     this.filter = new Filter(ingredients, recipes);
-    this.selectedRecipe = this.filter.findRecipe(selectedRecipe);
+    this.selectedRecipe = this.filter.findRecipeId(selectedRecipe);
     this.nutrition = new NutritionValues(ingredients, recipes);
     this.localPortion = this.selectedRecipe.portions;
     this.ratio = 1;

@@ -51,8 +51,7 @@ class App extends Base {
         }
         if (url.startsWith('/recept')) {
             let [, , theRecipeId] = url.split('/');
-            console.log(theRecipeId);
-            let recipe = new Recipe('Korv Stroganoff', this.ingredientsIdHash, this.recipes);
+            let recipe = new Recipe(theRecipeId, this.ingredientsIdHash, this.recipes);
             $('main').empty();
             recipe.render('main');
             recipe.ingredientList();
