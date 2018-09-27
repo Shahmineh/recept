@@ -4,9 +4,9 @@ Object.assign(AddRecipe.prototype, { template(){return `
         <div class="row justify-content-center pt-5">
           <h3>Lägg till recept</h3>
         </div>
-        <div class="row justify-content-center" >
-          <div class="col-sm-10 col-lg-6 input-names row-top">
-            <div class="small-one"><small>Namne ge ditt recept med ett lockande namn. Max 20 ord.</small>
+        <div class="row" >
+          <div class="input-names">
+            <div class="small-one"><small>Namne ge ditt recept</small>
             </div>
             <div class="input-name input-group">
               <input type="text" class="form-control recipe-name" placeholder="Receptets namn" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
@@ -14,9 +14,9 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
           </div>
         </div>  
-        <div class="row recipe-description justify-content-center">
-          <div class="col-sm-10 col-lg-6 input-names">
-            <div class="small-two"><small>Beskriv ditt recept kortfattat. Max 3 meningar.</small>
+        <div class="row recipe-description">
+          <div class="input-names">
+            <div class="small-two"><small>Beskriv ditt recept kortfattat</small>
             </div>
             <div class="input-name input-group">
               <textarea type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" required></textarea>
@@ -28,7 +28,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <!-- <i class="far fa-images justify-content-center p-5"></i> -->
           <div class="custom-file" id="uploader">
             <div>
-              <small>Lägg upp bild på din maträtt</small>
+              <small>Lägg upp en bild på din maträtt</small>
             </div>
             <div class="input-group">
                 <span class="input-group-btn">
@@ -38,7 +38,9 @@ Object.assign(AddRecipe.prototype, { template(){return `
                 </span>
                 <input type="text" class="form-control" readonly>
             </div>
-            <img id='img-upload'/>
+            <div class="img-div">
+             <img id='img-upload'/>            
+            </div>
           <!--   <div class="input-group">
               <input type="text" class="form-control" readonly>
               <span class="input-group-btn">
@@ -51,43 +53,44 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
         </div>  
         <div class="row justify-content-center pt-5">
-          <div class="forms">
+          <div class="forms-div">
             <div class="small-three">
-              <small>Välj antal portioner samt tid i min </small>
+              <small>Välj antal portioner och tid</small>
             </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label>
+            <div class="forms">
+              <div class="form-group">
+                <!-- <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label> -->
+                <div>
+                  <select class="custom-select portions-select" id="portions-select" required>
+                    <option value="">Välj antal</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                <div class="invalid-feedback">Välj antal portioner</div>
+              </div>
+              </div>
+              <div class="form-group">
+                <!-- <label for="exampleFormControlSelect1">Tid:</label> -->
               <div>
-                <select class="custom-select portions-select" id="portions-select" required>
-                  <option value="">Välj antal</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                </select>
-              <div class="invalid-feedback">Välj antal portioner</div>
-            </div>
-            </div>
-          <!--  <div class="small-four"><small>Ange hur lång tid det kommer ta att laga receptet</small></div> -->
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Tid:</label>
-              <div>
-                <input type="text" class="form-control time-input" id="time-input" placeholder="Tid" required>
-                <div class="invalid-feedback">Välj tid</div>
+              <input type="text" class="form-control time-input" id="time-input" placeholder="Tid" required>
+              <div class="invalid-feedback">Välj tid</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-       <div class="row col-12 justify-content-center under mt-5">
-         <div class="left mr-lg-5">
+       <div class="row under mt-5">
+         <div class="left col mr-lg-5">
             <div class="small-five">
-              <small>Ange råvara samt mängd.</small><i class="fas fa-info-circle"></i>
+              <small>Ange råvaror samt mängden</small><!-- <i class="fas fa-info-circle"></i> -->
             </div>
             <div class="ingredients-outer">
             </div>
@@ -95,9 +98,9 @@ Object.assign(AddRecipe.prototype, { template(){return `
               <button class="btn admin-button" id="add-ingredient-btn" type="button">Lägg till</button>
             </div>
           </div>
-          <div class="right mt-sm-5 mt-lg-0 mt-lg-0">
+          <div class="right col mt-sm-5 mt-lg-0 mt-lg-0">
             <div class="small-six">
-              <small>Beskriv tillvägagångssätt. Max 100 ord i varje ruta.</small>
+              <small>Beskriv tillvägagångssättet i varje ruta</small>
             </div>
             <div class="input-group d-block how">
             </div>
@@ -109,12 +112,12 @@ Object.assign(AddRecipe.prototype, { template(){return `
 
         <div class="row justify-content-center mt-5">
           <div class="small-seven">
-            <small>Fyll i taggar som passar bäst till ditt recept. Minst en i varje spalt måste fyllas i.</small>
+            <small>Fyll i taggar som passar bäst till ditt recept</small>
           </div>
         </div>
 
-        <div class="row justify-content-center mt-2">
-          <div class="col-sm-12 col-lg-3 mt-sm-4">
+        <div class="row tags justify-content-center mt-2">
+          <div class="col-sm-12 col-lg-3 mt-sm-4 mb-4">
             <p>Huvudkategori</p>
             <div class="form-check form-check-main">
               <input class="form-check-input-main" type="checkbox" name="exampleRadios" id="kott-tag" value="Kött">
@@ -135,7 +138,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
               </label>
             </div>
           </div>
-          <div class="col-sm-12 col-lg-3 mt-sm-4">
+          <div class="col-sm-12 col-lg-3 mt-sm-4 mb-4">
             <p>Specialkost</p>
             <div class="form-check">
               <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
@@ -156,7 +159,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
               </label>
             </div>
           </div>
-          <div class="col-sm-12 col-lg-3 mt-sm-4">
+          <div class="col-sm-12 col-lg-3 mt-sm-4 mb-4">
           <p>Måltid</p>
           <div class="form-check">
             <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="frukost-tag" value="Frukost">

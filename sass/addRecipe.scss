@@ -1,3 +1,10 @@
+.input-names{
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+
 .textnumber{
   margin-top: 10px;
   width: 25px;
@@ -35,9 +42,6 @@ i.far{
   justify-content: center;
 } */
 
-#uploader{
-  width: 318px;
-}
 
 #portions-select{
   width: 120px;
@@ -64,6 +68,14 @@ div.amount{
    width: 524px;
   }
 } */
+div.under{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+div.fa-times-div{
+  width: 50px;
+}
 
 div.underleft{
   padding-top: 50px;
@@ -71,7 +83,7 @@ div.underleft{
 
 .form-control-text{
   background-color: #e9ecef;
-  width: auto;
+  width: 100%;
 }
 
 div.text-input{
@@ -125,7 +137,7 @@ box-shadow: none;
   background-color:  #d3d3d3;
   color: #000;
   margin-left: 24px;
-  margin-top:25px;
+  // margin-top:25px;
 }
 
 #add-ingredient-btn:hover{
@@ -138,7 +150,7 @@ box-shadow: none;
   background-color:  #d3d3d3;
   color: #000;
   margin-left: 50px;
-  margin-top: 25px;
+  // margin-top: 25px;
 }
 
 #add-howto-btn:hover{
@@ -200,13 +212,13 @@ i.fa-times{
  }
 
  .small-five{
-   margin-bottom: 15px;
+  //  margin-bottom: 15px;
    margin-left: 24px;
  }
 
  .small-six{
    margin-left: 55px;
-   margin-bottom: 15px;
+  //  margin-bottom: 15px;
  }
 
  /* .flex-column{
@@ -229,6 +241,7 @@ i .fa-info-circle{
 
 .tags p{
   padding-left: 1.25rem;
+  font-size: 20px;
 }
 
 .small-seven{
@@ -244,6 +257,11 @@ i .fa-info-circle{
   background-color:  #777777;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   color: #fff;
+}
+
+#uploader{
+  width: 40%;
+  height: auto;
 }
 
 .btn-file {
@@ -268,4 +286,35 @@ i .fa-info-circle{
 
 #img-upload{
   width: 100%;
+  
 }
+
+/* .img-div{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+} */
+@media screen and (min-width: 576px){
+  .forms{
+    display: flex;
+  }
+  #portions-select{
+    margin-right: 100px;
+  }
+  .div-select{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .div-select{
+    display: -webkit-box;
+    margin-top: 15px;
+  }
+}
+
+.form-check-label{
+  font-size: 18px;
+}
+

@@ -21,7 +21,9 @@ class AddRecipe extends Base {
     let that = this;
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
-        <i class="fas fa-times" id="remove-ingredient-btn"></i>
+       
+          <i class="fas fa-times" id="remove-ingredient-btn"></i>
+              
         <div class="flex-column">
           <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" placeholder="Råvara" required>
           <div class="invalid-feedback">Fyll i här</div>
@@ -49,7 +51,8 @@ class AddRecipe extends Base {
         <div class="flex-column">
           <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
           <div class="invalid-feedback">Fyll i här</div>
-          </div>
+        </div>
+      </div>
       <div id="data-ravara-input-${that.ingredientCounter}"></div>
     `);
     
