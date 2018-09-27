@@ -22,7 +22,7 @@ class CategoryPage extends Base {
             </div>
 `);
         }) : $(".category-container").append(`
-            <div class="w-100 d-flex flex-column justify-content-center align-items-center h-100">
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center no-result-wrapper">
                 <img src="/imgs/loupe.png" class="menu-icon" alt="menu icon">
                 <h1>Inga resultat. Testa en annan kategori.</h1>
             </div>
