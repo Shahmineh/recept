@@ -8,10 +8,9 @@
 }
 
 .recipe-image {
-  height: auto; 
-  width: auto; 
-  max-width: 1969px; 
-  max-height: 473px;
+  width: 900px;
+  height: 500px;
+  object-fit: cover;
 }
 
 .recipe-layout {
