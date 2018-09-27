@@ -36,6 +36,7 @@ class AddRecipe extends Base {
             <option value="st">styck</option>
             <option value="l">liter</option>
             <option value="dl">deciliter</option>
+            <option value="ml">milliliter</option>
             <option value="msk">matsked</option>
             <option value="tsk">tesked</option>
             <option value="krm">kryddmått</option>
