@@ -41,6 +41,12 @@ class Recipe extends Base {
     if(this.selectedRecipe.tags.main[0] === "Kött"){
       this.imagePath = 'kott-main.jpg'
     }
+    if(this.selectedRecipe.tags.main[0] === "Fisk"){
+      this.imagePath = 'fisk-main.jpg'
+    }
+    if(this.selectedRecipe.tags.main[0] === "Kyckling"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
     
     console.log(this.imagePath);
     console.log(this.selectedRecipe.tags.main);
