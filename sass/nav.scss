@@ -32,6 +32,10 @@ header {
   }
  }
 
+ input[type="radio"]{
+  display: none;
+}
+
 #cssmenu ul,
 #cssmenu ul li,
 #cssmenu ul ul {
