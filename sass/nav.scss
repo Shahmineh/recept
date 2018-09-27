@@ -168,13 +168,13 @@ label {
   position: relative;
 }
 
-#cssmenu ul li.has-sub > a:after {
-  content: '+';
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  margin-top: -6px;
-}
+// #cssmenu ul li.has-sub > a:after {
+//   content: '+';
+//   position: absolute;
+//   top: 50%;
+//   right: 15px;
+//   margin-top: -6px;
+// }
 
 #cssmenu ul ul {
   border-radius: 0 3px 3px 0;
