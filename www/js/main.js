@@ -14,12 +14,6 @@ $(document).on('click', '*', function(e) {
 })
 
 
-$(document).on('click', 'main', function(e) {
-    let s = $('.ravara-list');
-    if (!s.is(e.target) && s.has(e.target).length === 0){
-      $(s).empty();
-    }
-})
 
 
 // const categories = $.getJSON("/json/categories.json",

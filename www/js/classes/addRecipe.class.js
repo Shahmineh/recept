@@ -134,6 +134,13 @@ class AddRecipe extends Base {
       that.instructionCounter--;
     });
 
+    $(document).on('click', 'main', function(e) {
+        let s = $('.ravara-list');
+        if (!s.is(e.target) && s.has(e.target).length === 0){
+          $(s).empty();
+        }
+    })
+  
     //  ALL VALIDATIONS NEED A BIT OF IMPROVEMENT, SPECIALLY VALIDATING BY DATA TYPE
     //Validation name
     $(document).on('keyup', '.recipe-name', function() {
