@@ -335,4 +335,36 @@ div .ravara-list{
 .list-ul{
   margin-bottom: 0px;
 }
-   
+
+/* @media screen and (min-width: 768px) and (max-width:798px)  {
+  .respo-amount{
+    padding-left: 24px;
+    padding-top: 17px;
+  }
+  .left{
+    padding-bottom: 30px;
+    padding-left: 38px;
+  }
+} */
+
+/* @media screen and (min-width: 1196px) and (max-width:1462px)  {
+  .respo-amount{
+    padding-left: 24px;
+    padding-top: 17px;
+  }
+  .left{
+    padding-bottom: 30px;
+    padding-left: 38px;
+  }
+} */
+
+@media screen and (max-width: 767px){
+  .respo-amount{
+    padding-left: 24px;
+    padding-top: 17px;
+   }
+   .left{
+     padding-bottom: 30px;
+     padding-left: 38px;
+   }
+}

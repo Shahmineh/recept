@@ -29,7 +29,7 @@ class AddRecipe extends Base {
             <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" required>
             <div class="invalid-feedback">Fyll i här</div>
           </div>
-          <div class="d-inline-flex">
+          <div class="d-inline-flex respo-amount">
             <div class="flex-column">
               <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
               <div class="invalid-feedback">Fyll i här</div>
