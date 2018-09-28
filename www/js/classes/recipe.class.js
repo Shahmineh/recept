@@ -60,7 +60,7 @@ class Recipe extends Base {
     if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Efterrätt"){
       this.imagePath = 'efterratt-main.jpg'
     }
-    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Veg"){
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Vegetarisk/vegansk"){
       this.imagePath = 'veg-main.jpg'
     }
     if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Laktosfri"){
