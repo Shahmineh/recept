@@ -66,6 +66,8 @@ i.far{
 div.ingredients{
   height: 50px;
   margin-bottom: 15px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 div.amount{
@@ -312,13 +314,15 @@ i .fa-info-circle{
 }
 
 div .ravara-list{
-  position: absolute;
+  position: relative;
+  z-index: 999;
+  left: -14px;
 }
 
 .button-data-ravara-input{
-  font-size: 16px;
+  font-size: 14px;
   background: rgba(255, 255, 255, 0.959);
-  padding: 7px;
+  padding: 10px;
 }
 .button-data-ravara-input:hover{
   background: #838383e3 !important;

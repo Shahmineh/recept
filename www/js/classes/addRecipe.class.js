@@ -52,8 +52,9 @@ class AddRecipe extends Base {
           <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
           <div class="invalid-feedback gram-input">Fyll i här</div>
         </div>
+        <div class="ravara-list" id="data-ravara-input-${that.ingredientCounter}"></div>
       </div>
-      <div class="ravara-list" id="data-ravara-input-${that.ingredientCounter}"></div>
+      
     `);
     
     // Object.values(that.ingredients).map(item=>{

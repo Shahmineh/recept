@@ -13,15 +13,13 @@ $(document).on('click', '*', function(e) {
   }
 })
 
-/* $(document).on('click', '*', function(e) { 
-  // if (e.target.getAttribute('type') != 'radio') {
+
+$(document).on('click', 'main', function(e) {
     let s = $('.ravara-list');
-    if (s.length) {
-      
-      e.stopImmediatePropagation();
-    // }
-  }
-}) */
+    if (!s.is(e.target) && s.has(e.target).length === 0){
+      $(s).empty();
+    }
+})
 
 
 // const categories = $.getJSON("/json/categories.json",
