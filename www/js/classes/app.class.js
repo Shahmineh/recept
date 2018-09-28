@@ -171,6 +171,12 @@ class App extends Base {
               $(s).empty();
             }
          });
+
+         $(document).on('click', '.btn-search', function(event){
+            let name = $(this).text().trim();
+            $(`.search-bar`).val(name);
+            $(`.search-autocomplete`).empty();
+          });
     }
 
     renderNav() {

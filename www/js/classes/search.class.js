@@ -47,7 +47,7 @@ class Search{
         $(document).on('keyup', '#search-input', function(){
             $('.search-autocomplete').empty();
             that.searchResult &&  $('#search-input').val().length ? that.searchResult.map(item=>{
-                return $('.search-autocomplete').append(`<button class="d-block">${item.name}</button>`)
+                return $('.search-autocomplete').append(`<button class="d-block btn-search">${item.name}</button>`)
             }) : $('.search-autocomplete').empty();
         });
     }
