@@ -10,6 +10,11 @@
   margin: 0.2%;
 }
 
+.responsiveImage {
+  height: 350px;
+  object-fit: cover;
+}
+
 .menu .menu-img {
   transition: 0.5s;
   width: 100%;
@@ -35,8 +40,9 @@
 
 .breakfast-text {
   position: absolute;
-  top: 30px;
-  left: 50px;
+  top: 0;
+  left: 0;
+  padding: 2rem;
   color: #fff;
   text-shadow: 2px 2px 2px #2b2b2b;
 }
@@ -67,7 +73,7 @@
 }
 
 .menu-little-text {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Satisfy', cursive;
   font-weight: 500;
   font-size: 25px;
   text-shadow: 2px 2px 2px #c0c0c0;
@@ -110,3 +116,5 @@
     display: contents!important;
   }
  }
+
+ 

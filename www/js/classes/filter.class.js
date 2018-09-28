@@ -43,6 +43,11 @@ class Filter{
         return result
     }
 
+    findRecipeId(inputToFilter){
+        let result = Object.values(this.recipes).find(recipe => recipe.recipeId === inputToFilter);
+        return result
+    }
+
     filterRecipesByIngredients(inputToFilter){
         inputToFilter = inputToFilter.toLowerCase();
         let ingredientsFromInput = this.filterIngredients(inputToFilter).map(ing => ing.Nummer);

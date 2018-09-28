@@ -1,5 +1,6 @@
 [
   {
+    "recipeId": "1",
     "name": "Korv Stroganoff",
     "time": "45 min",
     "portions": "2",
@@ -72,10 +73,11 @@
     }
   },
   {
+    "recipeId": "2",
     "name": "Risotto Svamp",
     "time": "45 min",
     "portions": "2",
-    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "description": "En krämig risotto med vitt vin, kantareller och riven parmesan. Förstärk svampsmaken med svampbuljong eller kantarellfond.",
     "ingredients": [
       {
         "number": "1",
@@ -133,7 +135,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "svamprisotto.jpg",
     "tags": {
       "main": [
         "Kött"
@@ -144,10 +146,11 @@
     }
   },
   {
+    "recipeId": "3",
     "name": "Risotto Korv",
     "time": "45 min",
     "portions": "2",
-    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "description": "En busenkel risotto för de minsta i familjen där den krämiga risotton är ett kul alternativ till stuvade makaroner",
     "ingredients": [
       {
         "number": "2515",
@@ -205,7 +208,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "korvrisotto.jpg",
     "tags": {
       "main": [
         "Kött"
@@ -216,10 +219,11 @@
     }
   },
   {
+    "recipeId": "4",
     "name": "Korv bulle",
     "time": "45 min",
     "portions": "2",
-    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "description": "Godaste picknickbrödet fyller du med kryddig korv och krämig ost. Lätt att ta med och att äta på utflykten.",
     "ingredients": [
       {
         "number": "2515",
@@ -277,7 +281,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "korvstroganoff.png",
+    "imagePath": "dinner.jpg",
     "tags": {
       "main": [
         "Kött"
@@ -288,6 +292,7 @@
     }
   },
   {
+    "recipeId": "5",
     "name": "Krämig pasta med kycklinglårfilé och basilika",
     "time": "45min",
     "portions": "4",
@@ -374,6 +379,7 @@
     }
   },
   {
+    "recipeId": "6",
     "name": "Ugnsfalu med bostongurka och paprika",
     "time": "45min",
     "portions": "4",
@@ -436,39 +442,13 @@
       "4": "Till servering: Skiva paprikan.",
       "5": "Potatismos: Värm mjölken. Krossa potatisen med en visp och rör ner mjölken. Smaka av med salt och peppar."
     },
+    "imagePath": "ugnfalu.jpg",
     "tags": {
       "meal": []
     }
   },
   {
-    "name": "Bönstroganoff med potatismos",
-    "time": "45",
-    "portions": "4",
-    "description": "Vad sägs om en vegovariant på vardagshjälten Stroganoff till middag? Denna gör du med zucchini, morötter och bönor i crème fraiche med smak av tomat och basilika. Till det har vi en riktigt krämig potatismos. Hoppas det smakar!",
-    "ingredients": [
-      {
-        "number": "4457",
-        "amount": "400",
-        "unit": "g",
-        "weight": "400"
-      }
-    ],
-    "steps": {
-      "0": "hahdfh"
-    },
-    "tags": {
-      "main": [
-        "Fisk"
-      ],
-      "special": [
-        "Laktosfri"
-      ],
-      "meal": [
-        "Mellanmål"
-      ]
-    }
-  },
-  {
+    "recipeId": "7",
     "name": "Bönstroganoff med potatismos",
     "time": "45min",
     "portions": "4",
@@ -543,6 +523,7 @@
       "4": "Skölj bönorna i kallt vatten. Låt dem rinna av. Tillsätt crème fraiche och bönor. Låt grytan koka ca 2 min. ",
       "5": "Strö över persilja och servera med potatismos."
     },
+    "imagePath": "bongryta.jpg",
     "tags": {
       "special": [
         "Vegetarisk/vegansk"
@@ -551,10 +532,11 @@
     }
   },
   {
+    "recipeId": "8",
     "name": "Ugnsstekt lax med rostade rotfrukter",
     "time": "45min",
     "portions": "4",
-    "description": "Hur gott med ugnsstekt lax och härligt söta rostade rotfrukter? En riktigt god smakkombination som dessutom är riktigt enkel att göra då allting tillagas i ugnen. Servera med en klick crème fraiche med smak av fetaost och soltorkade tomater, ät och njut!",
+    "description": "Hur gott med ugnsstekt lax och härligt söta rostade rotfrukter?",
     "ingredients": [
       {
         "number": "4457",
@@ -599,6 +581,7 @@
       "2": "Pensla laxen med rapsolja, salta och peppra. Lägg sedan laxen på rotfrukterna och fortsätt laga i ugnen ca 15 minuter.",
       "3": "Till servering: Servera med crème fraiche, tomater och dill."
     },
+    "imagePath": "laxgryta.jpg",
     "tags": {
       "main": [
         "Fisk"
@@ -609,6 +592,7 @@
     }
   },
   {
+    "recipeId": "9",
     "name": "Pannkakstårta med choklad och nutella",
     "time": "1-4t",
     "portions": "4",
@@ -701,9 +685,10 @@
       "4": "Lägg två pannkakor på varandra på ett fat. Bred ut 2–3 msk nutellakräm. Fortsätt att varva tills pannkakorna är slut. Bred extra nutellakräm på toppen om det finns kvar. Ställ tårtan kallt till servering.",
       "5": "Garnering: Strö över bären och sikta över florsocker."
     },
+    "imagePath": "pannkakstarta.jpg",
     "tags": {
       "main": [
-        "Fisk"
+        "Efterrätt"
       ],
       "meal": [
         "Efterrätt"
@@ -711,6 +696,7 @@
     }
   },
   {
+    "recipeId": "10",
     "name": "Frukostsallad med ägg",
     "time": "45min",
     "portions": "4",
@@ -750,6 +736,7 @@
     "steps": {
       "0": "Skala och hacka äggen grovt. Halvera, gröp ur och skär avokadon i små bitar. Kärna ur och skär äpplet i små tärningar. Lägg allt i en skål och vänd försiktigt ihop med matyoghurt. Smaka av med salt och peppar."
     },
+    "imagePath": "frukostsallad.jpg",
     "tags": {
       "special": [
         "Vegetarisk/vegansk"
@@ -760,6 +747,7 @@
     }
   },
   {
+    "recipeId": "11",
     "name": "Smoothiebowl med björnbär",
     "time": "45min",
     "portions": "4",
@@ -812,6 +800,7 @@
       "0": "Lägg undan några björnbär till garnering. Mixa resterande björnbär, halva bananen. havregryn och yoghurt till en slät kräm.",
       "1": "Häll upp i två skålar och toppa med de sparade björnbären, resten av bananen, passionfruktskärnor, skivad kiwi, chiafrön, kokos, mynta och honung."
     },
+    "imagePath": "smoothiebowl.jpg",
     "tags": {
       "special": [
         "Vegetarisk/vegansk"
@@ -823,6 +812,7 @@
     }
   },
   {
+    "recipeId": "12",
     "name": "Grillad Auberginegryta",
     "time": "105",
     "portions": "4",
@@ -903,12 +893,303 @@
       "4": "Knäck ner äggen i pannan och rör försiktigt så att äggen går sönder men inte blandar sig helt med övriga ingredienser. ",
       "5": "Garnera med persilja och servera med crème fraiche."
     },
+    "imagePath": "aubergingryta.jpg",
     "tags": {
       "special": [
         "Vegetarisk/vegansk"
       ],
       "meal": [
         "Förrätt"
+      ]
+    }
+  },
+  {
+    "recipeId": "13",
+    "name": "Ostpaj med Svecia",
+    "time": "45 min",
+    "portions": "2",
+    "description": "En klassisk ostpaj med smör i degen och smakrik lagrad Svecia i fyllningen. Vår goda ostpaj passar både som ensamrätt och på buffébordet.",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "st",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "st",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "410",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Hacka samman mjöl och smör till en grynig massa. Tillsätt vattnet och arbeta snabbt ihop till en deg.",
+      "1": "Tryck ut degen i sex portionsformar, ca 10 cm i diameter. Låt vila i kyl ca 30 min. Sätt ugnen på 200°.",
+      "2": "Nagga pajskalen och förgrädda i mitten av ugnen 10 min. Riv osten. Vispa samman ägg, mjölk, salt och peppar. Tillsätt osten och blanda väl.",
+      "3": "Häll fyllningen i pajskalen och grädda i mitten av ugnen ca 15 min."
+    },
+    "imagePath": "ostpaj.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Efterrätt"
+      ]
+    }
+  },
+  {
+    "recipeId": "14",
+    "name": "Kycklingpasta med spenat och grillade grönsaker",
+    "time": "35 min",
+    "portions": "2",
+    "description": "Supersnabb vardagspasta med krämig sås. Vill du göra rätten vegetarisk, tillsätt färdigkokta bönor eller kikärtor istället för kyckling. Klart!",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "st",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "st",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "410",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Koka pastan enligt anvisning på förpackningen.",
+      "1": "Strimla kycklingköttet. Fräs det i smör-&rapsolja i en stekpanna, salta och peppra.",
+      "2": "Rör ner crème fraiche och låt koka ihop ca 5 min. Vänd ner spenaten och blanda med pastan. Servera direk"
+    },
+    "imagePath": "kycklingpasta.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "recipeId": "15",
+    "name": "Reuben-Smörgås med rostbiff och surkålsfärskost",
+    "time": "35 min",
+    "portions": "2",
+    "description": "En klassisk amerikansk smörgås med vuxna smaker. Rosta gärna brödet för extra smak.",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "st",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "st",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "410",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Blanda färskost med surkål.",
+      "1": "Bred senap på brödskivorna.",
+      "2": "Fördela surkålsfärskost, skivade tomater och rostbiff på bröden.",
+      "3": "Peppra och toppa med rostad lök och körvel."
+    },
+    "imagePath": "reuben.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "recipeId": "16",
+    "name": "Sparris och lökpaj med citron och dragon",
+    "time": "35 min",
+    "portions": "2",
+    "description": "Gluten- och mjölkproteinfri paj utan äggstanning. En fräsch och lättlagad paj med primörer som kan varieras efter årstid. Bjud alla!",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Riv skalet från citronen och pressa ur saften.",
+      "1": "Mixa ihop citronskal, mjölmix, salt och margarin i en matberedare.",
+      "2": "Sätt ugnen på 225°C",
+      "3": " Skala och skär lökarna i stora bitar. Plocka och grovhacka dragonen. Fräs löken mjuk i hälften av olivoljan utan att den får färg.",
+      "4": "Dela tomaterna i halvor.",
+      "5": "Skala sparrisen om den är grov. Bryt av den nedre träiga delen av sparrisen. Dela sparrisen på längden och på mitten en gång.",
+      "6": "Grädda pajdegen mitt i ugnen 10-15 minuter, eller tills den börjar få lite färg. Sänk ugnsvärmen till 175°C."
+    },
+    "imagePath": "sparrisgluten.jpg",
+    "tags": {
+      "special": [
+        "Glutenfri"
+      ],
+      "meal": [
+        "Huvudrätt"
       ]
     }
   }

@@ -1,0 +1,37 @@
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  border-radius: 0 !important;
+  object-fit: cover;
+}
+.card-group a{
+  text-decoration: none;
+  color: black;
+  p {
+    text-decoration: none;
+    font-weight: bold; 
+  }
+  :hover {
+    color: #e26e21;
+  }
+}  
+
+.recipe-description{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: -moz-box;
+}
+
+.recipe-details{
+  height: 150px
+
+}
+
+.category-container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}

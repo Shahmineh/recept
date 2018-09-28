@@ -2,11 +2,13 @@ class Recipe extends Base {
   constructor(selectedRecipe, ingredients, recipes){
     super();
     this.filter = new Filter(ingredients, recipes);
-    this.selectedRecipe = this.filter.findRecipe(selectedRecipe);
+    this.selectedRecipe = this.filter.findRecipeId(selectedRecipe);
     this.nutrition = new NutritionValues(ingredients, recipes);
     this.localPortion = this.selectedRecipe.portions;
     this.ratio = 1;
+    
     this.eventHandlers();
+    this.renderMainPicture();
   } 
 
   eventHandlers(){
@@ -31,11 +33,51 @@ class Recipe extends Base {
     that.nutritionValuesList();
   }
 
+  renderMainPicture(){
+
+    let imagePath;
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Kött"){
+      this.imagePath = 'kott-main.jpg'
+    }
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Fisk"){
+      this.imagePath = 'fisk-main.jpeg'
+    }
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Kyckling"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Frukost"){
+      this.imagePath = 'frukost-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Mellanmål"){
+      this.imagePath = 'mellanmal-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Förrätt"){
+      this.imagePath = 'forratt-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Huvudrätt"){
+      this.imagePath = 'huvudratt-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Efterrätt"){
+      this.imagePath = 'efterratt-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Vegetarisk/vegansk"){
+      this.imagePath = 'veg-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Laktosfri"){
+      this.imagePath = 'laktosfri-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Glutenfri"){
+      this.imagePath = 'glutenfri-main.png'
+    }
+  }
+
 
   ingredientList(){
     let that = this;
     this.selectedRecipe.ingredients.map( ingredient => {
-      return $(".ingredient-control").append(`<li class="ingredient-layout"><b>${ingredient.amount*that.ratio} ${ingredient.unit}</b> ${this.filter.getIngredientName(ingredient.number)}</li>`);
+      return $(".ingredient-control").append(`<li class="ingredient-layout"><b>${
+        ingredient.unit == "st" ||  ingredient.unit == "msk" || ingredient.unit == "tsk" || ingredient.unit == "krm" ? ((ingredient.amount*that.ratio).toFixed() == 0 ? 1 :(ingredient.amount*that.ratio).toFixed()) : ingredient.amount*that.ratio.toFixed(2)
+      } ${ingredient.unit}</b> ${this.filter.getIngredientName(ingredient.number)}</li>`);
     });
   }
 
