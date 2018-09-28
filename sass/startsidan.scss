@@ -30,7 +30,7 @@
   bottom: 50px;
   left: 50px;
   color: #000;
-  text-shadow: 2px 2px 2px #ebebeb;
+  text-shadow: 2px 2px 2px #eeeeee;
   @media screen and (max-width: 576px) {
     color: #fff;
     text-shadow: 2px 2px 2px #4d4c4c;
@@ -55,6 +55,16 @@
   text-shadow: 2px 2px 2px #2b2b2b;
 }
 
+.menu-big-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
+}
+
 .dessert-text {
   position: absolute;
   top: 30px;
@@ -63,14 +73,7 @@
   text-shadow: 2px 2px 2px #2b2b2b;
 }
 
-.menu-big-text {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 700;
-  font-size: 45px;
-  @media screen and (max-width: 576px) {
-    font-size: 25px;
-  }
-}
+
 
 .menu-little-text {
   font-family: 'Satisfy', cursive;
@@ -117,4 +120,12 @@
   }
  }
 
- 
+ .find-btn {
+  font-family: 'Roboto', sans-serif;
+  padding: 5px 20px;
+ }
+
+ .btn {
+   border-radius: 0;
+   text-shadow: none;
+ }
