@@ -283,13 +283,8 @@ li > a {
 
  .modal-size {
   height: 90vh;
-  width: 72vw;
-  @media screen and (max-width: 576px) {
-    width: 100%;
-  }
-@media (min-width: 577px) and (max-width: 991.98px) {
-  width: 70vh;
-}
+  width: 100%;
+ 
 
  }
 
@@ -301,6 +296,7 @@ li > a {
    background-image: url("/imgs/modal-back.jpg");
    background-repeat: no-repeat;
    background-size: cover;
+   background-position: center bottom;
  }
  .logo {
   width: 40px;
