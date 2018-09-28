@@ -1,15 +1,45 @@
 .border-control {
-  @media screen and (min-width: 990px) {
+  @media screen and (min-width: 1200px) {
     border-left: 0px;
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1200px) {
     border-left: 2px solid;
   }
 }
 
+.recipe-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.category-image-control {
+  width: 100%;
+}
+
+.category-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0 75%;
+  opacity: 0.6;
+}
+
+.ingredients-wrapper{
+  width: 45%;
+}
+
+.instructions-wrapper{
+  width: 45%;
+}
+.recipe-content{
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
 .recipe-layout {
   padding: 0 0 7px 7px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
  
 .ingredient-control {
@@ -22,11 +52,7 @@
 
 .ingredient-layout {
   padding: 0 0 7px 0 !important;
-  font-size: 1.2rem;
-}
-
-.recipe-background {
-  background-color: #fff;
+  font-size: 1rem;
 }
 
 .sub-header {
@@ -47,5 +73,14 @@
 
 .cook-time {
   font-weight: 500;
-  font-size: 1.25rem !important;
+  font-size: 1rem !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .ingredients-wrapper{
+    width: 100%;
+  }
+  .instructions-wrapper{
+    width: 100%;
+  }
 }

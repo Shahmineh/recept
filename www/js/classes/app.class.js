@@ -2,11 +2,12 @@ class App extends Base {
     constructor() {
         super();
         // Read data to our globals from json files
+        this.loaderRender();
         this.livsmedelData;
         this.ingredientsIdHash = {};
         this.recipes;
         this.renderNav();
-        this.firstLoadStartPage()
+        // this.firstLoadStartPage()
         this.eventHandlers();
         $.getJSON("/json/livsmedel.json", (data) => {
             this.livsmedelData = data;
@@ -27,11 +28,20 @@ class App extends Base {
             this.ingredientsIdHash[livsmedel.Nummer] = livsmedel;
         }
     }
-
+    
     firstLoadStartPage() {
         let startsidan = new Startsidan(this);
         $('main').empty();
         startsidan.render('main');
+    }
+
+    loaderRender(){
+        !this.recipes ? $('main').html(`
+            <div class="loader">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+        `) : null;
+
     }
 
     navigation() {
@@ -45,8 +55,9 @@ class App extends Base {
             $('main').empty();
             startsidan.render('main');
         }
-        if (url == '/recept') {
-            let recipe = new Recipe('Korv Stroganoff', this.ingredientsIdHash, this.recipes);
+        if (url.startsWith('/recept')) {
+            let [, , theRecipeId] = url.split('/');
+            let recipe = new Recipe(theRecipeId, this.ingredientsIdHash, this.recipes);
             $('main').empty();
             recipe.render('main');
             recipe.ingredientList();
@@ -142,6 +153,16 @@ class App extends Base {
             that.navigation();
             //Stop the browers from starting a page reload
             e.preventDefault();
+        });
+
+        $(document).on('click', 'main', function (e) {
+          if (e.target.getAttribute('type') != 'radio') {
+            let s = $('[type="radio"]:checked')
+            if (s.length) {
+              s.prop('checked', false);
+              e.stopImmediatePropagation();
+            }
+          }
         });
     }
 

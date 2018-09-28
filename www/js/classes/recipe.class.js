@@ -2,11 +2,14 @@ class Recipe extends Base {
   constructor(selectedRecipe, ingredients, recipes){
     super();
     this.filter = new Filter(ingredients, recipes);
-    this.selectedRecipe = this.filter.findRecipe(selectedRecipe);
+    this.selectedRecipe = this.filter.findRecipeId(selectedRecipe);
     this.nutrition = new NutritionValues(ingredients, recipes);
     this.localPortion = this.selectedRecipe.portions;
     this.ratio = 1;
+    this.imagePath = 'Hej';
+    
     this.eventHandlers();
+    this.renderMainPicture();
   } 
 
   eventHandlers(){
@@ -31,11 +34,31 @@ class Recipe extends Base {
     that.nutritionValuesList();
   }
 
+  renderMainPicture(){
+
+    let imagePath;
+
+    if(this.selectedRecipe.tags.main[0] === "Kött"){
+      this.imagePath = 'kott-main.jpg'
+    }
+    if(this.selectedRecipe.tags.main[0] === "Fisk"){
+      this.imagePath = 'fisk-main.jpg'
+    }
+    if(this.selectedRecipe.tags.main[0] === "Kyckling"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    
+    console.log(this.imagePath);
+    console.log(this.selectedRecipe.tags.main);
+  }
+
 
   ingredientList(){
     let that = this;
     this.selectedRecipe.ingredients.map( ingredient => {
-      return $(".ingredient-control").append(`<li class="ingredient-layout"><b>${ingredient.amount*that.ratio} ${ingredient.unit}</b> ${this.filter.getIngredientName(ingredient.number)}</li>`);
+      return $(".ingredient-control").append(`<li class="ingredient-layout"><b>${
+        ingredient.unit == "st" ||  ingredient.unit == "msk" || ingredient.unit == "tsk" || ingredient.unit == "krm" ? ((ingredient.amount*that.ratio).toFixed() == 0 ? 1 :(ingredient.amount*that.ratio).toFixed()) : ingredient.amount*that.ratio.toFixed(2)
+      } ${ingredient.unit}</b> ${this.filter.getIngredientName(ingredient.number)}</li>`);
     });
   }
 
