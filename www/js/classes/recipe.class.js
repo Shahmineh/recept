@@ -56,7 +56,9 @@ class Recipe extends Base {
   ingredientList(){
     let that = this;
     this.selectedRecipe.ingredients.map( ingredient => {
-      return $(".ingredient-control").append(`<li class="ingredient-layout"><b>${ingredient.amount*that.ratio} ${ingredient.unit}</b> ${this.filter.getIngredientName(ingredient.number)}</li>`);
+      return $(".ingredient-control").append(`<li class="ingredient-layout"><b>${
+        ingredient.unit == "st" ||  ingredient.unit == "msk" || ingredient.unit == "tsk" || ingredient.unit == "krm" ? ((ingredient.amount*that.ratio).toFixed() == 0 ? 1 :(ingredient.amount*that.ratio).toFixed()) : ingredient.amount*that.ratio.toFixed(2)
+      } ${ingredient.unit}</b> ${this.filter.getIngredientName(ingredient.number)}</li>`);
     });
   }
 

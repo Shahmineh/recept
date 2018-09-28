@@ -44,7 +44,6 @@ class Filter{
     }
 
     findRecipeId(inputToFilter){
-        inputToFilter = inputToFilter.toLowerCase();
         let result = Object.values(this.recipes).find(recipe => recipe.recipeId === inputToFilter);
         return result
     }
