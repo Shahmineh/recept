@@ -13,15 +13,20 @@ class CategoryPage extends Base {
             <div class="card-group pl-1">
                 <div class="card">
                     <img class="card-img-top" src="/imgs/${recipe.imagePath}" alt="${recipe.tags.meal}">
-                        <div class="card-body">
+                        <div class="card-body recipe-details">
                             <p class="lead">${recipe.name}</p>
-                            <p>${recipe.description}</p>
+                            <p class="recipe-description">${recipe.description}</p>
                         </div>
-                        <a href="/recept" class="btn btn-primary" role="button" aria-pressed="true">Se Recept</a>
+                        <a href="/recept/${recipe.recipeId}" class="btn nav-btn category-btn" role="button" aria-pressed="true">Se Recept</a>
                 </div>
             </div>
 `);
-        }) : $(".category-container").append(`<h1>Sorry no recipe found</h1>`);
+        }) : $(".category-container").append(`
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center no-result-wrapper">
+                <img src="/imgs/loupe.png" class="menu-icon" alt="menu icon">
+                <h1>Inga resultat. Testa en annan kategori.</h1>
+            </div>
+        `);
     }
 
 }

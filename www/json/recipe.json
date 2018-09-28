@@ -1,5 +1,6 @@
 [
   {
+    "recipeId": "1",
     "name": "Korv Stroganoff",
     "time": "45 min",
     "portions": "2",
@@ -72,6 +73,7 @@
     }
   },
   {
+    "recipeId": "2",
     "name": "Risotto Svamp",
     "time": "45 min",
     "portions": "2",
@@ -144,6 +146,7 @@
     }
   },
   {
+    "recipeId": "3",
     "name": "Risotto Korv",
     "time": "45 min",
     "portions": "2",
@@ -216,6 +219,7 @@
     }
   },
   {
+    "recipeId": "4",
     "name": "Korv bulle",
     "time": "45 min",
     "portions": "2",
@@ -288,6 +292,7 @@
     }
   },
   {
+    "recipeId": "5",
     "name": "Krämig pasta med kycklinglårfilé och basilika",
     "time": "45min",
     "portions": "4",
@@ -374,6 +379,7 @@
     }
   },
   {
+    "recipeId": "6",
     "name": "Ugnsfalu med bostongurka och paprika",
     "time": "45min",
     "portions": "4",
@@ -442,6 +448,7 @@
     }
   },
   {
+    "recipeId": "7",
     "name": "Bönstroganoff med potatismos",
     "time": "45min",
     "portions": "4",
@@ -525,6 +532,7 @@
     }
   },
   {
+    "recipeId": "8",
     "name": "Ugnsstekt lax med rostade rotfrukter",
     "time": "45min",
     "portions": "4",
@@ -584,6 +592,7 @@
     }
   },
   {
+    "recipeId": "9",
     "name": "Pannkakstårta med choklad och nutella",
     "time": "1-4t",
     "portions": "4",
@@ -687,6 +696,7 @@
     }
   },
   {
+    "recipeId": "10",
     "name": "Frukostsallad med ägg",
     "time": "45min",
     "portions": "4",
@@ -737,6 +747,7 @@
     }
   },
   {
+    "recipeId": "11",
     "name": "Smoothiebowl med björnbär",
     "time": "45min",
     "portions": "4",
@@ -801,6 +812,7 @@
     }
   },
   {
+    "recipeId": "12",
     "name": "Grillad Auberginegryta",
     "time": "105",
     "portions": "4",

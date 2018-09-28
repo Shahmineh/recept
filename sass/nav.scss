@@ -13,7 +13,7 @@ header {
     height: 100%;
 
     a {
-      padding: 6px 8px 6px 16px;
+      // padding: 6px 8px 6px 16px;
       text-decoration: none;
       font-size: 15px;
       color: #000;
@@ -32,6 +32,10 @@ header {
   }
  }
 
+ input[type="radio"]{
+  display: none;
+}
+
 #cssmenu ul,
 #cssmenu ul li,
 #cssmenu ul ul {
@@ -40,7 +44,7 @@ header {
   padding: 0;
 }
 
-input[type="checkbox"]{
+input[type="radio"]{
   display: none;
 }
 
@@ -60,6 +64,14 @@ input[type="checkbox"]{
 
 label {
   cursor: pointer;
+}
+
+li > a {
+  cursor: pointer;
+  :hover,
+  :focus {
+    color: #e26e21;
+  }
 }
 
 #cssmenux ul li:hover, #cssmenu input:checked ~ ul {
@@ -102,18 +114,25 @@ label {
   }
 }
 
-#cssmenu ul ul ul {
-  top: -2px;
-  right: 0;
-}
-
 #cssmenu ul ul {
   top: -1px;
   left: 100%;
 }
 
-#cssmenu ul li {
+#cssmenu > ul > li {
   float: none;
+
+  @media screen and (max-width: 576px) {
+    float: left;
+    span span {
+      display: none;
+    }
+    ul {
+      position: absolute;
+      top: 100%;
+      left: 0%;
+    }
+  }
 }
 
 #cssmenu ul ul {
@@ -140,7 +159,12 @@ label {
   padding: 15px 20px;
   color: #ffffff;
   text-decoration: none;
+  @media screen and (max-width: 576px) {
+    padding: 20px 12px 15px 12px;
+  }
 }
+
+
 
 #cssmenu ul ul {
   width: 200px;
@@ -154,13 +178,13 @@ label {
   position: relative;
 }
 
-#cssmenu ul li.has-sub > a:after {
-  content: '+';
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  margin-top: -6px;
-}
+// #cssmenu ul li.has-sub > a:after {
+//   content: '+';
+//   position: absolute;
+//   top: 50%;
+//   right: 15px;
+//   margin-top: -6px;
+// }
 
 #cssmenu ul ul {
   border-radius: 0 3px 3px 0;
@@ -209,6 +233,7 @@ label {
 
 #cssmenu.align-right ul ul li.last {
   border-radius: 0 0 0 3px;
+  border: none;
 }
 
 #cssmenu.align-right ul ul {
@@ -219,9 +244,12 @@ label {
   width: 30px;
   margin-right: 10px;
   display: inline-block;
+  @media screen and (max-width: 576px) {
+    margin-right: 0;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 577px) and (max-width: 991.98px) {
   header {
     height: 100vh;
     min-width: 70px;
@@ -255,9 +283,27 @@ label {
 
  .modal-size {
   height: 90vh;
-  width: 72vw;
+  width: 100%;
+ 
+
  }
 
  .modal-footer {
    border-top: none;
+ }
+
+ .modal-content {
+   background-image: url("/imgs/modal-back.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center bottom;
+ }
+ .logo {
+  width: 40px;
+  margin-right: 20px;
+  display: inline-block;
+ }
+
+ .logo-text {
+   font-family: 'Notable', sans-serif;
  }

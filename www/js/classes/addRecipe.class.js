@@ -95,10 +95,8 @@ class AddRecipe extends Base {
           });
           $('.max-100').animate({ scrollTop: 0 }, "fast");
           that.reset();
-          $('main').empty();
-          that.render('main');
-          that.addIngredient();
-          that.addInstruction();
+          window.location.href = `/recept/${recipe.recipeId}`;
+          new App();
         }
         form.classList.add('was-validated');
       }, false);
@@ -323,6 +321,7 @@ class AddRecipe extends Base {
       let imagePath = $('#imgInp').val().split("\\")[2];
 
       let recipe = {
+        recipeId: (that.recipes.length + 1).toString(),
         name: $('#recipe-name').val(),
         time: $('#time-input').val(),
         portions: $('#portions-select').val(),
