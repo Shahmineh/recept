@@ -37,19 +37,40 @@ class Recipe extends Base {
   renderMainPicture(){
 
     let imagePath;
-
-    if(this.selectedRecipe.tags.main[0] === "Kött"){
+    console.log(this.selectedRecipe.tags.main);
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Kött"){
       this.imagePath = 'kott-main.jpg'
     }
-    if(this.selectedRecipe.tags.main[0] === "Fisk"){
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Fisk"){
       this.imagePath = 'fisk-main.jpg'
     }
-    if(this.selectedRecipe.tags.main[0] === "Kyckling"){
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Kyckling"){
       this.imagePath = 'kyckling-main.jpg'
     }
-    
-    console.log(this.imagePath);
-    console.log(this.selectedRecipe.tags.main);
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Frukost"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Mellanmål"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Förrätt"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Huvudrätt"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Efterrätt"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Veg"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Laktosfri"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Glutenfri"){
+      this.imagePath = 'kyckling-main.jpg'
+    }
   }
 
 
