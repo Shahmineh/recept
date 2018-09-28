@@ -11,7 +11,7 @@ class CategoryPage extends Base {
         this.filterResult.length ? this.filterResult.map(recipe => {
             return $(".category-container").append(`
             <div class="card-group pl-1 pb-2">
-            <a href="/recept/${recipe.recipeId}">
+            <a class="nav-btn" href="/recept/${recipe.recipeId}">
                 <div class="card">
                     <img class="card-img-top" src="/imgs/${recipe.imagePath}" alt="${recipe.tags.meal}">
                         <div class="card-body recipe-details">
