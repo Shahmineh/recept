@@ -164,6 +164,19 @@ class App extends Base {
             }
           }
         });
+
+        $(document).on('click', '.modal', function(e) {
+            let s = $('.search-autocomplete');
+            if (!s.is(e.target) && s.has(e.target).length === 0){
+              $(s).empty();
+            }
+         });
+
+         $(document).on('click', '.btn-search', function(event){
+            let name = $(this).text().trim();
+            $(`.search-bar`).val(name);
+            $(`.search-autocomplete`).empty();
+          });
     }
 
     renderNav() {
