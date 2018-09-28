@@ -6,7 +6,6 @@ class Recipe extends Base {
     this.nutrition = new NutritionValues(ingredients, recipes);
     this.localPortion = this.selectedRecipe.portions;
     this.ratio = 1;
-    this.imagePath = 'Hej';
     
     this.eventHandlers();
     this.renderMainPicture();
@@ -37,19 +36,39 @@ class Recipe extends Base {
   renderMainPicture(){
 
     let imagePath;
-
-    if(this.selectedRecipe.tags.main[0] === "Kött"){
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Kött"){
       this.imagePath = 'kott-main.jpg'
     }
-    if(this.selectedRecipe.tags.main[0] === "Fisk"){
-      this.imagePath = 'fisk-main.jpg'
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Fisk"){
+      this.imagePath = 'fisk-main.jpeg'
     }
-    if(this.selectedRecipe.tags.main[0] === "Kyckling"){
+    if(this.selectedRecipe.tags.main && this.selectedRecipe.tags.main[0] === "Kyckling"){
       this.imagePath = 'kyckling-main.jpg'
     }
-    
-    console.log(this.imagePath);
-    console.log(this.selectedRecipe.tags.main);
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Frukost"){
+      this.imagePath = 'frukost-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Mellanmål"){
+      this.imagePath = 'mellanmal-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Förrätt"){
+      this.imagePath = 'forratt-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Huvudrätt"){
+      this.imagePath = 'huvudratt-main.jpg'
+    }
+    if(this.selectedRecipe.tags.meal && this.selectedRecipe.tags.meal[0] === "Efterrätt"){
+      this.imagePath = 'efterratt-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Veg"){
+      this.imagePath = 'veg-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Laktosfri"){
+      this.imagePath = 'laktosfri-main.jpg'
+    }
+    if(this.selectedRecipe.tags.special && this.selectedRecipe.tags.special[0] === "Glutenfri"){
+      this.imagePath = 'glutenfri-main.png'
+    }
   }
 
 
