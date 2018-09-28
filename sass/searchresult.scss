@@ -9,9 +9,12 @@
   color: black;
   p {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold; 
   }
-}
+  :hover {
+    color: #e26e21;
+  }
+}  
 
 .recipe-description{
   overflow: hidden;
