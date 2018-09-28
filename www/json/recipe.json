@@ -77,7 +77,7 @@
     "name": "Risotto Svamp",
     "time": "45 min",
     "portions": "2",
-    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "description": "En krämig risotto med vitt vin, kantareller och riven parmesan. Förstärk svampsmaken med svampbuljong eller kantarellfond.",
     "ingredients": [
       {
         "number": "1",
@@ -135,7 +135,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "brunch.jpg",
+    "imagePath": "svamprisotto.jpg",
     "tags": {
       "main": [
         "Kött"
@@ -208,7 +208,7 @@
       "3": "Smaka av med salt och peppar.",
       "4": "Servera ris och vitkålssallad vid sidan om."
     },
-    "imagePath": "spanskpizza.jpeg",
+    "imagePath": "korvrisotto.jpg",
     "tags": {
       "main": [
         "Kött"
@@ -1112,6 +1112,81 @@
     "tags": {
       "main": [
         "Fisk"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "recipeId": "16",
+    "name": "Sparris och lökpaj med citron och dragon",
+    "time": "35 min",
+    "portions": "2",
+    "description": "Gluten- och mjölkproteinfri paj utan äggstanning. En fräsch och lättlagad paj med primörer som kan varieras efter årstid. Bjud alla!",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "styck",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "styck",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "deciliter",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "deciliter",
+        "weight": "100"
+      },
+      {
+        "number": "401",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "matsked",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Riv skalet från citronen och pressa ur saften.",
+      "1": "Mixa ihop citronskal, mjölmix, salt och margarin i en matberedare.",
+      "2": "Sätt ugnen på 225°C",
+      "3": " Skala och skär lökarna i stora bitar. Plocka och grovhacka dragonen. Fräs löken mjuk i hälften av olivoljan utan att den får färg.",
+      "4": "Dela tomaterna i halvor.",
+      "5": "Skala sparrisen om den är grov. Bryt av den nedre träiga delen av sparrisen. Dela sparrisen på längden och på mitten en gång.",
+      "6": "Grädda pajdegen mitt i ugnen 10-15 minuter, eller tills den börjar få lite färg. Sänk ugnsvärmen till 175°C."
+    },
+    "imagePath": "sparrisgluten.jpg",
+    "tags": {
+      "special": [
+        "Glutenfri"
       ],
       "meal": [
         "Huvudrätt"
