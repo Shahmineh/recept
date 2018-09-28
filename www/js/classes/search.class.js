@@ -17,7 +17,6 @@ class Search{
         let searchResult = [];
         searchResult = searchResult.concat(searchRecipe, searchIngredient, searchTag);
         this.searchResult = [... new Set(searchResult)];
-        console.log(this.searchResult);
         return this.searchResult;
     }
 
@@ -33,11 +32,17 @@ class Search{
             if(event.keyCode === 13){
                 event.preventDefault();
                 $('#search-input').val('');
-                console.log('search result', that.searchResult);
+                // console.log('search result', that.searchResult);
             }
         })
-        $(document).on('click', '#search-button', function(){
+        $(document).on('click', '.btn-search', function(){
             let val = $('#search-input').val();
+            that.searchEngine(val);
+        });
+        $(document).on('click', '#search-button', function(){
+            $('.modal').removeClass('show');
+            window.location.href = `/recept/${that.searchResult[0].recipeId}`;
+            new App();
         });
         
     }
