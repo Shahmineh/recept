@@ -13,7 +13,7 @@ header {
     height: 100%;
 
     a {
-      padding: 6px 8px 6px 16px;
+      // padding: 6px 8px 6px 16px;
       text-decoration: none;
       font-size: 15px;
       color: #000;
@@ -160,9 +160,11 @@ li > a {
   color: #ffffff;
   text-decoration: none;
   @media screen and (max-width: 576px) {
-    padding: 15px 15px;
+    padding: 20px 12px 15px 12px;
   }
 }
+
+
 
 #cssmenu ul ul {
   width: 200px;
@@ -282,6 +284,13 @@ li > a {
  .modal-size {
   height: 90vh;
   width: 72vw;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+@media (min-width: 577px) and (max-width: 991.98px) {
+  width: 70vh;
+}
+
  }
 
  .modal-footer {
@@ -295,7 +304,7 @@ li > a {
  }
  .logo {
   width: 40px;
-  margin-right: 10px;
+  margin-right: 20px;
   display: inline-block;
  }
 
