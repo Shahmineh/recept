@@ -75,7 +75,7 @@
     "name": "Risotto Svamp",
     "time": "45 min",
     "portions": "2",
-    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "description": "En perfekt kokt risotto är krämig och riset har kvar lite tuggmotstånd.",
     "ingredients": [
       {
         "number": "1",
@@ -147,7 +147,7 @@
     "name": "Risotto Korv",
     "time": "45 min",
     "portions": "2",
-    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "description": "En busenkel risotto för de minsta i familjen där den krämiga risotton är ett kul alternativ till stuvade makaroner",
     "ingredients": [
       {
         "number": "2515",
@@ -219,7 +219,7 @@
     "name": "Korv bulle",
     "time": "45 min",
     "portions": "2",
-    "description": "Vardagsfavoriten korv Stroganoff har aldrig varit mer lättlagad. Perfekt måltid de dagar då vi har kort om tid.",
+    "description": "Godaste picknickbrödet fyller du med kryddig korv och krämig ost. Lätt att ta med och att äta på utflykten.",
     "ingredients": [
       {
         "number": "2515",
@@ -528,7 +528,7 @@
     "name": "Ugnsstekt lax med rostade rotfrukter",
     "time": "45min",
     "portions": "4",
-    "description": "Hur gott med ugnsstekt lax och härligt söta rostade rotfrukter? En riktigt god smakkombination som dessutom är riktigt enkel att göra då allting tillagas i ugnen. Servera med en klick crème fraiche med smak av fetaost och soltorkade tomater, ät och njut!",
+    "description": "Hur gott med ugnsstekt lax och härligt söta rostade rotfrukter?",
     "ingredients": [
       {
         "number": "4457",
@@ -679,7 +679,7 @@
     "imagePath": "pannkakstarta.jpg",
     "tags": {
       "main": [
-        "Fisk"
+        "Efterrätt"
       ],
       "meal": [
         "Efterrätt"
