@@ -22,35 +22,39 @@ class AddRecipe extends Base {
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
        
+        <div class="d-inline-flex flex-wrap">
           <i class="fas fa-times" id="remove-ingredient-btn"></i>
-              
-        <div class="flex-column">
-          <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" required>
-          <div class="invalid-feedback">Fyll i här</div>
-        </div>
-        <div class="flex-column">
-          <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
-          <div class="invalid-feedback">Fyll i här</div>
-        </div>
-        <div class="flex-column">
-          <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
-            <option selected value="">Mängd:</option>
-            <option value="st">styck</option>
-            <option value="l">liter</option>
-            <option value="dl">deciliter</option>
-            <option value="ml">milliliter</option>
-            <option value="msk">matsked</option>
-            <option value="tsk">tesked</option>
-            <option value="krm">kryddmått</option>
-            <option value="kg">kilogram</option>
-            <option value="hg">hektogram</option>
-            <option value="g">gram</option>
-          </select>
-          <div class="invalid-feedback">Fyll i här</div>
-        </div>
-        <div class="flex-column">
-          <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
-          <div class="invalid-feedback gram-input">Fyll i här</div>
+                
+          <div class="flex-column">
+            <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" required>
+            <div class="invalid-feedback">Fyll i här</div>
+          </div>
+          <div class="d-inline-flex">
+            <div class="flex-column">
+              <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+              <div class="invalid-feedback">Fyll i här</div>
+            </div>
+            <div class="flex-column">
+              <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
+                <option selected value="">Mängd:</option>
+                <option value="st">styck</option>
+                <option value="l">liter</option>
+                <option value="dl">deciliter</option>
+                <option value="ml">milliliter</option>
+                <option value="msk">matsked</option>
+                <option value="tsk">tesked</option>
+                <option value="krm">kryddmått</option>
+                <option value="kg">kilogram</option>
+                <option value="hg">hektogram</option>
+                <option value="g">gram</option>
+              </select>
+              <div class="invalid-feedback">Fyll i här</div>
+            </div>
+            <div class="flex-column">
+              <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
+              <div class="invalid-feedback gram-input">Fyll i här</div>
+            </div>
+          </div>
         </div>
         <div class="ravara-list" id="data-ravara-input-${that.ingredientCounter}"></div>
       </div>
@@ -117,7 +121,7 @@ class AddRecipe extends Base {
     });   
     //Remove ingredient
     $(document).on('click', '#remove-ingredient-btn', function(){
-      $(this).parent('div.ingredients').remove();
+      $(this).parents('div.ingredients').remove();
       that.ingredientCounter--;
     });
     //add instruction
@@ -126,7 +130,7 @@ class AddRecipe extends Base {
     });   
     //Remove instruction
     $(document).on('click', '#remove-howto-btn', function(){
-      $(this).parent('div.how-to').remove();
+      $(this).parents('div.how-to').remove();
       that.instructionCounter--;
     });
 
