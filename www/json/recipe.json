@@ -902,5 +902,220 @@
         "Förrätt"
       ]
     }
+  },
+  {
+    "recipeId": "13",
+    "name": "Ostpaj med Svecia",
+    "time": "45 min",
+    "portions": "2",
+    "description": "En klassisk ostpaj med smör i degen och smakrik lagrad Svecia i fyllningen. Vår goda ostpaj passar både som ensamrätt och på buffébordet.",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "st",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "st",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "410",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Hacka samman mjöl och smör till en grynig massa. Tillsätt vattnet och arbeta snabbt ihop till en deg.",
+      "1": "Tryck ut degen i sex portionsformar, ca 10 cm i diameter. Låt vila i kyl ca 30 min. Sätt ugnen på 200°.",
+      "2": "Nagga pajskalen och förgrädda i mitten av ugnen 10 min. Riv osten. Vispa samman ägg, mjölk, salt och peppar. Tillsätt osten och blanda väl.",
+      "3": "Häll fyllningen i pajskalen och grädda i mitten av ugnen ca 15 min."
+    },
+    "imagePath": "ostpaj.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Efterrätt"
+      ]
+    }
+  },
+  {
+    "recipeId": "14",
+    "name": "Kycklingpasta med spenat och grillade grönsaker",
+    "time": "35 min",
+    "portions": "2",
+    "description": "Supersnabb vardagspasta med krämig sås. Vill du göra rätten vegetarisk, tillsätt färdigkokta bönor eller kikärtor istället för kyckling. Klart!",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "st",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "st",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "410",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Koka pastan enligt anvisning på förpackningen.",
+      "1": "Strimla kycklingköttet. Fräs det i smör-&rapsolja i en stekpanna, salta och peppra.",
+      "2": "Rör ner crème fraiche och låt koka ihop ca 5 min. Vänd ner spenaten och blanda med pastan. Servera direk"
+    },
+    "imagePath": "kycklingpasta.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
+  },
+  {
+    "recipeId": "15",
+    "name": "Reuben-Smörgås med rostbiff och surkålsfärskost",
+    "time": "35 min",
+    "portions": "2",
+    "description": "En klassisk amerikansk smörgås med vuxna smaker. Rosta gärna brödet för extra smak.",
+    "ingredients": [
+      {
+        "number": "2515",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "180"
+      },
+      {
+        "number": "1488",
+        "amount": "1",
+        "unit": "st",
+        "weight": "400"
+      },
+      {
+        "number": "344",
+        "amount": "2",
+        "unit": "st",
+        "weight": "200"
+      },
+      {
+        "number": "1717",
+        "amount": "2",
+        "unit": "dl",
+        "weight": "200"
+      },
+      {
+        "number": "1953",
+        "amount": "1",
+        "unit": "dl",
+        "weight": "100"
+      },
+      {
+        "number": "410",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "909",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      },
+      {
+        "number": "2189",
+        "amount": "1",
+        "unit": "msk",
+        "weight": "10"
+      }
+    ],
+    "steps": {
+      "0": "Blanda färskost med surkål.",
+      "1": "Bred senap på brödskivorna.",
+      "2": "Fördela surkålsfärskost, skivade tomater och rostbiff på bröden.",
+      "3": "Peppra och toppa med rostad lök och körvel."
+    },
+    "imagePath": "reuben.jpg",
+    "tags": {
+      "main": [
+        "Fisk"
+      ],
+      "meal": [
+        "Huvudrätt"
+      ]
+    }
   }
 ]
