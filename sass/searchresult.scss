@@ -2,10 +2,12 @@
   width: 100%;
   height: 200px;
   border-radius: 0 !important;
+  object-fit: cover;
 }
-.card-group a{
+.card-group a p{
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 .recipe-description{
