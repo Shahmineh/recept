@@ -21,20 +21,19 @@ class AddRecipe extends Base {
     let that = this;
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
-       
         <div class="d-inline-flex flex-wrap">
           <i class="fas fa-times" id="remove-ingredient-btn"></i>
-                
           <div class="flex-column">
-            <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" required>
+            <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" aria-label="råvara" required>
             <div class="invalid-feedback">Fyll i här</div>
           </div>
           <div class="d-inline-flex respo-amount">
             <div class="flex-column">
-              <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" required>
+              <input type="number" step="any" class="form-control mr-2 amount-input" id="amount-input-${that.ingredientCounter}" placeholder="Mängd" aria-label="mängd" required>
               <div class="invalid-feedback">Fyll i här</div>
             </div>
             <div class="flex-column">
+              <label class="sr-only" for="amount">Mängd</label>
               <select class="custom-select mr-2 amount-select" id="amount-select-${that.ingredientCounter}" required>
                 <option selected value="">Mängd:</option>
                 <option value="st">styck</option>
@@ -51,7 +50,7 @@ class AddRecipe extends Base {
               <div class="invalid-feedback">Fyll i här</div>
             </div>
             <div class="flex-column">
-              <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" required>
+              <input type="number" class="form-control gram-input" id="gram-input-${that.ingredientCounter}" placeholder="Gram" aria-label="Gram" required>
               <div class="invalid-feedback gram-input">Fyll i här</div>
             </div>
           </div>
@@ -75,7 +74,7 @@ class AddRecipe extends Base {
         <i class="fas fa-times" id="remove-howto-btn"></i> 
         <p class="textnumber mr-2">${that.instructionCounter +1}</p>
         <div class="text-input flex-column">
-          <textarea class="form-control form-control-text" aria-label="With textarea" id="instructions-text-${that.instructionCounter}" required></textarea>
+          <textarea class="form-control form-control-text" aria-label="instruktions text" id="instructions-text-${that.instructionCounter}" required></textarea>
           <div class="invalid-feedback">Skriv instruktioner här.</div> 
         </div>
         
