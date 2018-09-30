@@ -88,7 +88,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="ingredients-outer">
             </div>
             <div class="buttons">
-              <button class="btn admin-button" id="add-ingredient-btn" type="button">Lägg till</button>
+              <button class="btn admin-button" id="add-ingredient-btn" type="button" aria-labelledby="Lägg till ingredient">Lägg till</button>
             </div>
           </div>
           <div class="right col-12 col-xl-6">
@@ -98,7 +98,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="input-group d-block how">
             </div>
             <div class="buttons">
-              <button class="btn admin-button" id="add-howto-btn" type="button">Lägg till</button>
+              <button class="btn admin-button" id="add-howto-btn" type="button" aria-labelledby="Lägg till instruktion">Lägg till</button>
             </div>
           </div>
         </div> 
@@ -187,7 +187,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
         </div>
         <div class="row justify-content-center pt-5 pb-5">
-          <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
+          <button class="btn submit-btn" id="submit-btn" type="submit" aria-labelledby="lägg till recept">Lägg till recept</button>
         </div>
       </form>
   </div>
