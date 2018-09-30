@@ -1,26 +1,19 @@
 Object.assign(Navbar.prototype, { template(){ return `
 <div id="cssmenu">
   <ul>
-    <li><a href="/" class="nav-btn logo-btn"><span><img src="/imgs/chef.png" class="logo" alt=""><span class="logo-text">NamNam</span></span></a></li>
-    <li class="has-sub"><label for="main-item-1" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="menu icon"><span>Huvudkategori</span></span></label>
+    <li><a href="/" class="nav-btn logo-btn"><span><img src="/imgs/chef.png" class="logo" alt="En logga som visar en kockmössa med en mustasch undertill"><span
+            class="logo-text">NamNam</span></span></a></li>
+    <li class="has-sub"><label for="main-item-1" class="nav-btn"><span><img src="/imgs/meal.png" class="menu-icon" alt="En ikon på en hand som serverar mat"><span>Huvudkategori</span></span></label>
       <input id="main-item-1" type="radio" name="menu">
       <ul>
         <li class=""><a href="/huvudkategori/kott" class="nav-btn"><span>Kött</span></a>
-          <!-- <ul>
-                <li><a href="#"><span>Nött</span></a></li>
-                <li class="last"><a href="#"><span>Fläsk</span></a></li>
-             </ul> -->
         </li>
         <li class=""><a href="/huvudkategori/fisk" class="nav-btn"><span>Fisk</span></a></li>
         <li class=""><a href="/huvudkategori/kyckling" class="nav-btn"><span>Kyckling</span></a>
-          <!-- <ul>
-                <li><a href="#"><span>Sub Product</span></a></li>
-                <li class="last"><a href="#"><span>Sub Product</span></a></li>
-             </ul> -->
         </li>
       </ul>
     </li>
-    <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="menu icon"><span>
+    <li class="has-sub"><label for="main-item-2" class="nav-btn"><span><img src="/imgs/dish.png" class="menu-icon" alt="En ikon på ett sett bestick"><span>
             Måltid</span></span></label>
       <input id="main-item-2" type="radio" name="menu">
       <ul>
@@ -31,7 +24,7 @@ Object.assign(Navbar.prototype, { template(){ return `
         <li><a href="/maltid/efterratt" class="nav-btn"><span>Efterrätt</span></a></li>
       </ul>
     </li>
-    <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="menu icon"><span>
+    <li class="has-sub"><label for="main-item-3" class="nav-btn"><span><img src="/imgs/wheat.png" class="menu-icon" alt="En ikon på vete"><span>
             Specialkost</span></span></label>
       <input id="main-item-3" type="radio" name="menu">
       <ul>
@@ -40,37 +33,24 @@ Object.assign(Navbar.prototype, { template(){ return `
         <li class=""><a href="/specialkost/glutenfri" class="nav-btn"><span>Glutenfri</span></a></li>
       </ul>
     </li>
-    <!-- <li class="last"><a href="/varldens-mat" class="nav-btn"><span><img src="/imgs/worldwide.png" class="menu-icon" alt="menu icon"><span> Världens mat</span></span></a></li> -->
-    <li><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="menu icon"><span>
+    <li><a href="/lagg-recept" class="nav-btn"><span><img src="/imgs/plus.png" class="menu-icon" alt="En ikon som visar ett plus"><span>
             Lägg till recept</span></span></a></li>
     <li>
-      <!-- <button type="button" class="btn nav-btn" data-toggle="modal" data-target="#searchModal">
-        <img src="/imgs/loupe.png" class="menu-icon" alt="menu icon">
-        Sök recept
-      </button> -->
-
-      <a data-target="#searchModal" data-toggle="modal"><span><img src="/imgs/loupe.png" class="menu-icon" alt="menu icon"><span> Sök recept</span></span></a>
-
+      <a data-target="#searchModal" data-toggle="modal"><span><img src="/imgs/loupe.png" class="menu-icon" alt="En ikon med ett förstorningsglas"><span>
+            Sök recept</span></span></a>
     </li>
   </ul>
-
-
-
   <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content modal-size">
         <div class="modal-header search-modal-header">
           <h4 class="modal-title" id="exampleModalLabel">Vad söker du efter?</h4>
-          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button> -->
         </div>
         <div class="modal-body">
           <form class="form-inline my-2 my-lg-0 search-holder">
             <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search" id="search-input">
           </form>
           <div class="search-autocomplete"></div>
-
         </div>
         <div class="modal-footer">
           <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search-button">Search</button>
@@ -78,8 +58,5 @@ Object.assign(Navbar.prototype, { template(){ return `
       </div>
     </div>
   </div>
-
-
-
 </div>
 `}});
