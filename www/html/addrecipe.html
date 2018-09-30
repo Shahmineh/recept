@@ -88,7 +88,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="ingredients-outer">
             </div>
             <div class="buttons">
-              <button class="btn admin-button" id="add-ingredient-btn" type="button" aria-labelledby="Lägg till ingredient">Lägg till</button>
+              <button class="btn admin-button" id="add-ingredient-btn" type="button" aria-labelledby="Lägg till ingrediens">Lägg till</button>
             </div>
           </div>
           <div class="right col-12 col-xl-6">
@@ -111,7 +111,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
 
         <div class="row tags justify-content-center">
           <div class="col-sm-12 col-lg-3 mt-sm-4 mb-4">
-            <p>Huvudkategori</p>
+            <h5>Huvudkategori</h5>
             <div class="form-check form-check-main">
               <input class="form-check-input-main" type="checkbox" role="checkbox" name="meat" id="kott-tag" value="Kött">
               <label class="form-check-label" for="kott-tag">
@@ -132,7 +132,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
           </div>
           <div class="col-sm-12 col-lg-3 mt-sm-4 mb-4">
-            <p>Specialkost</p>
+            <h5>Specialkost</h5>
             <div class="form-check">
               <input class="form-check-input-special" type="checkbox" name="exampleRadios" id="veg-tag" value="Vegetarisk/vegansk">
               <label class="form-check-label" for="veg-tag">
@@ -153,7 +153,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
           </div>
           <div class="col-sm-12 col-lg-3 mt-sm-4 mb-4">
-          <p>Måltid</p>
+          <h5>Måltid</h5>
           <div class="form-check">
             <input class="form-check-input-meal" type="checkbox" name="exampleRadios" id="frukost-tag" value="Frukost">
             <label class="form-check-label" for="frukost-tag">

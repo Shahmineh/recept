@@ -22,7 +22,7 @@ class AddRecipe extends Base {
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
         <div class="d-inline-flex flex-wrap">
-          <i class="fas fa-times" id="remove-ingredient-btn" aria-label="ta bort ingredient"></i>
+          <i class="fas fa-times" id="remove-ingredient-btn" aria-label="ta bort ingrediens"></i>
           <div class="flex-column">
             <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" aria-label="råvara" required>
             <div class="invalid-feedback">Fyll i här</div>
