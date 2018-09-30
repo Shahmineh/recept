@@ -4,28 +4,30 @@ Object.assign(AddRecipe.prototype, { template(){return `
         <div class="row justify-content-center pt-5">
           <h3>Lägg till recept</h3>
         </div>
+
         <div class="row row-names" >
           <div class="input-names">
             <div class="small-one"><small>Namne ge ditt recept</small>
             </div>
             <div class="input-name input-group">
-              <input type="text" class="form-control recipe-name" placeholder="Receptets namn" autocomplete="off" aria-label="Recipient's username" aria-describedby="button-add" id="recipe-name" required>
+              <input type="text" class="form-control recipe-name" placeholder="Receptets namn" autocomplete="off" aria-label="Receptets namn" aria-describedby="button-add" id="recipe-name" required>
               <div class="invalid-feedback">Skriv namn till ditt recept</div>
             </div>
           </div>
         </div>  
+
         <div class="row recipe-description">
           <div class="input-names">
             <div class="small-two"><small>Beskriv ditt recept kortfattat</small>
             </div>
             <div class="input-name input-group">
-              <textarea type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" required></textarea>
+              <textarea type="text" class="form-control recipe-description" id="recipe-description" placeholder="Beskriv recpetet här" aria-label="Receptets beskrivning" required></textarea>
             <div class="invalid-feedback">Beskriv ditt recept här</div>
             </div>
           </div>
         </div>
+        
         <div class="row image-forms justify-content-center d-grid pt-5">
-            <!-- <i class="far fa-images justify-content-center p-5"></i> -->
           <div class="custom-file" id="uploader">
             <div>
               <small>Lägg upp en bild på din maträtt</small>
@@ -33,7 +35,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="input-group">
                 <span class="input-group-btn">
                     <span class="btn btn-default btn-file">
-                        Browse… <input type="file" id="imgInp">
+                        Browse… <input type="file" id="imgInp" aria-label="bild">
                     </span>
                 </span>
                 <input type="text" class="form-control" readonly>
@@ -41,15 +43,6 @@ Object.assign(AddRecipe.prototype, { template(){return `
             <div class="img-div">
              <img id='img-upload'/>            
             </div>
-          <!--   <div class="input-group">
-              <input type="text" class="form-control" readonly>
-              <span class="input-group-btn">
-                <span class="btn btn-default btn-file">
-                <input type="file" id="imgInp">
-                </span>
-              </span>
-            </div>
-            <img id='img-upload'/> -->
           </div>
         </div>  
         <div class="row row-time justify-content-center pt-5">
@@ -59,7 +52,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
             </div>
             <div class="forms">
               <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1" id="portions">Antal portioner:</label> -->
+                <label class="sr-only" for="portions" id="portions">Antal portioner</label>
                 <div>
                   <select class="custom-select portions-select" id="portions-select" required>
                     <option value="">Välj antal</option>
@@ -78,9 +71,9 @@ Object.assign(AddRecipe.prototype, { template(){return `
               </div>
               </div>
               <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1">Tid:</label> -->
+                <label class="sr-only" for="tid">Tid</label>
               <div>
-              <input type="text" class="form-control time-input" id="time-input" autocomplete="off" placeholder="Tid" required>
+              <input type="text" class="form-control time-input" id="time-input" autocomplete="off" placeholder="Tid" aria-label="Tid" required>
               <div class="invalid-feedback">Välj tid</div>
                 </div>
               </div>
@@ -90,7 +83,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
        <div class="row under mt-5">
          <div class="left col-12 col-xl-6">
             <div class="small-five">
-              <small>Ange råvaror samt mängden</small><!-- <i class="fas fa-info-circle"></i> -->
+              <small>Ange råvaror samt mängden</small>
             </div>
             <div class="ingredients-outer">
             </div>
@@ -194,9 +187,7 @@ Object.assign(AddRecipe.prototype, { template(){return `
           </div>
         </div>
         <div class="row justify-content-center pt-5 pb-5">
-            
-              <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
-          
+          <button class="btn submit-btn" id="submit-btn" type="submit">Lägg till recept</button>
         </div>
       </form>
   </div>
