@@ -22,7 +22,7 @@ class AddRecipe extends Base {
     $( ".ingredients-outer" ).append(`
       <div class="ingredients d-flex">
         <div class="d-inline-flex flex-wrap">
-          <i class="fas fa-times" id="remove-ingredient-btn"></i>
+          <i class="fas fa-times" id="remove-ingredient-btn" aria-label="ta bort ingredient"></i>
           <div class="flex-column">
             <input type="text" class="form-control ravara-input mr-2" id="ravara-input-${that.ingredientCounter}" autocomplete="off" placeholder="Råvara" aria-label="råvara" required>
             <div class="invalid-feedback">Fyll i här</div>
@@ -71,7 +71,7 @@ class AddRecipe extends Base {
     let that = this;
     $( ".how" ).append(`
       <div class="how-to">
-        <i class="fas fa-times" id="remove-howto-btn"></i> 
+        <i class="fas fa-times" id="remove-howto-btn" aria-label="ta bort instruktion"></i> 
         <p class="textnumber mr-2">${that.instructionCounter +1}</p>
         <div class="text-input flex-column">
           <textarea class="form-control form-control-text" aria-label="instruktions text" id="instructions-text-${that.instructionCounter}" required></textarea>
